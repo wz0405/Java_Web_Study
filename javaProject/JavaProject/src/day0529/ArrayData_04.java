@@ -16,6 +16,9 @@ public class ArrayData_04 {
 			data[i]=sc.nextInt();
 			sum+=data[i];
 		}
+		for(int i=0;i<data.length;i++) {
+			System.out.println(i+" =>"+data[i]);
+		}
 		System.out.println("숫자의합"+sum);
 	}
 
