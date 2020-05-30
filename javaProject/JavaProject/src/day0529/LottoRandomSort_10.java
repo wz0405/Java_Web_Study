@@ -1,5 +1,5 @@
 package day0529;
-import java.util.*;
+
 public class LottoRandomSort_10 {
 	public static void main(String[] args) {
 		int lotto[]=new int[6];
