@@ -12,6 +12,7 @@ class OuterObj{
 		System.out.println("외부클래스의 메소드");
 		System.out.println("외부에서 내부클래스 메소드 호출");
 		InnerClass in = new InnerClass();
+	
 		in.write();
 	}
 }
