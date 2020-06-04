@@ -29,7 +29,16 @@ public class FileIOReader_05 {
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("파일을 찾을 수 없음"+e.getMessage());
+		} finally {
+			try {
+				br.close();
+				fr.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		}
 	}
 
