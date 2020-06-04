@@ -13,7 +13,7 @@ public class UserException_10 {
 	{
 		Scanner sc = new Scanner(System.in);
 		
-		String str[]= {"±èÅÂÈñ","°í¼Ò¿µ","ÀÌ¹Î","±èÇıÀÚ"};
+		String str[]= {"±èÅÂÈñ","°í¼Ò¿µ","ÀÌ¹Î","±èÇıÀÚ",""};
 		String name="";
 		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
 		name=sc.nextLine();
