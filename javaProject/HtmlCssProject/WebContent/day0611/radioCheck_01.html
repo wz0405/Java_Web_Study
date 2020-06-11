@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+table {
+	border: 2px solid gray;
+	width: 500px;
+}
+
+tr, th, td {
+	border: 1px dotted gray;
+	font-size: 10pt;
+}
+</style>
+</head>
+<body>
+	<table>
+		<caption>Radio&Check</caption>
+		<tr height="30">
+			<td>
+				<b>최종학력을 선택하세요</b>
+				<!-- radio는 name이 동일해야함 -->
+				<input type="radio" name="grade" value="고등학교">
+				고등학교&nbsp;
+				<input type="radio" name="grade" value="전문대학">
+				전문대학&nbsp;
+				<input type="radio" name="grade" value="대학원">
+				대학원&nbsp;
+				<input type="radio" name="grade" value="대학원">
+				대학원&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>본인이 가능한 컴퓨터 언어는?</b>
+				<input type="checkbox" name="Lang" value="C언어">
+				C언어&nbsp;
+				<input type="checkbox" name="lang" value="java">
+				java&nbsp;
+				<input type="checkbox" name="Lang" value="php">
+				php&nbsp;
+				<input type="checkbox" name="Lang" value="spring">
+				spring&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>이미지선택</b>
+				<input type="file">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>우리반에서 가장 좋은 사람?</b>
+				<select>
+					<option value="수빈">수빈</option>
+					<option value="수빈">용찬</option>
+					<option value="수빈">종민</option>
+					<option value="수빈">용선</option>
+					<option value="수빈">지수</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>당신의 키는 몇cm입니까?</b>
+				<input type="number" name="height" min="150" max="230" step="2" value="150">
+				cm
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>당신의 몸무게는 몇 kg입니까?</b>
+				<input type="number" name="weight" min="20" max="200" step="2" value="50">
+				kg
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>색상선택</b>
+				<input type="color">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<b>날짜선택</b>
+				<input type="date">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
