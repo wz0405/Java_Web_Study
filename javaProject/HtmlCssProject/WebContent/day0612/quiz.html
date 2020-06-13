@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style type="text/css">
+.img {
+	width: 100px;
+	border-color: red;
+}
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		img1 = document.getElementById("img1");
+		img2 = document.getElementById("img2");
+		img3 = document.getElementById("img3");
+		
+		f1.onclick=function(){
+			img3.setAttribute("src", img2.getAttribute("src"));
+			img2.setAttribute("src", img1.getAttribute("src"));
+			img1.setAttribute("src", img3.getAttribute("src"));
+		}
+		f2.onclick=function(){
+			img1.setAttribute("src", img2.getAttribute("src"));
+			img6.setAttribute("src", img1.getAttribute("src"));
+			img2.setAttribute("src", img4.getAttribute("src"));
+			img1.setAttribute("src", img5.getAttribute("src"));
+		}
+		f3.onclick=function(){
+			img2.setAttribute("src", img3.getAttribute("src"));
+			img1.setAttribute("src", img6.getAttribute("src"));
+		}
+	}
+</script>
+</head>
+<body>
+	<h4>절대주소를 이용한 이미지</h4>
+	<img alt="" src="../image/1.png" id="img1">
+	<h4>상대주소를 이용한 이미지</h4>
+	<img alt="" src="../image/2.png" id="img2">
+	
+	<hr>
+	<input type="button" value="변경1" class="mybtn" id="f1" onclick="fun1()">
+	<input type="button" value="변경2" class="mybtn" id ="f2" onclick="fun2()">
+	<input type="button" value="원래대로" class="mybtn" id="f3" onclick="fun3()">
+	<hr>
+	<img alt="" src="../image/3.png" id="img3">
+	<img alt="" src="../image/4.png" id="img4">
+	<img alt="" src="../image/5.png" id="img5">
+	<img alt="" src="../image/6.png" id="img6">
+</body>
+</html>
