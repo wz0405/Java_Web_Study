@@ -11,16 +11,16 @@ import java.util.Scanner;
 
 public class MysqlDb_01 {
 	String driver="com.mysql.jdbc.Driver";
-	String url="jdbc:mysql://localhost:3306/test";
+	String url="jdbc:mysql://localhost:3306/root";
 	String user="root";
-	String pass="new password";
+	String pass="1234";
 	
 	public MysqlDb_01() {
 		try {
 			Class.forName(driver);
-			System.out.println("mysql µå¶óÀÌ¹ö ¼º°ø");
+			System.out.println("mysql ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		} catch (ClassNotFoundException e) {
-			System.out.println("mysql µå¶óÀÌ¹ö ½ÇÆÐ");
+			System.out.println("mysql ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½");
 			e.printStackTrace();
 		}
 	}
@@ -30,7 +30,7 @@ public class MysqlDb_01 {
 			conn=DriverManager.getConnection(url, user, pass);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			System.out.println("db¿¬µ¿ ½ÇÆÐ");
+			System.out.println("dbï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 			e.printStackTrace();
 		}
 		return conn;
@@ -43,11 +43,11 @@ public class MysqlDb_01 {
 		
 		String sql="";
 		
-		System.out.println("ÇÐ»ý¸íÀº?");
+		System.out.println("ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½?");
 		name=sc.nextLine();
-		System.out.println("ÇÐ°ú´Â?");
+		System.out.println("ï¿½Ð°ï¿½ï¿½ï¿½?");
 		major=sc.nextLine();
-		System.out.println("ÇÐ³âÀº?");
+		System.out.println("ï¿½Ð³ï¿½ï¿½ï¿½?");
 		grade=sc.nextLine();
 		
 		sql="insert into univ values(null,?,?,?,now())";
@@ -58,12 +58,12 @@ public class MysqlDb_01 {
 		conn=getConnection();
 		try {
 			pstmt=conn.prepareStatement(sql);
-			//?,?,?ÀÎÀÚ°ª ¿Ï¼º
+			//?,?,?ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ï¼ï¿½
 			pstmt.setString(1, name);
 			pstmt.setString(2, major);
 			pstmt.setString(3, grade);
 			
-			//¾÷µ¥ÀÌÆ®
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 			pstmt.executeUpdate();
 			
 			
@@ -88,13 +88,13 @@ public class MysqlDb_01 {
 	public void update() {
 		Scanner sc= new Scanner(System.in);
 		String sql,num,name,major,grade;
-		System.out.println("º¯°æÇÒ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 		num=sc.nextLine();
-		System.out.println("º¯°æÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 		name=sc.nextLine();
-		System.out.println("º¯°æÇÒ Àü°øÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 		major=sc.nextLine();
-		System.out.println("º¯°æÇÒ ÇÐ³âÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 		grade=sc.nextLine();
 		
 		sql="update univ set name=?, major=?,grade=? where num=?";
@@ -126,7 +126,7 @@ public class MysqlDb_01 {
 	public void delete() {
 		Scanner sc = new Scanner(System.in);
 		String sql,num;
-		System.out.println("»èÁ¦ÇÒ ¹øÈ£À» ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 		num=sc.nextLine();
 		sql="delete from univ where num=?";
 		Connection conn=null;
@@ -155,7 +155,7 @@ public class MysqlDb_01 {
 		
 	}
 	public void select() {
-		System.out.println("½ÃÄö½º\tÀÌ¸§\tÀü°ø\tÇÐ³â\tÇöÀç³¯Â¥");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\tï¿½Ì¸ï¿½\tï¿½ï¿½ï¿½ï¿½\tï¿½Ð³ï¿½\tï¿½ï¿½ï¿½ç³¯Â¥");
 		String sql="select * from univ order by num asc";
 		Connection conn=null;
 		Statement stmt=null;
@@ -166,8 +166,8 @@ public class MysqlDb_01 {
 			stmt=conn.createStatement();
 			rs=stmt.executeQuery(sql);
 			while(rs.next()) {
-				System.out.println(rs.getInt("num") //¼ýÀÚÇüÅÂ("ÄÃ·³¸í")
-						+"\t"+rs.getString("name") //¹®ÀÚ¿­("ÄÃ·³¸í")
+				System.out.println(rs.getInt("num") //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½("ï¿½Ã·ï¿½ï¿½ï¿½")
+						+"\t"+rs.getString("name") //ï¿½ï¿½ï¿½Ú¿ï¿½("ï¿½Ã·ï¿½ï¿½ï¿½")
 						+"\t"+rs.getString("major")
 						+"\t"+rs.getString("grade")
 						+"\t"+rs.getDate("sdate"));
@@ -192,13 +192,13 @@ public class MysqlDb_01 {
 		Scanner sc = new Scanner(System.in);
 		int n=0;
 		while(true) {
-			System.out.println("1.insert 2.select 3.delete 4. update 0.Á¾·á");
+			System.out.println("1.insert 2.select 3.delete 4. update 0.ï¿½ï¿½ï¿½ï¿½");
 			n=Integer.parseInt(sc.nextLine());
 			if(n==1)
 				my.insert();
 			else if(n==0)
 			{
-				System.out.println("Á¾·á");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½");
 				break;
 			}
 			else if(n==2) {
@@ -211,7 +211,7 @@ public class MysqlDb_01 {
 				my.update();
 			}
 			else {
-				System.out.println("°ªÀ» ÀÔ·ÂÇÏ¼¼¿ä");
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 			}
 		}
 	}
