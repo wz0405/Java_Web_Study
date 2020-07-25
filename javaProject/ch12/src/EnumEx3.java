@@ -1,25 +1,43 @@
-enum Transportation { 
-	BUS(100)      { int fare(int distance) { return distance*BASIC_FARE;}},
-	TRAIN(150)    { int fare(int distance) { return distance*BASIC_FARE;}},
-	SHIP(100)     { int fare(int distance) { return distance*BASIC_FARE;}},
-	AIRPLANE(300) { int fare(int distance) { return distance*BASIC_FARE;}};
+enum Transportation {
+    BUS(100) {
+        int fare(int distance) {
+            return distance * BASIC_FARE;
+        }
+    },
+    TRAIN(150) {
+        int fare(int distance) {
+            return distance * BASIC_FARE;
+        }
+    },
+    SHIP(100) {
+        int fare(int distance) {
+            return distance * BASIC_FARE;
+        }
+    },
+    AIRPLANE(300) {
+        int fare(int distance) {
+            return distance * BASIC_FARE;
+        }
+    };
 
-	protected final int BASIC_FARE; // protected·Î ÇØ¾ß °¢ »ó¼ö¿¡¼­ Á¢±Ù°¡´É
-	
-	Transportation(int basicFare) { // private Transportation(int basicFare) {
-		BASIC_FARE = basicFare;
-	}
+    protected final int BASIC_FARE; // protectedï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ï¿½ï¿½
 
-	public int getBasicFare() { return BASIC_FARE; }
+    Transportation(int basicFare) { // private Transportation(int basicFare) {
+        BASIC_FARE = basicFare;
+    }
 
-	abstract int fare(int distance); // °Å¸®¿¡ µû¸¥ ¿ä±Ý °è»ê
+    public int getBasicFare() {
+        return BASIC_FARE;
+    }
+
+    abstract int fare(int distance); // ï¿½Å¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 }
 
 class EnumEx3 {
-	public static void main(String[] args) {
-		System.out.println("bus fare="     +Transportation.BUS.fare(100));
-		System.out.println("train fare="   +Transportation.TRAIN.fare(100));
-		System.out.println("ship fare="    +Transportation.SHIP.fare(100));
-	    System.out.println("airplane fare="+Transportation.AIRPLANE.fare(100));
-	}
+    public static void main(String[] args) {
+        System.out.println("bus fare=" + Transportation.BUS.fare(100));
+        System.out.println("train fare=" + Transportation.TRAIN.fare(100));
+        System.out.println("ship fare=" + Transportation.SHIP.fare(100));
+        System.out.println("airplane fare=" + Transportation.AIRPLANE.fare(100));
+    }
 }

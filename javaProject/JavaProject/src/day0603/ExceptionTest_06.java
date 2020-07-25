@@ -2,19 +2,19 @@ package day0603;
 
 public class ExceptionTest_06 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("ÇÁ·Î±×·¥½ÃÀÛ");
-		try {
-			//¿¹¿Ü°¡ ¹ß»ýÇÒ ¼ö ÀÖ´Â ÄÚµå
-		int num=3/0; //Á¤¼ö¸¦ 0À¸·Î ³ª´©¾úÀ» ¶§ ¿¡·¯¹ß»ý
-		}catch(Exception e){
-			//ÇØ°á¹æ¾È
-			//ÀÚ¼¼ÇÑ ¿¡·¯¸Þ¼¼Áö
-			e.printStackTrace();
-		}
-		System.out.println("ÇÁ·Î±×·¥Á¾·á");
-		
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ï¿½ï¿½");
+        try {
+            //ï¿½ï¿½ï¿½Ü°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Úµï¿½
+            int num = 3 / 0; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½
+        } catch (Exception e) {
+            //ï¿½Ø°ï¿½ï¿½ï¿½
+            //ï¿½Ú¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½
+            e.printStackTrace();
+        }
+        System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ï¿½ï¿½");
+
+    }
 
 }

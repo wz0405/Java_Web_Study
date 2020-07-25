@@ -1,63 +1,63 @@
 import java.util.concurrent.*;
 
 class ForkJoinEx1 {
-	static final ForkJoinPool pool = new ForkJoinPool();  // ¾²·¹µåÇ®À» »ý¼º
+    static final ForkJoinPool pool = new ForkJoinPool();  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-	public static void main(String[] args) {
-		long from = 1L;
-		long to   = 100_000_000L;
+    public static void main(String[] args) {
+        long from = 1L;
+        long to = 100_000_000L;
 
-		SumTask task = new SumTask(from, to);
+        SumTask task = new SumTask(from, to);
 
-		long start = System.currentTimeMillis(); // ½ÃÀÛ½Ã°£ ÃÊ±âÈ­
-		Long result = pool.invoke(task);
+        long start = System.currentTimeMillis(); // ï¿½ï¿½ï¿½Û½Ã°ï¿½ ï¿½Ê±ï¿½È­
+        Long result = pool.invoke(task);
 
-		System.out.println("Elapsed time(4 Core):"+(System.currentTimeMillis()-start));
-		System.out.printf("sum of %d~%d=%d%n", from, to, result);
-		System.out.println();
+        System.out.println("Elapsed time(4 Core):" + (System.currentTimeMillis() - start));
+        System.out.printf("sum of %d~%d=%d%n", from, to, result);
+        System.out.println();
 
-		result = 0L;
-		start = System.currentTimeMillis(); // ½ÃÀÛ½Ã°£ ÃÊ±âÈ­
-		for(long i=from;i<=to;i++)
-			result += i;
+        result = 0L;
+        start = System.currentTimeMillis(); // ï¿½ï¿½ï¿½Û½Ã°ï¿½ ï¿½Ê±ï¿½È­
+        for (long i = from; i <= to; i++)
+            result += i;
 
-		System.out.println("Elapsed time(1 Core):"+(System.currentTimeMillis()-start));
-		System.out.printf("sum of %d~%d=%d%n", from, to, result);
-	} // mainÀÇ ³¡
+        System.out.println("Elapsed time(1 Core):" + (System.currentTimeMillis() - start));
+        System.out.printf("sum of %d~%d=%d%n", from, to, result);
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }
 
 class SumTask extends RecursiveTask<Long> {
-	long from;
-	long to;
+    long from;
+    long to;
 
-	SumTask(long from, long to) {
-		this.from = from;
-		this.to    = to;
-	}
+    SumTask(long from, long to) {
+        this.from = from;
+        this.to = to;
+    }
 
-	public Long compute() {
-		long size = to - from;
+    public Long compute() {
+        long size = to - from;
 
-		if(size <= 5)     // ´õÇÒ ¼ýÀÚ°¡ 5°³ ÀÌÇÏ¸é
-			return sum(); // ¼ýÀÚÀÇ ÇÕÀ» ¹ÝÈ¯
+        if (size <= 5)     // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ 5ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½
+            return sum(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 
-		long half = (from+to)/2;
+        long half = (from + to) / 2;
 
-		// ¹üÀ§¸¦ ¹ÝÀ¸·Î ³ª´²¼­ µÎ °³ÀÇ ÀÛ¾÷À» »ý¼º
-		SumTask leftSum  = new SumTask(from, half);
-		SumTask rightSum = new SumTask(half+1, to);
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        SumTask leftSum = new SumTask(from, half);
+        SumTask rightSum = new SumTask(half + 1, to);
 
-		leftSum.fork();
+        leftSum.fork();
 
-		return rightSum.compute() + leftSum.join();
-	}
+        return rightSum.compute() + leftSum.join();
+    }
 
-	long sum() { // from~toÀÇ ¸ðµç ¼ýÀÚ¸¦ ´õÇÑ °á°ú¸¦ ¹ÝÈ¯
-		long tmp = 0L; 
+    long sum() { // from~toï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+        long tmp = 0L;
 
-		for(long i=from;i<=to;i++)
-			tmp += i;
+        for (long i = from; i <= to; i++)
+            tmp += i;
 
-		return tmp;
-	}
+        return tmp;
+    }
 }

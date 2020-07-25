@@ -1,46 +1,46 @@
 package day0604;
 
 
-
 public class ThreadTest_04 implements Runnable {
-	String name;
-	int num;
-	//»ý¼ºÀÚ
-	public ThreadTest_04(String name, int num) {
-		// TODO Auto-generated constructor stub
-		this.name=name;
-		this.num=num;
-	}
-	
-	public void run() {
-		for(int i=1;i<=num;i++) {
-			System.out.println(name+"======>"+i);
-			
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
+    String name;
+    int num;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		//RunableÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇÑ Å¬·¡½º »ý¼º
-		ThreadTest_04 th1=new ThreadTest_04("one",300);
-		ThreadTest_04 th2=new ThreadTest_04("two",300);
-		ThreadTest_04 th3=new ThreadTest_04("three",300);
-		
-		//¾²·¹µå »ý¼º
-		Thread t1 = new Thread(th1);
-		Thread t2 = new Thread(th2);
-		Thread t3 = new Thread(th3);
-		//start()´Â Runable»óÅÂ¿¡¼­ ½ºÄÉÁì·¯¿¡ ÀÇÇØ¼­ ÇÏ³ª¾¿ Running»óÅÂ°¡ µÈ´Ù
-		t1.start();
-		t2.start();
-		t3.start();
-	}
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public ThreadTest_04(String name, int num) {
+        // TODO Auto-generated constructor stub
+        this.name = name;
+        this.num = num;
+    }
+
+    public void run() {
+        for (int i = 1; i <= num; i++) {
+            System.out.println(name + "======>" + i);
+
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+
+        //Runableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        ThreadTest_04 th1 = new ThreadTest_04("one", 300);
+        ThreadTest_04 th2 = new ThreadTest_04("two", 300);
+        ThreadTest_04 th3 = new ThreadTest_04("three", 300);
+
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Thread t1 = new Thread(th1);
+        Thread t2 = new Thread(th2);
+        Thread t3 = new Thread(th3);
+        //start()ï¿½ï¿½ Runableï¿½ï¿½ï¿½Â¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ì·¯ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ Runningï¿½ï¿½ï¿½Â°ï¿½ ï¿½È´ï¿½
+        t1.start();
+        t2.start();
+        t3.start();
+    }
 
 }

@@ -1,10 +1,10 @@
 class FlowEx13 {
-	public static void main(String[] args) { 
-		int sum = 0;	// ÇÕ°è¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö.
+    public static void main(String[] args) {
+        int sum = 0;    // ï¿½Õ°è¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
-		for(int i=1; i <= 10; i++) {
-			sum += i ;	//	sum = sum + i;
-			System.out.printf("1ºÎÅÍ %2d ±îÁöÀÇ ÇÕ: %2d%n", i, sum);
-		}
-	} // mainÀÇ ³¡
+        for (int i = 1; i <= 10; i++) {
+            sum += i;    //	sum = sum + i;
+            System.out.printf("1ï¿½ï¿½ï¿½ï¿½ %2d ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½: %2d%n", i, sum);
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

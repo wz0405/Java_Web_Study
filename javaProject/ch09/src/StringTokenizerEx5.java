@@ -1,21 +1,21 @@
 import java.util.*;
 
 class StringTokenizerEx5 {
-	public static void main(String[] args) {
-		String data = "100,,,200,300";
+    public static void main(String[] args) {
+        String data = "100,,,200,300";
 
-		String[] result = data.split(",");
-		StringTokenizer st = new StringTokenizer(data, ",");
+        String[] result = data.split(",");
+        StringTokenizer st = new StringTokenizer(data, ",");
 
-		for(int i=0; i < result.length;i++)
-			System.out.print(result[i]+"|");
+        for (int i = 0; i < result.length; i++)
+            System.out.print(result[i] + "|");
 
-		System.out.println("°³¼ö:"+result.length);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½:" + result.length);
 
-		int i=0;
-		for(;st.hasMoreTokens();i++)
-			System.out.print(st.nextToken()+"|");
+        int i = 0;
+        for (; st.hasMoreTokens(); i++)
+            System.out.print(st.nextToken() + "|");
 
-		System.out.println("°³¼ö:"+i);
-	} // main
+        System.out.println("ï¿½ï¿½ï¿½ï¿½:" + i);
+    } // main
 }

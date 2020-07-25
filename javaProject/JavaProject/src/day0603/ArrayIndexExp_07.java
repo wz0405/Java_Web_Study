@@ -2,28 +2,28 @@ package day0603;
 
 public class ArrayIndexExp_07 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String []str= {"apple","banana"};
-		System.out.println("Â÷·Ê´ë·ÎÃâ·Â");
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String[] str = {"apple", "banana"};
+        System.out.println("ï¿½ï¿½ï¿½Ê´ï¿½ï¿½ï¿½ï¿½ï¿½");
 //		try {
 //			for(int i=0;i<=str.length;i++) {
 //				System.out.println(str[i]);
 //			}
 //		}catch (ArrayIndexOutOfBoundsException e) {
 //			// TODO: handle exception
-//			//excption½Ã ¹ß»ýÇÏ´Â ÄÚµå
+//			//excptionï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ï´ï¿½ ï¿½Úµï¿½
 //			System.out.println(e.getMessage());
 //		}
-		
-		for(int j=str.length;j>=0;j--) {
-			try {
-			System.out.println(str[j]);
-			}catch (Exception e) {
-				System.out.println(e.getMessage());
-				// TODO: handle exception
-			}
-		}
-	}
+
+        for (int j = str.length; j >= 0; j--) {
+            try {
+                System.out.println(str[j]);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                // TODO: handle exception
+            }
+        }
+    }
 
 }

@@ -3,29 +3,28 @@ package day0527;
 import java.util.Scanner;
 
 public class IfTest_06 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String name;
-		int java,jsp,spring;
-		double avg;
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-		name=sc.nextLine();
-		System.out.println("¼¼°ú¸ñÀÇ Á¡¼ö¸¦ Â÷·Ê·Î ÀÔ·ÂÇÏ¼¼¿ä");
-		java=sc.nextInt();
-		jsp=sc.nextInt();
-		spring=sc.nextInt();
-		
-		//°è»ê
-		avg=(java+jsp+spring)/3.0;
-		System.out.println("3°ú¸ñÀÇ Á¡¼ö:"+java+","+jsp+","+spring);
-		System.out.println("Æò±Õ:"+avg);
-		System.out.println("ÇÕ°ÝÁ¶°ÇÀº Æò±Õ 60Á¡ ÀÌ»óÀÌ°í °¢ °ú¸ñ ¸ðµÎ 40Á¡ ÀÌ»óÀÔ´Ï´Ù");
-		
-		if (avg>=60 && java>=40 && jsp>=40 && spring>=40) {
-			System.out.println(name+"´ÔÀº ÇÕ°ÝÀÔ´Ï´Ù");
-		}
-		else {
-			System.out.println(name+"´ÔÀº ºÒÇÕ°ÝÀÔ´Ï´Ù");
-		}
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name;
+        int java, jsp, spring;
+        double avg;
+        System.out.println("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        name = sc.nextLine();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê·ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        java = sc.nextInt();
+        jsp = sc.nextInt();
+        spring = sc.nextInt();
+
+        //ï¿½ï¿½ï¿½
+        avg = (java + jsp + spring) / 3.0;
+        System.out.println("3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½:" + java + "," + jsp + "," + spring);
+        System.out.println("ï¿½ï¿½ï¿½:" + avg);
+        System.out.println("ï¿½Õ°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 60ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 40ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ô´Ï´ï¿½");
+
+        if (avg >= 60 && java >= 40 && jsp >= 40 && spring >= 40) {
+            System.out.println(name + "ï¿½ï¿½ï¿½ï¿½ ï¿½Õ°ï¿½ï¿½Ô´Ï´ï¿½");
+        } else {
+            System.out.println(name + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Õ°ï¿½ï¿½Ô´Ï´ï¿½");
+        }
+    }
 }

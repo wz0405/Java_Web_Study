@@ -3,35 +3,36 @@ package day0604;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-//Å°º¸µå·ÎºÎÅÍ ¹®ÀÚ¿­À» ÀÐ¾îº¸´Â ¿¹Á¦
+
+//Å°ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½Ð¾îº¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 public class FileIOTest_04 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		BufferedReader br =null;
-		InputStreamReader ir = null;
-		
-		ir=new InputStreamReader(System.in);
-		br=new BufferedReader(ir);
-		
-		String str="";
-		
-		System.out.println("¹®ÀÚ¿­À» ÀÔ·ÂÇÏ¼¼¿ä");
-		try {
-			str=br.readLine();//ÇÑÁÙ¾¿ ÀÐ¾î¿Â´Ù
-			System.out.println("ÀÔ·ÂÇÑ¹®ÀÚ¿­ => "+str);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally{
-			try {
-				br.close();
-				ir.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        BufferedReader br = null;
+        InputStreamReader ir = null;
+
+        ir = new InputStreamReader(System.in);
+        br = new BufferedReader(ir);
+
+        String str = "";
+
+        System.out.println("ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        try {
+            str = br.readLine();//ï¿½ï¿½ï¿½Ù¾ï¿½ ï¿½Ð¾ï¿½Â´ï¿½
+            System.out.println("ï¿½Ô·ï¿½ï¿½Ñ¹ï¿½ï¿½Ú¿ï¿½ => " + str);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+                ir.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
 
 }

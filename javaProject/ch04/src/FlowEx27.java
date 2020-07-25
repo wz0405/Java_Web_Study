@@ -1,27 +1,27 @@
 import java.util.*;
 
 class FlowEx27 {
-	public static void main(String[] args) { 
-		int num;
-		int sum = 0;
-		boolean flag = true;   // while¹®ÀÇ Á¶°Ç½ÄÀ¸·Î »ç¿ëµÉ º¯¼ö
+    public static void main(String[] args) {
+        int num;
+        int sum = 0;
+        boolean flag = true;   // whileï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-		System.out.println("ÇÕ°è¸¦ ±¸ÇÒ ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(²ø³»·Á¸é 0À» ÀÔ·Â)");
+        System.out.println("ï¿½Õ°è¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ ï¿½Ô·ï¿½)");
 
-		while(flag) {    // flagÀÇ °ªÀÌ trueÀÌ¹Ç·Î Á¶°Ç½ÄÀº ÂüÀÌ µÈ´Ù.
-			System.out.print(">>");
+        while (flag) {    // flagï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ trueï¿½Ì¹Ç·ï¿½ ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½È´ï¿½.
+            System.out.print(">>");
 
-			Scanner scanner = new Scanner(System.in);
-			String tmp = scanner.nextLine();
-			num = Integer.parseInt(tmp);  
+            Scanner scanner = new Scanner(System.in);
+            String tmp = scanner.nextLine();
+            num = Integer.parseInt(tmp);
 
-			if(num!=0) {  
-				sum += num; // numÀÌ 0ÀÌ ¾Æ´Ï¸é, sum¿¡ ´õÇÑ´Ù.
-			} else {
-				flag = false;   // numÀÌ 0ÀÌ¸é, flagÀÇ °ªÀ» false·Î º¯°æ.
-			}
-		} // while¹®ÀÇ ³¡
+            if (num != 0) {
+                sum += num; // numï¿½ï¿½ 0ï¿½ï¿½ ï¿½Æ´Ï¸ï¿½, sumï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½.
+            } else {
+                flag = false;   // numï¿½ï¿½ 0ï¿½Ì¸ï¿½, flagï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ falseï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+            }
+        } // whileï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-		System.out.println("ÇÕ°è:"+ sum);
-	}
+        System.out.println("ï¿½Õ°ï¿½:" + sum);
+    }
 }

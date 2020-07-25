@@ -3,79 +3,82 @@ import java.io.*;
 import java.util.*;
 
 public class TcpIpMultichatServer {
-	HashMap clients;
-	
-	TcpIpMultichatServer() {
-		clients = new HashMap();
-		Collections.synchronizedMap(clients);
-	}
+    HashMap clients;
 
-	public void start() {
-		ServerSocket serverSocket = null;
-		Socket socket = null;
+    TcpIpMultichatServer() {
+        clients = new HashMap();
+        Collections.synchronizedMap(clients);
+    }
 
-		try {
-			serverSocket = new ServerSocket(7777);
-			System.out.println("¼­¹ö°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.");
+    public void start() {
+        ServerSocket serverSocket = null;
+        Socket socket = null;
 
-			while(true) {
-				socket = serverSocket.accept();
-				System.out.println("["+socket.getInetAddress()+":"+socket.getPort()+"]"+"¿¡¼­ Á¢¼ÓÇÏ¿´½À´Ï´Ù.");
-				ServerReceiver thread = new ServerReceiver(socket);
-				thread.start();
-			}
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	} // start()
+        try {
+            serverSocket = new ServerSocket(7777);
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÛµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
-	void sendToAll(String msg) {
-		Iterator it = clients.keySet().iterator();
-		
-		while(it.hasNext()) {
-			try {
-				DataOutputStream out = (DataOutputStream)clients.get(it.next());
-				out.writeUTF(msg);
-			} catch(IOException e){}
-		} // while
-	} // sendToAll
+            while (true) {
+                socket = serverSocket.accept();
+                System.out.println("[" + socket.getInetAddress() + ":" + socket.getPort() + "]" + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+                ServerReceiver thread = new ServerReceiver(socket);
+                thread.start();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } // start()
 
-	public static void main(String args[]) {
-		new TcpIpMultichatServer().start();
-	} 
-	class ServerReceiver extends Thread {
-		Socket socket;
-		DataInputStream in;
-		DataOutputStream out;
+    void sendToAll(String msg) {
+        Iterator it = clients.keySet().iterator();
 
-		ServerReceiver(Socket socket) {
-			this.socket = socket;
-			try {
-				in  = new DataInputStream(socket.getInputStream());
-				out = new DataOutputStream(socket.getOutputStream());
-			} catch(IOException e) {}
-		}
+        while (it.hasNext()) {
+            try {
+                DataOutputStream out = (DataOutputStream) clients.get(it.next());
+                out.writeUTF(msg);
+            } catch (IOException e) {
+            }
+        } // while
+    } // sendToAll
 
-		public void run() {
-			String name = "";
-			try {
-				name = in.readUTF();
-				sendToAll("#"+name+"´ÔÀÌ µé¾î¿À¼Ì½À´Ï´Ù.");
+    public static void main(String args[]) {
+        new TcpIpMultichatServer().start();
+    }
 
-				clients.put(name, out);
-				System.out.println("ÇöÀç ¼­¹öÁ¢¼ÓÀÚ ¼ö´Â "+ clients.size()+"ÀÔ´Ï´Ù.");
+    class ServerReceiver extends Thread {
+        Socket socket;
+        DataInputStream in;
+        DataOutputStream out;
 
-				while(in!=null) {
-					sendToAll(in.readUTF());
-				}
-			} catch(IOException e) {
-				// ignore
-			} finally {
-				sendToAll("#"+name+"´ÔÀÌ ³ª°¡¼Ì½À´Ï´Ù.");
-				clients.remove(name);
-				System.out.println("["+socket.getInetAddress() +":"+socket.getPort()+"]"+"¿¡¼­ Á¢¼ÓÀ» Á¾·áÇÏ¿´½À´Ï´Ù.");
-				System.out.println("ÇöÀç ¼­¹öÁ¢¼ÓÀÚ ¼ö´Â "+ clients.size()+"ÀÔ´Ï´Ù.");
-			} // try
-		} // run
-	} // ReceiverThread
+        ServerReceiver(Socket socket) {
+            this.socket = socket;
+            try {
+                in = new DataInputStream(socket.getInputStream());
+                out = new DataOutputStream(socket.getOutputStream());
+            } catch (IOException e) {
+            }
+        }
+
+        public void run() {
+            String name = "";
+            try {
+                name = in.readUTF();
+                sendToAll("#" + name + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ï´ï¿½.");
+
+                clients.put(name, out);
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ " + clients.size() + "ï¿½Ô´Ï´ï¿½.");
+
+                while (in != null) {
+                    sendToAll(in.readUTF());
+                }
+            } catch (IOException e) {
+                // ignore
+            } finally {
+                sendToAll("#" + name + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ï´ï¿½.");
+                clients.remove(name);
+                System.out.println("[" + socket.getInetAddress() + ":" + socket.getPort() + "]" + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ " + clients.size() + "ï¿½Ô´Ï´ï¿½.");
+            } // try
+        } // run
+    } // ReceiverThread
 } // class

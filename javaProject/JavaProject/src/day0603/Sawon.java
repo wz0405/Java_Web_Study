@@ -1,41 +1,44 @@
 package day0603;
 
 public class Sawon {
-	Sawon(){}
-	private String sawonName;
-	private int giboPay, timeSu, familysu;
-	
-	//»ý¼ºÀÚ
-	public Sawon(String sawonName, int giboPay, int timeSu, int familysu) {
-		this.sawonName = sawonName;
-		this.giboPay = giboPay;
-		this.timeSu = timeSu;
-		this.familysu = familysu;
-		
-	}
-	//°¡Á·¼ö´ç...3ÀÎ¹Ì¸¸Àº 5¸¸¿ø, ÀÌ»óÀº 7¸¸¿ø
-	public int getFamSu() {
-		if(familysu<3) {
-			return 50000;
-		}
-		else {
-			return 70000;
-		}
-	}
-	
-	//ÃÊ°ú¼ö´çÀº ÃÊ°ú ½Ã°£ *20000¿ø ´Ü,5½Ã°£ÀÌ»óÀº ¹«Á¶°Ç 100000¿ø
-	public int getTimeSu() {
-		if(timeSu>=5) {
-			return 100000;
-		}
-		else {
-			return timeSu*20000;
-		}
-	}
-	public int getTotalPay() {
-		return giboPay+getFamSu()+getTimeSu();
-	}
-	public void getSawon() {
-		System.out.println(sawonName+"\t"+giboPay+"\t"+getFamSu()+"\t"+getTimeSu()+"\t"+getTotalPay());
-	}
+    Sawon() {
+    }
+
+    private String sawonName;
+    private int giboPay, timeSu, familysu;
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Sawon(String sawonName, int giboPay, int timeSu, int familysu) {
+        this.sawonName = sawonName;
+        this.giboPay = giboPay;
+        this.timeSu = timeSu;
+        this.familysu = familysu;
+
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...3ï¿½Î¹Ì¸ï¿½ï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½, ï¿½Ì»ï¿½ï¿½ï¿½ 7ï¿½ï¿½ï¿½ï¿½
+    public int getFamSu() {
+        if (familysu < 3) {
+            return 50000;
+        } else {
+            return 70000;
+        }
+    }
+
+    //ï¿½Ê°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½Ã°ï¿½ *20000ï¿½ï¿½ ï¿½ï¿½,5ï¿½Ã°ï¿½ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 100000ï¿½ï¿½
+    public int getTimeSu() {
+        if (timeSu >= 5) {
+            return 100000;
+        } else {
+            return timeSu * 20000;
+        }
+    }
+
+    public int getTotalPay() {
+        return giboPay + getFamSu() + getTimeSu();
+    }
+
+    public void getSawon() {
+        System.out.println(sawonName + "\t" + giboPay + "\t" + getFamSu() + "\t" + getTimeSu() + "\t" + getTotalPay());
+    }
 }

@@ -1,19 +1,18 @@
 class ExceptionEx17 {
-	public static void main(String[] args) 
-	{
-		try  {
-			method1();		
-		} catch (Exception e)	{
-			System.out.println("main¸Þ¼­µå¿¡¼­ ¿¹¿Ü°¡ Ã³¸®µÇ¾ú½À´Ï´Ù.");
-		}
-	}	// main¸Þ¼­µåÀÇ ³¡
+    public static void main(String[] args) {
+        try {
+            method1();
+        } catch (Exception e) {
+            System.out.println("mainï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ü°ï¿½ Ã³ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        }
+    }    // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-	static void method1() throws Exception {
-		try {
-			throw new Exception();
-		} catch (Exception e) {
-			System.out.println("method1¸Þ¼­µå¿¡¼­ ¿¹¿Ü°¡ Ã³¸®µÇ¾ú½À´Ï´Ù.");
-			throw e;			// ´Ù½Ã ¿¹¿Ü¸¦ ¹ß»ý½ÃÅ²´Ù.
-		}
-	}	// method1¸Þ¼­µåÀÇ ³¡
+    static void method1() throws Exception {
+        try {
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.println("method1ï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ü°ï¿½ Ã³ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            throw e;            // ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½Ü¸ï¿½ ï¿½ß»ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
+        }
+    }    // method1ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 }

@@ -2,25 +2,25 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class SerialEx2 {
-	public static void main(String[] args) {
-		try {
-			String fileName = "UserInfo.ser";
-			FileInputStream     fis = new FileInputStream(fileName);
-			BufferedInputStream bis = new BufferedInputStream(fis);
+    public static void main(String[] args) {
+        try {
+            String fileName = "UserInfo.ser";
+            FileInputStream fis = new FileInputStream(fileName);
+            BufferedInputStream bis = new BufferedInputStream(fis);
 
-			ObjectInputStream in = new ObjectInputStream(bis);
+            ObjectInputStream in = new ObjectInputStream(bis);
 
-			// °´Ã¼¸¦ ÀÐÀ» ¶§´Â Ãâ·ÂÇÑ ¼ø¼­¿Í ÀÏÄ¡ÇØ¾ßÇÑ´Ù.
-			UserInfo u1 = (UserInfo)in.readObject();
-			UserInfo u2 = (UserInfo)in.readObject();
-			ArrayList list = (ArrayList)in.readObject();
+            // ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ø¾ï¿½ï¿½Ñ´ï¿½.
+            UserInfo u1 = (UserInfo) in.readObject();
+            UserInfo u2 = (UserInfo) in.readObject();
+            ArrayList list = (ArrayList) in.readObject();
 
-			System.out.println(u1);
-			System.out.println(u2);
-			System.out.println(list);
-			in.close();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	} // main
+            System.out.println(u1);
+            System.out.println(u2);
+            System.out.println(list);
+            in.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } // main
 } // class

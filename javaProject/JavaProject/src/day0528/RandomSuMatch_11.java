@@ -3,24 +3,22 @@ package day0528;
 import java.util.Scanner;
 
 public class RandomSuMatch_11 {
-	public static void main(String[] args) {
-		int j=(int)(Math.random()*20)+1;
-		Scanner sc = new Scanner(System.in);
-		int num=0;
-		while(true) {
-			System.out.println("¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-			num=sc.nextInt();
-			if (j<num) {
-				System.out.println(num+"º¸´Ù ÀÛ½À´Ï´Ù.");
-			}
-			else if(j>num) {
-				System.out.println(num+"º¸´Ù Å®´Ï´Ù.");
-				
-			}
-			else {
-				System.out.println("¸Â¾Ò½À´Ï´Ù Á¤´äÀº"+j+"ÀÔ´Ï´Ù");
-				break;
-			}
-		}
-	}
+    public static void main(String[] args) {
+        int j = (int) (Math.random() * 20) + 1;
+        Scanner sc = new Scanner(System.in);
+        int num = 0;
+        while (true) {
+            System.out.println("ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+            num = sc.nextInt();
+            if (j < num) {
+                System.out.println(num + "ï¿½ï¿½ï¿½ï¿½ ï¿½Û½ï¿½ï¿½Ï´ï¿½.");
+            } else if (j > num) {
+                System.out.println(num + "ï¿½ï¿½ï¿½ï¿½ Å®ï¿½Ï´ï¿½.");
+
+            } else {
+                System.out.println("ï¿½Â¾Ò½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + j + "ï¿½Ô´Ï´ï¿½");
+                break;
+            }
+        }
+    }
 }

@@ -1,83 +1,95 @@
 import java.util.ArrayList;
 
 class ThreadWaitEx1 {
-	public static void main(String[] args) throws Exception {
-		Table table = new Table(); // ¿©·¯ ¾²·¹µå°¡ °øÀ¯ÇÏ´Â °´Ã¼
+    public static void main(String[] args) throws Exception {
+        Table table = new Table(); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½å°¡ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Ã¼
 
-		new Thread(new Cook(table), "COOK1").start();
-		new Thread(new Customer(table, "donut"),  "CUST1").start();
-		new Thread(new Customer(table, "burger"), "CUST2").start();
-	
-		// 0.1ÃÊ(100 ¹Ð¸® ¼¼ÄÁµå) ÈÄ¿¡ °­Á¦ Á¾·á½ÃÅ²´Ù.
-		Thread.sleep(100);
-		System.exit(0);
-	}
+        new Thread(new Cook(table), "COOK1").start();
+        new Thread(new Customer(table, "donut"), "CUST1").start();
+        new Thread(new Customer(table, "burger"), "CUST2").start();
+
+        // 0.1ï¿½ï¿½(100 ï¿½Ð¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
+        Thread.sleep(100);
+        System.exit(0);
+    }
 }
 
 class Customer implements Runnable {
-	private Table table;
-	private String food;
+    private Table table;
+    private String food;
 
-	Customer(Table table, String food) {
-		this.table = table;  
-		this.food  = food;
-	}
+    Customer(Table table, String food) {
+        this.table = table;
+        this.food = food;
+    }
 
-	public void run() {
-		while(true) {
-			try { Thread.sleep(10);} catch(InterruptedException e) {}
-			String name = Thread.currentThread().getName();
-			
-			if(eatFood())
-				System.out.println(name + " ate a " + food);
-			else 
-				System.out.println(name + " failed to eat. :(");
-		} // while
-	}
+    public void run() {
+        while (true) {
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+            }
+            String name = Thread.currentThread().getName();
 
-	boolean eatFood() { return table.remove(food); }
+            if (eatFood())
+                System.out.println(name + " ate a " + food);
+            else
+                System.out.println(name + " failed to eat. :(");
+        } // while
+    }
+
+    boolean eatFood() {
+        return table.remove(food);
+    }
 }
 
 class Cook implements Runnable {
-	private Table table;
-	
-	Cook(Table table) {	this.table = table; }
+    private Table table;
 
-	public void run() {
-		while(true) {
-			// ÀÓÀÇÀÇ ¿ä¸®¸¦ ÇÏ³ª ¼±ÅÃÇØ¼­ table¿¡ Ãß°¡ÇÑ´Ù.
-			int idx = (int)(Math.random()*table.dishNum());
-			table.add(table.dishNames[idx]);
+    Cook(Table table) {
+        this.table = table;
+    }
 
-			try { Thread.sleep(1);} catch(InterruptedException e) {}
-		} // while
-	}
+    public void run() {
+        while (true) {
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ä¸®ï¿½ï¿½ ï¿½Ï³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ tableï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ñ´ï¿½.
+            int idx = (int) (Math.random() * table.dishNum());
+            table.add(table.dishNames[idx]);
+
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+            }
+        } // while
+    }
 }
 
 class Table {
-	String[] dishNames = { "donut","donut","burger" }; // donutÀÌ ´õ ÀÚÁÖ ³ª¿Â´Ù.
-	final int MAX_FOOD = 6;  // Å×ÀÌºí¿¡ ³õÀ» ¼ö ÀÖ´Â ÃÖ´ë À½½ÄÀÇ °³¼ö
-	
-private ArrayList<String> dishes = new ArrayList<>();
+    String[] dishNames = {"donut", "donut", "burger"}; // donutï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½.
+    final int MAX_FOOD = 6;  // ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-	public void add(String dish) {
-		// Å×ÀÌºí¿¡ À½½ÄÀÌ °¡µæÃ¡À¸¸é, Å×ÀÌºí¿¡ À½½ÄÀ» Ãß°¡ÇÏÁö ¾Ê´Â´Ù.
-		if(dishes.size() >= MAX_FOOD)	
-			return;
-		dishes.add(dish);
-		System.out.println("Dishes:" + dishes.toString());
-	}
+    private ArrayList<String> dishes = new ArrayList<>();
 
-	public boolean remove(String dishName) {
-		// ÁöÁ¤µÈ ¿ä¸®¿Í ÀÏÄ¡ÇÏ´Â ¿ä¸®¸¦ Å×ÀÌºí¿¡¼­ Á¦°ÅÇÑ´Ù. 
-		for(int i=0; i<dishes.size();i++)
-			if(dishName.equals(dishes.get(i))) {
-				dishes.remove(i);
-				return true;
-			}
+    public void add(String dish) {
+        // ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ìºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
+        if (dishes.size() >= MAX_FOOD)
+            return;
+        dishes.add(dish);
+        System.out.println("Dishes:" + dishes.toString());
+    }
 
-		return false;
-	}
+    public boolean remove(String dishName) {
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ï´ï¿½ ï¿½ä¸®ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+        for (int i = 0; i < dishes.size(); i++)
+            if (dishName.equals(dishes.get(i))) {
+                dishes.remove(i);
+                return true;
+            }
 
-	public int dishNum() { return dishNames.length; }
+        return false;
+    }
+
+    public int dishNum() {
+        return dishNames.length;
+    }
 }

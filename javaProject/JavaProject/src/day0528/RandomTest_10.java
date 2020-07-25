@@ -1,15 +1,15 @@
 package day0528;
 
 public class RandomTest_10 {
-	public static void main(String[] args) {
-		//Math.random() ÇÑ¼ö´Â 0 ÀÌ»ó 1 ¹Ì¸¸ÀÇ ´õºíÇü ½Ç¼ö°ªÀ» ¹ÝÈ¯
-		
-		//10°³ÀÇ ³­¼ö ¹ß»ý
-		for(int i=0;i<10;i++) {
-			double j=Math.random();
-			System.out.println(j);
-		}
-	}
+    public static void main(String[] args) {
+        //Math.random() ï¿½Ñ¼ï¿½ï¿½ï¿½ 0 ï¿½Ì»ï¿½ 1 ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+
+        //10ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½
+        for (int i = 0; i < 10; i++) {
+            double j = Math.random();
+            System.out.println(j);
+        }
+    }
 }
 //int n=(int)(Math.random()*m)+n;
 //n~(m+n-1)

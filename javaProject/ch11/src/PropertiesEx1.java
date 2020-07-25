@@ -1,30 +1,30 @@
 import java.util.*;
 
 class PropertiesEx1 {
-	public static void main(String[] args) {
-		Properties prop = new Properties();
+    public static void main(String[] args) {
+        Properties prop = new Properties();
 
-		// prop¿¡ Å°¿Í °ª(key, value)À» ÀúÀåÇÑ´Ù.
-		prop.setProperty("timeout","30");
-		prop.setProperty("language","kr");
-		prop.setProperty("size","10");
-		prop.setProperty("capacity","10");
+        // propï¿½ï¿½ Å°ï¿½ï¿½ ï¿½ï¿½(key, value)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        prop.setProperty("timeout", "30");
+        prop.setProperty("language", "kr");
+        prop.setProperty("size", "10");
+        prop.setProperty("capacity", "10");
 
-		// prop¿¡ ÀúÀåµÈ ¿ä¼ÒµéÀ» EnumerationÀ» ÀÌ¿ëÇØ¼­ Ãâ·ÂÇÑ´Ù.
-		Enumeration e = prop.propertyNames();
+        // propï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òµï¿½ï¿½ï¿½ Enumerationï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        Enumeration e = prop.propertyNames();
 
-		while(e.hasMoreElements()) {
-			String element = (String)e.nextElement();
-			System.out.println(element + "="+ prop.getProperty(element));
-		}
+        while (e.hasMoreElements()) {
+            String element = (String) e.nextElement();
+            System.out.println(element + "=" + prop.getProperty(element));
+        }
 
-		System.out.println();
-		prop.setProperty("size","20");	// sizeÀÇ °ªÀ» 20À¸·Î º¯°æÇÑ´Ù.
-		System.out.println("size="       + prop.getProperty("size"));
-		System.out.println("capacity="   + prop.getProperty("capacity", "20"));
-		System.out.println("loadfactor=" + prop.getProperty("loadfactor", "0.75"));
+        System.out.println();
+        prop.setProperty("size", "20");    // sizeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 20ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        System.out.println("size=" + prop.getProperty("size"));
+        System.out.println("capacity=" + prop.getProperty("capacity", "20"));
+        System.out.println("loadfactor=" + prop.getProperty("loadfactor", "0.75"));
 
-		System.out.println(prop);	// prop¿¡ ÀúÀåµÈ ¿ä¼ÒµéÀ» Ãâ·ÂÇÑ´Ù.
-		prop.list(System.out);      // prop¿¡ ÀúÀåµÈ ¿ä¼ÒµéÀ» È­¸é(System.out)¿¡ Ãâ·ÂÇÑ´Ù.
-	}
+        System.out.println(prop);    // propï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        prop.list(System.out);      // propï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òµï¿½ï¿½ï¿½ È­ï¿½ï¿½(System.out)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+    }
 }

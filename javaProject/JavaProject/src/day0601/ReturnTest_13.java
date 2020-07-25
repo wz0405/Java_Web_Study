@@ -1,17 +1,22 @@
 package day0601;
 
+import java.util.Scanner;
+
 public class ReturnTest_13 {
 
-	public static void main(String[] args) {
-		divide(4,0);
-	}
-	public static void divide(int num1, int num2)
-	{
-		if(num2==0) {
-			System.out.println("0À¸·Î´Â ³ª´­¼ö ¾ø½À´Ï´Ù.");
-			return;
-		}
-		else
-			System.out.println("³ª´°¼ÀÀÇ °á°ú: "+num1/num2);
-	}
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+    	String y =sc.nextLine();
+    	System.out.println(y);
+        divide(4, 5);
+    }
+
+    public static void divide(int num1, int num2) {
+        if (num2 == 0) {
+            System.out.println("0ï¿½ï¿½ï¿½Î´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            return;
+        } else
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½: " + num1 / num2);
+    }
+
 }

@@ -1,30 +1,30 @@
 import java.util.*;
 
 class FlowEx32 {
-	public static void main(String[] args) { 
-		int menu = 0;
-		int num  = 0;
+    public static void main(String[] args) {
+        int menu = 0;
+        int num = 0;
 
-		Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-		while(true) {
-			System.out.println("(1) square");
-			System.out.println("(2) square root");
-			System.out.println("(3) log");
-			System.out.print("¿øÇÏ´Â ¸Þ´º(1~3)¸¦ ¼±ÅÃÇÏ¼¼¿ä.(Á¾·á:0)>");
+        while (true) {
+            System.out.println("(1) square");
+            System.out.println("(2) square root");
+            System.out.println("(3) log");
+            System.out.print("ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ´ï¿½(1~3)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(ï¿½ï¿½ï¿½ï¿½:0)>");
 
-			String tmp = scanner.nextLine(); // È­¸é¿¡¼­ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-			menu = Integer.parseInt(tmp);    // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)À» ¼ýÀÚ·Î º¯È¯
+            String tmp = scanner.nextLine(); // È­ï¿½é¿¡ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            menu = Integer.parseInt(tmp);    // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-			if(menu==0) {
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
-				break;
-			} else if (!(1 <= menu && menu <= 3)) {
-				System.out.println("¸Þ´º¸¦ Àß¸ø ¼±ÅÃÇÏ¼Ì½À´Ï´Ù.(Á¾·á´Â 0)");
-				continue;		
-			}
-			
-			System.out.println("¼±ÅÃÇÏ½Å ¸Þ´º´Â "+ menu +"¹øÀÔ´Ï´Ù.");
-		}
-	} // mainÀÇ ³¡
+            if (menu == 0) {
+                System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+                break;
+            } else if (!(1 <= menu && menu <= 3)) {
+                System.out.println("ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.(ï¿½ï¿½ï¿½ï¿½ï¿½ 0)");
+                continue;
+            }
+
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½Þ´ï¿½ï¿½ï¿½ " + menu + "ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

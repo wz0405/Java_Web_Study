@@ -2,22 +2,22 @@ package day0602;
 
 public class InterABImpl implements Inter_A, Inter_B {
 
-	@Override
-	public void write() {
-		// TODO Auto-generated method stub
-		System.out.println("¾²±â");
-	}
+    @Override
+    public void write() {
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½ï¿½ï¿½ï¿½");
+    }
 
-	@Override
-	public void draw() {
-		// TODO Auto-generated method stub
-		System.out.println("±×¸®±â");
-	}
+    @Override
+    public void draw() {
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½×¸ï¿½ï¿½ï¿½");
+    }
 
-	@Override
-	public void play() {
-		// TODO Auto-generated method stub
-		System.out.println("³î±â");
-	}
+    @Override
+    public void play() {
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½ï¿½ï¿½");
+    }
 
 }

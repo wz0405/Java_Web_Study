@@ -1,16 +1,15 @@
-class StaticBlockTest 
-{
-	static int[] arr = new int[10];
+class StaticBlockTest {
+    static int[] arr = new int[10];
 
-	static {
-		for(int i=0;i<arr.length;i++) {
-			// 1°ú 10»çÀÌÀÇ ÀÓÀÇÀÇ °ªÀ» ¹è¿­ arr¿¡ ÀúÀåÇÑ´Ù.
-			arr[i] = (int)(Math.random()*10) + 1;
-		}
-	}
+    static {
+        for (int i = 0; i < arr.length; i++) {
+            // 1ï¿½ï¿½ 10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ arrï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            arr[i] = (int) (Math.random() * 10) + 1;
+        }
+    }
 
-	public static void main(String args[]) {
-		for(int i=0; i<arr.length;i++)
-			System.out.println("arr["+i+"] :" + arr[i]);
-	}
+    public static void main(String args[]) {
+        for (int i = 0; i < arr.length; i++)
+            System.out.println("arr[" + i + "] :" + arr[i]);
+    }
 }

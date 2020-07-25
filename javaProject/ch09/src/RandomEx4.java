@@ -1,33 +1,33 @@
 import java.util.*;
 
 class RandomEx4 {
-	final static int RECORD_NUM = 10;	// »ý¼ºÇÒ ·¹ÄÚµåÀÇ ¼ö¸¦ Á¤ÇÑ´Ù.
-	final static String TABLE_NAME = "TEST_TABLE";
-	final static String[] CODE1 = {"010","011","017","018","019"};
-	final static String[] CODE2 = {"³²ÀÚ", "¿©ÀÚ"};
-	final static String[] CODE3 = {"10´ë","20´ë","30´ë","40´ë","50´ë"};
+    final static int RECORD_NUM = 10;    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½.
+    final static String TABLE_NAME = "TEST_TABLE";
+    final static String[] CODE1 = {"010", "011", "017", "018", "019"};
+    final static String[] CODE2 = {"ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½"};
+    final static String[] CODE3 = {"10ï¿½ï¿½", "20ï¿½ï¿½", "30ï¿½ï¿½", "40ï¿½ï¿½", "50ï¿½ï¿½"};
 
-	public static void main(String[] args) {
-		for(int i=0; i < RECORD_NUM; i++) {
-			System.out.println(" INSERT INTO "+TABLE_NAME
-					+  " VALUES ("
-					+  " '" + getRandArr(CODE1) + "'"
-					+  ", '" + getRandArr(CODE2) + "'"
-					+  ", '" + getRandArr(CODE3) + "'"
-					+  ",  " + getRand(100, 200)	// 100~200 »çÀÌÀÇ °ªÀ» ¾ò´Â´Ù.
-					+ "); ");
-		}
-	}
+    public static void main(String[] args) {
+        for (int i = 0; i < RECORD_NUM; i++) {
+            System.out.println(" INSERT INTO " + TABLE_NAME
+                    + " VALUES ("
+                    + " '" + getRandArr(CODE1) + "'"
+                    + ", '" + getRandArr(CODE2) + "'"
+                    + ", '" + getRandArr(CODE3) + "'"
+                    + ",  " + getRand(100, 200)    // 100~200 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+                    + "); ");
+        }
+    }
 
-	public static String getRandArr(String[] arr) {
-		return arr[getRand(arr.length-1)];	// ¹è¿­¿¡ ÀúÀåµÈ °ª Áß ÇÏ³ª¸¦ ¹ÝÈ¯ÇÑ´Ù.
-	}	
+    public static String getRandArr(String[] arr) {
+        return arr[getRand(arr.length - 1)];    // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+    }
 
-	public static int getRand(int n) {
-		return getRand(0, n);
-	}	
+    public static int getRand(int n) {
+        return getRand(0, n);
+    }
 
-	public static int getRand(int from, int to) {
-	      return (int)(Math.random()*(Math.abs(to-from)+1))+Math.min(from, to);
-	}	
+    public static int getRand(int from, int to) {
+        return (int) (Math.random() * (Math.abs(to - from) + 1)) + Math.min(from, to);
+    }
 }

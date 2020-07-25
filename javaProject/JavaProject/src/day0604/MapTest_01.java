@@ -6,29 +6,29 @@ import java.util.Map;
 import java.util.Set;
 
 public class MapTest_01 {
-	//key°ª value°ªÀ» Ã£´Â´Ù
-	//¼ø¼­´Â À¯ÁöµÇÁö¾ÊÀ½
-	//Å°´Â Áßº¹Çã¿ëÇÏÁö¾Ê°í °ªÀº Áßº¹Çã¿ëÇÔ
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Map<String, String>map=new HashMap<String, String>();
-		map.put("³Ñ¹ö¿ø", "À§±âÅ»Ãâ");
-		map.put("name","°­È£µ¿");
-		System.out.println(map.get("³Ñ¹ö¿ø"));
-		System.out.println(map.get("blood")); //¸Ê¿¡ ¾ø´Â Å°°ªÀ¸·Î ±¸ÇÏ¸é ³Î°ª
-		//Å°°ªÀ» ¸ÕÀú ÇÑ²¨¹ø¿¡ ¾òÀºÈÄ °ªÀ» ¾ò´Â ¹æ¹ý
-		Set<String>keyset=map.keySet();
-		System.out.println("1.¹æ¹ý");
-		Iterator<String>keyiter=keyset.iterator();
-		while(keyiter.hasNext()) {
-			String key=keyiter.next();
-			System.out.println(key+" "+map.get(key));
-		}
-		
-		System.out.println("2.¹æ¹ý");
-		for(String key:keyset) {
-			System.out.println(key+" "+map.get(key));
-		}
-	}
+    //keyï¿½ï¿½ valueï¿½ï¿½ï¿½ï¿½ Ã£ï¿½Â´ï¿½
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //Å°ï¿½ï¿½ ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("ï¿½Ñ¹ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½Å»ï¿½ï¿½");
+        map.put("name", "ï¿½ï¿½È£ï¿½ï¿½");
+        System.out.println(map.get("ï¿½Ñ¹ï¿½ï¿½ï¿½"));
+        System.out.println(map.get("blood")); //ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Î°ï¿½
+        //Å°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ²ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        Set<String> keyset = map.keySet();
+        System.out.println("1.ï¿½ï¿½ï¿½");
+        Iterator<String> keyiter = keyset.iterator();
+        while (keyiter.hasNext()) {
+            String key = keyiter.next();
+            System.out.println(key + " " + map.get(key));
+        }
+
+        System.out.println("2.ï¿½ï¿½ï¿½");
+        for (String key : keyset) {
+            System.out.println(key + " " + map.get(key));
+        }
+    }
 
 }

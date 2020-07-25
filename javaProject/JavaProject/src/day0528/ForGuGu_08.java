@@ -4,28 +4,26 @@ import java.util.Scanner;
 
 public class ForGuGu_08 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int dan=0;
-		// TODO Auto-generated method stub
-		while(true) {
-			System.out.println("¸î´Ü?");
-			dan=sc.nextInt();
-			if (dan>=2 && dan<=9) {
-				System.out.println(dan+"´Ü");
-				for (int i=1;i<=9;i++) {
-					System.out.println(dan+"x"+i+"="+dan*i);
-					}
-				System.out.println("");
-			}
-			else if(dan==0) {
-				System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù");
-				break;
-			}
-			else {
-				System.out.println("Àß¸øÀÔ·ÂÇß½À´Ï´Ù.");
-			}
-		}
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int dan = 0;
+        // TODO Auto-generated method stub
+        while (true) {
+            System.out.println("ï¿½ï¿½ï¿½?");
+            dan = sc.nextInt();
+            if (dan >= 2 && dan <= 9) {
+                System.out.println(dan + "ï¿½ï¿½");
+                for (int i = 1; i <= 9; i++) {
+                    System.out.println(dan + "x" + i + "=" + dan * i);
+                }
+                System.out.println("");
+            } else if (dan == 0) {
+                System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
+                break;
+            } else {
+                System.out.println("ï¿½ß¸ï¿½ï¿½Ô·ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
+            }
+        }
+    }
 
 }

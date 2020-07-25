@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 public class ArrayListTest_02 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String str[]= {"Àå¹Ì","ÈÄ¸®Áö¾Æ","¹éÇÕ"};
-		ArrayList<String>list=new ArrayList<String>();
-		
-		for(String s:str) {
-			list.add(s);
-		}
-		System.out.println("1. Ãâ·Â");
-		for(int i=0;i<list.size();i++) {
-			System.out.println(list.get(i));
-		}
-		System.out.println("2. Ãâ·Â");
-		for (String s:list) {
-			System.out.println(s);
-		}
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String str[] = {"ï¿½ï¿½ï¿½", "ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½"};
+        ArrayList<String> list = new ArrayList<String>();
+
+        for (String s : str) {
+            list.add(s);
+        }
+        System.out.println("1. ï¿½ï¿½ï¿½");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        System.out.println("2. ï¿½ï¿½ï¿½");
+        for (String s : list) {
+            System.out.println(s);
+        }
+    }
 
 }

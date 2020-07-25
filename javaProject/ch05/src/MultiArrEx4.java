@@ -1,25 +1,25 @@
 import java.util.*;
 
-class  MultiArrEx4{
-	public static void main(String[] args) {
-		String[][] words = {
-			{"chair","ÀÇÀÚ"},			// words[0][0], words[0][1]
-			{"computer","ÄÄÇ»ÅÍ"},	// words[1][0], words[1][1]
-			{"integer","Á¤¼ö"}		// words[2][0], words[2][1]
-		};
+class MultiArrEx4 {
+    public static void main(String[] args) {
+        String[][] words = {
+                {"chair", "ï¿½ï¿½ï¿½ï¿½"},            // words[0][0], words[0][1]
+                {"computer", "ï¿½ï¿½Ç»ï¿½ï¿½"},    // words[1][0], words[1][1]
+                {"integer", "ï¿½ï¿½ï¿½ï¿½"}        // words[2][0], words[2][1]
+        };
 
-		Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-		for(int i=0;i<words.length;i++) {
-			System.out.printf("Q%d. %sÀÇ ¶æÀº?", i+1, words[i][0]);
+        for (int i = 0; i < words.length; i++) {
+            System.out.printf("Q%d. %sï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½?", i + 1, words[i][0]);
 
-			String tmp = scanner.nextLine();
+            String tmp = scanner.nextLine();
 
-			if(tmp.equals(words[i][1])) {
-				System.out.printf("Á¤´äÀÔ´Ï´Ù.%n%n");
-			} else {
-			   System.out.printf("Æ²·È½À´Ï´Ù. Á¤´äÀº %sÀÔ´Ï´Ù.%n%n",words[i][1]);
-			}
-		} // for
-	} // mainÀÇ ³¡
+            if (tmp.equals(words[i][1])) {
+                System.out.printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.%n%n");
+            } else {
+                System.out.printf("Æ²ï¿½È½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ %sï¿½Ô´Ï´ï¿½.%n%n", words[i][1]);
+            }
+        } // for
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

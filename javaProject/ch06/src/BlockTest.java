@@ -1,22 +1,22 @@
 class BlockTest {
 
-	static {
-		System.out.println("static { }");
-	}
+    static {
+        System.out.println("static { }");
+    }
 
-	{
-		System.out.println("{ }");
-	}
+    {
+        System.out.println("{ }");
+    }
 
-	public BlockTest() {     
-		System.out.println("»ý¼ºÀÚ");
-	}
+    public BlockTest() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+    }
 
-	public static void main(String args[]) {
-		System.out.println("BlockTest bt = new BlockTest(); ");
-		BlockTest bt = new BlockTest();
+    public static void main(String args[]) {
+        System.out.println("BlockTest bt = new BlockTest(); ");
+        BlockTest bt = new BlockTest();
 
-		System.out.println("BlockTest bt2 = new BlockTest(); ");
-		BlockTest bt2 = new BlockTest();
-	}
+        System.out.println("BlockTest bt2 = new BlockTest(); ");
+        BlockTest bt2 = new BlockTest();
+    }
 }

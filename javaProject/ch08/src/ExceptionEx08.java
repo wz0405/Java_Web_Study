@@ -1,15 +1,15 @@
 class ExceptionEx08 {
-	public static void main(String args[]) {
-		System.out.println(1);			
-		System.out.println(2);
-		try {
-			System.out.println(3);
-			System.out.println(0/0); // ¿¹¿Ü¹ß»ý!!!
-			System.out.println(4); 	 // ½ÇÇàµÇÁö ¾Ê´Â´Ù.
-		} catch (ArithmeticException ae)	{
-			ae.printStackTrace();
-			System.out.println("¿¹¿Ü¸Þ½ÃÁö : " + ae.getMessage());
-		}	// try-catchÀÇ ³¡
-		System.out.println(6);
-	}	// main¸Þ¼­µåÀÇ ³¡
+    public static void main(String args[]) {
+        System.out.println(1);
+        System.out.println(2);
+        try {
+            System.out.println(3);
+            System.out.println(0 / 0); // ï¿½ï¿½ï¿½Ü¹ß»ï¿½!!!
+            System.out.println(4);     // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
+        } catch (ArithmeticException ae) {
+            ae.printStackTrace();
+            System.out.println("ï¿½ï¿½ï¿½Ü¸Þ½ï¿½ï¿½ï¿½ : " + ae.getMessage());
+        }    // try-catchï¿½ï¿½ ï¿½ï¿½
+        System.out.println(6);
+    }    // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 }

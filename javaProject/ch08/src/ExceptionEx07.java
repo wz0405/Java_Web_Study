@@ -1,18 +1,18 @@
 class ExceptionEx07 {
-	public static void main(String args[]) {
-		System.out.println(1);			
-		System.out.println(2);
-		try {
-			System.out.println(3);
-			System.out.println(0/0);
-			System.out.println(4); 		// ½ÇÇàµÇÁö ¾Ê´Â´Ù.
-		} catch (ArithmeticException ae)	{
-			if (ae instanceof ArithmeticException) 
-				System.out.println("true");	
-			System.out.println("ArithmeticException");
-		} catch (Exception e)	{
-			System.out.println("Exception");
-		}	// try-catchÀÇ ³¡
-		System.out.println(6);
-	}	// main¸Þ¼­µåÀÇ ³¡
+    public static void main(String args[]) {
+        System.out.println(1);
+        System.out.println(2);
+        try {
+            System.out.println(3);
+            System.out.println(0 / 0);
+            System.out.println(4);        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
+        } catch (ArithmeticException ae) {
+            if (ae instanceof ArithmeticException)
+                System.out.println("true");
+            System.out.println("ArithmeticException");
+        } catch (Exception e) {
+            System.out.println("Exception");
+        }    // try-catchï¿½ï¿½ ï¿½ï¿½
+        System.out.println(6);
+    }    // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 }

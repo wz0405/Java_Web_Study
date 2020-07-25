@@ -4,64 +4,64 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 public class TcpIpServer4 implements Runnable {
-	ServerSocket serverSocket;
-	Thread[] threadArr;
+    ServerSocket serverSocket;
+    Thread[] threadArr;
 
-	public static void main(String args[]) {
-		// 5°³ÀÇ ¾²·¹µå¸¦ »ý¼ºÇÏ´Â ¼­¹ö¸¦ »ý¼ºÇÑ´Ù.
-		TcpIpServer4 server = new TcpIpServer4(5);
-		server.start();
-	} // main
-	
-	public TcpIpServer4(int num) {
-		try {
-			// ¼­¹ö¼ÒÄÏÀ» »ý¼ºÇÏ¿© 7777¹ø Æ÷Æ®¿Í °áÇÕ(bind)½ÃÅ²´Ù.
-			serverSocket = new ServerSocket(7777);
-			System.out.println(getTime()+"¼­¹ö°¡ ÁØºñµÇ¾ú½À´Ï´Ù.");
+    public static void main(String args[]) {
+        // 5ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        TcpIpServer4 server = new TcpIpServer4(5);
+        server.start();
+    } // main
 
-			threadArr = new Thread[num];
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-	}
+    public TcpIpServer4(int num) {
+        try {
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ 7777ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(bind)ï¿½ï¿½Å²ï¿½ï¿½.
+            serverSocket = new ServerSocket(7777);
+            System.out.println(getTime() + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Øºï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
-	public void start() {
-		for(int i=0; i < threadArr.length; i++) {
-			threadArr[i] = new Thread(this);
-			threadArr[i].start();
-		}
-	}
+            threadArr = new Thread[num];
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-	public void run() {
-		while(true) {
-			try {
-				System.out.println(getTime()+ "°¡ ¿¬°á¿äÃ»À» ±â´Ù¸³´Ï´Ù.");
+    public void start() {
+        for (int i = 0; i < threadArr.length; i++) {
+            threadArr[i] = new Thread(this);
+            threadArr[i].start();
+        }
+    }
 
-				Socket socket = serverSocket.accept();
-				System.out.println(getTime()+ socket.getInetAddress() + "·ÎºÎÅÍ ¿¬°á¿äÃ»ÀÌ µé¾î¿Ô½À´Ï´Ù.");
+    public void run() {
+        while (true) {
+            try {
+                System.out.println(getTime() + "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½ï¿½Ï´ï¿½.");
 
-				// ¼ÒÄÏÀÇ Ãâ·Â½ºÆ®¸²À» ¾ò´Â´Ù.
-				OutputStream out = socket.getOutputStream();
-				DataOutputStream dos = new DataOutputStream(out);
+                Socket socket = serverSocket.accept();
+                System.out.println(getTime() + socket.getInetAddress() + "ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ï´ï¿½.");
 
-				// ¿ø°Ý ¼ÒÄÏ(remote socket)¿¡ µ¥ÀÌÅÍ¸¦ º¸³½´Ù.
-				dos.writeUTF("[Notice] Test Message1 from Server.");
-				System.out.println(getTime()+"µ¥ÀÌÅÍ¸¦ Àü¼ÛÇß½À´Ï´Ù.");
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+                OutputStream out = socket.getOutputStream();
+                DataOutputStream dos = new DataOutputStream(out);
 
-				// ½ºÆ®¸²°ú ¼ÒÄÏÀ» ´Ý¾ÆÁØ´Ù.
-				dos.close();
-				socket.close();
-		    } catch (IOException e) {
-				e.printStackTrace();
-			}
-		} // while	
-	} // run
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(remote socket)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+                dos.writeUTF("[Notice] Test Message1 from Server.");
+                System.out.println(getTime() + "ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
 
-	// ÇöÀç½Ã°£À» ¹®ÀÚ¿­·Î ¹ÝÈ¯ÇÏ´Â ÇÔ¼ö
-	static String getTime() {
-		String name = Thread.currentThread().getName();
-		SimpleDateFormat f = new SimpleDateFormat("[hh:mm:ss]");
+                // ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½Ø´ï¿½.
+                dos.close();
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } // while	
+    } // run
 
-		return f.format(new Date()) + name ;
-	}
+    // ï¿½ï¿½ï¿½ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+    static String getTime() {
+        String name = Thread.currentThread().getName();
+        SimpleDateFormat f = new SimpleDateFormat("[hh:mm:ss]");
+
+        return f.format(new Date()) + name;
+    }
 } // class

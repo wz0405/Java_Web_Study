@@ -3,26 +3,26 @@ package day0526;
 import java.util.Scanner;
 
 public class SannerTest_13 {
-	public static void main(String[] args) {
-		//scanner´Â ¹®ÀÚ¿­ÀÌ³ª ¼ýÀÚ¸¦ Å°º¸µå·Î ÀÔ·Â¹ÞÀ»¶§ importÇÏ´Â Å¬·¡½º
-		Scanner sc = new Scanner(System.in);
-		String name;
-		String age;
-		int num1;
-		int num2;
-		//Ãâ·Â¹®À¸·Î °¡ÀÌµå
-	
-		System.out.print("ÀÌ¸§ÀÔ·Â>");
-		name=sc.nextLine();//ÇÑÁÙÀ» ¹®ÀÚ·Î ÀÐ±â
-		System.out.print("³ªÀÌÀÔ·Â>");
-		age=sc.nextLine();
-		System.out.println("¼ýÀÚ 2°³ ÀÔ·Â");
-		//num1=sc.nextInt(); //¹öÆÛ°¡ °É¸±°æ¿ì ¶óÀÎÀ¸·Î ¹®ÀÚ¿­·Î Çü¹øÈ¯
-		num1=Integer.parseInt(sc.nextLine());
-		num2=sc.nextInt();
-		System.out.println("[½Å»óÁ¤º¸]");
-		System.out.println("ÀÌ¸§ :"+name);
-		System.out.println("³ªÀÌ :"+age);
-		System.out.println("µÎ ¼öÀÇ ÇÕ: "+(num1+num2));
-	}
+    public static void main(String[] args) {
+        //scannerï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½Ì³ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ Å°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ï¿½ï¿½ importï¿½Ï´ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
+        Scanner sc = new Scanner(System.in);
+        String name;
+        String age;
+        int num1;
+        int num2;
+        //ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½
+
+        System.out.print("ï¿½Ì¸ï¿½ï¿½Ô·ï¿½>");
+        name = sc.nextLine();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½Ð±ï¿½
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½>");
+        age = sc.nextLine();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Ô·ï¿½");
+        //num1=sc.nextInt(); //ï¿½ï¿½ï¿½Û°ï¿½ ï¿½É¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯
+        num1 = Integer.parseInt(sc.nextLine());
+        num2 = sc.nextInt();
+        System.out.println("[ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½]");
+        System.out.println("ï¿½Ì¸ï¿½ :" + name);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ :" + age);
+        System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½: " + (num1 + num2));
+    }
 }

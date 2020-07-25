@@ -1,38 +1,44 @@
 package day0601;
 
-class Apple{
-	//µðÆúÆ® »ý¼ºÀÚ
-	public Apple() {
-		System.out.println("µðÆúÆ® »ý¼ºÀÚ È£Ãâ apple");
-	}
+class Apple {
+    //ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Apple() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ apple");
+    }
 }
-class Banana{
-	public Banana(String str) {
-		System.out.println("»ý¼ºÀÚ È£Ãâ "+str);
-	}
+
+class Banana {
+    public Banana(String str) {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ " + str);
+    }
 }
-class Orange{
-	public Orange() {
-		System.out.println("¿À·»Áö µðÆúÆ® »ý¼ºÀÚ");
-		
-	}
-	public Orange(String str) {
-		System.out.println("¿À·»Áö µÎ¹øÂ° »ý¼ºÀÚ "+str);
-	}
-	public Orange(int n) {
-		System.out.println("¿À·»Áö ¼¼ ¹øÂ° »ý¼ºÀÚ "+n);
-	}
-	public Orange(String str, int n) {
-		System.out.println("¿À·»Áö ³× ¹øÂ° »ý¼ºÀÚ "+str+n);
-	}
+
+class Orange {
+    public Orange() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+
+    }
+
+    public Orange(String str) {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¹ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + str);
+    }
+
+    public Orange(int n) {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + n);
+    }
+
+    public Orange(String str, int n) {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + str + n);
+    }
 }
+
 public class ConstOver_06 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Apple ap=new Apple();
-		Banana ba =new Banana("¹Ù³ª³ª");
-		Orange or = new Orange("s",1);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Apple ap = new Apple();
+        Banana ba = new Banana("ï¿½Ù³ï¿½ï¿½ï¿½");
+        Orange or = new Orange("s", 1);
+    }
 
 }

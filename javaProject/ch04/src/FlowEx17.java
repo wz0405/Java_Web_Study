@@ -1,20 +1,20 @@
 import java.util.*;
 
 class FlowEx17 {
-	public static void main(String[] args) { 
-		int num = 0;
+    public static void main(String[] args) {
+        int num = 0;
 
-		System.out.print("*À» Ãâ·ÂÇÒ ¶óÀÎÀÇ ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+        System.out.print("*ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.>");
 
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine();  // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		num = Integer.parseInt(tmp);      // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)À» ¼ýÀÚ·Î º¯È¯
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine();  // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        num = Integer.parseInt(tmp);      // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		for(int i=0;i<num;i++) {
-			for(int j=0;j<=i;j++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
-	} // mainÀÇ ³¡
+        for (int i = 0; i < num; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

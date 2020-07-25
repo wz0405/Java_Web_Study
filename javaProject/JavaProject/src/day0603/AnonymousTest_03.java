@@ -1,28 +1,31 @@
 package day0603;
-abstract class AbstEx{
-	abstract public void show();
+
+abstract class AbstEx {
+    abstract public void show();
 }
+
 //////////////////////
-class OuterEx{
-	//»ý¼º°ú µ¿½Ã¿¡ ¸¸µé¾îÁö´Â Å¬·¡½º
-	AbstEx ab=new AbstEx() {
-		
-		@Override
-		public void show() {
-			// TODO Auto-generated method stub
-			System.out.println("ÀÍ¸í³»ºÎ Å¬·¡½º");
-		}
-	};
+class OuterEx {
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
+    AbstEx ab = new AbstEx() {
+
+        @Override
+        public void show() {
+            // TODO Auto-generated method stub
+            System.out.println("ï¿½Í¸ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½");
+        }
+    };
 }
+
 /////////////////////
 public class AnonymousTest_03 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		OuterEx ou = new OuterEx();
-		//¿ÜºÎÂüÁ¶º¯¼ö¸í.ÀÍ¸í³»ºÎÅ¬·¡½ºÀÇ ÂüÁ¶º¯¼ö¸í.À¸·Î È£Ãâ
-		//»ý¼º»ý·«..
-		ou.ab.show();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        OuterEx ou = new OuterEx();
+        //ï¿½Üºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½Í¸ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..
+        ou.ab.show();
+    }
 
 }

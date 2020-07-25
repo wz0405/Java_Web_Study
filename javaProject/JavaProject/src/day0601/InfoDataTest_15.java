@@ -2,16 +2,16 @@ package day0601;
 
 public class InfoDataTest_15 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		InfoData_15 in = new InfoData_15();
-		in.setData("ÇÑÇöÈñ","³²","µ¿ÀÛ±¸");
-		InfoData_15.ban="Çõ½Å¼ºÀå";
-		in.getData();
-		
-		InfoData_15 in1 = new InfoData_15();
-		in1.setData("ÇÑÇöÈñ","³²","µ¿ÀÛ±¸");
-		in1.getData();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        InfoData_15 in = new InfoData_15();
+        in.setData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½ï¿½Û±ï¿½");
+        InfoData_15.ban = "ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½";
+        in.getData();
+
+        InfoData_15 in1 = new InfoData_15();
+        in1.setData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½", "ï¿½ï¿½ï¿½Û±ï¿½");
+        in1.getData();
+    }
 
 }

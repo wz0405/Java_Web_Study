@@ -1,37 +1,39 @@
- class ThreadEx15 {
-	public static void main(String args[]) {
-		RunImplEx15 r = new RunImplEx15();
-		Thread th1 = new Thread(r, "*");
-		Thread th2 = new Thread(r, "**");
-		Thread th3 = new Thread(r, "***");
+class ThreadEx15 {
+    public static void main(String args[]) {
+        RunImplEx15 r = new RunImplEx15();
+        Thread th1 = new Thread(r, "*");
+        Thread th2 = new Thread(r, "**");
+        Thread th3 = new Thread(r, "***");
 
-		th1.start();
-		th2.start();
-		th3.start();
+        th1.start();
+        th2.start();
+        th3.start();
 
-		try {
-			Thread.sleep(2000);
-			th1.suspend();	// ¾²·¹µå th1À» Àá½Ã Áß´Ü½ÃÅ²´Ù.
-			Thread.sleep(2000);
-			th2.suspend();
-			Thread.sleep(3000);
-			th1.resume();	// ¾²·¹µå th1ÀÌ ´Ù½Ã µ¿ÀÛÇÏµµ·Ï ÇÑ´Ù.
-			Thread.sleep(3000);
-			th1.stop();		// ¾²·¹µå th1À» °­Á¦Á¾·á½ÃÅ²´Ù.
-			th2.stop();
-			Thread.sleep(2000);
-			th3.stop();
-		} catch (InterruptedException e) {}
-	} // main
+        try {
+            Thread.sleep(2000);
+            th1.suspend();    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ th1ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ß´Ü½ï¿½Å²ï¿½ï¿½.
+            Thread.sleep(2000);
+            th2.suspend();
+            Thread.sleep(3000);
+            th1.resume();    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ th1ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
+            Thread.sleep(3000);
+            th1.stop();        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ th1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
+            th2.stop();
+            Thread.sleep(2000);
+            th3.stop();
+        } catch (InterruptedException e) {
+        }
+    } // main
 }
 
 class RunImplEx15 implements Runnable {
-	public void run() {
-		while(true) {
-			System.out.println(Thread.currentThread().getName());
-			try {
-				Thread.sleep(1000);
-			} catch(InterruptedException e) {}
-		}
-	} // run()
+    public void run() {
+        while (true) {
+            System.out.println(Thread.currentThread().getName());
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+        }
+    } // run()
 }

@@ -1,33 +1,33 @@
 import java.util.*;
 
 class VectorEx1 {
-	public static void main(String[] args) {
-		Vector v = new Vector(5);	// ¿ë·®(capacity)ÀÌ 5ÀÎ Vector¸¦ »ý¼ºÇÑ´Ù.
-		v.add("1");
-		v.add("2");
-		v.add("3");
-		print(v);
+    public static void main(String[] args) {
+        Vector v = new Vector(5);    // ï¿½ë·®(capacity)ï¿½ï¿½ 5ï¿½ï¿½ Vectorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        v.add("1");
+        v.add("2");
+        v.add("3");
+        print(v);
 
-		v.trimToSize();	// ºó °ø°£À» ¾ø¾Ø´Ù.(¿ë·®°ú Å©±â°¡ °°¾ÆÁø´Ù.)
-		System.out.println("=== After trimToSize() ===");
-		print(v);
+        v.trimToSize();    // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø´ï¿½.(ï¿½ë·®ï¿½ï¿½ Å©ï¿½â°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.)
+        System.out.println("=== After trimToSize() ===");
+        print(v);
 
-		v.ensureCapacity(6);
-		System.out.println("=== After ensureCapacity(6) ===");
-		print(v);
+        v.ensureCapacity(6);
+        System.out.println("=== After ensureCapacity(6) ===");
+        print(v);
 
-		v.setSize(7);
-		System.out.println("=== After setSize(7) ===");
-		print(v);
-		
-		v.clear();
-		System.out.println("=== After clear() ===");
-		print(v);
-	}
+        v.setSize(7);
+        System.out.println("=== After setSize(7) ===");
+        print(v);
 
-	public static void print(Vector v) {
-		System.out.println(v);
-		System.out.println("size :" + v.size());
-		System.out.println("capacity :" + v.capacity());
-	}
+        v.clear();
+        System.out.println("=== After clear() ===");
+        print(v);
+    }
+
+    public static void print(Vector v) {
+        System.out.println(v);
+        System.out.println("size :" + v.size());
+        System.out.println("capacity :" + v.capacity());
+    }
 }

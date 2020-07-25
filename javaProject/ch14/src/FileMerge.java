@@ -1,49 +1,50 @@
 import java.io.*;
 
 class FileMerge {
-	public static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("USAGE : java FileMerge filename");
-			System.exit(0); // ÇÁ·Î±×·¥À» Á¾·áÇÑ´Ù.
-		}
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("USAGE : java FileMerge filename");
+            System.exit(0); // ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        }
 
-		String mergeFilename = args[0];
+        String mergeFilename = args[0];
 
-		try {
+        try {
 
-			File tempFile = File.createTempFile("~mergetemp",".tmp");
-			tempFile.deleteOnExit();
+            File tempFile = File.createTempFile("~mergetemp", ".tmp");
+            tempFile.deleteOnExit();
 
-			FileOutputStream     fos = new FileOutputStream(tempFile);
-			BufferedOutputStream bos = new BufferedOutputStream(fos);
+            FileOutputStream fos = new FileOutputStream(tempFile);
+            BufferedOutputStream bos = new BufferedOutputStream(fos);
 
-			BufferedInputStream bis = null;
+            BufferedInputStream bis = null;
 
-			int number = 1;
+            int number = 1;
 
-			File f = new File(mergeFilename + "_." + number);
+            File f = new File(mergeFilename + "_." + number);
 
-			while(f.exists()) {
-				f.setReadOnly();	// ÀÛ¾÷Áß¿¡ ÆÄÀÏÀÇ ³»¿ëÀÌ º¯°æµÇÁö ¾Êµµ·Ï ÇÑ´Ù.
-				bis = new BufferedInputStream(new FileInputStream(f));
+            while (f.exists()) {
+                f.setReadOnly();    // ï¿½Û¾ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
+                bis = new BufferedInputStream(new FileInputStream(f));
 
-				int data = 0;
-				while((data = bis.read()) != -1) {
-					bos.write(data);
-				}
+                int data = 0;
+                while ((data = bis.read()) != -1) {
+                    bos.write(data);
+                }
 
-				bis.close();
+                bis.close();
 
-				f = new File(mergeFilename + "_." + ++number);
-			} // while
+                f = new File(mergeFilename + "_." + ++number);
+            } // while
 
-			bos.close();
+            bos.close();
 
-			File oldFile = new File(mergeFilename);
-            
-			if(oldFile.exists()) oldFile.delete();
-			
-			tempFile.renameTo(oldFile);
-		} catch (IOException e) {}
-	} // main
+            File oldFile = new File(mergeFilename);
+
+            if (oldFile.exists()) oldFile.delete();
+
+            tempFile.renameTo(oldFile);
+        } catch (IOException e) {
+        }
+    } // main
 } // class

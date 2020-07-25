@@ -2,35 +2,35 @@ package day0603;
 
 import java.util.Scanner;
 
-class UserException extends Exception
-{
-	public UserException(String msg){
-		super(msg);
-	}
+class UserException extends Exception {
+    public UserException(String msg) {
+        super(msg);
+    }
 }
+
 public class UserException_10 {
-	public static void nameInput() throws Exception
-	{
-		Scanner sc = new Scanner(System.in);
-		
-		String str[]= {"±èÅÂÈñ","°í¼Ò¿µ","ÀÌ¹Î","±èÇýÀÚ",""};
-		String name="";
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-		name=sc.nextLine();
-		
-		for(String n:str) {
-			if(n.equals(name)) {
-				throw new UserException("±ÝÁöµÈ ´Ü¾îÀÔ´Ï´Ù");
-			}
-		}
-		System.out.println("³ªÀÇ ÀÌ¸§Àº "+name);
-	}
-	public static void main(String[] args) {
-		try {
-			nameInput();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("¿À·ù "+e.getMessage());
-		}
-	}
+    public static void nameInput() throws Exception {
+        Scanner sc = new Scanner(System.in);
+
+        String str[] = {"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½Ò¿ï¿½", "ï¿½Ì¹ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", ""};
+        String name = "";
+        System.out.println("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        name = sc.nextLine();
+
+        for (String n : str) {
+            if (n.equals(name)) {
+                throw new UserException("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ü¾ï¿½ï¿½Ô´Ï´ï¿½");
+            }
+        }
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ " + name);
+    }
+
+    public static void main(String[] args) {
+        try {
+            nameInput();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ " + e.getMessage());
+        }
+    }
 }

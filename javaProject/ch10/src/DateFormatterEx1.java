@@ -2,24 +2,24 @@ import java.time.*;
 import java.time.format.*;
 
 class DateFormatterEx1 {
-	public static void main(String[] args) {
-		ZonedDateTime zdateTime = ZonedDateTime.now();
+    public static void main(String[] args) {
+        ZonedDateTime zdateTime = ZonedDateTime.now();
 
-		String[] patternArr = {
-				"yyyy-MM-dd HH:mm:ss",         
-				"''yy³â MMM ddÀÏ E¿äÀÏ", 	
-				"yyyy-MM-dd HH:mm:ss.SSS Z VV",	
-				"yyyy-MM-dd hh:mm:ss a",			
-				"¿À´ÃÀº ¿Ã ÇØÀÇ D¹øÂ° ³¯ÀÔ´Ï´Ù.",     	
-				"¿À´ÃÀº ÀÌ ´ÞÀÇ d¹øÂ° ³¯ÀÔ´Ï´Ù.",     	
-				"¿À´ÃÀº ¿Ã ÇØÀÇ w¹øÂ° ÁÖÀÔ´Ï´Ù.",     	
-				"¿À´ÃÀº ÀÌ ´ÞÀÇ W¹øÂ° ÁÖÀÔ´Ï´Ù.",     	
-				"¿À´ÃÀº ÀÌ ´ÞÀÇ W¹øÂ° E¿äÀÏÀÔ´Ï´Ù."   	
-		};
+        String[] patternArr = {
+                "yyyy-MM-dd HH:mm:ss",
+                "''yyï¿½ï¿½ MMM ddï¿½ï¿½ Eï¿½ï¿½ï¿½ï¿½",
+                "yyyy-MM-dd HH:mm:ss.SSS Z VV",
+                "yyyy-MM-dd hh:mm:ss a",
+                "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Dï¿½ï¿½Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.",
+                "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ dï¿½ï¿½Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.",
+                "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ wï¿½ï¿½Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.",
+                "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Wï¿½ï¿½Â° ï¿½ï¿½ï¿½Ô´Ï´ï¿½.",
+                "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Wï¿½ï¿½Â° Eï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½."
+        };
 
-		for(String p : patternArr) {
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern(p);
-			System.out.println(zdateTime.format(formatter));	
-		}
-	} // mainÀÇ ³¡
+        for (String p : patternArr) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(p);
+            System.out.println(zdateTime.format(formatter));
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

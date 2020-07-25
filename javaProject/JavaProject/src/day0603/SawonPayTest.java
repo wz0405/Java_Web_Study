@@ -3,23 +3,23 @@ package day0603;
 import java.util.Scanner;
 
 public class SawonPayTest {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String name;
-		int pay,gasu,timesu;
-		
-		System.out.println("»ç¿ø¸íÀº?");
-		name=sc.nextLine();
-		System.out.println("±âº»±ÞÀº?");
-		pay=sc.nextInt();
-		System.out.println("ÃÊ°ú½Ã°£Àº?");
-		timesu=sc.nextInt();
-		System.out.println("ÃÑ °¡Á·¼ö´Â?");
-		gasu=sc.nextInt();
-		
-		Sawon sa = new Sawon(name,pay,timesu,gasu);
-		System.out.println("»ç¿ø¸í\t±âº»±Þ\t½Ã°£¼ö´ç\t°¡Á·¼ö\tÃÑ±Þ¿©");
-		sa.getSawon();
-		
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String name;
+        int pay, gasu, timesu;
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        name = sc.nextLine();
+        System.out.println("ï¿½âº»ï¿½ï¿½ï¿½ï¿½?");
+        pay = sc.nextInt();
+        System.out.println("ï¿½Ê°ï¿½ï¿½Ã°ï¿½ï¿½ï¿½?");
+        timesu = sc.nextInt();
+        System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        gasu = sc.nextInt();
+
+        Sawon sa = new Sawon(name, pay, timesu, gasu);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½\tï¿½âº»ï¿½ï¿½\tï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½\tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\tï¿½Ñ±Þ¿ï¿½");
+        sa.getSawon();
+
+    }
 }

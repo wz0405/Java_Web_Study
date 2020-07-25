@@ -1,9 +1,9 @@
 class ArrayEx16 {
-	public static void main(String[] args) {
-		System.out.println("¸Å°³º¯¼öÀÇ °³¼ö:"+args.length);
+    public static void main(String[] args) {
+        System.out.println("ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½:" + args.length);
 
-		for(int i=0;i< args.length;i++) {
-			System.out.println("args[" + i + "] = \""+ args[i] + "\"");
-		}
-	}
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("args[" + i + "] = \"" + args[i] + "\"");
+        }
+    }
 }

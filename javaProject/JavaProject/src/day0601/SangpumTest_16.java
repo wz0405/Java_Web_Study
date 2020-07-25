@@ -2,15 +2,15 @@ package day0601;
 
 public class SangpumTest_16 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Sangpum_16 sa=new Sangpum_16();
-		sa.setData("ÃÊÄÚÆÄÀÌ", 20, 500);
-		sa.getData();
-		
-		Sangpum_16 sa1=new Sangpum_16();
-		sa1.setData("ÀÚ°¥Ä¡", 30, 1000);
-		sa1.getData();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Sangpum_16 sa = new Sangpum_16();
+        sa.setData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 20, 500);
+        sa.getData();
+
+        Sangpum_16 sa1 = new Sangpum_16();
+        sa1.setData("ï¿½Ú°ï¿½Ä¡", 30, 1000);
+        sa1.getData();
+    }
 
 }

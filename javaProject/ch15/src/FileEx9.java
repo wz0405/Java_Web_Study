@@ -1,27 +1,27 @@
-import java.io.*; 
+import java.io.*;
 
-class FileEx9 { 
-	public static void main(String[] args) { 
-		if (args.length != 1) { 
-			System.out.println("Usage: java FileEx9 DIRECTORY"); 
-			System.exit(0); 
-		} 
+class FileEx9 {
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("Usage: java FileEx9 DIRECTORY");
+            System.exit(0);
+        }
 
-		File dir = new File(args[0]); 
+        File dir = new File(args[0]);
 
-		if(!dir.exists() || !dir.isDirectory()) {
-			System.out.println("À¯È¿ÇÏÁö ¾ÊÀº µð·ºÅä¸®ÀÔ´Ï´Ù.");
-			System.exit(0);
-		} 
+        if (!dir.exists() || !dir.isDirectory()) {
+            System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä¸®ï¿½Ô´Ï´ï¿½.");
+            System.exit(0);
+        }
 
-		File[] list = dir.listFiles(); 
+        File[] list = dir.listFiles();
 
-		for (int i = 0; i < list.length; i++) { 
-			String fileName = list[i].getName(); 
-			// ÆÄÀÏ¸í 
-			String newFileName = "0000" + fileName; 
-			newFileName = newFileName.substring(newFileName.length() - 7); 
-			list[i].renameTo(new File(dir, newFileName)); 
-		} 
-	} // end of main 
+        for (int i = 0; i < list.length; i++) {
+            String fileName = list[i].getName();
+            // ï¿½ï¿½ï¿½Ï¸ï¿½ 
+            String newFileName = "0000" + fileName;
+            newFileName = newFileName.substring(newFileName.length() - 7);
+            list[i].renameTo(new File(dir, newFileName));
+        }
+    } // end of main 
 } // end of FileEx9 class  

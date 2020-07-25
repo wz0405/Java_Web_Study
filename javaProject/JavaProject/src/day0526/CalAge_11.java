@@ -3,15 +3,15 @@ package day0526;
 import java.util.Calendar;
 
 public class CalAge_11 {
-	public static void main(String[] args) {
-		String name="ÇÑÇöÈñ";
-		//ÇöÀç ³âµµ°¡ ÇÊ¿ä...Calendar import
-		//°è»ê
-		//Ãâ·Â
-		int myYear=1995;
-		Calendar cal = Calendar.getInstance();
-		int curYear=cal.get(Calendar.YEAR);
-		System.out.println("ÀÌ¸§: "+name+" ³²");
-		System.out.println("³ªÀÌ: "+(curYear-myYear+1));
-	}
+    public static void main(String[] args) {
+        String name = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½âµµï¿½ï¿½ ï¿½Ê¿ï¿½...Calendar import
+        //ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½
+        int myYear = 1995;
+        Calendar cal = Calendar.getInstance();
+        int curYear = cal.get(Calendar.YEAR);
+        System.out.println("ï¿½Ì¸ï¿½: " + name + " ï¿½ï¿½");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½: " + (curYear - myYear + 1));
+    }
 }

@@ -1,27 +1,27 @@
 class Card2 {
-	String kind;
-	int number;
+    String kind;
+    int number;
 
-	Card2() {
-		this("SPADE", 1);  // Card(String kind, int number)¸¦ È£Ãâ
-	}
+    Card2() {
+        this("SPADE", 1);  // Card(String kind, int number)ï¿½ï¿½ È£ï¿½ï¿½
+    }
 
-	Card2(String kind, int number) {
-		this.kind = kind;
-		this.number = number;
-	}
+    Card2(String kind, int number) {
+        this.kind = kind;
+        this.number = number;
+    }
 
-	public String toString() {
-		// CardÀÎ½ºÅÏ½ºÀÇ kind¿Í number¸¦ ¹®ÀÚ¿­·Î ¹ÝÈ¯ÇÑ´Ù.
-		return "kind : " + kind + ", number : " + number;
-	}
+    public String toString() {
+        // Cardï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ kindï¿½ï¿½ numberï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+        return "kind : " + kind + ", number : " + number;
+    }
 }
 
 class CardToString2 {
-	public static void main(String[] args) {
-		Card2 c1 = new Card2();
-		Card2 c2 = new Card2("HEART", 10);
-		System.out.println(c1.toString());
-		System.out.println(c2.toString());
-	}
+    public static void main(String[] args) {
+        Card2 c1 = new Card2();
+        Card2 c2 = new Card2("HEART", 10);
+        System.out.println(c1.toString());
+        System.out.println(c2.toString());
+    }
 }

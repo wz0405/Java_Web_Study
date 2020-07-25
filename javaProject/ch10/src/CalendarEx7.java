@@ -1,37 +1,37 @@
-import java.util.*; 
+import java.util.*;
 
-class CalendarEx7 { 
-      public static void main(String[] args) { 
-            if(args.length !=2) { 
-                  System.out.println("Usage : java CalendarEx7 2015 11"); 
-                  return; 
-            } 
+class CalendarEx7 {
+    public static void main(String[] args) {
+        if (args.length != 2) {
+            System.out.println("Usage : java CalendarEx7 2015 11");
+            return;
+        }
 
-            int year  = Integer.parseInt(args[0]); 
-            int month = Integer.parseInt(args[1]); 
+        int year = Integer.parseInt(args[0]);
+        int month = Integer.parseInt(args[1]);
 
-            Calendar sDay = Calendar.getInstance();       // ½ÃÀÛÀÏ 
-            Calendar eDay = Calendar.getInstance();       // ³¡ÀÏ 
+        Calendar sDay = Calendar.getInstance();       // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+        Calendar eDay = Calendar.getInstance();       // ï¿½ï¿½ï¿½ï¿½ 
 
-            // ¿ùÀÇ °æ¿ì 0 ºÎÅÍ 11±îÁöÀÇ °ªÀ» °¡Áö¹Ç·Î 1À» »©Áà¾ßÇÑ´Ù. 
-            // ¿¹¸¦ µé¾î, 2004³â 11¿ù 1ÀÏÀº sDay.set(2004, 10, 1);°ú °°ÀÌ ÇØÁà¾ß ÇÑ´Ù. 
-            sDay.set(year, month-1, 1);     // ÀÔ·Â¿ùÀÇ 1ÀÏ·Î ¼³Á¤ÇÑ´Ù.
-            // ÀÔ·Â¿ùÀÇ ¸»ÀÏ·Î ¼³Á¤ÇÑ´Ù.
-	        eDay.set(year, month-1,  sDay.getActualMaximum(Calendar.DATE));	
-            // 1ÀÏÀÌ ¼ÓÇÑ ÁÖÀÇ ÀÏ¿äÀÏ·Î ³¯Â¥¼³Á¤.
-            sDay.add(Calendar.DATE, -sDay.get(Calendar.DAY_OF_WEEK) + 1);
-            // ¸»ÀÏÀÌ ¼ÓÇÑ ÁÖÀÇ Åä¿äÀÏ·Î ³¯Â¥¼³Á¤	
-            eDay.add(Calendar.DATE, 7 - eDay.get(Calendar.DAY_OF_WEEK));	
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ 11ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, 2004ï¿½ï¿½ 11ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ sDay.set(2004, 10, 1);ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½. 
+        sDay.set(year, month - 1, 1);     // ï¿½Ô·Â¿ï¿½ï¿½ï¿½ 1ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        // ï¿½Ô·Â¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        eDay.set(year, month - 1, sDay.getActualMaximum(Calendar.DATE));
+        // 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¿ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½.
+        sDay.add(Calendar.DATE, -sDay.get(Calendar.DAY_OF_WEEK) + 1);
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ï¿½ï¿½	
+        eDay.add(Calendar.DATE, 7 - eDay.get(Calendar.DAY_OF_WEEK));
 
-            System.out.println("      " + year +"³â " + month +"¿ù"); 
-            System.out.println(" SU MO TU WE TH FR SA"); 
-     
-			//½ÃÀÛ ÀÏºÎÅÍ ¸¶Áö¸· ÀÏ±îÁö(sDay <= eDay) 1ÀÏ¾¿ Áõ°¡½ÃÅ°¸é¼­ ÀÏ(Calendar.DATE)À» Ãâ·Â
-			for(int n=1; sDay.before(eDay) || sDay.equals(eDay); sDay.add(Calendar.DATE, 1)) {
-				int day = sDay.get(Calendar.DATE);
-                System.out.print((day < 10)? "  "+day : " "+day ); 
+        System.out.println("      " + year + "ï¿½ï¿½ " + month + "ï¿½ï¿½");
+        System.out.println(" SU MO TU WE TH FR SA");
 
-				if(n++%7==0) System.out.println();	// 7ÀÏÄ¡¸¦ Âï°í ³ª¼­ ÁÙÀ» ¹Ù²Û´Ù.
-            } 
-      } // main
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï±ï¿½ï¿½ï¿½(sDay <= eDay) 1ï¿½Ï¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å°ï¿½é¼­ ï¿½ï¿½(Calendar.DATE)ï¿½ï¿½ ï¿½ï¿½ï¿½
+        for (int n = 1; sDay.before(eDay) || sDay.equals(eDay); sDay.add(Calendar.DATE, 1)) {
+            int day = sDay.get(Calendar.DATE);
+            System.out.print((day < 10) ? "  " + day : " " + day);
+
+            if (n++ % 7 == 0) System.out.println();    // 7ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Û´ï¿½.
+        }
+    } // main
 } 

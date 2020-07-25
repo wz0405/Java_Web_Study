@@ -1,18 +1,18 @@
 package day0601;
 
 public class Counter_02 {
-	int count=0; //ÀÎ½ºÅÏ½º º¯¼ö´Â ¼­·Î ´Ù¸¥ ¸Þ¸ð¸®¸¦ °¡Áü
-	
-	public Counter_02() {
-		count++;
-		System.out.println(count);
-		
-	}
+    int count = 0; //ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½Þ¸ð¸®¸ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Counter_02 cot1=new Counter_02();
-		Counter_02 cot2=new Counter_02();
-	}
+    public Counter_02() {
+        count++;
+        System.out.println(count);
+
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Counter_02 cot1 = new Counter_02();
+        Counter_02 cot2 = new Counter_02();
+    }
 
 }

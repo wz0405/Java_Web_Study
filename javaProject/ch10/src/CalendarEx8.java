@@ -1,13 +1,13 @@
-class CalendarEx8 { 
-      public static void main(String[] args){ 
-		  String date1 = "201508";
-		  String date2 = "201405";
-		
-		  // ³â°ú ¿ùÀ» substringÀ¸·Î Àß¶ó¼­ Á¤¼ö·Î º¯È¯ÇÑ´Ù.
-		  // ³â¿¡ 12¸¦ °öÇØ¼­ ¿ù·Î º¯È¯ÇÑ ´ÙÀ½¿¡ »¬¼ÀÀ» ÇÏ¸é °³¿ùÂ÷¸¦ ±¸ÇÒ ¼ö ÀÖ´Ù.
-		  int month1 = Integer.parseInt(date1.substring(0,4))* 12 + Integer.parseInt(date1.substring(4));
-		  int month2 = Integer.parseInt(date2.substring(0,4))* 12 + Integer.parseInt(date2.substring(4));
+class CalendarEx8 {
+    public static void main(String[] args) {
+        String date1 = "201508";
+        String date2 = "201405";
 
-		  System.out.println(date1 +"°ú " + date2 + "ÀÇ Â÷ÀÌ´Â " + Math.abs(month1-month2) + "°³¿ù ÀÔ´Ï´Ù.");
-      } 
+        // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ substringï¿½ï¿½ï¿½ï¿½ ï¿½ß¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+        // ï¿½â¿¡ 12ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
+        int month1 = Integer.parseInt(date1.substring(0, 4)) * 12 + Integer.parseInt(date1.substring(4));
+        int month2 = Integer.parseInt(date2.substring(0, 4)) * 12 + Integer.parseInt(date2.substring(4));
+
+        System.out.println(date1 + "ï¿½ï¿½ " + date2 + "ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ " + Math.abs(month1 - month2) + "ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.");
+    }
 } 

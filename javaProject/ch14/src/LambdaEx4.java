@@ -1,30 +1,30 @@
 import java.util.*;
 
 class LambdaEx4 {
-	public static void main(String[] args) 	{
-		ArrayList<Integer> list = new ArrayList<>();
-		for(int i=0;i<10;i++)
-			list.add(i);
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++)
+            list.add(i);
 
-		// listÀÇ ¸ðµç ¿ä¼Ò¸¦ Ãâ·Â
-		list.forEach(i->System.out.print(i+","));
-		System.out.println();
+        // listï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½
+        list.forEach(i -> System.out.print(i + ","));
+        System.out.println();
 
-		// list¿¡¼­ 2 ¶Ç´Â 3ÀÇ ¹è¼ö¸¦ Á¦°ÅÇÑ´Ù.
-		list.removeIf(x-> x%2==0 || x%3==0);
-		System.out.println(list);
+        // listï¿½ï¿½ï¿½ï¿½ 2 ï¿½Ç´ï¿½ 3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        list.removeIf(x -> x % 2 == 0 || x % 3 == 0);
+        System.out.println(list);
 
-		list.replaceAll(i->i*10); // listÀÇ °¢ ¿ä¼Ò¿¡ 10À» °öÇÑ´Ù.
-		System.out.println(list);
+        list.replaceAll(i -> i * 10); // listï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ò¿ï¿½ 10ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½.
+        System.out.println(list);
 
-		Map<String, String> map = new HashMap<>();
-		map.put("1", "1");
-		map.put("2", "2");
-		map.put("3", "3");
-		map.put("4", "4");
+        Map<String, String> map = new HashMap<>();
+        map.put("1", "1");
+        map.put("2", "2");
+        map.put("3", "3");
+        map.put("4", "4");
 
-		// mapÀÇ ¸ðµç ¿ä¼Ò¸¦ {k,v}ÀÇ Çü½ÄÀ¸·Î Ãâ·ÂÇÑ´Ù.
-		map.forEach((k,v)-> System.out.print("{"+k+","+v+"},"));
-		System.out.println();
-	}
+        // mapï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ {k,v}ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        map.forEach((k, v) -> System.out.print("{" + k + "," + v + "},"));
+        System.out.println();
+    }
 }

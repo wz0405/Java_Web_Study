@@ -1,29 +1,29 @@
 class TvTest3 {
-	public static void main(String args[]) {
-		Tv t1 = new Tv();
-		Tv t2 = new Tv();
-		System.out.println("t1ÀÇ channel°ªÀº " + t1.channel + "ÀÔ´Ï´Ù.");
-		System.out.println("t2ÀÇ channel°ªÀº " + t2.channel + "ÀÔ´Ï´Ù.");
+    public static void main(String args[]) {
+        Tv t1 = new Tv();
+        Tv t2 = new Tv();
+        System.out.println("t1ï¿½ï¿½ channelï¿½ï¿½ï¿½ï¿½ " + t1.channel + "ï¿½Ô´Ï´ï¿½.");
+        System.out.println("t2ï¿½ï¿½ channelï¿½ï¿½ï¿½ï¿½ " + t2.channel + "ï¿½Ô´Ï´ï¿½.");
 
-		t2 = t1;		// t1ÀÌ ÀúÀåÇÏ°í ÀÖ´Â °ª(ÁÖ¼Ò)À» t2¿¡ ÀúÀåÇÑ´Ù.
-		t1.channel = 7;	// channel °ªÀ» 7·Î ÇÑ´Ù.
-		System.out.println("t1ÀÇ channel°ªÀ» 7·Î º¯°æÇÏ¿´½À´Ï´Ù.");
+        t2 = t1;        // t1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½(ï¿½Ö¼ï¿½)ï¿½ï¿½ t2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        t1.channel = 7;    // channel ï¿½ï¿½ï¿½ï¿½ 7ï¿½ï¿½ ï¿½Ñ´ï¿½.
+        System.out.println("t1ï¿½ï¿½ channelï¿½ï¿½ï¿½ï¿½ 7ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
-		System.out.println("t1ÀÇ channel°ªÀº " + t1.channel + "ÀÔ´Ï´Ù.");
-		System.out.println("t2ÀÇ channel°ªÀº " + t2.channel + "ÀÔ´Ï´Ù.");
-	}
+        System.out.println("t1ï¿½ï¿½ channelï¿½ï¿½ï¿½ï¿½ " + t1.channel + "ï¿½Ô´Ï´ï¿½.");
+        System.out.println("t2ï¿½ï¿½ channelï¿½ï¿½ï¿½ï¿½ " + t2.channel + "ï¿½Ô´Ï´ï¿½.");
+    }
 }
 
 /*
 class Tv { 
-     // TvÀÇ ¼Ó¼º(¸â¹öº¯¼ö) 
-     String color;           // »ö»ó 
-     boolean power;          // Àü¿ø»óÅÂ(on/off) 
-     int channel;          	 // Ã¤³Î 
+     // Tvï¿½ï¿½ ï¿½Ó¼ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½) 
+     String color;           // ï¿½ï¿½ï¿½ï¿½ 
+     boolean power;          // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(on/off) 
+     int channel;          	 // Ã¤ï¿½ï¿½ 
 
-     // TvÀÇ ±â´É(¸Þ¼­µå) 
-     void power()   { power = !power; }  // TV¸¦ ÄÑ°Å³ª ²ô´Â ±â´ÉÀ» ÇÏ´Â ¸Þ¼­µå 
-     void channelUp()   {  ++channel; }  // TVÀÇ Ã¤³ÎÀ» ³ôÀÌ´Â ±â´ÉÀ» ÇÏ´Â ¸Þ¼­µå 
-     void channelDown() {  --channel; }  // TVÀÇ Ã¤³ÎÀ» ³·Ãß´Â ±â´ÉÀ» ÇÏ´Â ¸Þ¼­µå  
+     // Tvï¿½ï¿½ ï¿½ï¿½ï¿½(ï¿½Þ¼ï¿½ï¿½ï¿½) 
+     void power()   { power = !power; }  // TVï¿½ï¿½ ï¿½Ñ°Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ 
+     void channelUp()   {  ++channel; }  // TVï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ 
+     void channelDown() {  --channel; }  // TVï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½  
 }
  */

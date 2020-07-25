@@ -1,20 +1,20 @@
 class ReturnTest {
-	public static void main(String[] args) {
-		ReturnTest r = new ReturnTest();
+    public static void main(String[] args) {
+        ReturnTest r = new ReturnTest();
 
-		int result = r.add(3,5);
-		System.out.println(result);
+        int result = r.add(3, 5);
+        System.out.println(result);
 
-		int[] result2 = {0}; // ¹è¿­À» »ý¼ºÇÏ°í result2[0]ÀÇ °ªÀ» 0À¸·Î ÃÊ±âÈ­
-		r.add(3,5,result2);  // ¹è¿­À» add¸Þ¼­µåÀÇ ¸Å°³º¯¼ö·Î Àü´Þ
-		System.out.println(result2[0]);
-	}
+        int[] result2 = {0}; // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ result2[0]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
+        r.add(3, 5, result2);  // ï¿½è¿­ï¿½ï¿½ addï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        System.out.println(result2[0]);
+    }
 
-	int add(int a, int b) {
-		return a + b;
-	}
+    int add(int a, int b) {
+        return a + b;
+    }
 
-	void add(int a, int b, int[] result) {
-		result[0] = a + b;  // ¸Å°³º¯¼ö·Î ³Ñ°Ü¹ÞÀº ¹è¿­¿¡ ¿¬»ê°á°ú¸¦ ÀúÀå
-	}
+    void add(int a, int b, int[] result) {
+        result[0] = a + b;  // ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ°Ü¹ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    }
 }

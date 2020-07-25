@@ -1,94 +1,109 @@
-import java.util.*;			// VectorÅ¬·¡½º¸¦ »ç¿ëÇÏ±â À§ÇØ¼­ Ãß°¡ÇØ ÁÖ¾ú´Ù.
+import java.util.*;            // VectorÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½.
 
 class Product3 {
-	int price;			// Á¦Ç°ÀÇ °¡°Ý
-	int bonusPoint;		// Á¦Ç°±¸¸Å ½Ã Á¦°øÇÏ´Â º¸³Ê½ºÁ¡¼ö
+    int price;            // ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    int bonusPoint;        // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	Product3(int price) {
-		this.price = price;
-		bonusPoint =(int)(price/10.0);
-	}
+    Product3(int price) {
+        this.price = price;
+        bonusPoint = (int) (price / 10.0);
+    }
 
-	Product3() {
-		price = 0;
-		bonusPoint = 0;
-	}
+    Product3() {
+        price = 0;
+        bonusPoint = 0;
+    }
 }
 
 class Tv5 extends Product3 {
-	Tv5() { super(100); }
-	public String toString() { return "Tv"; }
+    Tv5() {
+        super(100);
+    }
+
+    public String toString() {
+        return "Tv";
+    }
 }
 
 class Computer3 extends Product3 {
-	Computer3() { super(200); }
-	public String toString() { return "Computer"; }
+    Computer3() {
+        super(200);
+    }
+
+    public String toString() {
+        return "Computer";
+    }
 }
 
 class Audio3 extends Product3 {
-	Audio3() { super(50); }
-	public String toString() { return "Audio"; }
+    Audio3() {
+        super(50);
+    }
+
+    public String toString() {
+        return "Audio";
+    }
 }
 
-class Buyer3 {			// °í°´, ¹°°ÇÀ» »ç´Â »ç¶÷
-	int money = 1000;  	// ¼ÒÀ¯±Ý¾×
-	int bonusPoint = 0;	// º¸³Ê½ºÁ¡¼ö
-	Vector item = new Vector();	// ±¸ÀÔÇÑ Á¦Ç°À» ÀúÀåÇÏ´Âµ¥ »ç¿ëµÉ Vector°´Ã¼
+class Buyer3 {            // ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    int money = 1000;    // ï¿½ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½
+    int bonusPoint = 0;    // ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½
+    Vector item = new Vector();    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ Vectorï¿½ï¿½Ã¼
 
-	void buy(Product3 p) {
-		if(money < p.price) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ¹°°ÇÀ» »ì¼ö ¾ø½À´Ï´Ù.");
-			return;
-		}
-		money -= p.price;			// °¡Áø µ·¿¡¼­ ±¸ÀÔÇÑ Á¦Ç°ÀÇ °¡°ÝÀ» »«´Ù.
-		bonusPoint += p.bonusPoint;	// Á¦Ç°ÀÇ º¸³Ê½º Á¡¼ö¸¦ Ãß°¡ÇÑ´Ù.
-		item.add(p);				// ±¸ÀÔÇÑ Á¦Ç°À» Vector¿¡ ÀúÀåÇÑ´Ù.
-		System.out.println(p + "À»/¸¦ ±¸ÀÔÇÏ¼Ì½À´Ï´Ù.");
-	}
+    void buy(Product3 p) {
+        if (money < p.price) {
+            System.out.println("ï¿½Ü¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            return;
+        }
+        money -= p.price;            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        bonusPoint += p.bonusPoint;    // ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½Ê½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ñ´ï¿½.
+        item.add(p);                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ Vectorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        System.out.println(p + "ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.");
+    }
 
-	void refund(Product3 p) {	// ±¸ÀÔÇÑ Á¦Ç°À» È¯ºÒÇÑ´Ù.
-		if(item.remove(p)) {	// Á¦Ç°À» Vector¿¡¼­ Á¦°ÅÇÑ´Ù.
-			money += p.price;
-			bonusPoint -= p.bonusPoint;
-			System.out.println(p + "À»/¸¦ ¹ÝÇ°ÇÏ¼Ì½À´Ï´Ù.");
-		} else {			//  Á¦°Å¿¡ ½ÇÆÐÇÑ °æ¿ì
-			System.out.println("±¸ÀÔÇÏ½Å Á¦Ç° Áß ÇØ´ç Á¦Ç°ÀÌ ¾ø½À´Ï´Ù.");		
-		}
-	}
+    void refund(Product3 p) {    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ È¯ï¿½ï¿½ï¿½Ñ´ï¿½.
+        if (item.remove(p)) {    // ï¿½ï¿½Ç°ï¿½ï¿½ Vectorï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            money += p.price;
+            bonusPoint -= p.bonusPoint;
+            System.out.println(p + "ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.");
+        } else {            //  ï¿½ï¿½ï¿½Å¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç° ï¿½ï¿½ ï¿½Ø´ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        }
+    }
 
-	void summary() {		      // ±¸¸ÅÇÑ ¹°Ç°¿¡ ´ëÇÑ Á¤º¸¸¦ ¿ä¾àÇØ¼­ º¸¿©ÁØ´Ù.
-		int sum = 0;		      // ±¸ÀÔÇÑ ¹°Ç°ÀÇ °¡°ÝÇÕ°è
-		String itemList =""; 	  // ±¸ÀÔÇÑ ¹°Ç°¸ñ·Ï
-		
-		if(item.isEmpty()) {	// Vector°¡ ºñ¾îÀÖ´ÂÁö È®ÀÎÇÑ´Ù.
-			System.out.println("±¸ÀÔÇÏ½Å Á¦Ç°ÀÌ ¾ø½À´Ï´Ù.");
-			return;
-		}
+    void summary() {              // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
+        int sum = 0;              // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ°ï¿½
+        String itemList = "";      // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ï¿½
 
-		// ¹Ýº¹¹®À» ÀÌ¿ëÇØ¼­ ±¸ÀÔÇÑ ¹°Ç°ÀÇ ÃÑ °¡°Ý°ú ¸ñ·ÏÀ» ¸¸µç´Ù.
-		for(int i=0; i<item.size();i++) {
-			Product p = (Product)item.get(i);	
-			sum += p.price;
-			itemList += (i==0) ? "" + p : ", " + p;
-		}
-		System.out.println("±¸ÀÔÇÏ½Å ¹°Ç°ÀÇ ÃÑ±Ý¾×Àº " + sum + "¸¸¿øÀÔ´Ï´Ù.");
-		System.out.println("±¸ÀÔÇÏ½Å Á¦Ç°Àº " + itemList + "ÀÔ´Ï´Ù.");
-	}
+        if (item.isEmpty()) {    // Vectorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ñ´ï¿½.
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            return;
+        }
+
+        // ï¿½Ýºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ý°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+        for (int i = 0; i < item.size(); i++) {
+            Product p = (Product) item.get(i);
+            sum += p.price;
+            itemList += (i == 0) ? "" + p : ", " + p;
+        }
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½Ñ±Ý¾ï¿½ï¿½ï¿½ " + sum + "ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ " + itemList + "ï¿½Ô´Ï´ï¿½.");
+    }
 }
 
 class PolyArgumentTest3 {
-	public static void main(String args[]) {
-		Buyer3 b = new Buyer3();
-		Tv5 tv = new Tv5();
-		Computer3 com = new Computer3();
-		Audio3 audio = new Audio3();
+    public static void main(String args[]) {
+        Buyer3 b = new Buyer3();
+        Tv5 tv = new Tv5();
+        Computer3 com = new Computer3();
+        Audio3 audio = new Audio3();
 
-		b.buy(tv);
-		b.buy(com);
-		b.buy(audio);
-		b.summary();
-		System.out.println();
-		b.refund(com);
-		b.summary();
-	}
+        b.buy(tv);
+        b.buy(com);
+        b.buy(audio);
+        b.summary();
+        System.out.println();
+        b.refund(com);
+        b.summary();
+    }
 }

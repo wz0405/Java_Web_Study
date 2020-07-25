@@ -1,12 +1,15 @@
 package day0602_1;
 
 public class SuperObj_04 {
-	protected String name;
-	protected int age;
-	//»ý¼ºÀÚ
-	public SuperObj_04() {} //µðÆúÆ® »ý¼ºÀÚ »ý¼º..»ó¼Ó¹Þ´Â ÀÚ½ÄÅ¬·¡½º¿¡¼­ ÂüÁ¶ÇÒ ¼ö ÀÖÀ½
-	public SuperObj_04(String name, int age) {
-		this.name=name;
-		this.age=age;
-	}
+    protected String name;
+    protected int age;
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public SuperObj_04() {
+    } //ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½..ï¿½ï¿½Ó¹Þ´ï¿½ ï¿½Ú½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+    public SuperObj_04(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 }

@@ -1,27 +1,27 @@
 package day0601;
 
 public class InfoData_15 {
-	String name;
-	String gender;
-	String addr;
-	
-	static String ban;
-	static int cnt;
-	
-	//¸â¹ö¸Þ¼Òµå
-	public void setData(String name, String gender, String addr) {
-		this.name=name;
-		this.gender=gender;
-		this.addr=addr;
-	}
-	
-	//Ãâ·ÂÀ» ÇÑ¹ø¿¡ ÇÒ¼öÀÖ´Â ¸Þ¼Òµå ¸¸µé±â
-	public void getData() {
-		cnt++;
-		System.out.println("**ÇÐ»ý"+cnt+"Á¤º¸**");
-		System.out.println("ÀÌ¸§ "+this.name);
-		System.out.println("ÇÐ±Þ "+InfoData_15.ban);
-		System.out.println("¼ºº° "+this.gender);
-		System.out.println("ÁÖ¼Ò "+this.addr);
-	}
+    String name;
+    String gender;
+    String addr;
+
+    static String ban;
+    static int cnt;
+
+    //ï¿½ï¿½ï¿½ï¿½Þ¼Òµï¿½
+    public void setData(String name, String gender, String addr) {
+        this.name = name;
+        this.gender = gender;
+        this.addr = addr;
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½Ò¼ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼Òµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+    public void getData() {
+        cnt++;
+        System.out.println("**ï¿½Ð»ï¿½" + cnt + "ï¿½ï¿½ï¿½ï¿½**");
+        System.out.println("ï¿½Ì¸ï¿½ " + this.name);
+        System.out.println("ï¿½Ð±ï¿½ " + InfoData_15.ban);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ " + this.gender);
+        System.out.println("ï¿½Ö¼ï¿½ " + this.addr);
+    }
 }

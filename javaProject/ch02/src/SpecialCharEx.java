@@ -1,9 +1,9 @@
 class SpecialCharEx {
-	public static void main(String[] args) {
-		System.out.println('\'');		     //  '''Ã³·³ ÇÒ ¼ö ¾ø´Ù.
-		System.out.println("abc\t123\b456"); // \b¿¡ ÀÇÇØ 3ÀÌ Áö¿öÁø´Ù.
-		System.out.println('\n');		     //  °³Çà(new line)¹®ÀÚ Ãâ·ÂÇÏ°í °³Çà
-		System.out.println("\"Hello\"");	 //  Å«µû¿ÈÇ¥¸¦ Ãâ·ÂÇÏ·Á¸é ÀÌ·¸°Ô ÇÑ´Ù.
-		System.out.println("c:\\");
-	}
+    public static void main(String[] args) {
+        System.out.println('\'');             //  '''Ã³ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        System.out.println("abc\t123\b456"); // \bï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+        System.out.println('\n');             //  ï¿½ï¿½ï¿½ï¿½(new line)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½
+        System.out.println("\"Hello\"");     //  Å«ï¿½ï¿½ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
+        System.out.println("c:\\");
+    }
 }

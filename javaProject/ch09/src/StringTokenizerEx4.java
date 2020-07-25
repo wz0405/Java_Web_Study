@@ -1,44 +1,44 @@
-import java.util.*; 
+import java.util.*;
 
-class StringTokenizerEx4 { 
-	public static void main(String args[]) { 
-		String input = "»ï½Ê¸¸»ïÃµ¹é½Ê¿À"; 
+class StringTokenizerEx4 {
+    public static void main(String args[]) {
+        String input = "ï¿½ï¿½Ê¸ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ê¿ï¿½";
 
-		System.out.println(input); 
-		System.out.println(hangulToNum(input)); 
-	} 
+        System.out.println(input);
+        System.out.println(hangulToNum(input));
+    }
 
-	// ÇÑ±ÛÀ» ¼ýÀÚ·Î ¹Ù²Ù´Â ¸Þ¼­µå
-	public static long hangulToNum(String input) { 
-		long result = 0;     // ÃÖÁ¾ º¯È¯°á°ú¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö 
-		long tmpResult = 0;  // ½Ê¹éÃµ ´ÜÀ§ÀÇ °ªÀ» ÀúÀåÇÏ±â À§ÇÑ ÀÓ½Ãº¯¼ö
-		long num = 0; 
+    // ï¿½Ñ±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½Ù²Ù´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    public static long hangulToNum(String input) {
+        long result = 0;     // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
+        long tmpResult = 0;  // ï¿½Ê¹ï¿½Ãµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ó½Ãºï¿½ï¿½ï¿½
+        long num = 0;
 
-		final String NUMBER = "¿µÀÏÀÌ»ï»ç¿ÀÀ°Ä¥ÆÈ±¸"; 
-		final String UNIT   = "½Ê¹éÃµ¸¸¾ïÁ¶"; 
-		final long[] UNIT_NUM  = {10,100,1000,10000,(long)1e8,(long)1e12}; 
+        final String NUMBER = "ï¿½ï¿½ï¿½ï¿½ï¿½Ì»ï¿½ï¿½ï¿½ï¿½ï¿½Ä¥ï¿½È±ï¿½";
+        final String UNIT = "ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+        final long[] UNIT_NUM = {10, 100, 1000, 10000, (long) 1e8, (long) 1e12};
 
-		StringTokenizer st = new StringTokenizer(input, UNIT, true); 
+        StringTokenizer st = new StringTokenizer(input, UNIT, true);
 
-		while(st.hasMoreTokens()) { 
-			String token = st.nextToken(); 
-                   // ¼ýÀÚÀÎÁö, ´ÜÀ§(UNIT)ÀÎÁö È®ÀÎÇÑ´Ù.
-			int check = NUMBER.indexOf(token);	
+        while (st.hasMoreTokens()) {
+            String token = st.nextToken();
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½(UNIT)ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ñ´ï¿½.
+            int check = NUMBER.indexOf(token);
 
-			if(check==-1) { // ´ÜÀ§ÀÎ °æ¿ì
-				if("¸¸¾ïÁ¶".indexOf(token)==-1) { 
-					tmpResult += ( num!=0 ? num : 1) * UNIT_NUM[UNIT.indexOf(token)]; 
-				} else {	
-					tmpResult += num; 
-					result += (tmpResult!=0 ? tmpResult : 1) * UNIT_NUM[UNIT.indexOf(token)];
-					tmpResult = 0; 
-				} 
-				num = 0; 
-			} else {  // ¼ýÀÚÀÎ °æ¿ì
-				num = check; 
-			} 
-		} // end of while 
+            if (check == -1) { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+                if ("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½".indexOf(token) == -1) {
+                    tmpResult += (num != 0 ? num : 1) * UNIT_NUM[UNIT.indexOf(token)];
+                } else {
+                    tmpResult += num;
+                    result += (tmpResult != 0 ? tmpResult : 1) * UNIT_NUM[UNIT.indexOf(token)];
+                    tmpResult = 0;
+                }
+                num = 0;
+            } else {  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+                num = check;
+            }
+        } // end of while 
 
-		return result + tmpResult + num; 
-	} 
+        return result + tmpResult + num;
+    }
 } 

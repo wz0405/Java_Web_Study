@@ -1,36 +1,37 @@
 package day0601;
 
-class Card{
-	//ÀÎ½ºÅÏ½º º¯¼ö
-	//°¢ ÀÎ½ºÅÏ½ºÀÇ °³º°ÀûÀÎ ÀúÀß°ï°£ °¢°¢ ´Ù¸¥°ª ÀúÀå°¡´É
-	//ÂüÁ¶º¯¼ö¸í. À¸·Î Á¢±Ù°¡´É
-	String kind; //Ä«µå ¹«´Ì
-	int number; //Ä«µåÀÇ ¼ýÀÚ
-	
-	
-	//Å¬·¡½º º¯¼ö..staticº¯¼ö
-	//¸ðµçÀÎ½ºÅÏ½ºµéÀÌ °øÀ¯..Å¬·¡½º°¡ ·ÎµùµÉ¶§ »ý¼º Á¾·áµÉ¶§ ¼Ò¸ê
-	//Å¬·¡½º¸í.º¯¼ö¸íÀ¸·Î Á¢±Ù°¡´É
-	static int width,height;
+class Card {
+    //ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß°ï°£ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½å°¡ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ï¿½ï¿½
+    String kind; //Ä«ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    int number; //Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+
+    //Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½..staticï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½..Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½É¶ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½É¶ï¿½ ï¿½Ò¸ï¿½
+    //Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ï¿½ï¿½
+    static int width, height;
 }
+
 public class CardTest_01 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Card cd = new Card();
-		cd.kind="50";
-		cd.number=20;
-	
-		Card.width=50;
-		Card.height=80;
-		System.out.println(Card.width);
-		System.out.println(Card.height);
-		System.out.println(cd.kind);
-		System.out.println(cd.number);
-		Card cd2 =new Card();
-		cd2.kind="space";
-		cd2.number=7;
-		System.out.println(cd2.kind+cd2.number);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Card cd = new Card();
+        cd.kind = "50";
+        cd.number = 20;
+
+        Card.width = 50;
+        Card.height = 80;
+        System.out.println(Card.width);
+        System.out.println(Card.height);
+        System.out.println(cd.kind);
+        System.out.println(cd.number);
+        Card cd2 = new Card();
+        cd2.kind = "space";
+        cd2.number = 7;
+        System.out.println(cd2.kind + cd2.number);
+    }
 
 }

@@ -1,16 +1,14 @@
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-class ImportTest 
-{
-	public static void main(String[] args) 
-	{
-		 Date today = new Date();
-		 
-		 SimpleDateFormat date = new SimpleDateFormat("yyyy/MM/dd");
-		 SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss a");
+class ImportTest {
+    public static void main(String[] args) {
+        Date today = new Date();
 
-		 System.out.println("¿À´Ã ³¯Â¥´Â " + date.format(today));
-		 System.out.println("ÇöÀç ½Ã°£Àº " + time.format(today));
-	}
+        SimpleDateFormat date = new SimpleDateFormat("yyyy/MM/dd");
+        SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss a");
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ " + date.format(today));
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ " + time.format(today));
+    }
 }

@@ -1,19 +1,19 @@
 class FactorialTest {
-	public static void main(String args[]) {
-		int result = factorial(4);  // int result = FactorialTest.factorial(4);
+    public static void main(String args[]) {
+        int result = factorial(4);  // int result = FactorialTest.factorial(4);
 
-		System.out.println(result);
-	}
+        System.out.println(result);
+    }
 
-	static int factorial(int n) {
-		int result=0;
+    static int factorial(int n) {
+        int result = 0;
 
-		if ( n == 1) {
-			result = 1;		
-		} else {
-			result = n * factorial(n-1);		// ´Ù½Ã ¸Þ¼­µå ÀÚ½ÅÀ» È£ÃâÇÑ´Ù.
-		}
+        if (n == 1) {
+            result = 1;
+        } else {
+            result = n * factorial(n - 1);        // ï¿½Ù½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ñ´ï¿½.
+        }
 
-		return result;
-	}
+        return result;
+    }
 }

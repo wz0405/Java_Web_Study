@@ -2,11 +2,11 @@ package day0602;
 
 public class FruitTest_07 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//ÀÚ½ÄÅ¬·¡½º·Î »ý¼º
-		//Æò»ó½ÃÀÇ º¸ÆíÀû »ý¼º....
-		//ÂüÁ¶º¯¼ö°¡ ³Ê¹« ¸¹À½
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //ï¿½Ú½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½....
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¹ï¿½ ï¿½ï¿½ï¿½ï¿½
 //		Apple_07 ap1 = new Apple_07();
 //		ap1.showMessage();
 //		ap1.showtitle();
@@ -18,15 +18,15 @@ public class FruitTest_07 {
 //		Banana_07 ba1 = new Banana_07();
 //		ba1.showMessage();
 //		ba1.showtitle();
-		
-		//´ÙÇü¼ºÀ¸·Î °´Ã¼»ý¼ºÇÏ¿© Ãâ·Â
-		Fruit_07 fr;
-		fr=new Apple_07();
-		fr.showMessage();
-		fr.showtitle();
-		
-		fr=new Orange_07();
-		fr.showMessage();
-	}
+
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½
+        Fruit_07 fr;
+        fr = new Apple_07();
+        fr.showMessage();
+        fr.showtitle();
+
+        fr = new Orange_07();
+        fr.showMessage();
+    }
 
 }

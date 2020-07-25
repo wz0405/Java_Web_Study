@@ -2,25 +2,25 @@ package day0529;
 
 public class ArrayTest_01 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//¹è¿­¼±¾ð
-		//±âº»Çü ¹è¿­Àº °´Ã¼·Î ÀÎ½Ä
-		//int [] arr=new int[3];
-		int arr[]=new int[3];
-		String arr2[]=new String[5];
-		
-		arr[0]=10;
-		arr2[2]="20";
-		
-		System.out.println(arr2[0]);
-		for (int i=0;i<arr.length;i++) {
-			System.out.println(arr[i]);
-		}
-		//for each ´Ü¼øÃâ·Â..¼ø¹ø¸ø¹Ù²Þ,,´Ü¼ø Ãâ·ÂÀÏ¶§ »ç¿ë
-		for(int a:arr) {
-			System.out.println(a);
-		}
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //ï¿½è¿­ï¿½ï¿½ï¿½ï¿½
+        //ï¿½âº»ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Î½ï¿½
+        //int [] arr=new int[3];
+        int arr[] = new int[3];
+        String arr2[] = new String[5];
+
+        arr[0] = 10;
+        arr2[2] = "20";
+
+        System.out.println(arr2[0]);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+        //for each ï¿½Ü¼ï¿½ï¿½ï¿½ï¿½..ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù²ï¿½,,ï¿½Ü¼ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ ï¿½ï¿½ï¿½
+        for (int a : arr) {
+            System.out.println(a);
+        }
+    }
 
 }

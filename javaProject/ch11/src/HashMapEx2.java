@@ -1,38 +1,38 @@
 import java.util.*;
 
 class HashMapEx2 {
-	public static void main(String[] args) {
-		HashMap map = new HashMap();
-		map.put("±èÀÚ¹Ù", new Integer(90));
-		map.put("±èÀÚ¹Ù", new Integer(100));
-		map.put("ÀÌÀÚ¹Ù", new Integer(100));
-		map.put("°­ÀÚ¹Ù", new Integer(80));
-		map.put("¾ÈÀÚ¹Ù", new Integer(90));
+    public static void main(String[] args) {
+        HashMap map = new HashMap();
+        map.put("ï¿½ï¿½ï¿½Ú¹ï¿½", new Integer(90));
+        map.put("ï¿½ï¿½ï¿½Ú¹ï¿½", new Integer(100));
+        map.put("ï¿½ï¿½ï¿½Ú¹ï¿½", new Integer(100));
+        map.put("ï¿½ï¿½ï¿½Ú¹ï¿½", new Integer(80));
+        map.put("ï¿½ï¿½ï¿½Ú¹ï¿½", new Integer(90));
 
-		Set set = map.entrySet();
-		Iterator it = set.iterator();
+        Set set = map.entrySet();
+        Iterator it = set.iterator();
 
-		while(it.hasNext()) {
-			Map.Entry e = (Map.Entry)it.next();
-			System.out.println("ÀÌ¸§ : "+ e.getKey() + ", Á¡¼ö : " + e.getValue());
-		}
+        while (it.hasNext()) {
+            Map.Entry e = (Map.Entry) it.next();
+            System.out.println("ï¿½Ì¸ï¿½ : " + e.getKey() + ", ï¿½ï¿½ï¿½ï¿½ : " + e.getValue());
+        }
 
-		set = map.keySet();
-		System.out.println("Âü°¡ÀÚ ¸í´Ü : " + set);
+        set = map.keySet();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ : " + set);
 
-		Collection values = map.values();
-		it = values.iterator();
+        Collection values = map.values();
+        it = values.iterator();
 
-		int total = 0;
+        int total = 0;
 
-		while(it.hasNext()) {
-			Integer i = (Integer)it.next();
-			total += i.intValue();
-		}
+        while (it.hasNext()) {
+            Integer i = (Integer) it.next();
+            total += i.intValue();
+        }
 
-		System.out.println("ÃÑÁ¡ : " + total);
-		System.out.println("Æò±Õ : " + (float)total/set.size());
-		System.out.println("ÃÖ°íÁ¡¼ö : " + Collections.max(values));
-		System.out.println("ÃÖÀúÁ¡¼ö : " + Collections.min(values));
-	}
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ : " + total);
+        System.out.println("ï¿½ï¿½ï¿½ : " + (float) total / set.size());
+        System.out.println("ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ : " + Collections.max(values));
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : " + Collections.min(values));
+    }
 }

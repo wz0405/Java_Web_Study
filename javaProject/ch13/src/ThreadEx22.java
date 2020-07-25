@@ -1,35 +1,38 @@
 class ThreadEx22 {
-	public static void main(String args[]) {
-		Runnable r = new RunnableEx22();
-		new Thread(r).start();
-		new Thread(r).start();
-	}
+    public static void main(String args[]) {
+        Runnable r = new RunnableEx22();
+        new Thread(r).start();
+        new Thread(r).start();
+    }
 }
 
 class Account2 {
-	private int balance = 1000; // privateÀ¸·Î ÇØ¾ß µ¿±âÈ­°¡ ÀÇ¹Ì°¡ ÀÖ´Ù.
+    private int balance = 1000; // privateï¿½ï¿½ï¿½ï¿½ ï¿½Ø¾ï¿½ ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ ï¿½Ç¹Ì°ï¿½ ï¿½Ö´ï¿½.
 
-	public  int getBalance() {
-		return balance;
-	}
+    public int getBalance() {
+        return balance;
+    }
 
-	public synchronized void withdraw(int money){ // synchronized·Î ¸Þ¼­µå¸¦ µ¿±âÈ­
-		if(balance >= money) {
-			try { Thread.sleep(1000);} catch(InterruptedException e) {}
-			balance -= money;
-		}
-	} // withdraw
+    public synchronized void withdraw(int money) { // synchronizedï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½È­
+        if (balance >= money) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+            balance -= money;
+        }
+    } // withdraw
 }
 
 class RunnableEx22 implements Runnable {
-	Account2 acc = new Account2();
+    Account2 acc = new Account2();
 
-	public void run() {
-		while(acc.getBalance() > 0) {
-			// 100, 200, 300ÁßÀÇ ÇÑ °ªÀ» ÀÓÀ¸·Î ¼±ÅÃÇØ¼­ Ãâ±Ý(withdraw)
-			int money = (int)(Math.random() * 3 + 1) * 100;
-			acc.withdraw(money);
-			System.out.println("balance:"+acc.getBalance());
-		}
-	} // run()
+    public void run() {
+        while (acc.getBalance() > 0) {
+            // 100, 200, 300ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½(withdraw)
+            int money = (int) (Math.random() * 3 + 1) * 100;
+            acc.withdraw(money);
+            System.out.println("balance:" + acc.getBalance());
+        }
+    } // run()
 }

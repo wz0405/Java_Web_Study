@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<style type="text/css">
-table {
-	border: 2px solid gray;
-}
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <style type="text/css">
+        table {
+            border: 2px solid gray;
+        }
 
-th, td {
-	border: 1px dotted purple;
-	font-size: 10pt;
-}
-</style>
-<script type="text/javascript">
-	function datasend(){
-		opener.document.frm.name.value=frm.name.value;
-		opener.frm.hp.value=frm.hp.value;
-		opener.frm.addr.value=frm.addr.value;
-		
-		//현재 열려있는곳이 opner.document
-		window.close();
-	}	
-</script>
+        th, td {
+            border: 1px dotted purple;
+            font-size: 10pt;
+        }
+    </style>
+    <script type="text/javascript">
+        function datasend() {
+            opener.document.frm.name.value = frm.name.value;
+            opener.frm.hp.value = frm.hp.value;
+            opener.frm.addr.value = frm.addr.value;
+
+            //현재 열려있는곳이 opner.document
+            window.close();
+        }
+    </script>
 </head>
 <body>
-	<form action="" name="frm">
-		<table>
-			<tr>
-				<th width="100">이름</th>
-				<td width="200">
-					<input type="text" name="name" size="12">
-				</td>
-			</tr>
+<form action="" name="frm">
+    <table>
+        <tr>
+            <th width="100">이름</th>
+            <td width="200">
+                <input type="text" name="name" size="12">
+            </td>
+        </tr>
 
-			<tr>
-				<th width="100">핸드폰</th>
-				<td width="200">
-					<input type="text" name="hp" size="12">
-				</td>
-			</tr>
+        <tr>
+            <th width="100">핸드폰</th>
+            <td width="200">
+                <input type="text" name="hp" size="12">
+            </td>
+        </tr>
 
-			<tr>
-				<th width="100">주소</th>
-				<td width="200">
-					<input type="text" name="addr" size="12">
-				</td>
-			</tr>
+        <tr>
+            <th width="100">주소</th>
+            <td width="200">
+                <input type="text" name="addr" size="12">
+            </td>
+        </tr>
 
-			<tr align="center">
-				<td colspan="2">
-					<input type="button" value="데이타 보내기" onclick="datasend()">
-				</td>
-			</tr>
+        <tr align="center">
+            <td colspan="2">
+                <input type="button" value="데이타 보내기" onclick="datasend()">
+            </td>
+        </tr>
 
 
-		</table>
-	</form>
+    </table>
+</form>
 </body>
 </html>

@@ -1,30 +1,30 @@
 import java.io.*;
 
 class FileReaderEx1 {
-	public static void main(String args[]) {
-		try {
-			String fileName = "test.txt";
-			FileInputStream fis = new FileInputStream(fileName);
-			FileReader	    fr  = new FileReader(fileName);
+    public static void main(String args[]) {
+        try {
+            String fileName = "test.txt";
+            FileInputStream fis = new FileInputStream(fileName);
+            FileReader fr = new FileReader(fileName);
 
-			int data =0;
+            int data = 0;
 
-			// FileInputStreamÀ» ÀÌ¿ëÇØ¼­ ÆÄÀÏ³»¿ëÀ» ÀÐ¾î È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
-			while((data=fis.read())!=-1) {
-				System.out.print((char)data);
-			}
-			System.out.println();
-			fis.close();
+            // FileInputStreamï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Ï³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            while ((data = fis.read()) != -1) {
+                System.out.print((char) data);
+            }
+            System.out.println();
+            fis.close();
 
-			// FileReader¸¦ ÀÌ¿ëÇØ¼­ ÆÄÀÏ³»¿ëÀ» ÀÐ¾î È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
-			while((data=fr.read())!=-1) {
-				System.out.print((char)data);
-			}
-			System.out.println();
-			fr.close();				
+            // FileReaderï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Ï³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            while ((data = fr.read()) != -1) {
+                System.out.print((char) data);
+            }
+            System.out.println();
+            fr.close();
 
-		} catch (IOException e) {
-				e.printStackTrace();		
-		}
-	} // main
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    } // main
 }

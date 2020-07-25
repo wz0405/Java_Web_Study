@@ -2,22 +2,22 @@ import java.util.*;
 import java.text.*;
 
 class DateFormatEx2 {
-	public static void main(String[] args) {
-		// Calendar¿Í Date°£ÀÇ º¯È¯Àº ´ÙÀ½°ú °°ÀÌ ÇÑ´Ù.
-		Calendar cal = Calendar.getInstance();
-		cal.set(2005, 9, 3);	// 2005³â 10¿ù 3ÀÏ - Month´Â 0~11ÀÇ ¹üÀ§¸¦ °®´Â´Ù.
+    public static void main(String[] args) {
+        // Calendarï¿½ï¿½ Dateï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
+        Calendar cal = Calendar.getInstance();
+        cal.set(2005, 9, 3);    // 2005ï¿½ï¿½ 10ï¿½ï¿½ 3ï¿½ï¿½ - Monthï¿½ï¿½ 0~11ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½.
 
-		Date day = cal.getTime();
+        Date day = cal.getTime();
 
-		SimpleDateFormat sdf1, sdf2, sdf3, sdf4;
-		sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-		sdf2 = new SimpleDateFormat("yy-MM-dd E¿äÀÏ");
-		sdf3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
-		sdf4 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+        SimpleDateFormat sdf1, sdf2, sdf3, sdf4;
+        sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+        sdf2 = new SimpleDateFormat("yy-MM-dd Eï¿½ï¿½ï¿½ï¿½");
+        sdf3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
+        sdf4 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
 
-		System.out.println(sdf1.format(day)); // format(Date d)
-		System.out.println(sdf2.format(day));
-		System.out.println(sdf3.format(day));
-		System.out.println(sdf4.format(day));
-	}
+        System.out.println(sdf1.format(day)); // format(Date d)
+        System.out.println(sdf2.format(day));
+        System.out.println(sdf3.format(day));
+        System.out.println(sdf4.format(day));
+    }
 }

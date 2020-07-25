@@ -3,48 +3,49 @@ package day0528;
 import java.util.Scanner;
 
 public class StringText_04 {
-	public static void test1() {
-		Scanner sc=new Scanner(System.in);
-		String name;
-		int cnt=0;
-		
-		while(true)
-		{
-			System.out.println("ÀÌ¸§ÀÔ·Â(Á¾·á=³¡)");
-			name=sc.nextLine();
-			
-			if(name.contentEquals("³¡"))
-				break;
-			if(name.startsWith("±è"))
-				cnt++;
-		}
-		System.out.println("±è¾¾¼ºÀ» °¡Áø»ç¶÷Àº ÃÑ"+cnt+"ÀÔ´Ï´Ù");
-	}
-	public static void test2() {
-		//charAt(index) : ÇÑ±ÛÀÚ¸¸ ÃßÃâ
-		String a="950327-1010101";
-		char check=a.charAt(7);
-		if (check=='1') {
-			System.out.println("³²ÀÚ");
-		}
-		else {
-			System.out.println("¿©ÀÚ");
-		}
-		
-		
-	}
-	public static void test3() {
-		//substringÀ¸·Î ¹®ÀÚ¿­ ÃßÃâ
-		String str="³ª´Â fnÀÌ³ë¿¡µà¿¡¼­ Çõ½Å¼ºÀåÀ» ¹è¿ì´Â ÁßÀÔ´Ï´Ù.";
-		
-		String word1=str.substring(12,16);
-		System.out.println(word1);
-	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//test1();
-		//test2();
-		test3();
-	}
+    public static void test1() {
+        Scanner sc = new Scanner(System.in);
+        String name;
+        int cnt = 0;
+
+        while (true) {
+            System.out.println("ï¿½Ì¸ï¿½ï¿½Ô·ï¿½(ï¿½ï¿½ï¿½ï¿½=ï¿½ï¿½)");
+            name = sc.nextLine();
+
+            if (name.contentEquals("ï¿½ï¿½"))
+                break;
+            if (name.startsWith("ï¿½ï¿½"))
+                cnt++;
+        }
+        System.out.println("ï¿½è¾¾ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½" + cnt + "ï¿½Ô´Ï´ï¿½");
+    }
+
+    public static void test2() {
+        //charAt(index) : ï¿½Ñ±ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½
+        String a = "950327-1010101";
+        char check = a.charAt(7);
+        if (check == '1') {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½");
+        } else {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½");
+        }
+
+
+    }
+
+    public static void test3() {
+        //substringï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½
+        String str = "ï¿½ï¿½ï¿½ï¿½ fnï¿½Ì³ë¿¡ï¿½à¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.";
+
+        String word1 = str.substring(12, 16);
+        System.out.println(word1);
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //test1();
+        //test2();
+        test3();
+    }
 
 }

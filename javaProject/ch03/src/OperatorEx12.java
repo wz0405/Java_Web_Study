@@ -1,17 +1,17 @@
-class OperatorEx12 { 
-      public static void main(String[] args) { 
-            char c1 = 'a';        // c1¿¡´Â ¹®ÀÚ 'a'ÀÇ ÄÚµå°ªÀÎ 97ÀÌ ÀúÀåµÈ´Ù. 
-            char c2 = c1;         // c1¿¡ ÀúÀåµÇ¾î ÀÖ´Â °ªÀÌ c2¿¡ ÀúÀåµÈ´Ù. 
-            char c3 =' ';         // c3¸¦ °ø¹éÀ¸·Î ÃÊ±âÈ­ ÇÑ´Ù. 
+class OperatorEx12 {
+    public static void main(String[] args) {
+        char c1 = 'a';        // c1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 'a'ï¿½ï¿½ ï¿½Úµå°ªï¿½ï¿½ 97ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È´ï¿½. 
+        char c2 = c1;         // c1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ c2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È´ï¿½. 
+        char c3 = ' ';         // c3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½Ñ´ï¿½. 
 
-            int i = c1 + 1;       // 'a'+1 ¡æ 97+1 ¡æ 98
+        int i = c1 + 1;       // 'a'+1 ï¿½ï¿½ 97+1 ï¿½ï¿½ 98
 
-            c3 = (char)(c1 + 1); 
-            c2++; 
-            c2++; 
+        c3 = (char) (c1 + 1);
+        c2++;
+        c2++;
 
-            System.out.println("i=" + i); 
-            System.out.println("c2=" + c2); 
-            System.out.println("c3=" + c3); 
-      } 
+        System.out.println("i=" + i);
+        System.out.println("c2=" + c2);
+        System.out.println("c3=" + c3);
+    }
 } 

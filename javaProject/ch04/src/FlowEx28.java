@@ -1,26 +1,26 @@
 import java.util.*;
 
 class FlowEx28 {
-	public static void main(String[] args) { 
-		int input  = 0;
-		int answer = 0;
+    public static void main(String[] args) {
+        int input = 0;
+        int answer = 0;
 
-		answer = (int)(Math.random() * 100) + 1; // 1~100»çÀÌÀÇ ÀÓÀÇÀÇ ¼ö¸¦ ÀúÀå
-		Scanner scanner = new Scanner(System.in);
+        answer = (int) (Math.random() * 100) + 1; // 1~100ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Scanner scanner = new Scanner(System.in);
 
-		do {
-			System.out.print("1°ú 100»çÀÌÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+        do {
+            System.out.print("1ï¿½ï¿½ 100ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.>");
 
-			String tmp = scanner.nextLine();
-			input = Integer.parseInt(tmp);
+            String tmp = scanner.nextLine();
+            input = Integer.parseInt(tmp);
 
-			if(input > answer) {
-				System.out.println("´õ ÀÛÀº ¼ö·Î ´Ù½Ã ½ÃµµÇØº¸¼¼¿ä.");	
-			} else if(input < answer) {
-				System.out.println("´õ Å« ¼ö·Î ´Ù½Ã ½ÃµµÇØº¸¼¼¿ä.");			
-			}
-		} while(input!=answer);
+            if (input > answer) {
+                System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ãµï¿½ï¿½Øºï¿½ï¿½ï¿½ï¿½ï¿½.");
+            } else if (input < answer) {
+                System.out.println("ï¿½ï¿½ Å« ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ãµï¿½ï¿½Øºï¿½ï¿½ï¿½ï¿½ï¿½.");
+            }
+        } while (input != answer);
 
-		System.out.println("Á¤´äÀÔ´Ï´Ù.");
-	}
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+    }
 }

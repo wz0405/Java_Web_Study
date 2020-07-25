@@ -1,78 +1,74 @@
 package day0604;
+
 import java.util.Scanner;
 import java.util.Vector;
 
 public class VectorScore {
 
-	//Å×ÀÌºíÇüÅÂÀÇ °ªÀ» ´ãÀ»¼ö ÀÖ´Â ²Ù·¯¹Ì
-	//²Ù·¯¹Ì¿¡ Å¬·¡½º¸¦ ´ã¾Ò´Ù....±×·³ ²¨³¾¶§µµ Å¬·¡½º
-Vector<ScoreDTO>list=new Vector<ScoreDTO>(); 
-	
-//1.½ÃÇèÀÔ·ÂÀ» ´­·¶À»¶§ ½ÇÁ¦ ÀÌ¸§,¼ºÀû2°³¸¦ ÀÔ·ÂÇÒ ¸Þ¼Òµå
-	public void setScore()
-	{
-		Scanner sc=new Scanner(System.in);
-		
-		String name;
-		int java,spring;
-		
-		System.out.println("ÇÐ»ýÀÌ¸§Àº?");
-		name=sc.nextLine();
-		System.out.println("ÀÚ¹ÙÁ¡¼ö´Â?");
-		java=sc.nextInt();
-		System.out.println("½ºÇÁ¸µÁ¡¼ö´Â?");
-		spring=sc.nextInt();
-		
-		//DTOÅ¬·¡½º¸¦ »ý¼º
-		ScoreDTO dto=new ScoreDTO(name, java, spring);
-		list.add(dto); //º¤ÅÍ²Ù·¯¹Ì¿¡ ScoreDTO ¸¦ ´ã°Ú´Ù
-	}
-	
-	
-	//2.½ÃÇè¼ºÀûÃâ·Â
-	public void getScore()
-	{
-		System.out.println("[½ÃÇè¼ºÀû °á°ú]");
-		ScoreDTO.title();  //static¸Þ¼Òµå·Î Á¦¸ñÃâ·Â....Ãâ·Â¹®ÇÑÁÙ ´õ³Ö¾îµµ »ó°ü¾ø´Ù
-		System.out.println("===========");
-		
-		for(int i=0;i<list.size();i++)
-		{
-			ScoreDTO s=list.get(i);
-			
-			System.out.println(i+1+"\t"+s.getName()+"\t"+s.getJava()+"\t"+s.getSpring()+"\t"+s.getAvg()+"\t"+s.getPeonga());
-			System.out.println("-----------");
-		}
-	}
+    //ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½Ù·ï¿½ï¿½ï¿½
+    //ï¿½Ù·ï¿½ï¿½Ì¿ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò´ï¿½....ï¿½×·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½
+    Vector<ScoreDTO> list = new Vector<ScoreDTO>();
 
-	
-	public static void main(String[] args) {
-		
-		//»ý¼º..1.½ÃÇèÀÔ·Â 2.½ÃÇèÃâ·Â ¸Þ¼Òµå¸¦ ¸¸µç°÷ÀÌ VectorScore ÀÌ¹Ç·Î »ý¼ºÇØ¾ßµÈ´Ù
-		VectorScore vs=new VectorScore();
-		
-		Scanner sc=new Scanner(System.in);
-		
-		int n=0; //1,2,9 ¹ø ´©¸¦°Å ¼±ÅÃÇÒ º¯¼ö
-		
-		while(true) 
-		{
-		
-			System.out.println("1.½ÃÇè¼ºÀûÀÔ·Â   2.½ÃÇè¼ºÀûÃâ·Â   9.Á¾·á");
-			n=sc.nextInt();
-		
-			if(n==1)
-				vs.setScore();
-			else if(n==2)
-				vs.getScore();
-			else if(n==9)
-			{
-				System.out.println("Á¾·áÇÕ´Ï´Ù");
-				break;
-			}
-		}
-		
-		
-	}
+    //1.ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½,ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½
+    public void setScore() {
+        Scanner sc = new Scanner(System.in);
 
-	}
+        String name;
+        int java, spring;
+
+        System.out.println("ï¿½Ð»ï¿½ï¿½Ì¸ï¿½ï¿½ï¿½?");
+        name = sc.nextLine();
+        System.out.println("ï¿½Ú¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        java = sc.nextInt();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        spring = sc.nextInt();
+
+        //DTOÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        ScoreDTO dto = new ScoreDTO(name, java, spring);
+        list.add(dto); //ï¿½ï¿½ï¿½Í²Ù·ï¿½ï¿½Ì¿ï¿½ ScoreDTO ï¿½ï¿½ ï¿½ï¿½Ú´ï¿½
+    }
+
+
+    //2.ï¿½ï¿½ï¿½è¼ºï¿½ï¿½ï¿½ï¿½ï¿½
+    public void getScore() {
+        System.out.println("[ï¿½ï¿½ï¿½è¼ºï¿½ï¿½ ï¿½ï¿½ï¿½]");
+        ScoreDTO.title();  //staticï¿½Þ¼Òµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½....ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¾îµµ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        System.out.println("===========");
+
+        for (int i = 0; i < list.size(); i++) {
+            ScoreDTO s = list.get(i);
+
+            System.out.println(i + 1 + "\t" + s.getName() + "\t" + s.getJava() + "\t" + s.getSpring() + "\t" + s.getAvg() + "\t" + s.getPeonga());
+            System.out.println("-----------");
+        }
+    }
+
+
+    public static void main(String[] args) {
+
+        //ï¿½ï¿½ï¿½ï¿½..1.ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ 2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµå¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ VectorScore ï¿½Ì¹Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ßµÈ´ï¿½
+        VectorScore vs = new VectorScore();
+
+        Scanner sc = new Scanner(System.in);
+
+        int n = 0; //1,2,9 ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+        while (true) {
+
+            System.out.println("1.ï¿½ï¿½ï¿½è¼ºï¿½ï¿½ï¿½Ô·ï¿½   2.ï¿½ï¿½ï¿½è¼ºï¿½ï¿½ï¿½ï¿½ï¿½   9.ï¿½ï¿½ï¿½ï¿½");
+            n = sc.nextInt();
+
+            if (n == 1)
+                vs.setScore();
+            else if (n == 2)
+                vs.getScore();
+            else if (n == 9) {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
+                break;
+            }
+        }
+
+
+    }
+
+}

@@ -2,25 +2,25 @@ package day0527;
 
 public class OperTest_01 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int a,b;
-		a=b=5;
-		//´ÜÇ×ÀÏ °æ¿ì¿¡´Â ¾Õ¿¡ ºÙÀÌ³ª µÚ¿¡ ºÙÈ÷³ª ¶È°°À½
-		++a; 
-		b++; //b=b+1
-		System.out.println("a="+a);
-		System.out.println("b="+b);
-		
-		//¼ö½Ä¿¡¼­ »ç¿ëÇÒ¶§´Â ÀüÄ¡, ÈÄÄ¡ °á°ú°ªÀÌ Æ²¸®´Ù.
-		int m,n;
-		m=n=0;
-		a=b=5;
-		
-		m=a++; //ÈÄÄ¡ÀÏ°æ¿ì¿¡´Â ¸ÕÀú ´ëÀÔÈÄ Áõ°¡.
-		System.out.println("m="+m+", a="+a);
-		n=++b; //ÀüÄ¡ÀÏ°æ¿ì¿¡´Â ¸ÕÀú Áõ°¡ÈÄ ´ëÀÔ.
-		System.out.println("n="+n+", b="+b);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int a, b;
+        a = b = 5;
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ ï¿½Õ¿ï¿½ ï¿½ï¿½ï¿½Ì³ï¿½ ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½È°ï¿½ï¿½ï¿½
+        ++a;
+        b++; //b=b+1
+        System.out.println("a=" + a);
+        System.out.println("b=" + b);
+
+        //ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ò¶ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡, ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Æ²ï¿½ï¿½ï¿½ï¿½.
+        int m, n;
+        m = n = 0;
+        a = b = 5;
+
+        m = a++; //ï¿½ï¿½Ä¡ï¿½Ï°ï¿½ì¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        System.out.println("m=" + m + ", a=" + a);
+        n = ++b; //ï¿½ï¿½Ä¡ï¿½Ï°ï¿½ì¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        System.out.println("n=" + n + ", b=" + b);
+    }
 
 }

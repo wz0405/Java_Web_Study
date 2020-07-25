@@ -1,14 +1,14 @@
 class OperatorEx02 {
-	public static void main(String args[]) {
-		int i=5, j=0;
+    public static void main(String args[]) {
+        int i = 5, j = 0;
 
-		j = i++;
-		System.out.println("j=i++; ½ÇÇà ÈÄ, i=" + i +", j="+ j);
+        j = i++;
+        System.out.println("j=i++; ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½, i=" + i + ", j=" + j);
 
-		i=5;        // °á°ú¸¦ ºñ±³ÇÏ±â À§ÇØ, i¿Í jÀÇ °ªÀ» ´Ù½Ã 5¿Í 0À¸·Î º¯°æ
-		j=0;
+        i = 5;        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½, iï¿½ï¿½ jï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ 5ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        j = 0;
 
-		j = ++i;
-		System.out.println("j=++i; ½ÇÇà ÈÄ, i=" + i +", j="+ j);
-	}
+        j = ++i;
+        System.out.println("j=++i; ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½, i=" + i + ", j=" + j);
+    }
 }

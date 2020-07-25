@@ -1,20 +1,20 @@
 package day0529;
 
 public class ArrayTest_02 {
-	public static void main(String[] args) {
-		String[] str;
-		str=new String[4];
-		
-		str[0]="È«±æµ¿";
-		str[1]="¹Ú";
-		str[2]="Áö";
-		str[3]="¼ö";
-		
-		for(int j=0;j<str.length;j++) {
-			System.out.println(str[j]);
-		}
-		for(String a:str) {
-			System.out.println(a);
-		}
-	}
+    public static void main(String[] args) {
+        String[] str;
+        str = new String[4];
+
+        str[0] = "È«ï¿½æµ¿";
+        str[1] = "ï¿½ï¿½";
+        str[2] = "ï¿½ï¿½";
+        str[3] = "ï¿½ï¿½";
+
+        for (int j = 0; j < str.length; j++) {
+            System.out.println(str[j]);
+        }
+        for (String a : str) {
+            System.out.println(a);
+        }
+    }
 }

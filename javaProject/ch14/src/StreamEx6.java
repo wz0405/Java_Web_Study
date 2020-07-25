@@ -1,81 +1,90 @@
 import java.util.*;
 import java.util.stream.*;
+
 import static java.util.stream.Collectors.*;
 
 class StreamEx6 {
-	public static void main(String[] args) {
-		Student3[] stuArr = {
-			new Student3("ÀÌÀÚ¹Ù", 3, 300),
-			new Student3("±èÀÚ¹Ù", 1, 200),
-			new Student3("¾ÈÀÚ¹Ù", 2, 100),
-			new Student3("¹ÚÀÚ¹Ù", 2, 150),
-			new Student3("¼ÒÀÚ¹Ù", 1, 200),
-			new Student3("³ªÀÚ¹Ù", 3, 290),
-			new Student3("°¨ÀÚ¹Ù", 3, 180)	
-		};
+    public static void main(String[] args) {
+        Student3[] stuArr = {
+                new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 300),
+                new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", 1, 200),
+                new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", 2, 100),
+                new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", 2, 150),
+                new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", 1, 200),
+                new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 290),
+                new Student3("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 180)
+        };
 
-		// ÇÐ»ý ÀÌ¸§¸¸ »Ì¾Æ¼­ List<String>¿¡ ÀúÀå
-		List<String> names = Stream.of(stuArr).map(Student3::getName)
-									          .collect(Collectors.toList());
-		System.out.println(names);
+        // ï¿½Ð»ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ì¾Æ¼ï¿½ List<String>ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        List<String> names = Stream.of(stuArr).map(Student3::getName)
+                .collect(Collectors.toList());
+        System.out.println(names);
 
-		// ½ºÆ®¸²À» ¹è¿­·Î º¯È¯
-		Student3[] stuArr2 = Stream.of(stuArr).toArray(Student3[]::new);
+        // ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½È¯
+        Student3[] stuArr2 = Stream.of(stuArr).toArray(Student3[]::new);
 
-		for(Student3 s : stuArr2)
-			System.out.println(s);
+        for (Student3 s : stuArr2)
+            System.out.println(s);
 
-		// ½ºÆ®¸²À» Map<String, Student3>·Î º¯È¯. ÇÐ»ý ÀÌ¸§ÀÌ key 
-		Map<String,Student3> stuMap = Stream.of(stuArr)
-						                   .collect(Collectors.toMap(s->s.getName(), p->p));
-		for(String name : stuMap.keySet())
-			System.out.println(name +"-"+stuMap.get(name));
-		
-		long count = Stream.of(stuArr).collect(counting());
-		int totalScore = Stream.of(stuArr)
-                               .collect(summingInt(Student3::getTotalScore));
-		System.out.println("count="+count);
-		System.out.println("totalScore="+totalScore);
+        // ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ Map<String, Student3>ï¿½ï¿½ ï¿½ï¿½È¯. ï¿½Ð»ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ key 
+        Map<String, Student3> stuMap = Stream.of(stuArr)
+                .collect(Collectors.toMap(s -> s.getName(), p -> p));
+        for (String name : stuMap.keySet())
+            System.out.println(name + "-" + stuMap.get(name));
 
-		totalScore = Stream.of(stuArr)
-			               .collect(reducing(0, Student3::getTotalScore, Integer::sum));
-		System.out.println("totalScore="+totalScore);
+        long count = Stream.of(stuArr).collect(counting());
+        int totalScore = Stream.of(stuArr)
+                .collect(summingInt(Student3::getTotalScore));
+        System.out.println("count=" + count);
+        System.out.println("totalScore=" + totalScore);
 
-		Optional<Student3> topStudent = Stream.of(stuArr)
-		                                     .collect(maxBy(Comparator.comparingInt(Student3::getTotalScore)));
-		System.out.println("topStudent="+topStudent.get());
+        totalScore = Stream.of(stuArr)
+                .collect(reducing(0, Student3::getTotalScore, Integer::sum));
+        System.out.println("totalScore=" + totalScore);
 
-		IntSummaryStatistics stat = Stream.of(stuArr)
-					                      .collect(summarizingInt(Student3::getTotalScore));
-		System.out.println(stat);
+        Optional<Student3> topStudent = Stream.of(stuArr)
+                .collect(maxBy(Comparator.comparingInt(Student3::getTotalScore)));
+        System.out.println("topStudent=" + topStudent.get());
 
-		String stuNames = Stream.of(stuArr)
-							    .map(Student3::getName)
-							    .collect(joining(",", "{", "}"));
-		System.out.println(stuNames);
-	}
+        IntSummaryStatistics stat = Stream.of(stuArr)
+                .collect(summarizingInt(Student3::getTotalScore));
+        System.out.println(stat);
+
+        String stuNames = Stream.of(stuArr)
+                .map(Student3::getName)
+                .collect(joining(",", "{", "}"));
+        System.out.println(stuNames);
+    }
 }
 
 class Student3 implements Comparable<Student> {
-	String name;
-	int ban;
-	int totalScore;
+    String name;
+    int ban;
+    int totalScore;
 
-	Student3(String name, int ban, int totalScore) { 
-		this.name =name;
-		this.ban =ban;
-		this.totalScore =totalScore;
-	}
+    Student3(String name, int ban, int totalScore) {
+        this.name = name;
+        this.ban = ban;
+        this.totalScore = totalScore;
+    }
 
-	public String toString() { 
-	   return String.format("[%s, %d, %d]", name, ban, totalScore).toString(); 
-	}
+    public String toString() {
+        return String.format("[%s, %d, %d]", name, ban, totalScore).toString();
+    }
 
-	String getName() { return name;}
-	int getBan() { return ban;}
-	int getTotalScore() { return totalScore;}
+    String getName() {
+        return name;
+    }
 
-	public int compareTo(Student s) {
-		return s.totalScore - this.totalScore;
-	}
+    int getBan() {
+        return ban;
+    }
+
+    int getTotalScore() {
+        return totalScore;
+    }
+
+    public int compareTo(Student s) {
+        return s.totalScore - this.totalScore;
+    }
 }

@@ -1,20 +1,20 @@
 import java.util.*;
 
 class PriorityQueueEx {
-	public static void main(String[] args) {
-		Queue pq = new PriorityQueue();
-		pq.offer(3);  // pq.offer(new Integer(3)); ¿ÀÅä¹Ú½Ì
-		pq.offer(1);
-		pq.offer(5);
-		pq.offer(2);
-		pq.offer(4);
+    public static void main(String[] args) {
+        Queue pq = new PriorityQueue();
+        pq.offer(3);  // pq.offer(new Integer(3)); ï¿½ï¿½ï¿½ï¿½Ú½ï¿½
+        pq.offer(1);
+        pq.offer(5);
+        pq.offer(2);
+        pq.offer(4);
 
-		System.out.println(pq); // pqÀÇ ³»ºÎ ¹è¿­À» Ãâ·Â
+        System.out.println(pq); // pqï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½
 
-		Object obj = null;
+        Object obj = null;
 
-		// PriorityQueue¿¡ ÀúÀåµÈ ¿ä¼Ò¸¦ ÇÏ³ª¾¿ ²¨³½´Ù.
-		while((obj = pq.poll())!=null) 
-			System.out.println(obj);
-	}
+        // PriorityQueueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+        while ((obj = pq.poll()) != null)
+            System.out.println(obj);
+    }
 }

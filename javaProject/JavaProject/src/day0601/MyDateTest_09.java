@@ -1,49 +1,51 @@
 package day0601;
-class MyDate{
-	//ÀÎ½ºÅÏ½ºº¯¼ö
-	int year;
-	int month;
-	int day;
-	
-	//»ý¼ºÀÚ 3°³Â¥¸®..¸í½ÃÀû »ý¼ºÀÚ
-	//¸í½ÃÀû»ý¼ºÀÚ ¸¸µé¸é µðÆúÆ® ¾È¸¸µé¾îÁü
-	public MyDate(int y, int m, int d) {
-		year=y;
-		month=m;
-		day=d;
-	}
 
-	public int getYear() {
-		return year;
-	}
+class MyDate {
+    //ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½
+    int year;
+    int month;
+    int day;
 
-	public void setYear(int year) {
-		this.year = year;
-	}
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½Â¥ï¿½ï¿½..ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public MyDate(int y, int m, int d) {
+        year = y;
+        month = m;
+        day = d;
+    }
 
-	public int getMonth() {
-		return month;
-	}
+    public int getYear() {
+        return year;
+    }
 
-	public void setMonth(int month) {
-		this.month = month;
-	}
+    public void setYear(int year) {
+        this.year = year;
+    }
 
-	public int getDay() {
-		return day;
-	}
+    public int getMonth() {
+        return month;
+    }
 
-	public void setDay(int day) {
-		this.day = day;
-	}
-	
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
 }
+
 public class MyDateTest_09 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		MyDate my=new MyDate(2020,5,30);
-		System.out.println(my.getDay());
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        MyDate my = new MyDate(2020, 5, 30);
+        System.out.println(my.getDay());
+    }
 
 }

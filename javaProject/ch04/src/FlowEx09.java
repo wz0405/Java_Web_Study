@@ -1,36 +1,58 @@
 import java.util.*;
 
 class FlowEx09 {
-	public static void main(String[] args) { 
-		int score  = 0;
-		char grade = ' ';
+    public static void main(String[] args) {
+        int score = 0;
+        char grade = ' ';
 
-		System.out.print("´ç½ÅÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(1~100)>");
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(1~100)>");
 
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		score = Integer.parseInt(tmp);   // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)¸¦ ¼ýÀÚ·Î º¯È¯
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine(); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        score = Integer.parseInt(tmp);   // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		switch(score) {
-			case 100: case 99: case 98: case 97: case 96:
-			case 95:  case 94: case 93: case 92: case 91:
-			case 90 :
-				grade = 'A';
-				break;
-			case 89: case 88: case 87: case 86:
-			case 85: case 84: case 83: case 82: case 81:
-			case 80 :
-				grade = 'B';
-				break;
-			case 79: case 78: case 77: case 76:
-			case 75: case 74: case 73: case 72: case 71:
-			case 70 :
-				grade = 'C';
-				break;
-			default :
-				grade = 'F';
-		} // end of switch
+        switch (score) {
+            case 100:
+            case 99:
+            case 98:
+            case 97:
+            case 96:
+            case 95:
+            case 94:
+            case 93:
+            case 92:
+            case 91:
+            case 90:
+                grade = 'A';
+                break;
+            case 89:
+            case 88:
+            case 87:
+            case 86:
+            case 85:
+            case 84:
+            case 83:
+            case 82:
+            case 81:
+            case 80:
+                grade = 'B';
+                break;
+            case 79:
+            case 78:
+            case 77:
+            case 76:
+            case 75:
+            case 74:
+            case 73:
+            case 72:
+            case 71:
+            case 70:
+                grade = 'C';
+                break;
+            default:
+                grade = 'F';
+        } // end of switch
 
-		System.out.println("´ç½ÅÀÇ ÇÐÁ¡Àº "+ grade +"ÀÔ´Ï´Ù.");
-	} // mainÀÇ ³¡
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + grade + "ï¿½Ô´Ï´ï¿½.");
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

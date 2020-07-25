@@ -3,33 +3,33 @@ package day0526;
 import java.util.Scanner;
 
 public class ScannerScore_14 {
-	public static void main(String[] args) {
-		String name;
-		String ko;
-		String ma;
-		String en;
-		Scanner sc = new Scanner(System.in);
-		System.out.print("´ç½ÅÀÇ ÀÌ¸§Àº?");
-		name=sc.nextLine();
-		System.out.print("±¹¾îÁ¡¼ö´Â?");
-		ko=sc.nextLine();
-		System.out.print("¼öÇÐÁ¡¼ö´Â?");
-		ma=sc.nextLine();
-		System.out.print("¿µ¾îÁ¡¼ö´Â?");
-		en=sc.nextLine();
-		
-		System.out.println("===============");
-		System.out.println("ÀÌ¸§: "+name);
-		System.out.println("±¹¾îÁ¡¼ö: "+ko);
-		System.out.println("¼öÇÐÁ¡¼ö: "+ma);
-		System.out.println("¿µ¾îÁ¡¼ö: "+en);
-		
-		System.out.println("---------------");
-		int num1=Integer.parseInt(ko);
-		int num2=Integer.parseInt(ma);
-		int num3=Integer.parseInt(en);
-		int avg=(num1+num2+num3)/3;
-		System.out.println("Æò±Õ: "+avg);
-		
-	}
+    public static void main(String[] args) {
+        String name;
+        String ko;
+        String ma;
+        String en;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½?");
+        name = sc.nextLine();
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        ko = sc.nextLine();
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        ma = sc.nextLine();
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        en = sc.nextLine();
+
+        System.out.println("===============");
+        System.out.println("ï¿½Ì¸ï¿½: " + name);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " + ko);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " + ma);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: " + en);
+
+        System.out.println("---------------");
+        int num1 = Integer.parseInt(ko);
+        int num2 = Integer.parseInt(ma);
+        int num3 = Integer.parseInt(en);
+        int avg = (num1 + num2 + num3) / 3;
+        System.out.println("ï¿½ï¿½ï¿½: " + avg);
+
+    }
 }

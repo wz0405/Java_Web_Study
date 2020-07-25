@@ -4,57 +4,58 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class VectorBoard_03 {
-	
-	
-	Vector<BoardDTO_3>list = new Vector<BoardDTO_3>();
-	//1. ÀÔ·ÂÀ» ´©¸¦¶§ÀÇ °æ¿ì¿¡ ÇØ´çÇÏ´Â ¸Þ¼Òµå
-	public void setBoard() {
-		Scanner sc=new Scanner(System.in);
-		String name,subject,content;
-		System.out.println("ÀÛ¼ºÀÚ´Â?");
-		name=sc.nextLine();
-		System.out.println("Á¦¸ñÀº?");
-		subject=sc.nextLine();
-		System.out.println("³»¿ëÀº?");
-		content=sc.nextLine();
-		
-		BoardDTO_3 data = new BoardDTO_3(name, subject, content);
-		//º¤ÅÍ¿¡ ´ã´Â´Ù
-		list.add(data);
-		System.out.println("ÇöÀç µ¥ÀÌÅ¸°¹¼ö: "+list.size()+"°³");
-	}
-	//2. Ãâ·ÂÀ» ´©¸¦¶§ÀÇ °æ¿ì¿¡ ÇØ´çÇÏ´Â ¸Þ¼Òµå
-	public void getBoard() {
-		System.out.println("***°Ô½ÃÆÇ***");
-		System.out.println("----------------------");
-		for (int i=0;i<list.size();i++) {
-			//¸®½ºÆ®³»ÀÇ ÁöÁ¤µÈ À§Ä¡¿¡ ÀÖ´Â ¿ä¼Ò°ªÀ» µ¹·ÁÁØ´Ù
-			BoardDTO_3 b= list.get(i);
-			System.out.println("No. "+(i+1)+"ÀÛ¼ºÀÚ: "+b.getName());
-			System.out.println("Á¦¸ñ: "+b.getSubject());
-			System.out.println("³»¿ë: "+b.getContent());
-			System.out.println("---------------------");
-		}
-	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		VectorBoard_03 ve = new VectorBoard_03();
-		int n=0;
-		Scanner sc = new Scanner(System.in);
-		while(true) {
-			System.out.println("1¹øÀº Ãâ·Â 2¹øÀº ÀÔ·Â 0¹øÀº Á¾·áÀÔ´Ï´Ù.");
-			n=sc.nextInt();
-			if(n==2) {
-				ve.setBoard();
-			}
-			else if(n==1) {
-				ve.getBoard();
-			}
-			else if(n==0) {
-				System.out.println("ÇÁ·Î±×·¥ Á¾·á");
-				break;
-			}
-		}
-	}
+
+
+    Vector<BoardDTO_3> list = new Vector<BoardDTO_3>();
+
+    //1. ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ ï¿½Ø´ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
+    public void setBoard() {
+        Scanner sc = new Scanner(System.in);
+        String name, subject, content;
+        System.out.println("ï¿½Û¼ï¿½ï¿½Ú´ï¿½?");
+        name = sc.nextLine();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        subject = sc.nextLine();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        content = sc.nextLine();
+
+        BoardDTO_3 data = new BoardDTO_3(name, subject, content);
+        //ï¿½ï¿½ï¿½Í¿ï¿½ ï¿½ï¿½Â´ï¿½
+        list.add(data);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½: " + list.size() + "ï¿½ï¿½");
+    }
+
+    //2. ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ ï¿½Ø´ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
+    public void getBoard() {
+        System.out.println("***ï¿½Ô½ï¿½ï¿½ï¿½***");
+        System.out.println("----------------------");
+        for (int i = 0; i < list.size(); i++) {
+            //ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½Ò°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½
+            BoardDTO_3 b = list.get(i);
+            System.out.println("No. " + (i + 1) + "ï¿½Û¼ï¿½ï¿½ï¿½: " + b.getName());
+            System.out.println("ï¿½ï¿½ï¿½ï¿½: " + b.getSubject());
+            System.out.println("ï¿½ï¿½ï¿½ï¿½: " + b.getContent());
+            System.out.println("---------------------");
+        }
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        VectorBoard_03 ve = new VectorBoard_03();
+        int n = 0;
+        Scanner sc = new Scanner(System.in);
+        while (true) {
+            System.out.println("1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+            n = sc.nextInt();
+            if (n == 2) {
+                ve.setBoard();
+            } else if (n == 1) {
+                ve.getBoard();
+            } else if (n == 0) {
+                System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½");
+                break;
+            }
+        }
+    }
 
 }

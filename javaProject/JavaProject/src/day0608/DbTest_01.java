@@ -8,213 +8,215 @@ import java.sql.Statement;
 import java.util.Scanner;
 
 public class DbTest_01 {
-	//µå¶óÀÌ¹ö, url
-	String driver="oracle.jdbc.driver.OracleDriver";
-	String url="jdbc:oracle:thin:@localhost:1521:XE";
-	public DbTest_01() {
-		try {
-			Class.forName(driver);
-			System.out.println("¿À¶óÅ¬ µå¶óÀÌ¹ö ¼º°ø!!!");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			System.out.println("¿À¶óÅ¬ µå¶óÀÌ¹ö ½ÇÆÐ");
-		}
-	}
-	/////////»ý¼ºÀÚµµ ¸Þ¼­µå
-	//connection
-	public Connection getConnection() {
-		Connection conn = null;
-		try {
-			conn=DriverManager.getConnection(url, "hhh", "1234");
-			System.out.println("db¿¬µ¿ ¼º°ø");
-		} catch (SQLException e) {
-			System.out.println("db¿¬µ¿ ½ÇÆÐ");
-			e.printStackTrace();
-		}
-		return conn;
-	}
-	////insert
-	public void insert() {
-		Scanner sc = new Scanner(System.in);
-		String name, addr, sql; //insert sqlÀÛ¼ºÀ» À§ÇÑ º¯¼ö
-		System.out.println("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-		name=sc.nextLine();
-		System.out.println("ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		addr=sc.nextLine();
+    //ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½, url
+    String driver = "oracle.jdbc.driver.OracleDriver";
+    String url = "jdbc:oracle:thin:@localhost:1521:XE";
 
-		sql="insert into hello values(seq_h.nextval,'"+name+"', '"+addr+"',sysdate)";
-		System.out.println(sql);
-		
-		//1.db¿¬°á
-		Connection conn=null;
-		
-		//2.statement
-		Statement stmt=null;
-		conn=getConnection();
-		try {
-			stmt=conn.createStatement();
-			//sql¹® Àü¼Û¿¡ ÇÊ¿äÇÑ statement°´Ã¼¸¦ createStatement °´Ã¼¸¦ ÅëÇØ ¾ò´Â´Ù.
-			//sql¹® ½ÇÇà...insert¹®
-			stmt.executeUpdate(sql);
-		} catch (SQLException e) {
-			System.out.println("insert ¿¡·¯ "+e.getMessage());
-		}finally {
-			try {
-				stmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-	/////select
-	public void select() {
-		System.out.println("½ÃÄö½º\tÀÌ¸§\tÁÖ¼Ò\tÇöÀç³¯Â¥");
-		System.out.println("------------------------------");
-		
-		Connection conn=null;
-		Statement stmt=null;
-		ResultSet rs=null; //Á¶È¸ÇÒ¶§ Å×ÀÌºíÇüÅÂ·Î Ãâ·ÂÇØÁÖ´Â °´Ã¼
-		String sql="select * from hello order by num desc";//¿À¸§Â÷¼øÀ¸·Î Ãâ·Â
-		
-		conn=getConnection();
-		try {
-			stmt=conn.createStatement();
-			rs=stmt.executeQuery(sql);
-			//select¹®À» ¿äÃ»ÇÏ¹Ç·Î executeQuery¸Þ¼Òµå¸¦ ÀÌ¿ëÇØ¼­ Resultset°´Ã¼·Î °ªÀ» ¾ò´Â´Ù.
-			
-			//2°³ÀÌ»óÀÇ °ªÀ» ¾ò°íÀÚ ÇÒ¶§ while
-			while(rs.next()) { //´ÙÀ½°ªÀ» Ã£À¸¸é true°ª ¹ÝÈ¯
-				
-				//rsÀÇ next¸¦ ÀÌ¿ëÇØ¼­ ÇàÀ» ¼±ÅÃÇÏ°í, get¸Þ¼Òµå¸¦ ÀÌ¿ëÇØ¼­ Å×ÀÌºíÀÇ ÄÃ·³°ªÀ» ¾ò´Â´Ù.
-				System.out.println(rs.getInt("num") //¼ýÀÚÇüÅÂ("ÄÃ·³¸í")
-				+"\t"+rs.getString("name") //¹®ÀÚ¿­("ÄÃ·³¸í")
-				+"\t"+rs.getString("addr")
-				+"\t"+rs.getDate("sdate")); //³¯Â¥("ÄÃ·³¸í")
-			}
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			try {
-				rs.close();
-				stmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-	public void delete() {
-		Scanner sc = new Scanner(System.in);
-		String sql; //insert sqlÀÛ¼ºÀ» À§ÇÑ º¯¼ö
-		int num;
-		System.out.println("¸î ¹øÀÇ µ¥ÀÌÅÍ¸¦ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?");
-		num=sc.nextInt();
+    public DbTest_01() {
+        try {
+            Class.forName(driver);
+            System.out.println("ï¿½ï¿½ï¿½ï¿½Å¬ ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½!!!");
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            System.out.println("ï¿½ï¿½ï¿½ï¿½Å¬ ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½");
+        }
+    }
 
-		sql="delete from hello where num="+num;
-		System.out.println(sql);
-		
-		//1.db¿¬°á
-		Connection conn=null;
-		
-		//2.statement
-		Statement stmt=null;
-		conn=getConnection();
-		try {
-			stmt=conn.createStatement();
-			//sql¹® Àü¼Û¿¡ ÇÊ¿äÇÑ statement°´Ã¼¸¦ createStatement °´Ã¼¸¦ ÅëÇØ ¾ò´Â´Ù.
-			//sql¹® ½ÇÇà...insert¹®
-			int a = stmt.executeUpdate(sql); //¼º°øÇÑ ·¹ÄÚµå °³¼ö ¹ÝÈ¯
-			if(a==0) System.out.println("¾ø´Â µ¥ÀÌÅÍ ¹øÈ£ÀÔ´Ï´Ù"); //¾ø´Â ¹øÈ£ ÀÔ·Â½Ã ½ÇÁ¦ »èÁ¦¾ÈµÊ > 0 ¹ÝÈ¯
-			else
-				System.out.println("»èÁ¦µÇ¾ú½À´Ï´Ù"); //»èÁ¦µÇ¸é 1ÀÌ ¹ÝÈ¯
-		} catch (SQLException e) {
-			System.out.println("insert ¿¡·¯ "+e.getMessage());
-		}finally {
-			try {
-				stmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-	public void update() {
-		Scanner sc = new Scanner(System.in);
-		String sql,name,addr; //insert sqlÀÛ¼ºÀ» À§ÇÑ º¯¼ö
-		int num;
-		System.out.println("¸î ¹øÀÇ µ¥ÀÌÅÍ¸¦ ¼öÁ¤ÇÏ°Ú½À´Ï±î?");
-		num=sc.nextInt();
-		sc.nextLine();
-		System.out.println("¼öÁ¤ÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
-		name=sc.nextLine();
-		System.out.println("¼öÁ¤ÇÒ ÁÖ¼Ò¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		addr=sc.nextLine();
+    /////////ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    //connection
+    public Connection getConnection() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(url, "hhh", "1234");
+            System.out.println("dbï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+        } catch (SQLException e) {
+            System.out.println("dbï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+            e.printStackTrace();
+        }
+        return conn;
+    }
 
-		sql="update hello set name='"+name+"',addr='"+addr+"'where num="+num;
-		System.out.println(sql);
-		//1.db¿¬°á
-		Connection conn = null;
-		//2.statement
-		Statement stmt = null;
-		
-		conn=getConnection();
-		try {
-			stmt=conn.createStatement();
-			int a = stmt.executeUpdate(sql);
-			if(a==0) System.out.println("¾ø´Â µ¥ÀÌÅÍ ¹øÈ£ÀÔ´Ï´Ù"); //¾ø´Â ¹øÈ£ ÀÔ·Â½Ã ½ÇÁ¦ »èÁ¦¾ÈµÊ > 0 ¹ÝÈ¯
-			else
-				System.out.println("º¯°æµÇ¾ú½À´Ï´Ù");
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally {
-			try {
-				stmt.close();
-				conn.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		}
-		
-	}
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		DbTest_01 db = new DbTest_01();
-		//¸ÞÀÎÇÔ¼ö¿¡ µ¥ÀÌÅÍ Ãß°¡¸¦ ÇÒ¼öÀÖ°Ô Á¶°Ç¹® ÁöÁ¤
-		Scanner sc = new Scanner(System.in);
-		int n=0; //1,2,3,4,Á¾·á ¼±ÅÃÇÒ º¯¼ö
-		
-		while(true) {
-			System.out.println("1.insert 2.select 3.delete 4. update 0.Á¾·á");
-			n=Integer.parseInt(sc.nextLine());
-			
-			if(n==1)
-				db.insert();
-			else if(n==0)
-			{
-				System.out.println("Á¾·á");
-				break;
-			}
-			else if(n==2) {
-				db.select();
-			}
-			else if(n==3) {
-				db.delete();
-			}
-			else if(n==4) {
-				db.update();
-			}
-		}
-		
-	}
+    ////insert
+    public void insert() {
+        Scanner sc = new Scanner(System.in);
+        String name, addr, sql; //insert sqlï¿½Û¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        System.out.println("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        name = sc.nextLine();
+        System.out.println("ï¿½Ö¼Ò¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        addr = sc.nextLine();
+
+        sql = "insert into hello values(seq_h.nextval,'" + name + "', '" + addr + "',sysdate)";
+        System.out.println(sql);
+
+        //1.dbï¿½ï¿½ï¿½ï¿½
+        Connection conn = null;
+
+        //2.statement
+        Statement stmt = null;
+        conn = getConnection();
+        try {
+            stmt = conn.createStatement();
+            //sqlï¿½ï¿½ ï¿½ï¿½ï¿½Û¿ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ statementï¿½ï¿½Ã¼ï¿½ï¿½ createStatement ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+            //sqlï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½...insertï¿½ï¿½
+            stmt.executeUpdate(sql);
+        } catch (SQLException e) {
+            System.out.println("insert ï¿½ï¿½ï¿½ï¿½ " + e.getMessage());
+        } finally {
+            try {
+                stmt.close();
+                conn.close();
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /////select
+    public void select() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\tï¿½Ì¸ï¿½\tï¿½Ö¼ï¿½\tï¿½ï¿½ï¿½ç³¯Â¥");
+        System.out.println("------------------------------");
+
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null; //ï¿½ï¿½È¸ï¿½Ò¶ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½Ã¼
+        String sql = "select * from hello order by num desc";//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+
+        conn = getConnection();
+        try {
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(sql);
+            //selectï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Ï¹Ç·ï¿½ executeQueryï¿½Þ¼Òµå¸¦ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ Resultsetï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+
+            //2ï¿½ï¿½ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¶ï¿½ while
+            while (rs.next()) { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ï¿½ï¿½ trueï¿½ï¿½ ï¿½ï¿½È¯
+
+                //rsï¿½ï¿½ nextï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½, getï¿½Þ¼Òµå¸¦ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+                System.out.println(rs.getInt("num") //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½("ï¿½Ã·ï¿½ï¿½ï¿½")
+                        + "\t" + rs.getString("name") //ï¿½ï¿½ï¿½Ú¿ï¿½("ï¿½Ã·ï¿½ï¿½ï¿½")
+                        + "\t" + rs.getString("addr")
+                        + "\t" + rs.getDate("sdate")); //ï¿½ï¿½Â¥("ï¿½Ã·ï¿½ï¿½ï¿½")
+            }
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            try {
+                rs.close();
+                stmt.close();
+                conn.close();
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void delete() {
+        Scanner sc = new Scanner(System.in);
+        String sql; //insert sqlï¿½Û¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        int num;
+        System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½?");
+        num = sc.nextInt();
+
+        sql = "delete from hello where num=" + num;
+        System.out.println(sql);
+
+        //1.dbï¿½ï¿½ï¿½ï¿½
+        Connection conn = null;
+
+        //2.statement
+        Statement stmt = null;
+        conn = getConnection();
+        try {
+            stmt = conn.createStatement();
+            //sqlï¿½ï¿½ ï¿½ï¿½ï¿½Û¿ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ statementï¿½ï¿½Ã¼ï¿½ï¿½ createStatement ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+            //sqlï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½...insertï¿½ï¿½
+            int a = stmt.executeUpdate(sql); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+            if (a == 0) System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½Ô´Ï´ï¿½"); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½Ô·Â½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ > 0 ï¿½ï¿½È¯
+            else
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½"); //ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ 1ï¿½ï¿½ ï¿½ï¿½È¯
+        } catch (SQLException e) {
+            System.out.println("insert ï¿½ï¿½ï¿½ï¿½ " + e.getMessage());
+        } finally {
+            try {
+                stmt.close();
+                conn.close();
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void update() {
+        Scanner sc = new Scanner(System.in);
+        String sql, name, addr; //insert sqlï¿½Û¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        int num;
+        System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°Ú½ï¿½ï¿½Ï±ï¿½?");
+        num = sc.nextInt();
+        sc.nextLine();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        name = sc.nextLine();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        addr = sc.nextLine();
+
+        sql = "update hello set name='" + name + "',addr='" + addr + "'where num=" + num;
+        System.out.println(sql);
+        //1.dbï¿½ï¿½ï¿½ï¿½
+        Connection conn = null;
+        //2.statement
+        Statement stmt = null;
+
+        conn = getConnection();
+        try {
+            stmt = conn.createStatement();
+            int a = stmt.executeUpdate(sql);
+            if (a == 0) System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½Ô´Ï´ï¿½"); //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£ ï¿½Ô·Â½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Èµï¿½ > 0 ï¿½ï¿½È¯
+            else
+                System.out.println("ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½");
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally {
+            try {
+                stmt.close();
+                conn.close();
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+        }
+
+    }
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        DbTest_01 db = new DbTest_01();
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Ò¼ï¿½ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½Ç¹ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Scanner sc = new Scanner(System.in);
+        int n = 0; //1,2,3,4,ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+        while (true) {
+            System.out.println("1.insert 2.select 3.delete 4. update 0.ï¿½ï¿½ï¿½ï¿½");
+            n = Integer.parseInt(sc.nextLine());
+
+            if (n == 1)
+                db.insert();
+            else if (n == 0) {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½");
+                break;
+            } else if (n == 2) {
+                db.select();
+            } else if (n == 3) {
+                db.delete();
+            } else if (n == 4) {
+                db.update();
+            }
+        }
+
+    }
 
 }

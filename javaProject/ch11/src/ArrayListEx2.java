@@ -1,22 +1,22 @@
-import java.util.*; 
+import java.util.*;
 
-class ArrayListEx2 { 
-	public static void main(String[] args) { 
-		final int LIMIT = 10;	// ÀÚ¸£°íÀÚ ÇÏ´Â ±ÛÀÚÀÇ °³¼ö¸¦ ÁöÁ¤ÇÑ´Ù.
-		String source = "0123456789abcdefghijABCDEFGHIJ!@#$%^&*()ZZZ"; 
-		int length = source.length(); 
+class ArrayListEx2 {
+    public static void main(String[] args) {
+        final int LIMIT = 10;    // ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        String source = "0123456789abcdefghijABCDEFGHIJ!@#$%^&*()ZZZ";
+        int length = source.length();
 
-		List list = new ArrayList(length/LIMIT + 10); // Å©±â¸¦ ¾à°£ ¿©À¯ ÀÖ°Ô Àâ´Â´Ù.
+        List list = new ArrayList(length / LIMIT + 10); // Å©ï¿½â¸¦ ï¿½à°£ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½Â´ï¿½.
 
-		for(int i=0; i < length; i+=LIMIT) { 
-			if(i+LIMIT < length ) 
-				list.add(source.substring(i, i+LIMIT)); 
-			else 
-				list.add(source.substring(i)); 
-		} 
+        for (int i = 0; i < length; i += LIMIT) {
+            if (i + LIMIT < length)
+                list.add(source.substring(i, i + LIMIT));
+            else
+                list.add(source.substring(i));
+        }
 
-		for(int i=0; i < list.size(); i++) { 
-			System.out.println(list.get(i)); 
-		} 
-	} // main()
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+    } // main()
 } 

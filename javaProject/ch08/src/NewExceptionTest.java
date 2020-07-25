@@ -1,50 +1,52 @@
 class NewExceptionTest {
-	public static void main(String args[]) {
-		try {
-			startInstall();		// ÇÁ·Î±×·¥ ¼³Ä¡¿¡ ÇÊ¿äÇÑ ÁØºñ¸¦ ÇÑ´Ù.
-			copyFiles();			// ÆÄÀÏµéÀ» º¹»çÇÑ´Ù. 
-		} catch (SpaceException e)	{
-			System.out.println("¿¡·¯ ¸Þ½ÃÁö : " + e.getMessage());
-			e.printStackTrace();
-			System.out.println("°ø°£À» È®º¸ÇÑ ÈÄ¿¡ ´Ù½Ã ¼³Ä¡ÇÏ½Ã±â ¹Ù¶ø´Ï´Ù.");
-		} catch (MemoryException me)	{
-			System.out.println("¿¡·¯ ¸Þ½ÃÁö : " + me.getMessage());
-			me.printStackTrace();
-			System.gc();		//  Garbage CollectionÀ» ¼öÇàÇÏ¿© ¸Þ¸ð¸®¸¦ ´Ã·ÁÁØ´Ù.
-			System.out.println("´Ù½Ã ¼³Ä¡¸¦ ½ÃµµÇÏ¼¼¿ä.");
-		} finally {
-			deleteTempFiles();	// ÇÁ·Î±×·¥ ¼³Ä¡¿¡ »ç¿ëµÈ ÀÓ½ÃÆÄÀÏµéÀ» »èÁ¦ÇÑ´Ù.
-		} // tryÀÇ ³¡
-	} // mainÀÇ ³¡
+    public static void main(String args[]) {
+        try {
+            startInstall();        // ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Øºï¿½ ï¿½Ñ´ï¿½.
+            copyFiles();            // ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        } catch (SpaceException e) {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ : " + e.getMessage());
+            e.printStackTrace();
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½Ä¡ï¿½Ï½Ã±ï¿½ ï¿½Ù¶ï¿½ï¿½Ï´ï¿½.");
+        } catch (MemoryException me) {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ : " + me.getMessage());
+            me.printStackTrace();
+            System.gc();        //  Garbage Collectionï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½Þ¸ð¸®¸ï¿½ ï¿½Ã·ï¿½ï¿½Ø´ï¿½.
+            System.out.println("ï¿½Ù½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ãµï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
+        } finally {
+            deleteTempFiles();    // ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ó½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        } // tryï¿½ï¿½ ï¿½ï¿½
+    } // mainï¿½ï¿½ ï¿½ï¿½
 
-   static void startInstall() throws SpaceException, MemoryException { 
-		if(!enoughSpace()) 		// ÃæºÐÇÑ ¼³Ä¡ °ø°£ÀÌ ¾øÀ¸¸é...
-			throw new SpaceException("¼³Ä¡ÇÒ °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
-		if (!enoughMemory())		// ÃæºÐÇÑ ¸Þ¸ð¸®°¡ ¾øÀ¸¸é...
-			throw new MemoryException("¸Þ¸ð¸®°¡ ºÎÁ·ÇÕ´Ï´Ù.");
-   } // startInstall¸Þ¼­µåÀÇ ³¡
+    static void startInstall() throws SpaceException, MemoryException {
+        if (!enoughSpace())        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
+            throw new SpaceException("ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+        if (!enoughMemory())        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¸ð¸®°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
+            throw new MemoryException("ï¿½Þ¸ð¸®°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+    } // startInstallï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-   static void copyFiles() { /* ÆÄÀÏµéÀ» º¹»çÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù. */ }
-   static void deleteTempFiles() { /* ÀÓ½ÃÆÄÀÏµéÀ» »èÁ¦ÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù.*/}
-   
-   static boolean enoughSpace()   {
-		// ¼³Ä¡ÇÏ´Âµ¥ ÇÊ¿äÇÑ °ø°£ÀÌ ÀÖ´ÂÁö È®ÀÎÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù.
-		return false;
-   }
-   static boolean enoughMemory() {
-		// ¼³Ä¡ÇÏ´Âµ¥ ÇÊ¿äÇÑ ¸Þ¸ð¸®°ø°£ÀÌ ÀÖ´ÂÁö È®ÀÎÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù.
-		return true;
-   }
-} // ExceptionTestÅ¬·¡½ºÀÇ ³¡
+    static void copyFiles() { /* ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½. */ }
+
+    static void deleteTempFiles() { /* ï¿½Ó½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½.*/}
+
+    static boolean enoughSpace() {
+        // ï¿½ï¿½Ä¡ï¿½Ï´Âµï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½.
+        return false;
+    }
+
+    static boolean enoughMemory() {
+        // ï¿½ï¿½Ä¡ï¿½Ï´Âµï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Þ¸ð¸®°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½.
+        return true;
+    }
+} // ExceptionTestÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
 class SpaceException extends Exception {
-	SpaceException(String msg) {
-	   super(msg);	
-   }
-} 
+    SpaceException(String msg) {
+        super(msg);
+    }
+}
 
 class MemoryException extends Exception {
-	MemoryException(String msg) {
-	   super(msg);	
-   }
+    MemoryException(String msg) {
+        super(msg);
+    }
 }

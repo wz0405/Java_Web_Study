@@ -1,7 +1,7 @@
 package day0601;
 
 public class TestA_03 {
-	String name="ÇÑÇöÈñ";
-	static String message="ÇìÇì";
+    String name = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+    static String message = "ï¿½ï¿½ï¿½ï¿½";
 
 }

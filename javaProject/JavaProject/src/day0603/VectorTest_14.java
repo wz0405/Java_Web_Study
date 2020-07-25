@@ -5,45 +5,42 @@ import java.util.Vector;
 
 public class VectorTest_14 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-		//¹è¿­°ú ´Þ¸® ÀÚµ¿À¸·Î ¹è¿­±æÀÌ°¡ ´Ã¾î³­´Ù
-		
-		//List<String>list=new Vector<String>();
-		Vector<String>list=new Vector<String>();
-		
-		System.out.println("ÃÊ±âÇÒ´çÅ©±â: "+list.capacity());
-		System.out.println("ÃÊ±âµ¥ÀÌÅÍ °¹¼ö: "+list.size());
-		
-		//Ãß°¡
-		list.add("»ç°ú");
-		list.add("»ç°ú");
-		list.add("¿À·»Áö");
-		list.add("»ç°ú");
-		list.add("Å°À§");
-		
-		System.out.println("°¹¼ö: "+list.size());
-		
-		System.out.println("1.Ãâ·Â");
-		for(int i=0;i<list.size();i++)
-		{
-			String s=list.get(i);
-			System.out.println(s);
-		}
-		System.out.println("2.Ãâ·Â");
-		for(String s:list)
-			System.out.println(s);
-		
-		System.out.println("3.Ãâ·Â");
-		Iterator<String>iter=list.iterator();
-		while(iter.hasNext())
-		{
-			System.out.println(iter.next());
-		}
-		
-		
-		
-	}
+        //ï¿½è¿­ï¿½ï¿½ ï¿½Þ¸ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½Ã¾î³­ï¿½ï¿½
+
+        //List<String>list=new Vector<String>();
+        Vector<String> list = new Vector<String>();
+
+        System.out.println("ï¿½Ê±ï¿½ï¿½Ò´ï¿½Å©ï¿½ï¿½: " + list.capacity());
+        System.out.println("ï¿½Ê±âµ¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + list.size());
+
+        //ï¿½ß°ï¿½
+        list.add("ï¿½ï¿½ï¿½");
+        list.add("ï¿½ï¿½ï¿½");
+        list.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        list.add("ï¿½ï¿½ï¿½");
+        list.add("Å°ï¿½ï¿½");
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½: " + list.size());
+
+        System.out.println("1.ï¿½ï¿½ï¿½");
+        for (int i = 0; i < list.size(); i++) {
+            String s = list.get(i);
+            System.out.println(s);
+        }
+        System.out.println("2.ï¿½ï¿½ï¿½");
+        for (String s : list)
+            System.out.println(s);
+
+        System.out.println("3.ï¿½ï¿½ï¿½");
+        Iterator<String> iter = list.iterator();
+        while (iter.hasNext()) {
+            System.out.println(iter.next());
+        }
+
+
+    }
 
 }

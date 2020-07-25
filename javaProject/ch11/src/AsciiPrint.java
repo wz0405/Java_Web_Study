@@ -1,7 +1,7 @@
-class AsciiPrint{
-	public static void main(String[] args) {
-		char ch = ' ';
-		for(int i=0; i < 95; i++)  // °ø¹é(' ')ÀÌÈÄÀÇ ¹®ÀÚµéÀ» Ãâ·ÂÇÑ´Ù.
-			System.out.print(ch++);
-	}
+class AsciiPrint {
+    public static void main(String[] args) {
+        char ch = ' ';
+        for (int i = 0; i < 95; i++)  // ï¿½ï¿½ï¿½ï¿½(' ')ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            System.out.print(ch++);
+    }
 }

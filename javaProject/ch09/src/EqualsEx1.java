@@ -1,28 +1,28 @@
 class EqualsEx1 {
-	public static void main(String[] args) {
-		Value v1 = new Value(10);
-		Value v2 = new Value(10);		
+    public static void main(String[] args) {
+        Value v1 = new Value(10);
+        Value v2 = new Value(10);
 
-		if (v1.equals(v2)) {
-			System.out.println("v1°ú v2´Â °°½À´Ï´Ù.");
-		} else {
-			System.out.println("v1°ú v2´Â ´Ù¸¨´Ï´Ù.");		
-		}
+        if (v1.equals(v2)) {
+            System.out.println("v1ï¿½ï¿½ v2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        } else {
+            System.out.println("v1ï¿½ï¿½ v2ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½Ï´ï¿½.");
+        }
 
-		v2 = v1;
+        v2 = v1;
 
-		if (v1.equals(v2)) {
-			System.out.println("v1°ú v2´Â °°½À´Ï´Ù.");
-		} else {
-			System.out.println("v1°ú v2´Â ´Ù¸¨´Ï´Ù.");		
-		}
-	} // main
-} 
+        if (v1.equals(v2)) {
+            System.out.println("v1ï¿½ï¿½ v2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        } else {
+            System.out.println("v1ï¿½ï¿½ v2ï¿½ï¿½ ï¿½Ù¸ï¿½ï¿½Ï´ï¿½.");
+        }
+    } // main
+}
 
 class Value {
-	int value;
+    int value;
 
-	Value(int value) {
-		this.value = value;
-	}
+    Value(int value) {
+        this.value = value;
+    }
 }

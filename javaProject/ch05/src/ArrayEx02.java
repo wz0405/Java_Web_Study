@@ -1,30 +1,30 @@
-import java.util.*;  // Arrays.toString()À» »ç¿ëÇÏ±â À§ÇØ Ãß°¡
+import java.util.*;  // Arrays.toString()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
 
 class ArrayEx02 {
-	public static void main(String[] args) {
-		int[] iArr1 = new int[10];
-		int[] iArr2 = new int[10];
+    public static void main(String[] args) {
+        int[] iArr1 = new int[10];
+        int[] iArr2 = new int[10];
 //		int[] iArr3 = new int[]{100, 95, 80, 70, 60};
-		int[] iArr3 = {100, 95, 80, 70, 60};
-		char[] chArr = {'a', 'b', 'c', 'd'};
+        int[] iArr3 = {100, 95, 80, 70, 60};
+        char[] chArr = {'a', 'b', 'c', 'd'};
 
-		for (int i=0; i < iArr1.length ; i++ ) {
-			iArr1[i] = i + 1; // 1~10ÀÇ ¼ýÀÚ¸¦ ¼ø¼­´ë·Î ¹è¿­¿¡ ³Ö´Â´Ù.
-		}
+        for (int i = 0; i < iArr1.length; i++) {
+            iArr1[i] = i + 1; // 1~10ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½Ö´Â´ï¿½.
+        }
 
-		for (int i=0; i < iArr2.length ; i++ ) {
-			iArr2[i] = (int)(Math.random()*10) + 1; // 1~10ÀÇ °ªÀ» ¹è¿­¿¡ ÀúÀå
-		}
+        for (int i = 0; i < iArr2.length; i++) {
+            iArr2[i] = (int) (Math.random() * 10) + 1; // 1~10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        }
 
-		// ¹è¿­¿¡ ÀúÀåµÈ °ªµéÀ» Ãâ·ÂÇÑ´Ù.
-		for(int i=0; i < iArr1.length;i++) {
-			System.out.print(iArr1[i]+",");	
-		}
-		System.out.println();													
-		System.out.println(Arrays.toString(iArr2));
-		System.out.println(Arrays.toString(iArr3));
-		System.out.println(Arrays.toString(chArr));
-		System.out.println(iArr3);
-		System.out.println(chArr);
-	}
+        // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        for (int i = 0; i < iArr1.length; i++) {
+            System.out.print(iArr1[i] + ",");
+        }
+        System.out.println();
+        System.out.println(Arrays.toString(iArr2));
+        System.out.println(Arrays.toString(iArr3));
+        System.out.println(Arrays.toString(chArr));
+        System.out.println(iArr3);
+        System.out.println(chArr);
+    }
 }

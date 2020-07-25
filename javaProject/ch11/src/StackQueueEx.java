@@ -1,26 +1,26 @@
 import java.util.*;
 
 class StackQueueEx {
-	public static void main(String[] args) {
-		Stack st = new Stack();
-		Queue q = new LinkedList();	 // QueueÀÎÅÍÆäÀÌ½ºÀÇ ±¸ÇöÃ¼ÀÎ LinkedList¸¦ »ç¿ë
-		
-		st.push("0");
-		st.push("1");
-		st.push("2");
+    public static void main(String[] args) {
+        Stack st = new Stack();
+        Queue q = new LinkedList();     // Queueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ LinkedListï¿½ï¿½ ï¿½ï¿½ï¿½
 
-		q.offer("0");
-		q.offer("1");
-		q.offer("2");
+        st.push("0");
+        st.push("1");
+        st.push("2");
 
-		System.out.println("= Stack =");
-		while(!st.empty()) {
-			System.out.println(st.pop());
-		}
+        q.offer("0");
+        q.offer("1");
+        q.offer("2");
 
-		System.out.println("= Queue =");
-		while(!q.isEmpty()) {
-			System.out.println(q.poll());
-		}
-	}
+        System.out.println("= Stack =");
+        while (!st.empty()) {
+            System.out.println(st.pop());
+        }
+
+        System.out.println("= Queue =");
+        while (!q.isEmpty()) {
+            System.out.println(q.poll());
+        }
+    }
 }

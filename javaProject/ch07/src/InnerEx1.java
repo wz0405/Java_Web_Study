@@ -1,25 +1,25 @@
-class InnerEx1 { 
-      class InstanceInner { 
-            int iv = 100; 
-//          static int cv = 100;            // ¿¡·¯! staticº¯¼ö¸¦ ¼±¾ðÇÒ ¼ö ¾ø´Ù. 
-            final static int CONST = 100;   // final staticÀº »ó¼öÀÌ¹Ç·Î Çã¿ëÇÑ´Ù. 
-      } 
+class InnerEx1 {
+    class InstanceInner {
+        int iv = 100;
+        //          static int cv = 100;            // ï¿½ï¿½ï¿½ï¿½! staticï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. 
+        final static int CONST = 100;   // final staticï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+    }
 
-      static class StaticInner { 
-            int iv = 200; 
-            static int cv = 200;       // staticÅ¬·¡½º¸¸ static¸â¹ö¸¦ Á¤ÀÇÇÒ ¼ö ÀÖ´Ù. 
-      } 
+    static class StaticInner {
+        int iv = 200;
+        static int cv = 200;       // staticÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ staticï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½. 
+    }
 
-      void myMethod() { 
-            class LocalInner { 
-                  int iv = 300; 
-//                static int cv = 300;          // ¿¡·¯! staticº¯¼ö¸¦ ¼±¾ðÇÒ ¼ö ¾ø´Ù. 
-                  final static int CONST = 300; // final staticÀº »ó¼öÀÌ¹Ç·Î Çã¿ë 
-            } 
-      } 
+    void myMethod() {
+        class LocalInner {
+            int iv = 300;
+            //                static int cv = 300;          // ï¿½ï¿½ï¿½ï¿½! staticï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. 
+            final static int CONST = 300; // final staticï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ ï¿½ï¿½ï¿½ 
+        }
+    }
 
-      public static void main(String args[]) { 
-            System.out.println(InstanceInner.CONST); 
-            System.out.println(StaticInner.cv); 
-      } 
+    public static void main(String args[]) {
+        System.out.println(InstanceInner.CONST);
+        System.out.println(StaticInner.cv);
+    }
 } 

@@ -1,28 +1,29 @@
 import java.util.*;
 
 class FlowEx08 {
-	public static void main(String[] args) { 
-		char gender;
-		String regNo = "";
+    public static void main(String[] args) {
+        char gender;
+        String regNo = "";
 
-		System.out.print("´ç½ÅÀÇ ÁÖ¹Î¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(011231-1111222)>");
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¹Î¹ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(011231-1111222)>");
 
-		Scanner scanner = new Scanner(System.in);
-		regNo = scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        regNo = scanner.nextLine();
 
-		gender = regNo.charAt(7); // ÀÔ·Â¹ÞÀº ¹øÈ£ÀÇ 8¹øÂ° ¹®ÀÚ¸¦ gender¿¡ ÀúÀå
+        gender = regNo.charAt(7); // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ 8ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ú¸ï¿½ genderï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-		switch(gender) {
-			case '1':
-			case '3':
-				System.out.println("´ç½ÅÀº ³²ÀÚÀÔ´Ï´Ù.");
-				break;
-			case '2':
-			case '4':
-				System.out.println("´ç½ÅÀº ¿©ÀÚÀÔ´Ï´Ù.");
-				break;
-			default:
-				System.out.println("À¯È¿ÇÏÁö ¾ÊÀº ÁÖ¹Îµî·Ï¹øÈ£ÀÔ´Ï´Ù.");;
-		}
-	} // mainÀÇ ³¡
+        switch (gender) {
+            case '1':
+            case '3':
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                break;
+            case '2':
+            case '4':
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                break;
+            default:
+                System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¹Îµï¿½Ï¹ï¿½È£ï¿½Ô´Ï´ï¿½.");
+                ;
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

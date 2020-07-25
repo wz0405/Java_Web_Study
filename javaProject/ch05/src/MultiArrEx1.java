@@ -1,55 +1,55 @@
 import java.util.*;
 
 class MultiArrEx1 {
-	public static void main(String[] args) {
-		final int SIZE = 10;
-		int x = 0, y = 0;
+    public static void main(String[] args) {
+        final int SIZE = 10;
+        int x = 0, y = 0;
 
-		char[][] board = new char[SIZE][SIZE];
-		byte[][] shipBoard = {
-		  //  1  2  3  4  5  6  7  8  9
-			{ 0, 0, 0, 0, 0, 0, 1, 0, 0 }, // 1
-			{ 1, 1, 1, 1, 0, 0, 1, 0, 0 }, // 2
-			{ 0, 0, 0, 0, 0, 0, 1, 0, 0 }, // 3
-			{ 0, 0, 0, 0, 0, 0, 1, 0, 0 }, // 4
-			{ 0, 0, 0, 0, 0, 0, 0, 0, 0 }, // 5
-			{ 1, 1, 0, 1, 0, 0, 0, 0, 0 }, // 6
-			{ 0, 0, 0, 1, 0, 0, 0, 0, 0 }, // 7
-			{ 0, 0, 0, 1, 0, 0, 0, 0, 0 }, // 8
-			{ 0, 0, 0, 0, 0, 1, 1, 1, 0 }, // 9
-		};
+        char[][] board = new char[SIZE][SIZE];
+        byte[][] shipBoard = {
+                //  1  2  3  4  5  6  7  8  9
+                {0, 0, 0, 0, 0, 0, 1, 0, 0}, // 1
+                {1, 1, 1, 1, 0, 0, 1, 0, 0}, // 2
+                {0, 0, 0, 0, 0, 0, 1, 0, 0}, // 3
+                {0, 0, 0, 0, 0, 0, 1, 0, 0}, // 4
+                {0, 0, 0, 0, 0, 0, 0, 0, 0}, // 5
+                {1, 1, 0, 1, 0, 0, 0, 0, 0}, // 6
+                {0, 0, 0, 1, 0, 0, 0, 0, 0}, // 7
+                {0, 0, 0, 1, 0, 0, 0, 0, 0}, // 8
+                {0, 0, 0, 0, 0, 1, 1, 1, 0}, // 9
+        };
 
-	     // 0Çà¿¡ Çà¹øÈ£¸¦, 0¿­¿¡ ¿­¹øÈ£¸¦ ÀúÀåÇÑ´Ù. 
-		for(int i=1;i<SIZE;i++)
-			board[0][i] = board[i][0] = (char)(i+'0');
+        // 0ï¿½à¿¡ ï¿½ï¿½ï¿½È£ï¿½ï¿½, 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+        for (int i = 1; i < SIZE; i++)
+            board[0][i] = board[i][0] = (char) (i + '0');
 
-		Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-		while(true) {
-			System.out.printf("ÁÂÇ¥¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(Á¾·á´Â 00)>");
-			String input = scanner.nextLine(); // È­¸éÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
+        while (true) {
+            System.out.printf("ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(ï¿½ï¿½ï¿½ï¿½ï¿½ 00)>");
+            String input = scanner.nextLine(); // È­ï¿½ï¿½ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-			if(input.length()==2) {   // µÎ ±ÛÀÚ¸¦ ÀÔ·ÂÇÑ °æ¿ì
-				x = input.charAt(0) - '0';  // ¹®ÀÚ¸¦ ¼ýÀÚ·Î º¯È¯
-				y = input.charAt(1) - '0';
+            if (input.length() == 2) {   // ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+                x = input.charAt(0) - '0';  // ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
+                y = input.charAt(1) - '0';
 
-				if(x==0 && y==0) // x¿Í y°¡ ¸ðµÎ 0ÀÎ °æ¿ì Á¾·á
-					break; 
-			} 
-			
-			if(input.length()!=2 || x <= 0 || x >= SIZE || y <= 0 || y >= SIZE){
-				System.out.println("Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-				continue;
-			}
+                if (x == 0 && y == 0) // xï¿½ï¿½ yï¿½ï¿½ ï¿½ï¿½ï¿½ 0ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                    break;
+            }
 
-			// shipBoard[x-1][y-1]ÀÇ °ªÀÌ 1ÀÌ¸é, 'O'À» board[x][y]¿¡ ÀúÀåÇÑ´Ù.  
-			board[x][y] = shipBoard[x-1][y-1]==1 ? 'O' : 'X';  
+            if (input.length() != 2 || x <= 0 || x >= SIZE || y <= 0 || y >= SIZE) {
+                System.out.println("ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ô´Ï´ï¿½. ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+                continue;
+            }
 
-			// ¹è¿­ boardÀÇ ³»¿ëÀ» È­¸é¿¡ Ãâ·ÂÇÑ´Ù.
-			for(int i=0;i<SIZE;i++) {
-				System.out.println(board[i]); // board[i]´Â 1Â÷¿ø ¹è¿­
-			}
-			System.out.println();
-		}
-	} // mainÀÇ ³¡
+            // shipBoard[x-1][y-1]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 1ï¿½Ì¸ï¿½, 'O'ï¿½ï¿½ board[x][y]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.  
+            board[x][y] = shipBoard[x - 1][y - 1] == 1 ? 'O' : 'X';
+
+            // ï¿½è¿­ boardï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½é¿¡ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            for (int i = 0; i < SIZE; i++) {
+                System.out.println(board[i]); // board[i]ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+            }
+            System.out.println();
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

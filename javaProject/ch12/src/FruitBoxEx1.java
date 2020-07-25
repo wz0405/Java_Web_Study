@@ -1,38 +1,69 @@
 import java.util.ArrayList;
 
-class Fruit				  { public String toString() { return "Fruit";}}
-class Apple extends Fruit { public String toString() { return "Apple";}}
-class Grape extends Fruit { public String toString() { return "Grape";}}
-class Toy		          { public String toString() { return "Toy"  ;}}
+class Fruit {
+    public String toString() {
+        return "Fruit";
+    }
+}
+
+class Apple extends Fruit {
+    public String toString() {
+        return "Apple";
+    }
+}
+
+class Grape extends Fruit {
+    public String toString() {
+        return "Grape";
+    }
+}
+
+class Toy {
+    public String toString() {
+        return "Toy";
+    }
+}
 
 class FruitBoxEx1 {
-	public static void main(String[] args) {
-		Box<Fruit> fruitBox = new Box<Fruit>();
-		Box<Apple> appleBox = new Box<Apple>();
-		Box<Toy>   toyBox   = new Box<Toy>();
-//		Box<Grape> grapeBox = new Box<Apple>(); // ¿¡·¯. Å¸ÀÔ ºÒÀÏÄ¡
+    public static void main(String[] args) {
+        Box<Fruit> fruitBox = new Box<Fruit>();
+        Box<Apple> appleBox = new Box<Apple>();
+        Box<Toy> toyBox = new Box<Toy>();
+//		Box<Grape> grapeBox = new Box<Apple>(); // ï¿½ï¿½ï¿½ï¿½. Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ä¡
 
-		fruitBox.add(new Fruit());
-		fruitBox.add(new Apple()); // OK. void add(Fruit item)
+        fruitBox.add(new Fruit());
+        fruitBox.add(new Apple()); // OK. void add(Fruit item)
 
 
-		appleBox.add(new Apple());
-		appleBox.add(new Apple());
-//		appleBox.add(new Toy()); // ¿¡·¯. Box<Apple>¿¡´Â Apple¸¸ ´ãÀ» ¼ö ÀÖÀ½
+        appleBox.add(new Apple());
+        appleBox.add(new Apple());
+//		appleBox.add(new Toy()); // ï¿½ï¿½ï¿½ï¿½. Box<Apple>ï¿½ï¿½ï¿½ï¿½ Appleï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-		toyBox.add(new Toy());
-//		toyBox.add(new Apple()); // ¿¡·¯. Box<Toy>¿¡´Â AppleÀ» ´ãÀ» ¼ö ¾øÀ½
+        toyBox.add(new Toy());
+//		toyBox.add(new Apple()); // ï¿½ï¿½ï¿½ï¿½. Box<Toy>ï¿½ï¿½ï¿½ï¿½ Appleï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-		System.out.println(fruitBox);
-		System.out.println(appleBox);
-		System.out.println(toyBox);
-	}  // mainÀÇ ³¡
+        System.out.println(fruitBox);
+        System.out.println(appleBox);
+        System.out.println(toyBox);
+    }  // mainï¿½ï¿½ ï¿½ï¿½
 }
 
 class Box<T> {
-	ArrayList<T> list = new ArrayList<T>();
-	void add(T item)  { list.add(item); }
-	T get(int i)      { return list.get(i); }
-	int size() { return list.size(); }
-	public String toString() { return list.toString();}
+    ArrayList<T> list = new ArrayList<T>();
+
+    void add(T item) {
+        list.add(item);
+    }
+
+    T get(int i) {
+        return list.get(i);
+    }
+
+    int size() {
+        return list.size();
+    }
+
+    public String toString() {
+        return list.toString();
+    }
 }

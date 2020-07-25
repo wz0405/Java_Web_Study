@@ -2,92 +2,95 @@ package day0602;
 
 import java.util.Scanner;
 
-interface Command{
-	public void write();
+interface Command {
+    public void write();
 }
-//////////////////////////////////
-class Insert implements Command{
 
-	@Override
-	public void write() {
-		// TODO Auto-generated method stub
-		
-		System.out.println("°Ô½ÃÆÇ¿¡ °Ô½Ã¹°À» Ãß°¡ÇÕ´Ï´Ù");
-	}
-	
+//////////////////////////////////
+class Insert implements Command {
+
+    @Override
+    public void write() {
+        // TODO Auto-generated method stub
+
+        System.out.println("ï¿½Ô½ï¿½ï¿½Ç¿ï¿½ ï¿½Ô½Ã¹ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Õ´Ï´ï¿½");
+    }
+
 }
 
 ///////////////////////////
-class Modify implements Command{
+class Modify implements Command {
 
-	@Override
-	public void write() {
-		// TODO Auto-generated method stub
-		System.out.println("°Ô½ÃÆÇ¿¡ °Ô½Ã¹°À» ¼öÁ¤ÇÕ´Ï´Ù");
-	}
-	
+    @Override
+    public void write() {
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½Ô½ï¿½ï¿½Ç¿ï¿½ ï¿½Ô½Ã¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
+    }
+
 }
+
 ///////////////////
-class delete implements Command{
+class delete implements Command {
 
-	@Override
-	public void write() {
-		// TODO Auto-generated method stub
-		System.out.println("°Ô½ÃÆÇ¿¡ °Ô½Ã¹°À» »èÁ¦ÇÕ´Ï´Ù");
-	}
-	
+    @Override
+    public void write() {
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½Ô½ï¿½ï¿½Ç¿ï¿½ ï¿½Ô½Ã¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
+    }
+
 }
+
 ///////////////////////
-class List implements Command{
+class List implements Command {
 
-	@Override
-	public void write() {
-		System.out.println("°Ô½ÃÆÇ¿¡ °Ô½Ã¹°À» Á¶È¸ÇÕ´Ï´Ù");
-		
-	}
-	
+    @Override
+    public void write() {
+        System.out.println("ï¿½Ô½ï¿½ï¿½Ç¿ï¿½ ï¿½Ô½Ã¹ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ï¿½Õ´Ï´ï¿½");
+
+    }
+
 }
+
 //////////////////////////////////////
 public class InterBoardEx {
 
-	public static void main(String[] args) {
-		
-		
-		Scanner sc=new Scanner(System.in);
-		Command comm=null;
-		int n;
-		
-		while(true) {
-			
-			System.out.println("1.Ãß°¡  2.¼öÁ¤  3.»èÁ¦ 4.Á¶È¸ 5ÀÌ»ó.Á¾·á");
-		    n=sc.nextInt();
-		    
-		    switch(n)
-		    {
-		    case 1:
-		    	comm=new Insert();
-		    	break;
-		    case 2:
-		    	comm=new Modify();
-		    	break;
-		    case 3:
-		    	comm=new delete();
-		    	break;
-		    case 4:
-		    	comm=new List();
-		    	break;
-		    default:
-		    	System.out.println("Á¾·áÇÕ´Ï´Ù");
-		    	break;
-		    
-		    }
-		    
-		    if(n<=4)
-		    	comm.write();  //1,2,3,4Ãâ·Â
-		    else
-		    	break;
-		}
+    public static void main(String[] args) {
 
-	}
+
+        Scanner sc = new Scanner(System.in);
+        Command comm = null;
+        int n;
+
+        while (true) {
+
+            System.out.println("1.ï¿½ß°ï¿½  2.ï¿½ï¿½ï¿½ï¿½  3.ï¿½ï¿½ï¿½ï¿½ 4.ï¿½ï¿½È¸ 5ï¿½Ì»ï¿½.ï¿½ï¿½ï¿½ï¿½");
+            n = sc.nextInt();
+
+            switch (n) {
+                case 1:
+                    comm = new Insert();
+                    break;
+                case 2:
+                    comm = new Modify();
+                    break;
+                case 3:
+                    comm = new delete();
+                    break;
+                case 4:
+                    comm = new List();
+                    break;
+                default:
+                    System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
+                    break;
+
+            }
+
+            if (n <= 4)
+                comm.write();  //1,2,3,4ï¿½ï¿½ï¿½
+            else
+                break;
+        }
+
+    }
 
 }

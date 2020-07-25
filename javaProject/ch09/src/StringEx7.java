@@ -1,18 +1,18 @@
 class StringEx7 {
-	public static void main(String[] args) {
-		String fullName = "Hello.java";
+    public static void main(String[] args) {
+        String fullName = "Hello.java";
 
-		// fullName¿¡¼­ '.'ÀÇ À§Ä¡¸¦ Ã£´Â´Ù.
-		int index = fullName.indexOf('.');
+        // fullNameï¿½ï¿½ï¿½ï¿½ '.'ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ Ã£ï¿½Â´ï¿½.
+        int index = fullName.indexOf('.');
 
-		// fullNameÀÇ Ã¹¹øÂ° ±ÛÀÚºÎÅÍ '.'ÀÌ ÀÖ´Â °÷±îÁö ¹®ÀÚ¿­À» ÃßÃâÇÑ´Ù.
-		String fileName = fullName.substring(0, index);
+        // fullNameï¿½ï¿½ Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½ '.'ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        String fileName = fullName.substring(0, index);
 
- 	    // '.'ÀÇ ´ÙÀ½ ¹®ÀÚ ºÎÅÍ ½ÃÀÛÇØ¼­ ¹®ÀÚ¿­ÀÇ ³¡±îÁö ÃßÃâÇÑ´Ù.
-		// fullName.substring(index+1, fullName.length());ÀÇ °á°ú¿Í °°´Ù.
-		String ext = fullName.substring(index+1);
+        // '.'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        // fullName.substring(index+1, fullName.length());ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        String ext = fullName.substring(index + 1);
 
-		System.out.println(fullName + "ÀÇ È®ÀåÀÚ¸¦ Á¦¿ÜÇÑ ÀÌ¸§Àº " + fileName);
-		System.out.println(fullName + "ÀÇ È®ÀåÀÚ´Â " + ext);
-	}
+        System.out.println(fullName + "ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ " + fileName);
+        System.out.println(fullName + "ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ú´ï¿½ " + ext);
+    }
 }

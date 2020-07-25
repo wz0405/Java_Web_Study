@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Insert title here</title>
-<style type="text/css">
-.test {
-	width: 150px;
-	height: 150px;
-}
+    <meta charset="utf-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+        .test {
+            width: 150px;
+            height: 150px;
+        }
 
-.result {
-	width: 200px;
-	height: 200px;
-}
+        .result {
+            width: 200px;
+            height: 200px;
+        }
 
-div#img_div {
-	position: absolute;
-	left: 500px;
-	top: 100px;
-}
+        div#img_div {
+            position: absolute;
+            left: 500px;
+            top: 100px;
+        }
 
-div#result_div {
-	position: absolute;
-	left: 300px;
-	top: 600px;
-}
-</style>
-<script type="text/javascript">
-	//id로 객체값 얻어오기
-	window.onload = function() {
+        div#result_div {
+            position: absolute;
+            left: 300px;
+            top: 600px;
+        }
+    </style>
+    <script type="text/javascript">
+        //id로 객체값 얻어오기
+        window.onload = function () {
 
-		img2 = document.getElementById("img2");
-		img6 = document.getElementById("img6");
-		img2.onlick = function() {
-			//결과값의 아이디를 얻어서 그 객체에 src속성값을 각각의 객체 src에서 읽어와 변경해주기
-			img6.setAttribute("src", img2.getAttribute("src"));
-		}
+            img2 = document.getElementById("img2");
+            img6 = document.getElementById("img6");
+            img2.onlick = function () {
+                //결과값의 아이디를 얻어서 그 객체에 src속성값을 각각의 객체 src에서 읽어와 변경해주기
+                img6.setAttribute("src", img2.getAttribute("src"));
+            }
 
-	}
+        }
 
-	//각개체마다 온클릭 이벤트 발생
-</script>
+        //각개체마다 온클릭 이벤트 발생
+    </script>
 </head>
 <body>
-	<div>
-		<img alt="" src="../image/yona.png" id="img1" class="test"> <img alt="" src="../image/yeonhee.png" id="img2" class="test"> <img alt="" src="../image/youna.png" id="img3" class="test"> <img alt="" src="../image/taeri.png" id="img4" class="test"> <img alt="" src="../image/seol.png" id="img5" class="test">
-	</div>
+<div>
+    <img alt="" src="../image/yona.png" id="img1" class="test"> <img alt="" src="../image/yeonhee.png" id="img2"
+                                                                     class="test"> <img alt="" src="../image/youna.png"
+                                                                                        id="img3" class="test"> <img
+        alt="" src="../image/taeri.png" id="img4" class="test"> <img alt="" src="../image/seol.png" id="img5"
+                                                                     class="test">
+</div>
 
-	<div id="result_div">
-		<img alt="" src="../image/web.jpg" id="img6" class="result">
-	</div>
+<div id="result_div">
+    <img alt="" src="../image/web.jpg" id="img6" class="result">
+</div>
 </body>
 </html>

@@ -2,14 +2,14 @@ package day0526;
 
 public class PrintTest {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//syso + cnt space
-		
-		System.out.println("¾È³çÇÏ¼¼¿ä");
-		System.out.println("¾È³çÇÏ¼¼¿ä");
-		System.out.println(10+20);
-		System.out.println("20");
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //syso + cnt space
+
+        System.out.println("ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        System.out.println("ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        System.out.println(10 + 20);
+        System.out.println("20");
+    }
 
 }

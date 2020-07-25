@@ -1,57 +1,60 @@
 package day0601;
-class Score{
-	private String name;
-	private int java;
-	private int spring;
-	
-	static final String TITLE="Áß°£°í»ç Á¡¼ö";
 
-	public String getName() {
-		return name;
-	}
+class Score {
+    private String name;
+    private int java;
+    private int spring;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    static final String TITLE = "ï¿½ß°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
 
-	public int getJava() {
-		return java;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setJava(int java) {
-		this.java = java;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getSpring() {
-		return spring;
-	}
+    public int getJava() {
+        return java;
+    }
 
-	public void setSpring(int spring) {
-		this.spring = spring;
-	}
-	//ÇÕ°è¸Þ¼­µå
-	public int getTot() {
-		int num=0;
-		num=this.java+this.spring;
-		return num;
-	}
-	//Æò±Õ¸Þ¼­µå
-	public double getAvg()
-	{
-		return getTot()/2.0;
-	}
+    public void setJava(int java) {
+        this.java = java;
+    }
+
+    public int getSpring() {
+        return spring;
+    }
+
+    public void setSpring(int spring) {
+        this.spring = spring;
+    }
+
+    //ï¿½Õ°ï¿½Þ¼ï¿½ï¿½ï¿½
+    public int getTot() {
+        int num = 0;
+        num = this.java + this.spring;
+        return num;
+    }
+
+    //ï¿½ï¿½Õ¸Þ¼ï¿½ï¿½ï¿½
+    public double getAvg() {
+        return getTot() / 2.0;
+    }
 }
+
 public class ScoreTest_17 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Score sc = new Score();
-		sc.setJava(50);
-		sc.setSpring(79);
-		System.out.println(Score.TITLE);
-		System.out.println("ÇÕ°è"+sc.getTot()+"Æò±Õ"+sc.getAvg());
-		
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Score sc = new Score();
+        sc.setJava(50);
+        sc.setSpring(79);
+        System.out.println(Score.TITLE);
+        System.out.println("ï¿½Õ°ï¿½" + sc.getTot() + "ï¿½ï¿½ï¿½" + sc.getAvg());
 
-	}
+
+    }
 
 }

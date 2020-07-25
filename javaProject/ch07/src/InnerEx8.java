@@ -1,14 +1,14 @@
 import java.awt.*;
 import java.awt.event.*;
 
-class  InnerEx8 {
-	public static void main(String[] args) {
-		Button b = new Button("Start");
-		b.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-					System.out.println("ActionEvent occurred!!!");
-				}
-			} // ÀÍ¸í Å¬·¡½ºÀÇ ³¡
-		);
-	} // main¸Þ¼­µåÀÇ ³¡
-} // InnerEx8Å¬·¡½ºÀÇ ³¡
+class InnerEx8 {
+    public static void main(String[] args) {
+        Button b = new Button("Start");
+        b.addActionListener(new ActionListener() {
+                                public void actionPerformed(ActionEvent e) {
+                                    System.out.println("ActionEvent occurred!!!");
+                                }
+                            } // ï¿½Í¸ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+        );
+    } // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+} // InnerEx8Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½

@@ -1,54 +1,54 @@
 import java.util.*;
 
 public class StackEx1 {
-	public static Stack back    = new Stack();
-	public static Stack forward = new Stack();  
+    public static Stack back = new Stack();
+    public static Stack forward = new Stack();
 
-	public static void main(String[] args) {
-		goURL("1.³×ÀÌÆ®");
-		goURL("2.¾ßÈÄ");
-		goURL("3.³×ÀÌ¹ö");
-		goURL("4.´ÙÀ½");
+    public static void main(String[] args) {
+        goURL("1.ï¿½ï¿½ï¿½ï¿½Æ®");
+        goURL("2.ï¿½ï¿½ï¿½ï¿½");
+        goURL("3.ï¿½ï¿½ï¿½Ì¹ï¿½");
+        goURL("4.ï¿½ï¿½ï¿½ï¿½");
 
-		printStatus();
+        printStatus();
 
-		goBack();
-		System.out.println("= µÚ·Î°¡±â ¹öÆ°À» ´©¸¥ ÈÄ =");  
-		printStatus();
+        goBack();
+        System.out.println("= ï¿½Ú·Î°ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ =");
+        printStatus();
 
-		goBack();
-		System.out.println("= 'µÚ·Î' ¹öÆ°À» ´©¸¥ ÈÄ =");  
-		printStatus();
+        goBack();
+        System.out.println("= 'ï¿½Ú·ï¿½' ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ =");
+        printStatus();
 
-		goForward();
-		System.out.println("= '¾ÕÀ¸·Î' ¹öÆ°À» ´©¸¥ ÈÄ =");  
-		printStatus();
+        goForward();
+        System.out.println("= 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½' ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ =");
+        printStatus();
 
-		goURL("codechobo.com");
-		System.out.println("= »õ·Î¿î ÁÖ¼Ò·Î ÀÌµ¿ ÈÄ =");  
-		printStatus();
-	}
+        goURL("codechobo.com");
+        System.out.println("= ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ö¼Ò·ï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ =");
+        printStatus();
+    }
 
-	public static void printStatus() {
-		System.out.println("back:"+back);
-		System.out.println("forward:"+forward);
-		System.out.println("ÇöÀçÈ­¸éÀº '" + back.peek()+"' ÀÔ´Ï´Ù.");  
-		System.out.println();
-	}
+    public static void printStatus() {
+        System.out.println("back:" + back);
+        System.out.println("forward:" + forward);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ '" + back.peek() + "' ï¿½Ô´Ï´ï¿½.");
+        System.out.println();
+    }
 
-	public static void goURL(String url){
-		back.push(url);
-		if(!forward.empty()) 
-			forward.clear();
-	}
+    public static void goURL(String url) {
+        back.push(url);
+        if (!forward.empty())
+            forward.clear();
+    }
 
-	public static void goForward(){
-		if(!forward.empty())
-			back.push(forward.pop());
-	}
+    public static void goForward() {
+        if (!forward.empty())
+            back.push(forward.pop());
+    }
 
-	public static void goBack(){
-		if(!back.empty())
-			forward.push(back.pop());
-	}
+    public static void goBack() {
+        if (!back.empty())
+            forward.push(back.pop());
+    }
 }

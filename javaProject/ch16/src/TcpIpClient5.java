@@ -2,25 +2,25 @@ import java.net.*;
 import java.io.*;
 
 public class TcpIpClient5 {
-	public static void main(String args[]) {
-		try {
-			String serverIp = "127.0.0.1";
-            
-			// ¼ÒÄÏÀ» »ý¼ºÇÏ¿© ¿¬°áÀ» ¿äÃ»ÇÑ´Ù.
-			Socket socket = new Socket(serverIp, 7777); 
+    public static void main(String args[]) {
+        try {
+            String serverIp = "127.0.0.1";
 
-			System.out.println("¼­¹ö¿¡ ¿¬°áµÇ¾ú½À´Ï´Ù.");
-			Sender sender = new Sender(socket);
-			Receiver receiver = new Receiver(socket);
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Ñ´ï¿½.
+            Socket socket = new Socket(serverIp, 7777);
 
-			sender.start();
-			receiver.start();
-		} catch(ConnectException ce) {
-			ce.printStackTrace();
-		} catch(IOException ie) {  
-			ie.printStackTrace();
-		} catch(Exception e) {
-			e.printStackTrace();  
-		}  
-	} // main
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            Sender sender = new Sender(socket);
+            Receiver receiver = new Receiver(socket);
+
+            sender.start();
+            receiver.start();
+        } catch (ConnectException ce) {
+            ce.printStackTrace();
+        } catch (IOException ie) {
+            ie.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } // main
 } // class

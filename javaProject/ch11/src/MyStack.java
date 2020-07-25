@@ -2,40 +2,40 @@ import java.util.*;
 
 class MyStack extends Vector {
     public Object push(Object item) {
-		addElement(item);
-		return item;
+        addElement(item);
+        return item;
     }
 
     public Object pop() {
-		Object obj = peek();	 // Stack¿¡ ÀúÀåµÈ ¸¶Áö¸· ¿ä¼Ò¸¦ ÀÐ¾î¿Â´Ù.
-		//   ¸¸ÀÏ StackÀÌ ºñ¾îÀÖÀ¸¸é peek()¸Þ¼­µå°¡ EmptyStackExceptionÀ» ¹ß»ý½ÃÅ²´Ù.
-        //   ¸¶Áö¸· ¿ä¼Ò¸¦ »èÁ¦ÇÑ´Ù. ¹è¿­ÀÇ index°¡ 0 ºÎÅÍ ½ÃÀÛÇÏ¹Ç·Î 1À» »©ÁØ´Ù.
-		removeElementAt(size() - 1); 
+        Object obj = peek();     // Stackï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½Ð¾ï¿½Â´ï¿½.
+        //   ï¿½ï¿½ï¿½ï¿½ Stackï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ peek()ï¿½Þ¼ï¿½ï¿½å°¡ EmptyStackExceptionï¿½ï¿½ ï¿½ß»ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
+        //   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. ï¿½è¿­ï¿½ï¿½ indexï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¹Ç·ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½Ø´ï¿½.
+        removeElementAt(size() - 1);
 
-		return obj;
+        return obj;
     }
 
     public Object peek() {
-		int	len = size();
+        int len = size();
 
-		if (len == 0)
-			throw new EmptyStackException();
-        // ¸¶Áö¸· ¿ä¼Ò¸¦ ¹ÝÈ¯ÇÑ´Ù. ¹è¿­ÀÇ index°¡ 0 ºÎÅÍ ½ÃÀÛÇÏ¹Ç·Î 1À» »©ÁØ´Ù.
-		return elementAt(len - 1);	
+        if (len == 0)
+            throw new EmptyStackException();
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½. ï¿½è¿­ï¿½ï¿½ indexï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¹Ç·ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½Ø´ï¿½.
+        return elementAt(len - 1);
     }
 
     public boolean empty() {
-		return size() == 0;
+        return size() == 0;
     }
-    
-    public int search(Object o) {
-		int i = lastIndexOf(o);	// ³¡¿¡¼­ºÎÅÍ °´Ã¼¸¦ Ã£´Â´Ù. 
-		// ¹ÝÈ¯°ªÀº ÀúÀåµÈ À§Ä¡(¹è¿­ÀÇ index)ÀÌ´Ù.
-		if (i >= 0) { // °´Ã¼¸¦ Ã£Àº °æ¿ì
-			return size() - i; // StackÀº ¸Ç À§¿¡ ÀúÀåµÈ °´Ã¼ÀÇ index¸¦ 1·Î Á¤ÀÇÇÏ±â ¶§¹®¿¡
-                               // °è»êÀ» ÅëÇØ¼­ ±¸ÇÑ´Ù.
-		}
 
-		return - 1;		// ÇØ´ç °´Ã¼¸¦ Ã£Áö ¸øÇÏ¸é -1¸¦ ¹ÝÈ¯ÇÑ´Ù.
-	}
+    public int search(Object o) {
+        int i = lastIndexOf(o);    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ Ã£ï¿½Â´ï¿½. 
+        // ï¿½ï¿½È¯ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(ï¿½è¿­ï¿½ï¿½ index)ï¿½Ì´ï¿½.
+        if (i >= 0) { // ï¿½ï¿½Ã¼ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½
+            return size() - i; // Stackï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ indexï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½.
+        }
+
+        return -1;        // ï¿½Ø´ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ -1ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+    }
 }

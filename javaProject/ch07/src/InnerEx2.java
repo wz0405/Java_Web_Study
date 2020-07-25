@@ -1,33 +1,37 @@
 class InnerEx2 {
-	class InstanceInner {}
-	static class StaticInner {}
+    class InstanceInner {
+    }
 
-	// ÀÎ½ºÅÏ½º¸â¹ö °£¿¡´Â ¼­·Î Á÷Á¢ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.
-	InstanceInner iv = new InstanceInner();
-	// static ¸â¹ö °£¿¡´Â ¼­·Î Á÷Á¢ Á¢±ÙÀÌ °¡´ÉÇÏ´Ù.
-	static StaticInner cv = new StaticInner();
+    static class StaticInner {
+    }
 
-	static void staticMethod() {
-        // static¸â¹ö´Â ÀÎ½ºÅÏ½º¸â¹ö¿¡ Á÷Á¢ Á¢±ÙÇÒ ¼ö ¾ø´Ù.
+    // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+    InstanceInner iv = new InstanceInner();
+    // static ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+    static StaticInner cv = new StaticInner();
+
+    static void staticMethod() {
+        // staticï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 //		InstanceInner obj1 = new InstanceInner();	
-		StaticInner obj2 = new StaticInner();
+        StaticInner obj2 = new StaticInner();
 
-        //	±»ÀÌ Á¢±ÙÇÏ·Á¸é ¾Æ·¡¿Í °°ÀÌ °´Ã¼¸¦ »ý¼ºÇØ¾ß ÇÑ´Ù.
-        //	ÀÎ½ºÅÏ½ºÅ¬·¡½º´Â ¿ÜºÎ Å¬·¡½º¸¦ ¸ÕÀú »ý¼ºÇØ¾ß¸¸ »ý¼ºÇÒ ¼ö ÀÖ´Ù.
-		InnerEx2 outer = new InnerEx2();
-		InstanceInner obj1 = outer.new InstanceInner();
-	}
+        //	ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½Æ·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ñ´ï¿½.
+        //	ï¿½Î½ï¿½ï¿½Ï½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Üºï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ß¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
+        InnerEx2 outer = new InnerEx2();
+        InstanceInner obj1 = outer.new InstanceInner();
+    }
 
-	void instanceMethod() {
-        // ÀÎ½ºÅÏ½º¸Þ¼­µå¿¡¼­´Â ÀÎ½ºÅÏ½º¸â¹ö¿Í static¸â¹ö ¸ðµÎ Á¢±Ù °¡´ÉÇÏ´Ù.
-		InstanceInner obj1 = new InstanceInner();
-		StaticInner obj2 = new StaticInner();
-		// ¸Þ¼­µå ³»¿¡ Áö¿ªÀûÀ¸·Î ¼±¾ðµÈ ³»ºÎ Å¬·¡½º´Â ¿ÜºÎ¿¡¼­ Á¢±ÙÇÒ ¼ö ¾ø´Ù.
+    void instanceMethod() {
+        // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ staticï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+        InstanceInner obj1 = new InstanceInner();
+        StaticInner obj2 = new StaticInner();
+        // ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 //		LocalInner lv = new LocalInner();
-	}
+    }
 
-	void myMethod() {
-		class LocalInner {}
-		LocalInner lv = new LocalInner();
-	}
+    void myMethod() {
+        class LocalInner {
+        }
+        LocalInner lv = new LocalInner();
+    }
 }

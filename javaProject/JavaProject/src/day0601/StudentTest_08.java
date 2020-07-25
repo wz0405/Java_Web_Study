@@ -2,16 +2,16 @@ package day0601;
 
 public class StudentTest_08 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Student_08 st = new Student_08();
-		//ÂüÁ¶º¯¼ö¸í.º¯¼ö·Î °ªÀ» ºÒ·¯¿Ã¼ö ¾ø´Ù
-		//¼öÁ¤¸Þ¼­µå·Î ¼öÁ¤ °¡´É
-		st.setName("ÇÑÇöÈñ");
-		st.setAge(26);
-		String name=st.getName();
-		int age=st.getAge();
-		System.out.println(name+age);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Student_08 st = new Student_08();
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½Ã¼ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        st.setName("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        st.setAge(26);
+        String name = st.getName();
+        int age = st.getAge();
+        System.out.println(name + age);
+    }
 
 }

@@ -1,18 +1,20 @@
-class Data { int x; }
+class Data {
+    int x;
+}
 
 class PrimitiveParamEx {
-	public static void main(String[] args) {
-		Data d = new Data();
-		d.x = 10;
-		System.out.println("main() : x = " + d.x);
+    public static void main(String[] args) {
+        Data d = new Data();
+        d.x = 10;
+        System.out.println("main() : x = " + d.x);
 
-		change(d.x);
-		System.out.println("After change(d.x)");
-		System.out.println("main() : x = " + d.x);
-	}
+        change(d.x);
+        System.out.println("After change(d.x)");
+        System.out.println("main() : x = " + d.x);
+    }
 
-	static void change(int x) {  // ±âº»Çü ¸Å°³º¯¼ö
-		x = 1000;
-		System.out.println("change() : x = " + x);
-	}
+    static void change(int x) {  // ï¿½âº»ï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½
+        x = 1000;
+        System.out.println("change() : x = " + x);
+    }
 }

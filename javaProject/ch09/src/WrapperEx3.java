@@ -1,29 +1,29 @@
 class WrapperEx3 {
-	public static void main(String[] args) {
-		int i = 10;
+    public static void main(String[] args) {
+        int i = 10;
 
-        // ±âº»ÇüÀ» ÂüÁ¶ÇüÀ¸·Î Çüº¯È¯(Çüº¯È¯ »ý·«°¡´É)
-		Integer intg = (Integer)i; // Integer intg = Integer.valueOf(i);
-		Object   obj = (Object)i;  // Object obj = (Object)Integer.valueOf(i);
+        // ï¿½âº»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯(ï¿½ï¿½ï¿½ï¿½È¯ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
+        Integer intg = (Integer) i; // Integer intg = Integer.valueOf(i);
+        Object obj = (Object) i;  // Object obj = (Object)Integer.valueOf(i);
 
-		Long     lng = 100L;  // Long lng = new Long(100L);
+        Long lng = 100L;  // Long lng = new Long(100L);
 
-		int i2 = intg + 10;   // ÂüÁ¶Çü°ú ±âº»Çü°£ÀÇ ¿¬»ê °¡´É
-		long l = intg + lng;  // ÂüÁ¶Çü °£ÀÇ µ¡¼Àµµ °¡´É
+        int i2 = intg + 10;   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½âº»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        long l = intg + lng;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-		Integer intg2 = new Integer(20);
-		int i3 = (int)intg2;  // ÂüÁ¶ÇüÀ» ±âº»ÇüÀ¸·Î Çüº¯È¯µµ °¡´É(Çüº¯È¯ »ý·«°¡´É)
+        Integer intg2 = new Integer(20);
+        int i3 = (int) intg2;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½âº»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½È¯ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
 
-		Integer intg3 = intg2 + i3; 
+        Integer intg3 = intg2 + i3;
 
-		System.out.println("i     ="+i);
-		System.out.println("intg  ="+intg);
-		System.out.println("obj   ="+obj);
-		System.out.println("lng   ="+lng);
-		System.out.println("intg + 10  ="+i2);
-		System.out.println("intg + lng ="+l);
-		System.out.println("intg2 ="+intg2);
-		System.out.println("i3    ="+i3);
-		System.out.println("intg2 + i3 ="+intg3);
-	}
+        System.out.println("i     =" + i);
+        System.out.println("intg  =" + intg);
+        System.out.println("obj   =" + obj);
+        System.out.println("lng   =" + lng);
+        System.out.println("intg + 10  =" + i2);
+        System.out.println("intg + lng =" + l);
+        System.out.println("intg2 =" + intg2);
+        System.out.println("i3    =" + i3);
+        System.out.println("intg2 + i3 =" + intg3);
+    }
 }

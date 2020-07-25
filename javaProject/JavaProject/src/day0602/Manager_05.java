@@ -1,18 +1,20 @@
 package day0602;
-//ÀÚ½ÄÅ¬·¡½º 
-public class Manager_05 extends Employee_05{
-	String depart;
-	public Manager_05(String name, int salary,String depart) {
-		super(name, salary);
-		this.depart=depart;
-		// TODO Auto-generated constructor stub
-	}
 
-	//ºÎ¸ðÀÇ ¸Þ¼­µå¸¦ ¹°·Á¹Þ¾Æ ÀÚ½ÄÅ¬·¡½º¿¡¼­ ¿Ï¼º....¿À¹ö¶óÀÌµù
-	@Override
-	public String getEmployee() {
-		// TODO Auto-generated method stub
-		return super.getEmployee()+","+depart;
-	}
-	
+//ï¿½Ú½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ 
+public class Manager_05 extends Employee_05 {
+    String depart;
+
+    public Manager_05(String name, int salary, String depart) {
+        super(name, salary);
+        this.depart = depart;
+        // TODO Auto-generated constructor stub
+    }
+
+    //ï¿½Î¸ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Þ¾ï¿½ ï¿½Ú½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¼ï¿½....ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½
+    @Override
+    public String getEmployee() {
+        // TODO Auto-generated method stub
+        return super.getEmployee() + "," + depart;
+    }
+
 }

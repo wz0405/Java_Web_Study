@@ -1,9 +1,9 @@
 class FlowEx23 {
-	public static void main(String[] args) { 
-		int i= 5;
+    public static void main(String[] args) {
+        int i = 5;
 
-		while(i--!=0) {
-			System.out.println(i + " - I can do it.");
-		}
-	} // mainÀÇ ³¡
+        while (i-- != 0) {
+            System.out.println(i + " - I can do it.");
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

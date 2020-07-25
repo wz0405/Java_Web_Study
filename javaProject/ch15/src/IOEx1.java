@@ -2,25 +2,25 @@ import java.io.*;
 import java.util.Arrays;
 
 class IOEx1 {
-	public static void main(String[] args) {
-		byte[] inSrc = {0,1,2,3,4,5,6,7,8,9};
-		byte[] outSrc = null;
+    public static void main(String[] args) {
+        byte[] inSrc = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        byte[] outSrc = null;
 
-		ByteArrayInputStream  input  = null;
-		ByteArrayOutputStream output = null;
+        ByteArrayInputStream input = null;
+        ByteArrayOutputStream output = null;
 
-		input  = new ByteArrayInputStream(inSrc);
-		output = new ByteArrayOutputStream();
+        input = new ByteArrayInputStream(inSrc);
+        output = new ByteArrayOutputStream();
 
-		int data = 0;
+        int data = 0;
 
-		while((data = input.read())!=-1) {
-			output.write(data);	// void write(int b)
-		}
+        while ((data = input.read()) != -1) {
+            output.write(data);    // void write(int b)
+        }
 
-		outSrc = output.toByteArray(); // ½ºÆ®¸²ÀÇ ³»¿ëÀ» byte¹è¿­·Î ¹ÝÈ¯ÇÑ´Ù.
+        outSrc = output.toByteArray(); // ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ byteï¿½è¿­ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
 
-		System.out.println("Input Source  :" + Arrays.toString(inSrc));
-		System.out.println("Output Source :" + Arrays.toString(outSrc));
-	}
+        System.out.println("Input Source  :" + Arrays.toString(inSrc));
+        System.out.println("Output Source :" + Arrays.toString(outSrc));
+    }
 }

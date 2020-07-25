@@ -1,53 +1,53 @@
 class ThreadEx20 {
-	public static void main(String args[]) {
-		ThreadEx20_1 gc = new ThreadEx20_1();
-		gc.setDaemon(true);
-		gc.start();
+    public static void main(String args[]) {
+        ThreadEx20_1 gc = new ThreadEx20_1();
+        gc.setDaemon(true);
+        gc.start();
 
-		int requiredMemory = 0;
+        int requiredMemory = 0;
 
-		for(int i=0; i < 20; i++) {
-			requiredMemory = (int)(Math.random() * 10) * 20;
+        for (int i = 0; i < 20; i++) {
+            requiredMemory = (int) (Math.random() * 10) * 20;
 
-			// ÇÊ¿äÇÑ ¸Þ¸ð¸®°¡ »ç¿ëÇÒ ¼ö ÀÖ´Â ¾çº¸´Ù Å©°Å³ª ÀüÃ¼ ¸Þ¸ð¸®ÀÇ 60%ÀÌ»óÀ»
-            // »ç¿ëÇßÀ» °æ¿ì gc¸¦ ±ú¿î´Ù.
-			if(gc.freeMemory() < requiredMemory || gc.freeMemory() < gc.totalMemory() * 0.4) {	
-				gc.interrupt();	// ÀáÀÚ°í ÀÖ´Â ¾²·¹µå t1À» ±ú¿î´Ù.		
-			}
-			
-			gc.usedMemory += requiredMemory;
-			System.out.println("usedMemory:"+gc.usedMemory);
-		}
-	}
+            // ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Þ¸ð¸®°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½çº¸ï¿½ï¿½ Å©ï¿½Å³ï¿½ ï¿½ï¿½Ã¼ ï¿½Þ¸ï¿½ï¿½ï¿½ 60%ï¿½Ì»ï¿½ï¿½ï¿½
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ gcï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+            if (gc.freeMemory() < requiredMemory || gc.freeMemory() < gc.totalMemory() * 0.4) {
+                gc.interrupt();    // ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ t1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.		
+            }
+
+            gc.usedMemory += requiredMemory;
+            System.out.println("usedMemory:" + gc.usedMemory);
+        }
+    }
 }
 
 class ThreadEx20_1 extends Thread {
-	final static int MAX_MEMORY = 1000;
-	int usedMemory = 0;
-	
-	public void run() {
-		while(true) {
-			try {
-				Thread.sleep(10 * 1000);	// 10ÃÊ¸¦ ±â´Ù¸°´Ù.
-			} catch(InterruptedException e) {
-				System.out.println("Awaken by interrupt().");
-			}
+    final static int MAX_MEMORY = 1000;
+    int usedMemory = 0;
 
-			gc();	// garbage collectionÀ» ¼öÇàÇÑ´Ù.
-			System.out.println("Garbage Collected. Free Memory :" + freeMemory());
-		}
-	}
+    public void run() {
+        while (true) {
+            try {
+                Thread.sleep(10 * 1000);    // 10ï¿½Ê¸ï¿½ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½.
+            } catch (InterruptedException e) {
+                System.out.println("Awaken by interrupt().");
+            }
 
-	public void gc() {
-		usedMemory -= 300;
-		if(usedMemory < 0) usedMemory = 0;
-	}
+            gc();    // garbage collectionï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            System.out.println("Garbage Collected. Free Memory :" + freeMemory());
+        }
+    }
 
-	public int totalMemory() {
-		return MAX_MEMORY;
-	}
+    public void gc() {
+        usedMemory -= 300;
+        if (usedMemory < 0) usedMemory = 0;
+    }
 
-	public int freeMemory() {
-		return MAX_MEMORY - usedMemory;
-	}
+    public int totalMemory() {
+        return MAX_MEMORY;
+    }
+
+    public int freeMemory() {
+        return MAX_MEMORY - usedMemory;
+    }
 }

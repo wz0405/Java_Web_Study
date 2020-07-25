@@ -1,18 +1,18 @@
 class FlowEx33 {
-	public static void main(String[] args)
-	{
-        // for¹®¿¡ Loop1ÀÌ¶ó´Â ÀÌ¸§À» ºÙ¿´´Ù.
-		Loop1 : for(int i=2;i <=9;i++) {	
-				for(int j=1;j <=9;j++) {
-					if(j==5)
-						break Loop1;
+    public static void main(String[] args) {
+        // forï¿½ï¿½ï¿½ï¿½ Loop1ï¿½Ì¶ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ù¿ï¿½ï¿½ï¿½.
+        Loop1:
+        for (int i = 2; i <= 9; i++) {
+            for (int j = 1; j <= 9; j++) {
+                if (j == 5)
+                    break Loop1;
 //						break;
 //						continue Loop1;
 //						continue;
-					System.out.println(i+"*"+ j +"="+ i*j);
-				} // end of for i
-				System.out.println();
-		} // end of Loop1
+                System.out.println(i + "*" + j + "=" + i * j);
+            } // end of for i
+            System.out.println();
+        } // end of Loop1
 
-	}
+    }
 }

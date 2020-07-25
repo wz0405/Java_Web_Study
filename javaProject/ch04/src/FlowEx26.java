@@ -1,10 +1,10 @@
 class FlowEx26 {
-	public static void main(String[] args) { 
-		int sum = 0;
-		int i   = 0;
+    public static void main(String[] args) {
+        int sum = 0;
+        int i = 0;
 
-		while((sum += ++i) <= 100) { // i¸¦ 1¾¿ Áõ°¡½ÃÄÑ¼­ sum¿¡ °è¼Ó ´õÇØ³ª°£´Ù.
-			System.out.printf("%d - %d%n", i, sum);
-		}
-	} // mainÀÇ ³¡
+        while ((sum += ++i) <= 100) { // iï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼ï¿½ sumï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½ï¿½ï¿½.
+            System.out.printf("%d - %d%n", i, sum);
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

@@ -1,25 +1,29 @@
 package day0601;
 
 public class Student_08 {
-	
-	//ÀÎ½ºÅÏ½º°¡ privateÀÌ¸é ¸ÞÀÎ¿¡¼­ »ý¼ºÀ» ÇØµµ ÂüÁ¶º¯¼ö·Î Á¢±ÙÀÌ ºÒ°¡´ÉÇÏ´Ù
-	//±×·¡¼­ ¹Ýµå½Ã Á¢±Ù°¡´ÉÇÑ ¸Þ¼­µå°¡ ÇÊ¼ö
-	//setÀº ¼öÁ¤¿ëµµ getÀº °ª Ãâ·Â¿ëµµ·Î ¸¸µç´Ù
-	private String name;
-	private int age;
-	//set¸Þ¼­µå
-	public void setName(String name) {
-		this.name=name;
-	}
-	public void setAge(int age) {
-		this.age=age;
-	}
-	//get¸Þ¼­µå
-	//getÀº ¼öÁ¤µÈ °ªÀ» µ¹·ÁÁÖ´Â ¸Þ¼­µå.Á¶È¸¸ñÀû
-	public String getName() {
-		return name;
-	}
-	public int getAge() {
-		return age;
-	}
+
+    //ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ privateï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Øµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½ï¿½Ï´ï¿½
+    //ï¿½×·ï¿½ï¿½ï¿½ ï¿½Ýµï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½å°¡ ï¿½Ê¼ï¿½
+    //setï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ëµµ getï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Â¿ëµµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+    private String name;
+    private int age;
+
+    //setï¿½Þ¼ï¿½ï¿½ï¿½
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    //getï¿½Þ¼ï¿½ï¿½ï¿½
+    //getï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½.ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
 }

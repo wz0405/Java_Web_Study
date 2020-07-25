@@ -1,15 +1,17 @@
 package day0602;
-class Student_01{
-	private String stuName;
-	private String phone;
-	private int score;
-	//»ý¼ºÀÚ 3°³
+
+class Student_01 {
+    private String stuName;
+    private String phone;
+    private int score;
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½
 }
+
 public class ArrayConst_01 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }

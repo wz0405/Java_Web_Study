@@ -1,26 +1,29 @@
 package day0603;
-class Outer{
-	int a=10;
-	static int b=20;
-	
-	class Inner{
-		int c=30;
-		//static int d=100; ³»ºÎ¿¡¼­´Â static ¸ø¾¸
-		//Ãâ·Â¸Þ¼Òµå_³»ºÎ
-		public void write() {
-			System.out.println("¿ÜºÎº¯¼ö a="+a);
-			System.out.println("¿ÜºÎ Á¤Àûº¯¼ö b="+b);
-			System.out.println("³»ºÎ º¯¼öc="+c);
-			System.out.println("³»ºÎ Á¤Àûº¯¼ö´Â ºÒ°¡´É");
-		}
-	}
+
+class Outer {
+    int a = 10;
+    static int b = 20;
+
+    class Inner {
+        int c = 30;
+
+        //static int d=100; ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ï¿½ï¿½ static ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½Â¸Þ¼Òµï¿½_ï¿½ï¿½ï¿½ï¿½
+        public void write() {
+            System.out.println("ï¿½ÜºÎºï¿½ï¿½ï¿½ a=" + a);
+            System.out.println("ï¿½Üºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ b=" + b);
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½c=" + c);
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½ï¿½ï¿½");
+        }
+    }
 }
+
 public class InnerClassVar_04 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Outer.Inner ou = new Outer().new Inner();
-		ou.write();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Outer.Inner ou = new Outer().new Inner();
+        ou.write();
+    }
 
 }

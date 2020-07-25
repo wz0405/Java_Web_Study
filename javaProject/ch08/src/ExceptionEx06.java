@@ -1,14 +1,14 @@
 class ExceptionEx06 {
-	public static void main(String args[]) {
-		System.out.println(1);			
-		System.out.println(2);
-		try {
-			System.out.println(3);
-			System.out.println(0/0);
-			System.out.println(4); 	// ½ÇÇàµÇÁö ¾Ê´Â´Ù.
-		} catch (Exception e)	{	// ArithmeticException´ë½Å ExceptionÀ» »ç¿ë.
-			System.out.println(5);
-		}	// try-catchÀÇ ³¡
-		System.out.println(6);
-	}	// main¸Þ¼­µåÀÇ ³¡
+    public static void main(String args[]) {
+        System.out.println(1);
+        System.out.println(2);
+        try {
+            System.out.println(3);
+            System.out.println(0 / 0);
+            System.out.println(4);    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
+        } catch (Exception e) {    // ArithmeticExceptionï¿½ï¿½ï¿½ Exceptionï¿½ï¿½ ï¿½ï¿½ï¿½.
+            System.out.println(5);
+        }    // try-catchï¿½ï¿½ ï¿½ï¿½
+        System.out.println(6);
+    }    // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 }

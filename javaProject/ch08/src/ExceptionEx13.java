@@ -1,14 +1,14 @@
 class ExceptionEx13 {
-	public static void main(String[] args) {
-		method1(); 	  // °°Àº Å¬·¡½º³»ÀÇ static¸â¹öÀÌ¹Ç·Î °´Ã¼»ý¼º¾øÀÌ Á÷Á¢ È£Ãâ°¡´É.
-  	}	// main¸Þ¼­µåÀÇ ³¡
+    public static void main(String[] args) {
+        method1();      // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ staticï¿½ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½â°¡ï¿½ï¿½.
+    }    // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-	static void method1() {
-		try {
-		     throw new Exception();
-		} catch (Exception e) {
-			System.out.println("method1¸Þ¼­µå¿¡¼­ ¿¹¿Ü°¡ Ã³¸®µÇ¾ú½À´Ï´Ù.");
-			e.printStackTrace();
-		}
-	}	// method1ÀÇ ³¡
+    static void method1() {
+        try {
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.println("method1ï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ü°ï¿½ Ã³ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            e.printStackTrace();
+        }
+    }    // method1ï¿½ï¿½ ï¿½ï¿½
 }

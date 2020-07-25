@@ -1,14 +1,14 @@
 class ExceptionEx09 {
-	public static void main(String args[]) {
-		try {
-			Exception e = new Exception("°íÀÇ·Î ¹ß»ý½ÃÄ×À½.");
-			throw e;	 // ¿¹¿Ü¸¦ ¹ß»ý½ÃÅ´
-		//  throw new Exception("°íÀÇ·Î ¹ß»ý½ÃÄ×À½.");  
+    public static void main(String args[]) {
+        try {
+            Exception e = new Exception("ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
+            throw e;     // ï¿½ï¿½ï¿½Ü¸ï¿½ ï¿½ß»ï¿½ï¿½ï¿½Å´
+            //  throw new Exception("ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
 
-		} catch (Exception e)	{
-			System.out.println("¿¡·¯ ¸Þ½ÃÁö : " + e.getMessage());
-		     e.printStackTrace();
-		}
-		System.out.println("ÇÁ·Î±×·¥ÀÌ Á¤»ó Á¾·áµÇ¾úÀ½.");
-	}
+        } catch (Exception e) {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ : " + e.getMessage());
+            e.printStackTrace();
+        }
+        System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½.");
+    }
 }

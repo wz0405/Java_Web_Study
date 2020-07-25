@@ -1,19 +1,21 @@
 package day0601;
 
-class Member{
-	String name;
-	public Member(String name) {
-		this.name=name;
-		System.out.println("³»ÀÌ¸§Àº "+this.name+"ÀÔ´Ï´Ù");
-	}
+class Member {
+    String name;
+
+    public Member(String name) {
+        this.name = name;
+        System.out.println("ï¿½ï¿½ï¿½Ì¸ï¿½ï¿½ï¿½ " + this.name + "ï¿½Ô´Ï´ï¿½");
+    }
 }
+
 public class ConstTest_05 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Member me = new Member("ÇÑÇöÈñ");
-		Member me2 = new Member("¹ÚÁö¼ö");
-		Member me3 = new Member("ÇÑ¸íÈñ");
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Member me = new Member("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        Member me2 = new Member("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        Member me3 = new Member("ï¿½Ñ¸ï¿½ï¿½ï¿½");
+    }
 
 }

@@ -2,34 +2,35 @@ import java.io.*;
 import java.util.Arrays;
 
 class IOEx3 {
-	public static void main(String[] args) {
-		byte[] inSrc = {0,1,2,3,4,5,6,7,8,9};
-		byte[] outSrc = null;
+    public static void main(String[] args) {
+        byte[] inSrc = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        byte[] outSrc = null;
 
-		byte[] temp = new byte[4];	// ÀÌÀü ¿¹Á¦¿Í ¹è¿­ÀÇ Å©±â°¡ ´Ù¸£´Ù.
+        byte[] temp = new byte[4];    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ Å©ï¿½â°¡ ï¿½Ù¸ï¿½ï¿½ï¿½.
 
-		ByteArrayInputStream input = null;
-		ByteArrayOutputStream output = null;
+        ByteArrayInputStream input = null;
+        ByteArrayOutputStream output = null;
 
-		input  = new ByteArrayInputStream(inSrc);
-		output = new ByteArrayOutputStream();
+        input = new ByteArrayInputStream(inSrc);
+        output = new ByteArrayOutputStream();
 
-		System.out.println("Input Source  :" + Arrays.toString(inSrc));
+        System.out.println("Input Source  :" + Arrays.toString(inSrc));
 
-		try {
-			while(input.available() > 0) {
-				input.read(temp);
-				output.write(temp); 
+        try {
+            while (input.available() > 0) {
+                input.read(temp);
+                output.write(temp);
 //				System.out.println("temp :" + Arrays.toString(temp));
 
-				outSrc = output.toByteArray();
-				printArrays(temp, outSrc);
-			}
-		} catch(IOException e) {}
-	} // mainÀÇ ³¡
+                outSrc = output.toByteArray();
+                printArrays(temp, outSrc);
+            }
+        } catch (IOException e) {
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 
-	static void printArrays(byte[] temp, byte[] outSrc) {
-		System.out.println("temp          :" +Arrays.toString(temp));
-		System.out.println("Output Source :" +Arrays.toString(outSrc));	
-	}
+    static void printArrays(byte[] temp, byte[] outSrc) {
+        System.out.println("temp          :" + Arrays.toString(temp));
+        System.out.println("Output Source :" + Arrays.toString(outSrc));
+    }
 }

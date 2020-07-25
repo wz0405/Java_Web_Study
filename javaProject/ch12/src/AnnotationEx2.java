@@ -1,24 +1,24 @@
 class NewClass {
-	int newField;
+    int newField;
 
-	int getNewField() { 
-		return newField;
-	}	
+    int getNewField() {
+        return newField;
+    }
 
-	@Deprecated
-	int oldField;
+    @Deprecated
+    int oldField;
 
-	@Deprecated
-	int getOldField() { 
-		return oldField;
-	}
+    @Deprecated
+    int getOldField() {
+        return oldField;
+    }
 }
 
 class AnnotationEx2 {
-	public static void main(String args[]) {
-		NewClass nc = new NewClass();
+    public static void main(String args[]) {
+        NewClass nc = new NewClass();
 
-		nc.oldField = 10;                     //@Depreacted°¡ ºÙÀº ´ë»óÀ» »ç¿ë
-		System.out.println(nc.getOldField()); //@Depreacted°¡ ºÙÀº ´ë»óÀ» »ç¿ë
-	}
+        nc.oldField = 10;                     //@Depreactedï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        System.out.println(nc.getOldField()); //@Depreactedï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    }
 }

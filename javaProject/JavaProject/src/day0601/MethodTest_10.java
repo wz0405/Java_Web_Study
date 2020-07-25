@@ -2,15 +2,16 @@ package day0601;
 
 public class MethodTest_10 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("ÇÁ·Î±×·¥½ÃÀÛ");
-		goodMorning(33);
-		System.out.println("ÇÁ·Î±×·¥ ³¡");
-	}
-	public static void goodMorning(int age) {
-		System.out.println("ÁÁÀº¾ÆÄ§");
-		System.out.println("Á¦ ³ªÀÌ´Â "+age+"ÀÔ´Ï´Ù");
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ï¿½ï¿½");
+        goodMorning(33);
+        System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½");
+    }
+
+    public static void goodMorning(int age) {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä§");
+        System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ " + age + "ï¿½Ô´Ï´ï¿½");
+    }
 
 }

@@ -1,24 +1,24 @@
 class FactorialTest2 {
-	static long factorial(int n) {
-		if(n<=0 || n>20) return -1;  // ¸Å°³º¯¼öÀÇ À¯È¿¼º °Ë»ç.
-		if(n<=1) 
-			 return 1;
-	    return n * factorial(n-1); 
-	}
+    static long factorial(int n) {
+        if (n <= 0 || n > 20) return -1;  // ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¿ï¿½ï¿½ ï¿½Ë»ï¿½.
+        if (n <= 1)
+            return 1;
+        return n * factorial(n - 1);
+    }
 
-	public static void main(String args[]) {
-		int  n = 21;
-		long result = 0;
+    public static void main(String args[]) {
+        int n = 21;
+        long result = 0;
 
-		for(int i = 1; i <= n; i++) {
-			result = factorial(i);
+        for (int i = 1; i <= n; i++) {
+            result = factorial(i);
 
-			if(result==-1) {
-				System.out.printf("À¯È¿ÇÏÁö ¾ÊÀº °ªÀÔ´Ï´Ù.(0<n<=20):%d%n", n);
-				break;
-			}
+            if (result == -1) {
+                System.out.printf("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.(0<n<=20):%d%n", n);
+                break;
+            }
 
-			System.out.printf("%2d!=%20d%n", i, result);
-		}
-	} // mainÀÇ ³¡
+            System.out.printf("%2d!=%20d%n", i, result);
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

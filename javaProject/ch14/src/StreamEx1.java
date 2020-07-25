@@ -2,44 +2,52 @@ import java.util.*;
 import java.util.stream.*;
 
 class StreamEx1 {
-	public static void main(String[] args) {
-	     Stream<Student> studentStream = Stream.of(
-							new Student("ÀÌÀÚ¹Ù", 3, 300),
-							new Student("±èÀÚ¹Ù", 1, 200),
-							new Student("¾ÈÀÚ¹Ù", 2, 100),
-							new Student("¹ÚÀÚ¹Ù", 2, 150),
-							new Student("¼ÒÀÚ¹Ù", 1, 200),
-							new Student("³ªÀÚ¹Ù", 3, 290),
-							new Student("°¨ÀÚ¹Ù", 3, 180)
-						);
+    public static void main(String[] args) {
+        Stream<Student> studentStream = Stream.of(
+                new Student("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 300),
+                new Student("ï¿½ï¿½ï¿½Ú¹ï¿½", 1, 200),
+                new Student("ï¿½ï¿½ï¿½Ú¹ï¿½", 2, 100),
+                new Student("ï¿½ï¿½ï¿½Ú¹ï¿½", 2, 150),
+                new Student("ï¿½ï¿½ï¿½Ú¹ï¿½", 1, 200),
+                new Student("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 290),
+                new Student("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 180)
+        );
 
-	     studentStream.sorted(Comparator.comparing(Student::getBan) // ¹Ýº° Á¤·Ä
-			    	  .thenComparing(Comparator.naturalOrder()))    // ±âº» Á¤·Ä
-					  .forEach(System.out::println);
-	}
+        studentStream.sorted(Comparator.comparing(Student::getBan) // ï¿½Ýºï¿½ ï¿½ï¿½ï¿½ï¿½
+                .thenComparing(Comparator.naturalOrder()))    // ï¿½âº» ï¿½ï¿½ï¿½ï¿½
+                .forEach(System.out::println);
+    }
 }
 
 class Student implements Comparable<Student> {
-	String name;
-	int ban;
-	int totalScore;
+    String name;
+    int ban;
+    int totalScore;
 
-	Student(String name, int ban, int totalScore) { 
-		this.name =name;
-		this.ban =ban;
-		this.totalScore =totalScore;
-	}
+    Student(String name, int ban, int totalScore) {
+        this.name = name;
+        this.ban = ban;
+        this.totalScore = totalScore;
+    }
 
-	public String toString() { 
-	    return String.format("[%s, %d, %d]", name, ban, totalScore).toString(); 
-	}
+    public String toString() {
+        return String.format("[%s, %d, %d]", name, ban, totalScore).toString();
+    }
 
-	String getName()     { return name;}
-	int getBan()         { return ban;}
-	int getTotalScore()  { return totalScore;}
+    String getName() {
+        return name;
+    }
 
-   // ÃÑÁ¡ ³»¸²Â÷¼øÀ» ±âº» Á¤·Ä·Î ÇÑ´Ù.
-	public int compareTo(Student s) { 
-		return s.totalScore - this.totalScore;
-	}
+    int getBan() {
+        return ban;
+    }
+
+    int getTotalScore() {
+        return totalScore;
+    }
+
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½âº» ï¿½ï¿½ï¿½Ä·ï¿½ ï¿½Ñ´ï¿½.
+    public int compareTo(Student s) {
+        return s.totalScore - this.totalScore;
+    }
 }

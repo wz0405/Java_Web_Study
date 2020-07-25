@@ -1,34 +1,35 @@
 class Car3 {
-	String color;		// »ö»ó
-	String gearType;    // º¯¼Ó±â Á¾·ù - auto(ÀÚµ¿), manual(¼öµ¿)
-	int door;			// ¹®ÀÇ °³¼ö
+    String color;        // ï¿½ï¿½ï¿½ï¿½
+    String gearType;    // ï¿½ï¿½ï¿½Ó±ï¿½ ï¿½ï¿½ï¿½ï¿½ - auto(ï¿½Úµï¿½), manual(ï¿½ï¿½ï¿½ï¿½)
+    int door;            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-	Car3() {
-		this("white", "auto", 4);
-	}
+    Car3() {
+        this("white", "auto", 4);
+    }
 
-	Car3(Car3 c) {	// ÀÎ½ºÅÏ½ºÀÇ º¹»ç¸¦ À§ÇÑ »ý¼ºÀÚ.
-		color    = c.color;
-		gearType = c.gearType;
-		door     = c.door;
-	}
+    Car3(Car3 c) {    // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ç¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+        color = c.color;
+        gearType = c.gearType;
+        door = c.door;
+    }
 
-	Car3(String color, String gearType, int door) {
-		this.color    = color;
-		this.gearType = gearType;
-		this.door     = door;
-	}
+    Car3(String color, String gearType, int door) {
+        this.color = color;
+        this.gearType = gearType;
+        this.door = door;
+    }
 }
-class CarTest3 {
-	public static void main(String[] args) {
-		Car3 c1 = new Car3();
-		Car3 c2 = new Car3(c1);	// c1ÀÇ º¹»çº» c2¸¦ »ý¼ºÇÑ´Ù.
-		System.out.println("c1ÀÇ color=" + c1.color + ", gearType=" + c1.gearType+ ", door="+c1.door);
-		System.out.println("c2ÀÇ color=" + c2.color + ", gearType=" + c2.gearType+ ", door="+c2.door);
 
-		c1.door=100;	// c1ÀÇ ÀÎ½ºÅÏ½ºº¯¼ö doorÀÇ °ªÀ» º¯°æÇÑ´Ù.
-		System.out.println("c1.door=100; ¼öÇà ÈÄ");
-		System.out.println("c1ÀÇ color=" + c1.color + ", gearType=" + c1.gearType+ ", door="+c1.door);
-		System.out.println("c2ÀÇ color=" + c2.color + ", gearType=" + c2.gearType+ ", door="+c2.door);
-	}
+class CarTest3 {
+    public static void main(String[] args) {
+        Car3 c1 = new Car3();
+        Car3 c2 = new Car3(c1);    // c1ï¿½ï¿½ ï¿½ï¿½ï¿½çº» c2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        System.out.println("c1ï¿½ï¿½ color=" + c1.color + ", gearType=" + c1.gearType + ", door=" + c1.door);
+        System.out.println("c2ï¿½ï¿½ color=" + c2.color + ", gearType=" + c2.gearType + ", door=" + c2.door);
+
+        c1.door = 100;    // c1ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ doorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        System.out.println("c1.door=100; ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
+        System.out.println("c1ï¿½ï¿½ color=" + c1.color + ", gearType=" + c1.gearType + ", door=" + c1.door);
+        System.out.println("c2ï¿½ï¿½ color=" + c2.color + ", gearType=" + c2.gearType + ", door=" + c2.door);
+    }
 }

@@ -1,34 +1,56 @@
 class MyMath2 {
-	long a, b;
-	
-	// ÀÎ½ºÅÏ½ºº¯¼ö a, b¸¸À» ÀÌ¿ëÇØ¼­ ÀÛ¾÷ÇÏ¹Ç·Î ¸Å°³º¯¼ö°¡ ÇÊ¿ä¾ø´Ù.
-	long add() 	    { return a + b; }  // a, b´Â ÀÎ½ºÅÏ½ºº¯¼ö
-	long subtract() { return a - b; }
-	long multiply() { return a * b; }
-	double divide() { return a / b; }
+    long a, b;
 
-	// ÀÎ½ºÅÏ½ºº¯¼ö¿Í °ü°è¾øÀÌ ¸Å°³º¯¼ö¸¸À¸·Î ÀÛ¾÷ÀÌ °¡´ÉÇÏ´Ù.
-	static long   add(long a, long b) 	   	 { return a + b; } // a, b´Â Áö¿ªº¯¼ö
-	static long   subtract(long a, long b)   { return a - b; }
-	static long   multiply(long a, long b)	 { return a * b; }
-	static double divide(double a, double b) { return a / b; }
+    // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ a, bï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½Û¾ï¿½ï¿½Ï¹Ç·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½.
+    long add() {
+        return a + b;
+    }  // a, bï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+    long subtract() {
+        return a - b;
+    }
+
+    long multiply() {
+        return a * b;
+    }
+
+    double divide() {
+        return a / b;
+    }
+
+    // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+    static long add(long a, long b) {
+        return a + b;
+    } // a, bï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+    static long subtract(long a, long b) {
+        return a - b;
+    }
+
+    static long multiply(long a, long b) {
+        return a * b;
+    }
+
+    static double divide(double a, double b) {
+        return a / b;
+    }
 }
 
 class MyMathTest2 {
-	public static void main(String args[]) {
-		// Å¬·¡½º¸Þ¼­µå È£Ãâ. ÀÎ½ºÅÏ½º »ý¼º¾øÀÌ È£Ãâ°¡´É
-		System.out.println(MyMath2.add(200L, 100L));
-		System.out.println(MyMath2.subtract(200L, 100L));
-		System.out.println(MyMath2.multiply(200L, 100L));
-		System.out.println(MyMath2.divide(200.0, 100.0));
+    public static void main(String args[]) {
+        // Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½ È£ï¿½ï¿½. ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½â°¡ï¿½ï¿½
+        System.out.println(MyMath2.add(200L, 100L));
+        System.out.println(MyMath2.subtract(200L, 100L));
+        System.out.println(MyMath2.multiply(200L, 100L));
+        System.out.println(MyMath2.divide(200.0, 100.0));
 
-		MyMath2 mm = new MyMath2(); // ÀÎ½ºÅÏ½º¸¦ »ý¼º
-		mm.a = 200L;
-		mm.b = 100L;
-		// ÀÎ½ºÅÏ½º¸Þ¼­µå´Â °´Ã¼»ý¼º ÈÄ¿¡¸¸ È£ÃâÀÌ °¡´ÉÇÔ.
-		System.out.println(mm.add());
-		System.out.println(mm.subtract());
-		System.out.println(mm.multiply());
-		System.out.println(mm.divide());
-	}
+        MyMath2 mm = new MyMath2(); // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        mm.a = 200L;
+        mm.b = 100L;
+        // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+        System.out.println(mm.add());
+        System.out.println(mm.subtract());
+        System.out.println(mm.multiply());
+        System.out.println(mm.divide());
+    }
 }

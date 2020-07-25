@@ -1,32 +1,32 @@
 final class Card3 {
-	String kind;
-	int num;
+    String kind;
+    int num;
 
-	Card3() {
-		this("SPADE", 1);
-	}
+    Card3() {
+        this("SPADE", 1);
+    }
 
-	Card3(String kind, int num) {
-		this.kind = kind;
-		this.num  = num;
-	}
+    Card3(String kind, int num) {
+        this.kind = kind;
+        this.num = num;
+    }
 
-	public String toString() {
-		return kind + ":" + num;
-	}
+    public String toString() {
+        return kind + ":" + num;
+    }
 }
 
 class ClassEx1 {
-	public static void main(String[] args) throws Exception {
-		Card3 c  = new Card3("HEART", 3);       // new¿¬»êÀÚ·Î °´Ã¼ »ý¼º
-		Card3 c2 = Card3.class.newInstance();   // Class°´Ã¼¸¦ ÅëÇØ¼­ °´Ã¼ »ý¼º
+    public static void main(String[] args) throws Exception {
+        Card3 c = new Card3("HEART", 3);       // newï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
+        Card3 c2 = Card3.class.newInstance();   // Classï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 
-		Class cObj = c.getClass();
+        Class cObj = c.getClass();
 
-		System.out.println(c);
-		System.out.println(c2);
-		System.out.println(cObj.getName());
-		System.out.println(cObj.toGenericString());
-		System.out.println(cObj.toString());		
-	}
+        System.out.println(c);
+        System.out.println(c2);
+        System.out.println(cObj.getName());
+        System.out.println(cObj.toGenericString());
+        System.out.println(cObj.toString());
+    }
 }

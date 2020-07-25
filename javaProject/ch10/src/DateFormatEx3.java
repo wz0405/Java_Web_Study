@@ -2,13 +2,14 @@ import java.util.*;
 import java.text.*;
 
 class DateFormatEx3 {
-	public static void main(String[] args) {
-		DateFormat df  = new SimpleDateFormat("yyyy³â MM¿ù ddÀÏ");
-		DateFormat df2 = new SimpleDateFormat("yyyy/MM/dd");
+    public static void main(String[] args) {
+        DateFormat df = new SimpleDateFormat("yyyyï¿½ï¿½ MMï¿½ï¿½ ddï¿½ï¿½");
+        DateFormat df2 = new SimpleDateFormat("yyyy/MM/dd");
 
-		try {
-			Date d = df.parse("2015³â 11¿ù 23ÀÏ");
-			System.out.println(df2.format(d));
-		} catch(Exception e) {}
-	} // main
+        try {
+            Date d = df.parse("2015ï¿½ï¿½ 11ï¿½ï¿½ 23ï¿½ï¿½");
+            System.out.println(df2.format(d));
+        } catch (Exception e) {
+        }
+    } // main
 }

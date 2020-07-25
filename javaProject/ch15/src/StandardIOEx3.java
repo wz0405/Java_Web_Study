@@ -1,19 +1,19 @@
- import java.io.*;
+import java.io.*;
 
 class StandardIOEx3 {
-	public static void main(String[] args) {
-		PrintStream      ps  = null;
-		FileOutputStream fos = null;
+    public static void main(String[] args) {
+        PrintStream ps = null;
+        FileOutputStream fos = null;
 
-		try {
-			fos = new FileOutputStream("test.txt");
-			ps  = new PrintStream(fos);
-			System.setOut(ps);    //  System.outÀÇ Ãâ·Â´ë»óÀ» test.txtÆÄÀÏ·Î º¯°æ
-		} catch(FileNotFoundException e) {
-			System.err.println("File not found.");
-		}
+        try {
+            fos = new FileOutputStream("test.txt");
+            ps = new PrintStream(fos);
+            System.setOut(ps);    //  System.outï¿½ï¿½ ï¿½ï¿½Â´ï¿½ï¿½ï¿½ï¿½ test.txtï¿½ï¿½ï¿½Ï·ï¿½ ï¿½ï¿½ï¿½ï¿½
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found.");
+        }
 
-		System.out.println("Hello by System.out");		
-		System.err.println("Hello by System.err");		
-	}
+        System.out.println("Hello by System.out");
+        System.err.println("Hello by System.err");
+    }
 }

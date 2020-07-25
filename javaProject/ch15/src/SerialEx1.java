@@ -2,29 +2,29 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class SerialEx1 {
-	public static void main(String[] args) {
-		try {
-			String fileName = "UserInfo.ser";
-			FileOutputStream     fos = new FileOutputStream(fileName);
-			BufferedOutputStream bos = new BufferedOutputStream(fos);
+    public static void main(String[] args) {
+        try {
+            String fileName = "UserInfo.ser";
+            FileOutputStream fos = new FileOutputStream(fileName);
+            BufferedOutputStream bos = new BufferedOutputStream(fos);
 
-			ObjectOutputStream out = new ObjectOutputStream(bos);
-			
-			UserInfo u1 = new UserInfo("JavaMan","1234",30);
-			UserInfo u2 = new UserInfo("JavaWoman","4321",26);
+            ObjectOutputStream out = new ObjectOutputStream(bos);
 
-			ArrayList<UserInfo> list = new ArrayList<>();
-			list.add(u1);
-			list.add(u2);
+            UserInfo u1 = new UserInfo("JavaMan", "1234", 30);
+            UserInfo u2 = new UserInfo("JavaWoman", "4321", 26);
 
-			// °´Ã¼¸¦ Á÷·ÄÈ­ÇÑ´Ù.
-			out.writeObject(u1);
-			out.writeObject(u2);
-			out.writeObject(list);
-			out.close();
-			System.out.println("Á÷·ÄÈ­°¡ Àß ³¡³µ½À´Ï´Ù.");
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-	} // main
+            ArrayList<UserInfo> list = new ArrayList<>();
+            list.add(u1);
+            list.add(u2);
+
+            // ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ï¿½Ñ´ï¿½.
+            out.writeObject(u1);
+            out.writeObject(u2);
+            out.writeObject(list);
+            out.close();
+            System.out.println("ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    } // main
 } // class

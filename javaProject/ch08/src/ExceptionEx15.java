@@ -1,29 +1,30 @@
 import java.io.*;
 
 class ExceptionEx15 {
-	public static void main(String[] args) {
-        // command line¿¡¼­ ÀÔ·Â¹ÞÀº °ªÀ» ÀÌ¸§À¸·Î °®´Â ÆÄÀÏÀ» »ý¼ºÇÑ´Ù.
-		File f = createFile(args[0]);	
-		System.out.println( f.getName() + " ÆÄÀÏÀÌ ¼º°øÀûÀ¸·Î »ý¼ºµÇ¾ú½À´Ï´Ù.");
-	} // main¸Þ¼­µåÀÇ ³¡
+    public static void main(String[] args) {
+        // command lineï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        File f = createFile(args[0]);
+        System.out.println(f.getName() + " ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+    } // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-	static File createFile(String fileName) {
-		try {
-			if (fileName==null || fileName.equals(""))
-				throw new Exception("ÆÄÀÏÀÌ¸§ÀÌ À¯È¿ÇÏÁö ¾Ê½À´Ï´Ù.");
-		} catch (Exception e) {
-             // fileNameÀÌ ºÎÀûÀýÇÑ °æ¿ì, ÆÄÀÏ ÀÌ¸§À» 'Á¦¸ñ¾øÀ½.txt'·Î ÇÑ´Ù.
-			fileName = "Á¦¸ñ¾øÀ½.txt";	 
-		} finally {
-			File f = new File(fileName); // FileÅ¬·¡½ºÀÇ °´Ã¼¸¦ ¸¸µç´Ù.
-			createNewFile(f);		     // »ý¼ºµÈ °´Ã¼¸¦ ÀÌ¿ëÇØ¼­ ÆÄÀÏÀ» »ý¼ºÇÑ´Ù.
-			return f;
-		}
-	}	// createFile¸Þ¼­µåÀÇ ³¡
+    static File createFile(String fileName) {
+        try {
+            if (fileName == null || fileName.equals(""))
+                throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
+        } catch (Exception e) {
+            // fileNameï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.txt'ï¿½ï¿½ ï¿½Ñ´ï¿½.
+            fileName = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.txt";
+        } finally {
+            File f = new File(fileName); // FileÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+            createNewFile(f);             // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            return f;
+        }
+    }    // createFileï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-	static void createNewFile(File f) {
-		try {
-			f.createNewFile();		// ÆÄÀÏÀ» »ý¼ºÇÑ´Ù.
-		} catch(Exception e){ }
-	}	// createNewFile¸Þ¼­µåÀÇ ³¡
+    static void createNewFile(File f) {
+        try {
+            f.createNewFile();        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        } catch (Exception e) {
+        }
+    }    // createNewFileï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 } 

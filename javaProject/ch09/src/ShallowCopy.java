@@ -1,70 +1,72 @@
 import java.util.*;
 
 class Circle implements Cloneable {
-	Point2 p;  // ¿øÁ¡
-	double r; // ¹ÝÁö¸§
+    Point2 p;  // ï¿½ï¿½ï¿½ï¿½
+    double r; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	Circle(Point2 p, double r) {
-		this.p = p;
-		this.r = r;
-	}
+    Circle(Point2 p, double r) {
+        this.p = p;
+        this.r = r;
+    }
 
-	public Circle shallowCopy() { // ¾èÀº º¹»ç
-		Object obj = null;
+    public Circle shallowCopy() { // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Object obj = null;
 
-		try {
-			obj = super.clone();
-		} catch (CloneNotSupportedException e) {}
+        try {
+            obj = super.clone();
+        } catch (CloneNotSupportedException e) {
+        }
 
-		return (Circle)obj;
-	}
+        return (Circle) obj;
+    }
 
-	public Circle deepCopy() { // ±íÀº º¹»ç
-		Object obj = null;
+    public Circle deepCopy() { // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Object obj = null;
 
-		try {
-			obj = super.clone();
-		} catch (CloneNotSupportedException e) {}
+        try {
+            obj = super.clone();
+        } catch (CloneNotSupportedException e) {
+        }
 
-		Circle c = (Circle)obj; 
-		c.p = new Point2(this.p.x, this.p.y); 
+        Circle c = (Circle) obj;
+        c.p = new Point2(this.p.x, this.p.y);
 
-		return c;
-	}
+        return c;
+    }
 
-	public String toString() {
-		return "[p=" + p + ", r="+ r +"]";
-	}
+    public String toString() {
+        return "[p=" + p + ", r=" + r + "]";
+    }
 }
 
 class Point2 {
-	int x;
-	int y;
+    int x;
+    int y;
 
-	Point2(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
+    Point2(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 
-	public String toString() {
-		return "("+x +", "+y+")";
-	}
+    public String toString() {
+        return "(" + x + ", " + y + ")";
+    }
 }
 
 class ShallowCopy {
-	public static void main(String[] args) {
-		Circle c1 = new Circle(new Point2(1, 1), 2.0);
-		Circle c2 = c1.shallowCopy();
-		Circle c3 = c1.deepCopy();
-	
-		System.out.println("c1="+c1);
-		System.out.println("c2="+c2);
-		System.out.println("c3="+c3);
-		c1.p.x = 9;
-		c1.p.y = 9;
-		System.out.println("= c1ÀÇ º¯°æ ÈÄ =");
-		System.out.println("c1="+c1);
-		System.out.println("c2="+c2);
-		System.out.println("c3="+c3);
-	}
+    public static void main(String[] args) {
+        Circle c1 = new Circle(new Point2(1, 1), 2.0);
+        Circle c2 = c1.shallowCopy();
+        Circle c3 = c1.deepCopy();
+
+        System.out.println("c1=" + c1);
+        System.out.println("c2=" + c2);
+        System.out.println("c3=" + c3);
+        c1.p.x = 9;
+        c1.p.y = 9;
+        System.out.println("= c1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ =");
+        System.out.println("c1=" + c1);
+        System.out.println("c2=" + c2);
+        System.out.println("c3=" + c3);
+    }
 }

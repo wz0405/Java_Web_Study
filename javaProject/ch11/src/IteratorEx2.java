@@ -1,33 +1,33 @@
 import java.util.*;
 
 public class IteratorEx2 {
-	public static void main(String[] args) {
-		ArrayList original = new ArrayList(10);
-		ArrayList copy1    = new ArrayList(10);		
-		ArrayList copy2    = new ArrayList(10);		
-		
-		for(int i=0; i < 10; i++)
-			original.add(i+"");
+    public static void main(String[] args) {
+        ArrayList original = new ArrayList(10);
+        ArrayList copy1 = new ArrayList(10);
+        ArrayList copy2 = new ArrayList(10);
 
-		Iterator it = original.iterator();
-		
-		while(it.hasNext())
-			copy1.add(it.next());
+        for (int i = 0; i < 10; i++)
+            original.add(i + "");
 
-		System.out.println("= Original¿¡¼­ copy1·Î º¹»ç(copy) =");		
-		System.out.println("original:"+original);
-		System.out.println("copy1:"+copy1);
-		System.out.println();
+        Iterator it = original.iterator();
 
-		it = original.iterator(); // Iterator´Â Àç»ç¿ëÀÌ ¾ÈµÇ¹Ç·Î, ´Ù½Ã ¾ò¾î¿Í¾ß ÇÑ´Ù.
-		
-		while(it.hasNext()){
-			copy2.add(it.next());
-			it.remove();
-		}
-		
-		System.out.println("= Original¿¡¼­ copy2·Î ÀÌµ¿(move) =");		
-		System.out.println("original:"+original);
-		System.out.println("copy2:"+copy2);		
-	} // main
+        while (it.hasNext())
+            copy1.add(it.next());
+
+        System.out.println("= Originalï¿½ï¿½ï¿½ï¿½ copy1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(copy) =");
+        System.out.println("original:" + original);
+        System.out.println("copy1:" + copy1);
+        System.out.println();
+
+        it = original.iterator(); // Iteratorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ÈµÇ¹Ç·ï¿½, ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½Í¾ï¿½ ï¿½Ñ´ï¿½.
+
+        while (it.hasNext()) {
+            copy2.add(it.next());
+            it.remove();
+        }
+
+        System.out.println("= Originalï¿½ï¿½ï¿½ï¿½ copy2ï¿½ï¿½ ï¿½Ìµï¿½(move) =");
+        System.out.println("original:" + original);
+        System.out.println("copy2:" + copy2);
+    } // main
 } // class

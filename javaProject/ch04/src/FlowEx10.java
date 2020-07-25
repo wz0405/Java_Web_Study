@@ -1,31 +1,31 @@
 import java.util.*;
 
 class FlowEx10 {
-	public static void main(String[] args) { 
-		int score  = 0;
-		char grade = ' ';
+    public static void main(String[] args) {
+        int score = 0;
+        char grade = ' ';
 
-		System.out.print("´ç½ÅÀÇ Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(1~100)>");
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(1~100)>");
 
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		score = Integer.parseInt(tmp);   // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)¸¦ ¼ýÀÚ·Î º¯È¯
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine(); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        score = Integer.parseInt(tmp);   // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		switch(score/10) {
-			case 10:
-			case 9 :
-				grade = 'A';
-				break;
-			case 8 :
-				grade = 'B';
-				break;
-			case 7 :
-				grade = 'C';
-				break;
-			default :
-				grade = 'F';
-		} // end of switch
+        switch (score / 10) {
+            case 10:
+            case 9:
+                grade = 'A';
+                break;
+            case 8:
+                grade = 'B';
+                break;
+            case 7:
+                grade = 'C';
+                break;
+            default:
+                grade = 'F';
+        } // end of switch
 
-		System.out.println("´ç½ÅÀÇ ÇÐÁ¡Àº "+ grade +"ÀÔ´Ï´Ù.");
-	} // mainÀÇ ³¡
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + grade + "ï¿½Ô´Ï´ï¿½.");
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

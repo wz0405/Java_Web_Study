@@ -2,14 +2,14 @@ package day0526;
 
 public class CastString_06 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int num1=Integer.parseInt("20");
-		//String num2="30";
-		int num2=Integer.parseInt("30");
-		//¹®ÀÚ¸¦ ¼ýÀÚ·Î Çüº¯È¯
-		//Integer.parseInt
-		System.out.println(num1+num2);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int num1 = Integer.parseInt("20");
+        //String num2="30";
+        int num2 = Integer.parseInt("30");
+        //ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½È¯
+        //Integer.parseInt
+        System.out.println(num1 + num2);
+    }
 
 }

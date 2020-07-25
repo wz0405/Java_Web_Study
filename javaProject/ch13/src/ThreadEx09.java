@@ -1,34 +1,35 @@
- class ThreadEx09 {
-	public static void main(String args[]) throws Exception {
-		ThreadGroup main = Thread.currentThread().getThreadGroup();
-		ThreadGroup grp1 = new ThreadGroup("Group1");
-		ThreadGroup grp2 = new ThreadGroup("Group2");
+class ThreadEx09 {
+    public static void main(String args[]) throws Exception {
+        ThreadGroup main = Thread.currentThread().getThreadGroup();
+        ThreadGroup grp1 = new ThreadGroup("Group1");
+        ThreadGroup grp2 = new ThreadGroup("Group2");
 
-		// ThreadGroup(ThreadGroup parent, String name) 
-		ThreadGroup subGrp1 = new ThreadGroup(grp1,"SubGroup1"); 
+        // ThreadGroup(ThreadGroup parent, String name) 
+        ThreadGroup subGrp1 = new ThreadGroup(grp1, "SubGroup1");
 
-		grp1.setMaxPriority(3);	// ¾²·¹µå ±×·ì grp1ÀÇ ÃÖ´ë¿ì¼±¼øÀ§¸¦ 3À¸·Î º¯°æ.
-		
-		Runnable r = new Runnable() {
-			public void run() {
-				try { 
-					Thread.sleep(1000); // ¾²·¹µå¸¦ 1ÃÊ°£ ¸ØÃß°Ô ÇÑ´Ù.
-				} catch(InterruptedException e) {}
-			}	
-		};
+        grp1.setMaxPriority(3);    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½ grp1ï¿½ï¿½ ï¿½Ö´ï¿½ì¼±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
-         // Thread(ThreadGroup tg, Runnable r, String name)
-		Thread th1 = new Thread(grp1,     r, "th1"); 
-		Thread th2 = new Thread(subGrp1,  r, "th2");
-		Thread th3 = new Thread(grp2,     r, "th3");   
+        Runnable r = new Runnable() {
+            public void run() {
+                try {
+                    Thread.sleep(1000); // ï¿½ï¿½ï¿½ï¿½ï¿½å¸¦ 1ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ß°ï¿½ ï¿½Ñ´ï¿½.
+                } catch (InterruptedException e) {
+                }
+            }
+        };
 
-		th1.start();
-		th2.start();
-		th3.start();
+        // Thread(ThreadGroup tg, Runnable r, String name)
+        Thread th1 = new Thread(grp1, r, "th1");
+        Thread th2 = new Thread(subGrp1, r, "th2");
+        Thread th3 = new Thread(grp2, r, "th3");
 
-		System.out.println(">>List of ThreadGroup : "+ main.getName() 
-                           +", Active ThreadGroup: " + main.activeGroupCount()
-                           +", Active Thread: "      + main.activeCount());
-		main.list();
-	}
+        th1.start();
+        th2.start();
+        th3.start();
+
+        System.out.println(">>List of ThreadGroup : " + main.getName()
+                + ", Active ThreadGroup: " + main.activeGroupCount()
+                + ", Active Thread: " + main.activeCount());
+        main.list();
+    }
 }

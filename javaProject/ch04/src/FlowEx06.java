@@ -1,30 +1,34 @@
 import java.util.*;
 
 class FlowEx06 {
-	public static void main(String[] args) { 
-		int month = 0;
+    public static void main(String[] args) {
+        int month = 0;
 
-		System.out.print("ÇöÀç ¿ùÀ» ÀÔ·ÂÇÏ¼¼¿ä.>");
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.>");
 
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		month = Integer.parseInt(tmp);   // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)À» ¼ýÀÚ·Î º¯È¯
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine(); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        month = Integer.parseInt(tmp);   // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		switch(month) {
-			case 3: 
-			case 4: 
-			case 5:
-				System.out.println("ÇöÀçÀÇ °èÀýÀº º½ÀÔ´Ï´Ù.");
-				break;
-			case 6: case 7: case 8:
-				System.out.println("ÇöÀçÀÇ °èÀýÀº ¿©¸§ÀÔ´Ï´Ù.");
-				break;
-			case 9: case 10: case 11:
-				System.out.println("ÇöÀçÀÇ °èÀýÀº °¡À»ÀÔ´Ï´Ù.");
-				break;
-			default:
-	//		case 12:	case 1: case 2:
-				System.out.println("ÇöÀçÀÇ °èÀýÀº °Ü¿ïÀÔ´Ï´Ù.");
-		}
-	} // mainÀÇ ³¡
+        switch (month) {
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                break;
+            default:
+                //		case 12:	case 1: case 2:
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ü¿ï¿½ï¿½Ô´Ï´ï¿½.");
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

@@ -1,31 +1,37 @@
 package day0602;
-class Info{
-	private String name;
-	private String blood;
-	private int age;
-	Info(){}
-	Info(String name, String blood, int age){
-		this.name=name;
-		this.blood=blood;
-		this.age=age;
-	}
-	void getData() {
-		System.out.println(this.name+"\t"+this.blood+"\t"+this.age);
-	}
+
+class Info {
+    private String name;
+    private String blood;
+    private int age;
+
+    Info() {
+    }
+
+    Info(String name, String blood, int age) {
+        this.name = name;
+        this.blood = blood;
+        this.age = age;
+    }
+
+    void getData() {
+        System.out.println(this.name + "\t" + this.blood + "\t" + this.age);
+    }
 }
+
 public class QuizArray_10 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Info[] in = new Info[4];
-		in[0]=new Info("ÀÌ¼ö¿¬","BÇü",17);
-		in[1]=new Info("ÀÌ¼ö¿¬","BÇü",17);
-		in[2]=new Info("ÀÌ¼ö¿¬","BÇü",17);
-		in[3]=new Info("ÀÌ¼ö¿¬","BÇü",17);
-		
-		for(int i=0;i<4;i++) {
-			in[i].getData();
-		}
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Info[] in = new Info[4];
+        in[0] = new Info("ï¿½Ì¼ï¿½ï¿½ï¿½", "Bï¿½ï¿½", 17);
+        in[1] = new Info("ï¿½Ì¼ï¿½ï¿½ï¿½", "Bï¿½ï¿½", 17);
+        in[2] = new Info("ï¿½Ì¼ï¿½ï¿½ï¿½", "Bï¿½ï¿½", 17);
+        in[3] = new Info("ï¿½Ì¼ï¿½ï¿½ï¿½", "Bï¿½ï¿½", 17);
+
+        for (int i = 0; i < 4; i++) {
+            in[i].getData();
+        }
+    }
 
 }

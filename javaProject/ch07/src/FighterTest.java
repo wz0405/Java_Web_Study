@@ -1,36 +1,44 @@
 class FighterTest {
-	public static void main(String[] args) {
-		Fighter f = new Fighter();
+    public static void main(String[] args) {
+        Fighter f = new Fighter();
 
-		if (f instanceof Unit)	{		
-			System.out.println("f´Â UnitÅ¬·¡½ºÀÇ ÀÚ¼ÕÀÔ´Ï´Ù.");
-		}
-		if (f instanceof Fightable) {	
-			System.out.println("f´Â FightableÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇß½À´Ï´Ù.");
-		}
-		if (f instanceof Movable) {		
-			System.out.println("f´Â MovableÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇß½À´Ï´Ù.");
-		}
-		if (f instanceof Attackable) {	
-			System.out.println("f´Â AttackableÀÎÅÍÆäÀÌ½º¸¦ ±¸ÇöÇß½À´Ï´Ù.");
-		}
-		if (f instanceof Object) {		
-			System.out.println("f´Â ObjectÅ¬·¡½ºÀÇ ÀÚ¼ÕÀÔ´Ï´Ù.");
-		}
-	}
+        if (f instanceof Unit) {
+            System.out.println("fï¿½ï¿½ UnitÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¼ï¿½ï¿½Ô´Ï´ï¿½.");
+        }
+        if (f instanceof Fightable) {
+            System.out.println("fï¿½ï¿½ Fightableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
+        }
+        if (f instanceof Movable) {
+            System.out.println("fï¿½ï¿½ Movableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
+        }
+        if (f instanceof Attackable) {
+            System.out.println("fï¿½ï¿½ Attackableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
+        }
+        if (f instanceof Object) {
+            System.out.println("fï¿½ï¿½ ObjectÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¼ï¿½ï¿½Ô´Ï´ï¿½.");
+        }
+    }
 }
 
 class Fighter extends Unit implements Fightable {
-	public void move(int x, int y) { /* ³»¿ë »ý·« */ }
-	public void attack(Unit u) { /* ³»¿ë »ý·« */ }
+    public void move(int x, int y) { /* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */ }
+
+    public void attack(Unit u) { /* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */ }
 }
 
 class Unit {
-	int currentHP;	// À¯´ÖÀÇ Ã¼·Â
-	int x;			// À¯´ÖÀÇ À§Ä¡(xÁÂÇ¥)
-	int y;			// À¯´ÖÀÇ À§Ä¡(yÁÂÇ¥)
+    int currentHP;    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¼ï¿½ï¿½
+    int x;            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(xï¿½ï¿½Ç¥)
+    int y;            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(yï¿½ï¿½Ç¥)
 }
 
-interface Fightable extends Movable, Attackable { }
-interface Movable    {	void move(int x, int y);	}
-interface Attackable {	void attack(Unit u); 		}
+interface Fightable extends Movable, Attackable {
+}
+
+interface Movable {
+    void move(int x, int y);
+}
+
+interface Attackable {
+    void attack(Unit u);
+}

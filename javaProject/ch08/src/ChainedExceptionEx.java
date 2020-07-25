@@ -1,69 +1,71 @@
 class ChainedExceptionEx {
-	public static void main(String args[]) {
-		try {
-			install();
-		} catch(InstallException e) {
-			e.printStackTrace();
-		} catch(Exception e) {
-			e.printStackTrace();		
-		}
-	} // mainÀÇ ³¡
+    public static void main(String args[]) {
+        try {
+            install();
+        } catch (InstallException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 
-	static void install() throws InstallException {
-		try {
-			startInstall();		// ÇÁ·Î±×·¥ ¼³Ä¡¿¡ ÇÊ¿äÇÑ ÁØºñ¸¦ ÇÑ´Ù.
-			copyFiles();		// ÆÄÀÏµéÀ» º¹»çÇÑ´Ù. 
-		} catch (SpaceException2 e)	{
-			InstallException ie = new InstallException("¼³Ä¡Áß ¿¹¿Ü¹ß»ý");
-			ie.initCause(e);
-			throw ie;
-		} catch (MemoryException2 me) {
-			InstallException ie = new InstallException("¼³Ä¡Áß ¿¹¿Ü¹ß»ý");
-			ie.initCause(me);
-			throw ie;
-		} finally {
-			deleteTempFiles();	// ÇÁ·Î±×·¥ ¼³Ä¡¿¡ »ç¿ëµÈ ÀÓ½ÃÆÄÀÏµéÀ» »èÁ¦ÇÑ´Ù.
-		} // tryÀÇ ³¡
-	}
+    static void install() throws InstallException {
+        try {
+            startInstall();        // ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Øºï¿½ ï¿½Ñ´ï¿½.
+            copyFiles();        // ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+        } catch (SpaceException2 e) {
+            InstallException ie = new InstallException("ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ü¹ß»ï¿½");
+            ie.initCause(e);
+            throw ie;
+        } catch (MemoryException2 me) {
+            InstallException ie = new InstallException("ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ü¹ß»ï¿½");
+            ie.initCause(me);
+            throw ie;
+        } finally {
+            deleteTempFiles();    // ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ó½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        } // tryï¿½ï¿½ ï¿½ï¿½
+    }
 
-static void startInstall() throws SpaceException2, MemoryException2 { 
-	if(!enoughSpace()) { 		// ÃæºÐÇÑ ¼³Ä¡ °ø°£ÀÌ ¾øÀ¸¸é...
-		throw new SpaceException2("¼³Ä¡ÇÒ °ø°£ÀÌ ºÎÁ·ÇÕ´Ï´Ù.");
-	}
+    static void startInstall() throws SpaceException2, MemoryException2 {
+        if (!enoughSpace()) {        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
+            throw new SpaceException2("ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+        }
 
-	if (!enoughMemory()) {		// ÃæºÐÇÑ ¸Þ¸ð¸®°¡ ¾øÀ¸¸é...
-		throw new MemoryException2("¸Þ¸ð¸®°¡ ºÎÁ·ÇÕ´Ï´Ù.");
-//		throw new RuntimeException(new MemoryException("¸Þ¸ð¸®°¡ ºÎÁ·ÇÕ´Ï´Ù."));
-	}
-} // startInstall¸Þ¼­µåÀÇ ³¡
+        if (!enoughMemory()) {        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¸ð¸®°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...
+            throw new MemoryException2("ï¿½Þ¸ð¸®°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+//		throw new RuntimeException(new MemoryException("ï¿½Þ¸ð¸®°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½."));
+        }
+    } // startInstallï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-   static void copyFiles() { /* ÆÄÀÏµéÀ» º¹»çÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù. */ }
-   static void deleteTempFiles() { /* ÀÓ½ÃÆÄÀÏµéÀ» »èÁ¦ÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù.*/}
-   
-   static boolean enoughSpace()   {
-		// ¼³Ä¡ÇÏ´Âµ¥ ÇÊ¿äÇÑ °ø°£ÀÌ ÀÖ´ÂÁö È®ÀÎÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù.
-		return false;
-   }
-   static boolean enoughMemory() {
-		// ¼³Ä¡ÇÏ´Âµ¥ ÇÊ¿äÇÑ ¸Þ¸ð¸®°ø°£ÀÌ ÀÖ´ÂÁö È®ÀÎÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù.
-		return true;
-   }
-} // ExceptionTestÅ¬·¡½ºÀÇ ³¡
+    static void copyFiles() { /* ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½. */ }
+
+    static void deleteTempFiles() { /* ï¿½Ó½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½.*/}
+
+    static boolean enoughSpace() {
+        // ï¿½ï¿½Ä¡ï¿½Ï´Âµï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½.
+        return false;
+    }
+
+    static boolean enoughMemory() {
+        // ï¿½ï¿½Ä¡ï¿½Ï´Âµï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Þ¸ð¸®°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½.
+        return true;
+    }
+} // ExceptionTestÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
 class InstallException extends Exception {
-	InstallException(String msg) {
-	   super(msg);	
-   }
-} 
+    InstallException(String msg) {
+        super(msg);
+    }
+}
 
 class SpaceException2 extends Exception {
-	SpaceException2(String msg) {
-	   super(msg);	
-   }
-} 
+    SpaceException2(String msg) {
+        super(msg);
+    }
+}
 
 class MemoryException2 extends Exception {
-	MemoryException2(String msg) {
-	   super(msg);	
-   }
+    MemoryException2(String msg) {
+        super(msg);
+    }
 }

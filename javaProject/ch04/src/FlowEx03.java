@@ -1,19 +1,19 @@
-import java.util.*; // ScannerÅ¬·¡½º¸¦ »ç¿ëÇÏ±â À§ÇØ Ãß°¡
+import java.util.*; // ScannerÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
 
 class FlowEx03 {
-	public static void main(String[] args) {  
-		int input;
+    public static void main(String[] args) {
+        int input;
 
-		System.out.print("¼ýÀÚ¸¦ ÇÏ³ª ÀÔ·ÂÇÏ¼¼¿ä.>");
+        System.out.print("ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ï³ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.>");
 
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		input = Integer.parseInt(tmp);   // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)À» ¼ýÀÚ·Î º¯È¯
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine(); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        input = Integer.parseInt(tmp);   // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		if(input==0) {
-			System.out.println("ÀÔ·ÂÇÏ½Å ¼ýÀÚ´Â 0ÀÔ´Ï´Ù.");	
-		} else { // input!=0ÀÎ °æ¿ì
-			System.out.println("ÀÔ·ÂÇÏ½Å ¼ýÀÚ´Â 0ÀÌ ¾Æ´Õ´Ï´Ù.");
-		}
-	} // mainÀÇ ³¡
+        if (input == 0) {
+            System.out.println("ï¿½Ô·ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½Ú´ï¿½ 0ï¿½Ô´Ï´ï¿½.");
+        } else { // input!=0ï¿½ï¿½ ï¿½ï¿½ï¿½
+            System.out.println("ï¿½Ô·ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½Ú´ï¿½ 0ï¿½ï¿½ ï¿½Æ´Õ´Ï´ï¿½.");
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

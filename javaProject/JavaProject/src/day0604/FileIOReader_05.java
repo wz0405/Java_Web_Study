@@ -7,39 +7,39 @@ import java.io.IOException;
 
 public class FileIOReader_05 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String filePath="C:\\java_0526\\javaProject\\ch01\\src\\Hello.java";
-		BufferedReader br=null;
-		FileReader fr =null;
-		
-		try {
-			fr=new FileReader(filePath);
-			System.out.println("ÆÄÀÏÀ» Ã£À½");
-			
-			br=new BufferedReader(fr);
-			while(true) {
-				//ÆÄÀÏ¿¡¼­ ÇÑÁÙ¾¿ ÀÐ´Â´Ù
-				String line=br.readLine();
-				
-				//¹®¼­ÀÇ ³¡À¸·Î°¡¸é null°ª ¹ÝÈ¯
-				if(line==null)
-					break;
-				System.out.println(line);
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("ÆÄÀÏÀ» Ã£À» ¼ö ¾øÀ½"+e.getMessage());
-		} finally {
-			try {
-				br.close();
-				fr.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-		}
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        String filePath = "C:\\java_0526\\javaProject\\ch01\\src\\Hello.java";
+        BufferedReader br = null;
+        FileReader fr = null;
+
+        try {
+            fr = new FileReader(filePath);
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½");
+
+            br = new BufferedReader(fr);
+            while (true) {
+                //ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¾ï¿½ ï¿½Ð´Â´ï¿½
+                String line = br.readLine();
+
+                //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Î°ï¿½ï¿½ï¿½ nullï¿½ï¿½ ï¿½ï¿½È¯
+                if (line == null)
+                    break;
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" + e.getMessage());
+        } finally {
+            try {
+                br.close();
+                fr.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+        }
+    }
 
 }

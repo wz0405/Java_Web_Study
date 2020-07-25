@@ -1,12 +1,12 @@
 package day0602;
 
-public class EmployeeTest_05{
-	
+public class EmployeeTest_05 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Manager_05 ma = new Manager_05("ÃÖÁö¿ì",10000," °æ¿µ");
-		System.out.println(ma.getEmployee());
-	}
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Manager_05 ma = new Manager_05("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 10000, " ï¿½æ¿µ");
+        System.out.println(ma.getEmployee());
+    }
 
 }

@@ -1,25 +1,25 @@
 import java.util.*;
 
 class FlowEx04 {
-	public static void main(String[] args) { 
-		int score  = 0;   // Á¡¼ö¸¦ ÀúÀåÇÏ±â À§ÇÑ º¯¼ö
-		char grade =' ';  // ÇÐÁ¡À» ÀúÀåÇÏ±â À§ÇÑ º¯¼ö. °ø¹éÀ¸·Î ÃÊ±âÈ­ÇÑ´Ù.
+    public static void main(String[] args) {
+        int score = 0;   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        char grade = ' ';  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ñ´ï¿½.
 
-		System.out.print("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		score = Integer.parseInt(tmp);   // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)À» ¼ýÀÚ·Î º¯È¯
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.>");
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine(); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        score = Integer.parseInt(tmp);   // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		if (score >= 90) {         // score°¡ 90Á¡ º¸´Ù °°°Å³ª Å©¸é AÇÐÁ¡
-			 grade = 'A';             
-		} else if (score >=80) {   // score°¡ 80Á¡ º¸´Ù °°°Å³ª Å©¸é BÇÐÁ¡ 
-			 grade = 'B'; 
-		} else if (score >=70) {   // score°¡ 70Á¡ º¸´Ù °°°Å³ª Å©¸é CÇÐÁ¡ 
-			 grade = 'C'; 
-		} else {                   // ³ª¸ÓÁö´Â DÇÐÁ¡
-			 grade = 'D'; 
-		}
-            
-		System.out.println("´ç½ÅÀÇ ÇÐÁ¡Àº "+ grade +"ÀÔ´Ï´Ù."); 
-	}
+        if (score >= 90) {         // scoreï¿½ï¿½ 90ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å³ï¿½ Å©ï¿½ï¿½ Aï¿½ï¿½ï¿½ï¿½
+            grade = 'A';
+        } else if (score >= 80) {   // scoreï¿½ï¿½ 80ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å³ï¿½ Å©ï¿½ï¿½ Bï¿½ï¿½ï¿½ï¿½ 
+            grade = 'B';
+        } else if (score >= 70) {   // scoreï¿½ï¿½ 70ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å³ï¿½ Å©ï¿½ï¿½ Cï¿½ï¿½ï¿½ï¿½ 
+            grade = 'C';
+        } else {                   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Dï¿½ï¿½ï¿½ï¿½
+            grade = 'D';
+        }
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + grade + "ï¿½Ô´Ï´ï¿½.");
+    }
 }

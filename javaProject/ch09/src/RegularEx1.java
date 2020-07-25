@@ -1,17 +1,16 @@
-import java.util.regex.*;	// Pattern°ú Matcher°¡ ¼ÓÇÑ ÆÐÅ°Áö
+import java.util.regex.*;    // Patternï¿½ï¿½ Matcherï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å°ï¿½ï¿½
 
 class RegularEx1 {
-	public static void main(String[] args) 
-	{
-		String[] data = {"bat", "baby", "bonus",
-				    "cA","ca", "co", "c.", "c0", "car","combat","count",
-				    "date", "disc"};		
-		Pattern p = Pattern.compile("c[a-z]*");	// c·Î ½ÃÀÛÇÏ´Â ¼Ò¹®ÀÚ¿µ´Ü¾î
+    public static void main(String[] args) {
+        String[] data = {"bat", "baby", "bonus",
+                "cA", "ca", "co", "c.", "c0", "car", "combat", "count",
+                "date", "disc"};
+        Pattern p = Pattern.compile("c[a-z]*");    // cï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ò¹ï¿½ï¿½Ú¿ï¿½ï¿½Ü¾ï¿½
 
-		for(int i=0; i < data.length; i++) {
-			Matcher m = p.matcher(data[i]);
-			if(m.matches())
-				System.out.print(data[i] + ",");
-		}
-	}
+        for (int i = 0; i < data.length; i++) {
+            Matcher m = p.matcher(data[i]);
+            if (m.matches())
+                System.out.print(data[i] + ",");
+        }
+    }
 }

@@ -1,32 +1,32 @@
 package day0529;
 
 public class LottoRandomSort_10 {
-	public static void main(String[] args) {
-		int lotto[]=new int[6];
-		//1¹ø~45¹ø ³­¼ö¹ß»ý
-		for(int a=0;a<lotto.length;a++) {
-		
-			int b=(int)(Math.random()*45)+1;
-			lotto[a]=b;
-			for(int c=0;c<a;c++) {
-				if(lotto[c]==lotto[a]) {
-					a--;
-					break;
-	
-				}
-			}
-		}
-		for (int j=0;j<lotto.length;j++) {
-			for(int i=j+1;i<lotto.length;i++) {
-				if(lotto[j]>lotto[i]) {
-					int temp=lotto[j];
-					lotto[j]=lotto[i];
-					lotto[i]=temp;
-				}
-			}
-		}
-		for(int a:lotto) {
-			System.out.println(a);
-		}
-	}
+    public static void main(String[] args) {
+        int lotto[] = new int[6];
+        //1ï¿½ï¿½~45ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½
+        for (int a = 0; a < lotto.length; a++) {
+
+            int b = (int) (Math.random() * 45) + 1;
+            lotto[a] = b;
+            for (int c = 0; c < a; c++) {
+                if (lotto[c] == lotto[a]) {
+                    a--;
+                    break;
+
+                }
+            }
+        }
+        for (int j = 0; j < lotto.length; j++) {
+            for (int i = j + 1; i < lotto.length; i++) {
+                if (lotto[j] > lotto[i]) {
+                    int temp = lotto[j];
+                    lotto[j] = lotto[i];
+                    lotto[i] = temp;
+                }
+            }
+        }
+        for (int a : lotto) {
+            System.out.println(a);
+        }
+    }
 }

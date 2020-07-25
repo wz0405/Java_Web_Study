@@ -1,31 +1,32 @@
 class Outer {
-	class InstanceInner {
-		int iv=100;
-	}
-	static class StaticInner {
-		int iv=200;
-		static int cv=300;
-	}
+    class InstanceInner {
+        int iv = 100;
+    }
 
-	void myMethod() {
-		class LocalInner {
-			int iv=400;
-		}
-	}
+    static class StaticInner {
+        int iv = 200;
+        static int cv = 300;
+    }
+
+    void myMethod() {
+        class LocalInner {
+            int iv = 400;
+        }
+    }
 }
 
 class InnerEx4 {
-	public static void main(String[] args) {
-		// ÀÎ½ºÅÏ½ºÅ¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÏ·Á¸é
-		// ¿ÜºÎ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸¦ ¸ÕÀú »ý¼ºÇØ¾ß ÇÑ´Ù.
-		Outer oc = new Outer();
-		Outer.InstanceInner ii = oc.new InstanceInner();
+    public static void main(String[] args) {
+        // ï¿½Î½ï¿½ï¿½Ï½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½
+        // ï¿½Üºï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ñ´ï¿½.
+        Outer oc = new Outer();
+        Outer.InstanceInner ii = oc.new InstanceInner();
 
-		System.out.println("ii.iv : "+ ii.iv);
-		System.out.println("Outer.StaticInner.cv : " + Outer.StaticInner.cv);
+        System.out.println("ii.iv : " + ii.iv);
+        System.out.println("Outer.StaticInner.cv : " + Outer.StaticInner.cv);
 
-	     // ½ºÅÂÆ½ ³»ºÎ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º´Â ¿ÜºÎ Å¬·¡½º¸¦ ¸ÕÀú »ý¼ºÇÏÁö ¾Ê¾Æµµ µÈ´Ù.
-		Outer.StaticInner si = new Outer.StaticInner();
-		System.out.println("si.iv : "+ si.iv);
-	}
+        // ï¿½ï¿½ï¿½ï¿½Æ½ ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½Üºï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Æµï¿½ ï¿½È´ï¿½.
+        Outer.StaticInner si = new Outer.StaticInner();
+        System.out.println("si.iv : " + si.iv);
+    }
 }

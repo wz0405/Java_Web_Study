@@ -1,18 +1,18 @@
 class FinallyTest3 {
-	public static void main(String args[]) {
-		// method1()Àº static¸Þ¼­µåÀÌ¹Ç·Î ÀÎ½ºÅÏ½º »ý¼º¾øÀÌ Á÷Á¢ È£ÃâÀÌ °¡´ÉÇÏ´Ù.
-		FinallyTest3.method1();		
-        System.out.println("method1()ÀÇ ¼öÇàÀ» ¸¶Ä¡°í main¸Þ¼­µå·Î µ¹¾Æ¿Ô½À´Ï´Ù.");
-	}	// main¸Þ¼­µåÀÇ ³¡
+    public static void main(String args[]) {
+        // method1()ï¿½ï¿½ staticï¿½Þ¼ï¿½ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+        FinallyTest3.method1();
+        System.out.println("method1()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿Ô½ï¿½ï¿½Ï´ï¿½.");
+    }    // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-	static void method1() {
-		try {
-			System.out.println("method1()ÀÌ È£ÃâµÇ¾ú½À´Ï´Ù.");
-			return;		// ÇöÀç ½ÇÇà ÁßÀÎ ¸Þ¼­µå¸¦ Á¾·áÇÑ´Ù.
-		}	catch (Exception e)	{
-			e.printStackTrace();
-		} finally {
-			System.out.println("method1()ÀÇ finallyºí·°ÀÌ ½ÇÇàµÇ¾ú½À´Ï´Ù.");
-		}
-	}	// method1¸Þ¼­µåÀÇ ³¡
+    static void method1() {
+        try {
+            System.out.println("method1()ï¿½ï¿½ È£ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            return;        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            System.out.println("method1()ï¿½ï¿½ finallyï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        }
+    }    // method1ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 }

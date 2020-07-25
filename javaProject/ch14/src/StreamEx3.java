@@ -2,54 +2,63 @@ import java.util.*;
 import java.util.stream.*;
 
 class StreamEx3 {
-	public static void main(String[] args) {
-		Student2[] stuArr = {
-			new Student2("ÀÌÀÚ¹Ù", 3, 300),
-			new Student2("±èÀÚ¹Ù", 1, 200),
-			new Student2("¾ÈÀÚ¹Ù", 2, 100),
-			new Student2("¹ÚÀÚ¹Ù", 2, 150),
-			new Student2("¼ÒÀÚ¹Ù", 1, 200),
-			new Student2("³ªÀÚ¹Ù", 3, 290),
-			new Student2("°¨ÀÚ¹Ù", 3, 180)	
-		};
+    public static void main(String[] args) {
+        Student2[] stuArr = {
+                new Student2("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 300),
+                new Student2("ï¿½ï¿½ï¿½Ú¹ï¿½", 1, 200),
+                new Student2("ï¿½ï¿½ï¿½Ú¹ï¿½", 2, 100),
+                new Student2("ï¿½ï¿½ï¿½Ú¹ï¿½", 2, 150),
+                new Student2("ï¿½ï¿½ï¿½Ú¹ï¿½", 1, 200),
+                new Student2("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 290),
+                new Student2("ï¿½ï¿½ï¿½Ú¹ï¿½", 3, 180)
+        };
 
-		Stream<Student2> stuStream = Stream.of(stuArr);
+        Stream<Student2> stuStream = Stream.of(stuArr);
 
-		stuStream.sorted(Comparator.comparing(Student2::getBan)
-				 .thenComparing(Comparator.naturalOrder()))
-				 .forEach(System.out::println);
+        stuStream.sorted(Comparator.comparing(Student2::getBan)
+                .thenComparing(Comparator.naturalOrder()))
+                .forEach(System.out::println);
 
-		stuStream = Stream.of(stuArr); // ½ºÆ®¸²À» ´Ù½Ã »ý¼ºÇÑ´Ù. 
-	     IntStream stuScoreStream= stuStream.mapToInt(Student2::getTotalScore);
+        stuStream = Stream.of(stuArr); // ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+        IntStream stuScoreStream = stuStream.mapToInt(Student2::getTotalScore);
 
-		IntSummaryStatistics stat = stuScoreStream.summaryStatistics();
-		System.out.println("count="+stat.getCount());
-		System.out.println("sum="+stat.getSum());
-		System.out.printf("average=%.2f%n", stat.getAverage());
-		System.out.println("min="+stat.getMin());
-		System.out.println("max="+stat.getMax());
-	}
+        IntSummaryStatistics stat = stuScoreStream.summaryStatistics();
+        System.out.println("count=" + stat.getCount());
+        System.out.println("sum=" + stat.getSum());
+        System.out.printf("average=%.2f%n", stat.getAverage());
+        System.out.println("min=" + stat.getMin());
+        System.out.println("max=" + stat.getMax());
+    }
 }
 
 class Student2 implements Comparable<Student2> {
-	String name;
-	int ban;
-	int totalScore;
-	Student2(String name, int ban, int totalScore) { 
-		this.name = name;
-		this.ban  = ban;
-		this.totalScore = totalScore;
-	}
+    String name;
+    int ban;
+    int totalScore;
 
-	public String toString() { 
-	   return String.format("[%s, %d, %d]", name, ban, totalScore).toString(); 
-	}
+    Student2(String name, int ban, int totalScore) {
+        this.name = name;
+        this.ban = ban;
+        this.totalScore = totalScore;
+    }
 
-	String getName()	{ return name;}
-	int getBan()		{ return ban;}
-	int getTotalScore() { return totalScore;}
+    public String toString() {
+        return String.format("[%s, %d, %d]", name, ban, totalScore).toString();
+    }
 
-	public int compareTo(Student2 s) {
-		return s.totalScore - this.totalScore;
-	}
+    String getName() {
+        return name;
+    }
+
+    int getBan() {
+        return ban;
+    }
+
+    int getTotalScore() {
+        return totalScore;
+    }
+
+    public int compareTo(Student2 s) {
+        return s.totalScore - this.totalScore;
+    }
 }

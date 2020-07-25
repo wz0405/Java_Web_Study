@@ -5,31 +5,31 @@ import java.io.InputStream;
 
 public class ExceptionTest_08 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//InputStream: ¹ÙÀÌÆ®´ÜÀ§ÀÔ·Â ÃÖ»óÀ§ Å¬·¡½º-Ãß»óÅ¬·¡½ºÀÌ¹Ç·Î °´Ã¼¸£ Á÷Á¢¸ø¸¸µå¹Ç·Î
-		//ÀÚ½ÄÅ¬·¡½º°¡ ¹Þ¾Æ¼­ Á÷Á¢±¸Çö
-		//read(): ÇÑ¹ÙÀÌÆ®¸¸ ÀÐ´Â´Ù.
-		//read(byte[] b)-»ç¿ëÀÚ°¡ ÁöÁ¤ÇÑ ¹ÙÀÌÆ®¸¦ ÀÌ¿ëÇØ¼­ ÇÑ²¨¹ø¿¡ ¿øÇÏ´Â ¸¸Å­ ÀÐ´Â´Ù.
-		
-		InputStream	is=System.in;
-		int a=0;
-		System.out.println("ÇÑ±ÛÀÚ ÀÔ·Â: ");
-		
-		try {
-			a=is.read();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("¿À·ù: "+e.getMessage());
-		}
-		System.out.println("3ÃÊµÚ¿¡ Ãâ·ÂÇÕ´Ï´Ù");
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("ÀÔ·Â°ª :"+(char)a);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //InputStream: ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½Ô·ï¿½ ï¿½Ö»ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½-ï¿½ß»ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½
+        //ï¿½Ú½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¾Æ¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        //read(): ï¿½Ñ¹ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ð´Â´ï¿½.
+        //read(byte[] b)-ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½Ñ²ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½Å­ ï¿½Ð´Â´ï¿½.
+
+        InputStream is = System.in;
+        int a = 0;
+        System.out.println("ï¿½Ñ±ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½: ");
+
+        try {
+            a = is.read();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            System.out.println("ï¿½ï¿½ï¿½ï¿½: " + e.getMessage());
+        }
+        System.out.println("3ï¿½ÊµÚ¿ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        System.out.println("ï¿½Ô·Â°ï¿½ :" + (char) a);
+    }
 
 }

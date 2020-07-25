@@ -1,18 +1,22 @@
 package day0602;
-//ºÎ¸ðÅ¬·¡½º
+
+//ï¿½Î¸ï¿½Å¬ï¿½ï¿½ï¿½ï¿½
 public class Employee_05 {
-	private String name;
-	private int salary;
-	public Employee_05() {}
-	//»ý¼ºÀÚ 
-	public Employee_05(String name, int salary) {
-		// TODO Auto-generated constructor stub
-		this.name=name;
-		this.salary=salary;
-	}
-	
-	//¸Þ¼Òµå
-	public String getEmployee() {
-		return name+", "+salary; 
-	}
+    private String name;
+    private int salary;
+
+    public Employee_05() {
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+    public Employee_05(String name, int salary) {
+        // TODO Auto-generated constructor stub
+        this.name = name;
+        this.salary = salary;
+    }
+
+    //ï¿½Þ¼Òµï¿½
+    public String getEmployee() {
+        return name + ", " + salary;
+    }
 }

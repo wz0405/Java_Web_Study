@@ -1,33 +1,33 @@
 import java.util.ArrayList;
 
 class NewClass2 {
-	int newField;
+    int newField;
 
-	int getNewField() { 
-		return newField;
-	}	
+    int getNewField() {
+        return newField;
+    }
 
-	@Deprecated
-	int oldField;
+    @Deprecated
+    int oldField;
 
-	@Deprecated
-	int getOldField() { 
-		return oldField;
-	}
+    @Deprecated
+    int getOldField() {
+        return oldField;
+    }
 }
 
 
 class AnnotationEx3 {
-	@SuppressWarnings("deprecation")     // deprecation°ü·Ã °æ°í¸¦ ¾ïÁ¦
-	public static void main(String args[]) {
-		NewClass2 nc = new NewClass2();
+    @SuppressWarnings("deprecation")     // deprecationï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public static void main(String args[]) {
+        NewClass2 nc = new NewClass2();
 
-		nc.oldField = 10;                     //@Depreacted°¡ ºÙÀº ´ë»óÀ» »ç¿ë
-		System.out.println(nc.getOldField()); //@Depreacted°¡ ºÙÀº ´ë»óÀ» »ç¿ë
+        nc.oldField = 10;                     //@Depreactedï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        System.out.println(nc.getOldField()); //@Depreactedï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 
-		@SuppressWarnings("unchecked")               // Áö³×¸¯½º °ü·Ã °æ°í¸¦ ¾ïÁ¦
-		ArrayList<NewClass2> list = new ArrayList();  // Å¸ÀÔÀ» ÁöÁ¤ÇÏÁö ¾ÊÀ½.
-		list.add(nc);
-	}
+        @SuppressWarnings("unchecked")               // ï¿½ï¿½ï¿½×¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                ArrayList<NewClass2> list = new ArrayList();  // Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        list.add(nc);
+    }
 }
 

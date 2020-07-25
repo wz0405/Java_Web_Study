@@ -1,86 +1,89 @@
-class RepairableTest{
-	public static void main(String[] args) {
-		Tank tank = new Tank();
-		Dropship dropship = new Dropship();
+class RepairableTest {
+    public static void main(String[] args) {
+        Tank tank = new Tank();
+        Dropship dropship = new Dropship();
 
-		Marine marine = new Marine();
-		SCV	scv = new SCV();
+        Marine marine = new Marine();
+        SCV scv = new SCV();
 
-		scv.repair(tank);	// SCV°¡ Tank¸¦ ¼ö¸®ÇÏµµ·Ï ÇÑ´Ù.
-		scv.repair(dropship);
+        scv.repair(tank);    // SCVï¿½ï¿½ Tankï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
+        scv.repair(dropship);
 //		scv.repair(marine);	
-	}
+    }
 }
 
-interface Repairable {}
+interface Repairable {
+}
+
 class GroundUnit extends Unit2 {
-	GroundUnit(int hp) {
-		super(hp);
-	}
+    GroundUnit(int hp) {
+        super(hp);
+    }
 }
 
 class AirUnit extends Unit2 {
-	AirUnit(int hp) {
-		super(hp);
-	}
+    AirUnit(int hp) {
+        super(hp);
+    }
 }
 
 class Unit2 {
-	int hitPoint;
-	final int MAX_HP;
-	Unit2(int hp) {
-		MAX_HP = hp;
-	}
-	//...
+    int hitPoint;
+    final int MAX_HP;
+
+    Unit2(int hp) {
+        MAX_HP = hp;
+    }
+    //...
 }
 
 class Tank extends GroundUnit implements Repairable {
-	Tank() {
-		super(150);		// TankÀÇ HP´Â 150ÀÌ´Ù.
-		hitPoint = MAX_HP;
-	}
+    Tank() {
+        super(150);        // Tankï¿½ï¿½ HPï¿½ï¿½ 150ï¿½Ì´ï¿½.
+        hitPoint = MAX_HP;
+    }
 
-	public String toString() {
-		return "Tank";
-	}
-	//...
+    public String toString() {
+        return "Tank";
+    }
+    //...
 }
 
 class Dropship extends AirUnit implements Repairable {
-	Dropship() {
-		super(125);		// DropshipÀÇ HP´Â 125ÀÌ´Ù.
-		hitPoint = MAX_HP;
-	}
+    Dropship() {
+        super(125);        // Dropshipï¿½ï¿½ HPï¿½ï¿½ 125ï¿½Ì´ï¿½.
+        hitPoint = MAX_HP;
+    }
 
-	public String toString() {
-		return "Dropship";
-	}
-	//...
+    public String toString() {
+        return "Dropship";
+    }
+    //...
 }
 
 class Marine extends GroundUnit {
-	Marine() {
-		super(40);
-		hitPoint = MAX_HP;
-	}
-	//...
+    Marine() {
+        super(40);
+        hitPoint = MAX_HP;
+    }
+    //...
 }
 
-class SCV extends GroundUnit implements Repairable{
-	SCV() {
-		super(60);
-		hitPoint = MAX_HP;
-	}
+class SCV extends GroundUnit implements Repairable {
+    SCV() {
+        super(60);
+        hitPoint = MAX_HP;
+    }
 
-	void repair(Repairable r) {
-		if (r instanceof Unit2) {
-			Unit2 u = (Unit2)r;
-			while(u.hitPoint!=u.MAX_HP) {
-				/* UnitÀÇ HP¸¦ Áõ°¡½ÃÅ²´Ù. */
-				u.hitPoint++;
-			}
-			System.out.println( u.toString() + "ÀÇ ¼ö¸®°¡ ³¡³µ½À´Ï´Ù.");
-		}
-	}	
-	//...
+    void repair(Repairable r) {
+        if (r instanceof Unit2) {
+            Unit2 u = (Unit2) r;
+            while (u.hitPoint != u.MAX_HP) {
+                /* Unitï¿½ï¿½ HPï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½. */
+                u.hitPoint++;
+            }
+            System.out.println(u.toString() + "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        }
+    }
+    //...
 }

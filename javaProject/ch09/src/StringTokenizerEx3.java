@@ -1,18 +1,18 @@
-import java.util.*; 
+import java.util.*;
 
-class StringTokenizerEx3 { 
-	public static void main(String args[]) { 
-		String source = "1,±èÃµÀç,100,100,100|2,¹Ú¼öÀç,95,80,90|3,ÀÌÀÚ¹Ù,80,90,90";
-		StringTokenizer st = new StringTokenizer(source, "|"); 
+class StringTokenizerEx3 {
+    public static void main(String args[]) {
+        String source = "1,ï¿½ï¿½Ãµï¿½ï¿½,100,100,100|2,ï¿½Ú¼ï¿½ï¿½ï¿½,95,80,90|3,ï¿½ï¿½ï¿½Ú¹ï¿½,80,90,90";
+        StringTokenizer st = new StringTokenizer(source, "|");
 
-		while(st.hasMoreTokens()) {
-			String token = st.nextToken();
+        while (st.hasMoreTokens()) {
+            String token = st.nextToken();
 
-			StringTokenizer st2 = new StringTokenizer(token, ","); 
-			while(st2.hasMoreTokens()) {
-				System.out.println(st2.nextToken());
-			}
-			System.out.println("------");
-		}
-	} // mainÀÇ ³¡
+            StringTokenizer st2 = new StringTokenizer(token, ",");
+            while (st2.hasMoreTokens()) {
+                System.out.println(st2.nextToken());
+            }
+            System.out.println("------");
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

@@ -1,64 +1,63 @@
 import java.io.*;
 
 class FileEx6 {
-	static int found = 0;
-	
-	public static void main(String args[]) {
-		if(args.length != 2) {
-			System.out.println("USAGE : java FileEx6 DIRECTORY KEYWORD");
-			System.exit(0);
-		}
+    static int found = 0;
 
-		File dir = new File(args[0]);
-		String keyword = args[1];
+    public static void main(String args[]) {
+        if (args.length != 2) {
+            System.out.println("USAGE : java FileEx6 DIRECTORY KEYWORD");
+            System.exit(0);
+        }
 
-		if(!dir.exists() || !dir.isDirectory()) {
-			System.out.println("À¯È¿ÇÏÁö ¾ÊÀº µð·ºÅä¸®ÀÔ´Ï´Ù.");
-			System.exit(0);
-		} 
+        File dir = new File(args[0]);
+        String keyword = args[1];
 
-		try {
-			findInFiles(dir, keyword);
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
+        if (!dir.exists() || !dir.isDirectory()) {
+            System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä¸®ï¿½Ô´Ï´ï¿½.");
+            System.exit(0);
+        }
 
-		System.out.println();
-		System.out.println("ÃÑ " + found + "°³ÀÇ ¶óÀÎ¿¡¼­ '" + keyword + "'À»/¸¦ ¹ß°ßÇÏ¿´½À´Ï´Ù. ");
-	} // main
+        try {
+            findInFiles(dir, keyword);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-	public static void findInFiles(File dir, String keyword) throws IOException
-     {
-		File[] files = dir.listFiles();
+        System.out.println();
+        System.out.println("ï¿½ï¿½ " + found + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ï¿½ï¿½ '" + keyword + "'ï¿½ï¿½/ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½. ");
+    } // main
 
-		for(int i=0; i < files.length; i++) {
-			if(files[i].isDirectory()) {
-				findInFiles(files[i], keyword);
-			} else {
-				String filename  = files[i].getName();
-				String extension = filename.substring(filename.lastIndexOf(".")+1);
-				extension = "," + extension + "," ;
+    public static void findInFiles(File dir, String keyword) throws IOException {
+        File[] files = dir.listFiles();
 
-				if(",java,txt,bak,".indexOf(extension) == -1) continue;
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].isDirectory()) {
+                findInFiles(files[i], keyword);
+            } else {
+                String filename = files[i].getName();
+                String extension = filename.substring(filename.lastIndexOf(".") + 1);
+                extension = "," + extension + ",";
 
-				filename = dir.getAbsolutePath() + File.separator + filename;
+                if (",java,txt,bak,".indexOf(extension) == -1) continue;
 
-				FileReader     fr = new FileReader(files[i]);
-				BufferedReader br = new BufferedReader(fr);
+                filename = dir.getAbsolutePath() + File.separator + filename;
 
-				String data = "";
-				int lineNum = 0;
+                FileReader fr = new FileReader(files[i]);
+                BufferedReader br = new BufferedReader(fr);
 
-				while((data=br.readLine())!=null) {
-					lineNum++;
-					if(data.indexOf(keyword)!=-1) {
-						found++;
-						System.out.println("["+filename+ "("+lineNum+")" + "]" + data);
-					}
-				} // while
-				
-				br.close();
-			}
-		} // for
-	} // findInFiles
+                String data = "";
+                int lineNum = 0;
+
+                while ((data = br.readLine()) != null) {
+                    lineNum++;
+                    if (data.indexOf(keyword) != -1) {
+                        found++;
+                        System.out.println("[" + filename + "(" + lineNum + ")" + "]" + data);
+                    }
+                } // while
+
+                br.close();
+            }
+        } // for
+    } // findInFiles
 } // class

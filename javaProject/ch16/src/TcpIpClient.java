@@ -2,32 +2,32 @@ import java.net.*;
 import java.io.*;
 
 public class TcpIpClient {
-	public static void main(String args[]) {
-		try {
-			String serverIp = "127.0.0.1";
+    public static void main(String args[]) {
+        try {
+            String serverIp = "127.0.0.1";
 
-			System.out.println("¼­¹ö¿¡ ¿¬°áÁßÀÔ´Ï´Ù. ¼­¹öIP :" + serverIp);
-			// ¼ÒÄÏÀ» »ý¼ºÇÏ¿© ¿¬°áÀ» ¿äÃ»ÇÑ´Ù.
-			Socket socket = new Socket(serverIp, 7777); 
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½IP :" + serverIp);
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Ñ´ï¿½.
+            Socket socket = new Socket(serverIp, 7777);
 
-			// ¼ÒÄÏÀÇ ÀÔ·Â½ºÆ®¸²À» ¾ò´Â´Ù.
-			InputStream in = socket.getInputStream();
-			DataInputStream dis = new DataInputStream(in);
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+            InputStream in = socket.getInputStream();
+            DataInputStream dis = new DataInputStream(in);
 
-			// ¼ÒÄÏÀ¸·Î ºÎÅÍ ¹ÞÀº µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÑ´Ù.
-			System.out.println("¼­¹ö·ÎºÎÅÍ ¹ÞÀº ¸Þ½ÃÁö :"+dis.readUTF());      
-			System.out.println("¿¬°áÀ» Á¾·áÇÕ´Ï´Ù.");
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ :" + dis.readUTF());
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 
-			// ½ºÆ®¸²°ú ¼ÒÄÏÀ» ´Ý´Â´Ù.
-			dis.close();
-			socket.close();
-			System.out.println("¿¬°áÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.");
-		} catch(ConnectException ce) {
-			ce.printStackTrace();
-		} catch(IOException ie) {
-			ie.printStackTrace();
-		} catch(Exception e) {
-			e.printStackTrace();  
-		}  
-	} // main
+            // ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý´Â´ï¿½.
+            dis.close();
+            socket.close();
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        } catch (ConnectException ce) {
+            ce.printStackTrace();
+        } catch (IOException ie) {
+            ie.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } // main
 } // class

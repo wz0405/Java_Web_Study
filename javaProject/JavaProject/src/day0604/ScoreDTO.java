@@ -2,73 +2,70 @@ package day0604;
 
 public class ScoreDTO {
 
-	private String name;
-	private int java;
-	private int spring;
-	
-	//µðÆúÆ®»ý¼ºÀÚ-±âº»À¸·Î ¸¸µé°Í!!!
-	public ScoreDTO() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	//»ý¼ºÀÚ_¹Ýµå½Ã ÀÎ½ºÅÏ½ºº¯¼ö=ÀÎÀÚ°ª(ÆÄ¶ó¸ÞÅ¸°ª)
-	public ScoreDTO(String name,int java,int spring) {
-		this.name=name;
-		this.java=java;
-		this.spring=spring;
-	}
+    private String name;
+    private int java;
+    private int spring;
 
-	//°¢°¢ÀÇ setter,getter
-	public String getName() {
-		return name;
-	}
+    //ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-ï¿½âº»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!!!
+    public ScoreDTO() {
+        // TODO Auto-generated constructor stub
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½Ýµï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½=ï¿½ï¿½ï¿½Ú°ï¿½(ï¿½Ä¶ï¿½ï¿½Å¸ï¿½ï¿½)
+    public ScoreDTO(String name, int java, int spring) {
+        this.name = name;
+        this.java = java;
+        this.spring = spring;
+    }
 
-	public int getJava() {
-		return java;
-	}
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ setter,getter
+    public String getName() {
+        return name;
+    }
 
-	public void setJava(int java) {
-		this.java = java;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getSpring() {
-		return spring;
-	}
+    public int getJava() {
+        return java;
+    }
 
-	public void setSpring(int spring) {
-		this.spring = spring;
-	}
-	
-	
-	//Å¸ÀÌÆ²...ststic¸Þ¼Òµå´Â Å¬·¡½º¸í.¸Þ¼Òµå¸íÀ¸·Î Á¢±Ù°¡´ÉÇÏ´Ï...
-	public static void title()
-	{
-		System.out.println("No\tÇÐ»ý¸í\tÀÚ¹Ù\t½ºÇÁ¸µ\tÆò±Õ\tÆò°¡");
-	}
-	
-	//Æò±Õ±¸ÇÏ´Â ¸Þ¼Òµå
-	public double getAvg()
-	{
-		double avg=(java+spring)/2.0;
-		return avg;  //return°ªÀº ¸Þ¼Òµå¸¸µé¶§ÀÇ ÀÚ·áÇü°ú ÀÏÄ¡ÇØ¾ßÇÑ´Ù
-	}
-	
-	//Æò°¡¸Þ¼Òµå
-	public String getPeonga() 
-	{
-		if(getAvg()>=90)
-			return "ÂüÀßÇß¾î¿ä";
-		else if(getAvg()>=80)
-			return "´õ ³ë·ÂÇÒ°Í!!";
-		else
-			return "Àç¼ö°­";
-	}
+    public void setJava(int java) {
+        this.java = java;
+    }
 
-	
+    public int getSpring() {
+        return spring;
+    }
+
+    public void setSpring(int spring) {
+        this.spring = spring;
+    }
+
+
+    //Å¸ï¿½ï¿½Æ²...ststicï¿½Þ¼Òµï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½Þ¼Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ï¿½ï¿½ï¿½Ï´ï¿½...
+    public static void title() {
+        System.out.println("No\tï¿½Ð»ï¿½ï¿½ï¿½\tï¿½Ú¹ï¿½\tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\tï¿½ï¿½ï¿½\tï¿½ï¿½");
+    }
+
+    //ï¿½ï¿½Õ±ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
+    public double getAvg() {
+        double avg = (java + spring) / 2.0;
+        return avg;  //returnï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµå¸¸ï¿½é¶§ï¿½ï¿½ ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Ø¾ï¿½ï¿½Ñ´ï¿½
+    }
+
+    //ï¿½ò°¡¸Þ¼Òµï¿½
+    public String getPeonga() {
+        if (getAvg() >= 90)
+            return "ï¿½ï¿½ï¿½ï¿½ï¿½ß¾ï¿½ï¿½";
+        else if (getAvg() >= 80)
+            return "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ò°ï¿½!!";
+        else
+            return "ï¿½ï¿½ï¿½ï¿½ï¿½";
+    }
+
+
 }
 
 

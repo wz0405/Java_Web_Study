@@ -1,32 +1,34 @@
 class InterfaceTest3 {
-	public static void main(String[] args) {
-		A3 a = new A3();
-		a.methodA();
-	}
+    public static void main(String[] args) {
+        A3 a = new A3();
+        a.methodA();
+    }
 }
 
- class A3 {
+class A3 {
     void methodA() {
-          I3 i = InstanceManager.getInstance();
-		  i.methodB();
-		  System.out.println(i.toString()); // i·Î ObjectÅ¬·¡½ºÀÇ ¸Þ¼­µå È£Ãâ°¡´É
-     }
- }
+        I3 i = InstanceManager.getInstance();
+        i.methodB();
+        System.out.println(i.toString()); // iï¿½ï¿½ ObjectÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ È£ï¿½â°¡ï¿½ï¿½
+    }
+}
 
- interface I3 {
-      public abstract void methodB();
- }
+interface I3 {
+    public abstract void methodB();
+}
 
- class B3 implements I3 {
-     public void methodB() {
-          System.out.println("methodB in B3 class");
-     }
+class B3 implements I3 {
+    public void methodB() {
+        System.out.println("methodB in B3 class");
+    }
 
-	 public String toString() { return "class B3";}
- }
+    public String toString() {
+        return "class B3";
+    }
+}
 
- class InstanceManager {
-	public static I3 getInstance() {
-		return new B3();
-	}
- }
+class InstanceManager {
+    public static I3 getInstance() {
+        return new B3();
+    }
+}

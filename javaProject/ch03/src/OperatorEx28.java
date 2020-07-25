@@ -1,21 +1,21 @@
 class OperatorEx28 {
-	public static void main(String[] args) { 
-		int x = 0xAB;
-		int y = 0xF;
+    public static void main(String[] args) {
+        int x = 0xAB;
+        int y = 0xF;
 
-		System.out.printf("x = %#X \t\t%s%n", x, toBinaryString(x));
-		System.out.printf("y = %#X \t\t%s%n", x, toBinaryString(y));
-		System.out.printf("%#X | %#X = %#X \t%s%n", x, y, x | y, toBinaryString(x | y));
-		System.out.printf("%#X & %#X = %#X \t%s%n", x, y, x & y, toBinaryString(x & y));
-		System.out.printf("%#X ^ %#X = %#X \t%s%n", x, y, x ^ y, toBinaryString(x ^ y));
-		System.out.printf("%#X ^ %#X ^ %#X = %#X %s%n", x, y, y, x ^ y ^ y, toBinaryString(x ^ y ^ y));
-	} // mainÀÇ ³¡
+        System.out.printf("x = %#X \t\t%s%n", x, toBinaryString(x));
+        System.out.printf("y = %#X \t\t%s%n", x, toBinaryString(y));
+        System.out.printf("%#X | %#X = %#X \t%s%n", x, y, x | y, toBinaryString(x | y));
+        System.out.printf("%#X & %#X = %#X \t%s%n", x, y, x & y, toBinaryString(x & y));
+        System.out.printf("%#X ^ %#X = %#X \t%s%n", x, y, x ^ y, toBinaryString(x ^ y));
+        System.out.printf("%#X ^ %#X ^ %#X = %#X %s%n", x, y, y, x ^ y ^ y, toBinaryString(x ^ y ^ y));
+    } // mainï¿½ï¿½ ï¿½ï¿½
 
-	// 10Áø Á¤¼ö¸¦ 2Áø¼ö·Î º¯È¯ÇÏ´Â ¸Þ¼­µå
-	static String toBinaryString(int x) {
-		String zero = "00000000000000000000000000000000";
-		String tmp = zero + Integer.toBinaryString(x);
+    // 10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    static String toBinaryString(int x) {
+        String zero = "00000000000000000000000000000000";
+        String tmp = zero + Integer.toBinaryString(x);
 
-		return tmp.substring(tmp.length()-32);
-	}
+        return tmp.substring(tmp.length() - 32);
+    }
 }

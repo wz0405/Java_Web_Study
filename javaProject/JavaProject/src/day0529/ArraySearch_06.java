@@ -4,33 +4,33 @@ import java.util.Scanner;
 
 public class ArraySearch_06 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		int data[]= {5,1,512,52,34,124,1233,16,85,32,74};
-		int num=0;
-		boolean ch=false;
-		//¼ıÀÚ¸¦ ÀÔ·ÂÇØ¼­ ±× ¼ıÀÚ°¡ data¾È¿¡ ÀÖ´ÂÁö
-		//¾øÀ¸¸é ¾ø´Ù°í Ç¥½Ã, ÀÖÀ¸¸é ¸î¹øÂ° ÀÖ´ÂÁö
-		//0ÀÔ·Â½Ã Á¾·á
-		while(true) {
-			System.out.println("°Ë»öÇÒ ¼ıÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-			num=sc.nextInt();
-			for (int i=0;i<data.length;i++) {
-				if(data[i]==num) {
-				ch=true;
-				System.out.println("°ªÀ» Ã£¾Ò½À´Ï´Ù. °ªÀº"+i+"¹øÂ°¿¡ ÀÖ½À´Ï´Ù");
-				}
-			}
-			if(num==0) {
-				System.out.println("Å½»öÀ» Á¾·áÇÕ´Ï´Ù.");
-				break;
-			}
-			if(!ch)
-				System.out.println("µ¥ÀÌÅÍ¿¡ ¾øÀ½");
-			
-		}
-			
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner sc = new Scanner(System.in);
+        int data[] = {5, 1, 512, 52, 34, 124, 1233, 16, 85, 32, 74};
+        int num = 0;
+        boolean ch = false;
+        //ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ dataï¿½È¿ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ Ç¥ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â° ï¿½Ö´ï¿½ï¿½ï¿½
+        //0ï¿½Ô·Â½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        while (true) {
+            System.out.println("ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+            num = sc.nextInt();
+            for (int i = 0; i < data.length; i++) {
+                if (data[i] == num) {
+                    ch = true;
+                    System.out.println("ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½Ò½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½" + i + "ï¿½ï¿½Â°ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½");
+                }
+            }
+            if (num == 0) {
+                System.out.println("Å½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+                break;
+            }
+            if (!ch)
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ ï¿½ï¿½ï¿½ï¿½");
+
+        }
+
+    }
 }
 		

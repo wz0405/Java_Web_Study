@@ -1,34 +1,34 @@
 import java.util.*;
 
 class HashMapEx1 {
-	public static void main(String[] args) {
-		HashMap map = new HashMap();
-		map.put("myId", "1234");
-		map.put("asdf", "1111");
-		map.put("asdf", "1234");
+    public static void main(String[] args) {
+        HashMap map = new HashMap();
+        map.put("myId", "1234");
+        map.put("asdf", "1111");
+        map.put("asdf", "1234");
 
-		Scanner s = new Scanner(System.in);	// È­¸éÀ¸·ÎºÎÅÍ ¶óÀÎ´ÜÀ§·Î ÀÔ·Â¹Þ´Â´Ù.
+        Scanner s = new Scanner(System.in);    // È­ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹Þ´Â´ï¿½.
 
-		while(true) {
-			System.out.println("id¿Í password¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			System.out.print("id :");
-			String id = s.nextLine().trim();
+        while (true) {
+            System.out.println("idï¿½ï¿½ passwordï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+            System.out.print("id :");
+            String id = s.nextLine().trim();
 
-			System.out.print("password :");
-			String password = s.nextLine().trim();
-			System.out.println();
+            System.out.print("password :");
+            String password = s.nextLine().trim();
+            System.out.println();
 
-			if(!map.containsKey(id)) {
-				System.out.println("ÀÔ·ÂÇÏ½Å id´Â Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-				continue;
-			} else {
-				if(!(map.get(id)).equals(password)) {
-					System.out.println("ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-				} else {
-					System.out.println("id¿Í ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÕ´Ï´Ù.");						
-					break;
-				}
-			}
-		} // while
-	} // mainÀÇ ³¡
+            if (!map.containsKey(id)) {
+                System.out.println("ï¿½Ô·ï¿½ï¿½Ï½ï¿½ idï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½. ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+                continue;
+            } else {
+                if (!(map.get(id)).equals(password)) {
+                    System.out.println("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½. ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+                } else {
+                    System.out.println("idï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Õ´Ï´ï¿½.");
+                    break;
+                }
+            }
+        } // while
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

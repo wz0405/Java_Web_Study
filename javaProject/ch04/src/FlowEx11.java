@@ -1,40 +1,41 @@
 import java.util.*;
 
 class FlowEx11 {
-	public static void main(String[] args) { 
-		char gender;
-		String regNo = "";
-		System.out.print("´ç½ÅÀÇ ÁÖ¹Î¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(011231-1111222)>");
+    public static void main(String[] args) {
+        char gender;
+        String regNo = "";
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¹Î¹ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(011231-1111222)>");
 
-		Scanner scanner = new Scanner(System.in);
-		regNo = scanner.nextLine();
+        Scanner scanner = new Scanner(System.in);
+        regNo = scanner.nextLine();
 
-		gender = regNo.charAt(7); // ÀÔ·Â¹ÞÀº ¹øÈ£ÀÇ 8¹øÂ° ¹®ÀÚ¸¦ gender¿¡ ÀúÀå
+        gender = regNo.charAt(7); // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½ 8ï¿½ï¿½Â° ï¿½ï¿½ï¿½Ú¸ï¿½ genderï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-		switch(gender) {
-			case '1':
-			case '3':
-				switch(gender) {
-					case '1':
-					System.out.println("´ç½ÅÀº 2000³â ÀÌÀü¿¡ Ãâ»ýÇÑ ³²ÀÚÀÔ´Ï´Ù.");
-						break;
-					case '3':
-					System.out.println("´ç½ÅÀº 2000³â ÀÌÈÄ¿¡ Ãâ»ýÇÑ ³²ÀÚÀÔ´Ï´Ù.");
-				}
-				break;    // ÀÌ break¹®À» »©¸ÔÁö ¾Êµµ·Ï ÁÖÀÇ
-			case '2':
-			case '4':
-				switch(gender) {
-					case '2':
-					System.out.println("´ç½ÅÀº 2000³â ÀÌÀü¿¡ Ãâ»ýÇÑ ¿©ÀÚÀÔ´Ï´Ù.");
-						break;
-					case '4':
-					System.out.println("´ç½ÅÀº 2000³â ÀÌÈÄ¿¡ Ãâ»ýÇÑ ¿©ÀÚÀÔ´Ï´Ù.");
-						break;
-				}
-				break;
-			default:
-				System.out.println("À¯È¿ÇÏÁö ¾ÊÀº ÁÖ¹Îµî·Ï¹øÈ£ÀÔ´Ï´Ù.");;
-		}
-	} // mainÀÇ ³¡
+        switch (gender) {
+            case '1':
+            case '3':
+                switch (gender) {
+                    case '1':
+                        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ 2000ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                        break;
+                    case '3':
+                        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ 2000ï¿½ï¿½ ï¿½ï¿½ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                }
+                break;    // ï¿½ï¿½ breakï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            case '2':
+            case '4':
+                switch (gender) {
+                    case '2':
+                        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ 2000ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                        break;
+                    case '4':
+                        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ 2000ï¿½ï¿½ ï¿½ï¿½ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+                        break;
+                }
+                break;
+            default:
+                System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¹Îµï¿½Ï¹ï¿½È£ï¿½Ô´Ï´ï¿½.");
+                ;
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

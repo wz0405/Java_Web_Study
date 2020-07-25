@@ -4,22 +4,22 @@ import java.util.Scanner;
 
 public class ScanWhileTrue_05 {
 
-	public static void main(String[] args) {
-		int num;
-		int sum=0;
-		// TODO Auto-generated method stub
-		System.out.println("ÇÕ°è¸¦ ±¸ÇÒ ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ½Ã¿À");
-		Scanner sc = new Scanner(System.in);
-		num=sc.nextInt();
-		int s=num;
-		System.out.println("---------------------");
-		while(true) {
-			sum+=num;
-			num--;
-			if (num==0) break;
-		}
-		System.out.println("1~"+s+"±îÁöÀÇ ÇÕÀº"+sum+"ÀÔ´Ï´Ù");
-		
-	}
+    public static void main(String[] args) {
+        int num;
+        int sum = 0;
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½Õ°è¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ã¿ï¿½");
+        Scanner sc = new Scanner(System.in);
+        num = sc.nextInt();
+        int s = num;
+        System.out.println("---------------------");
+        while (true) {
+            sum += num;
+            num--;
+            if (num == 0) break;
+        }
+        System.out.println("1~" + s + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" + sum + "ï¿½Ô´Ï´ï¿½");
+
+    }
 
 }

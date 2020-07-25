@@ -1,37 +1,36 @@
 class ReferenceParamEx3 {
-	public static void main(String[] args) 
-	{
-		int[] arr = new int[] {3,2,1,6,5,4};
+    public static void main(String[] args) {
+        int[] arr = new int[]{3, 2, 1, 6, 5, 4};
 
-		printArr(arr);  // ¹è¿­ÀÇ ¸ðµç ¿ä¼Ò¸¦ Ãâ·Â
-		sortArr(arr);   // ¹è¿­À» Á¤·Ä
-		printArr(arr);  // Á¤·ÄÈÄ °á°ú¸¦ Ãâ·Â
-		System.out.println("sum="+sumArr(arr)); // ¹è¿­ÀÇ ÃÑÇÕÀ» Ãâ·Â
-	}
+        printArr(arr);  // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½
+        sortArr(arr);   // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        printArr(arr);  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        System.out.println("sum=" + sumArr(arr)); // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    }
 
-	static void printArr(int[] arr) {  // ¹è¿­ÀÇ ¸ðµç ¿ä¼Ò¸¦ Ãâ·Â
-		System.out.print("[");
+    static void printArr(int[] arr) {  // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½
+        System.out.print("[");
 
-		for(int i : arr)  // Çâ»óµÈ for¹®
-			System.out.print(i+",");
-		System.out.println("]");
-	}
+        for (int i : arr)  // ï¿½ï¿½ï¿½ï¿½ forï¿½ï¿½
+            System.out.print(i + ",");
+        System.out.println("]");
+    }
 
-	static int sumArr(int[] arr) {  // ¹è¿­ÀÇ ¸ðµç ¿ä¼ÒÀÇ ÇÕÀ» ¹ÝÈ¯
-		int sum = 0;
+    static int sumArr(int[] arr) {  // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+        int sum = 0;
 
-		for(int i=0;i<arr.length;i++)
-			sum += arr[i];
-		return sum;
-	}
+        for (int i = 0; i < arr.length; i++)
+            sum += arr[i];
+        return sum;
+    }
 
-	static void sortArr(int[] arr) {  // ¹è¿­À» ¿À¸§Â÷¼øÀ¸·Î Á¤·Ä
-		for(int i=0;i<arr.length-1;i++)
-			for(int j=0;j<arr.length-1-i;j++)
-				if(arr[j] > arr[j+1]) {
-					int tmp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = tmp;
-				}
-	} // sortArr(int[] arr)
+    static void sortArr(int[] arr) {  // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        for (int i = 0; i < arr.length - 1; i++)
+            for (int j = 0; j < arr.length - 1 - i; j++)
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+    } // sortArr(int[] arr)
 }

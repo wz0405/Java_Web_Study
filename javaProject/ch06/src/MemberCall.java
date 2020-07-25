@@ -1,32 +1,32 @@
 class MemberCall {
-	int iv = 10;
-	static int cv = 20;
+    int iv = 10;
+    static int cv = 20;
 
-	int iv2 = cv;
-//	static int cv2 = iv;		// ¿¡·¯. Å¬·¡½ºº¯¼ö´Â ÀÎ½ºÅÏ½º º¯¼ö¸¦ »ç¿ëÇÒ ¼ö ¾øÀ½.
-	static int cv2 = new MemberCall().iv;	 // ÀÌÃ³·³ °´Ã¼¸¦ »ý¼ºÇØ¾ß »ç¿ë°¡´É.
+    int iv2 = cv;
+    //	static int cv2 = iv;		// ï¿½ï¿½ï¿½ï¿½. Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+    static int cv2 = new MemberCall().iv;     // ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½ï¿½ë°¡ï¿½ï¿½.
 
-	static void staticMethod1() {
-		System.out.println(cv);
-//		System.out.println(iv); // ¿¡·¯. Å¬·¡½º¸Þ¼­µå¿¡¼­ ÀÎ½ºÅÏ½ºº¯¼ö¸¦ »ç¿ëºÒ°¡.
-		MemberCall c = new MemberCall();	
-		System.out.println(c.iv);   // °´Ã¼¸¦ »ý¼ºÇÑ ÈÄ¿¡¾ß ÀÎ½ºÅÏ½ºº¯¼öÀÇ ÂüÁ¶°¡´É.
-}
+    static void staticMethod1() {
+        System.out.println(cv);
+//		System.out.println(iv); // ï¿½ï¿½ï¿½ï¿½. Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò°ï¿½.
+        MemberCall c = new MemberCall();
+        System.out.println(c.iv);   // ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+    }
 
-	void instanceMethod1() {
-		System.out.println(cv);		
-		System.out.println(iv); // ÀÎ½ºÅÏ½º¸Þ¼­µå¿¡¼­´Â ÀÎ½ºÅÏ½ºº¯¼ö¸¦ ¹Ù·Î »ç¿ë°¡´É.
-}
+    void instanceMethod1() {
+        System.out.println(cv);
+        System.out.println(iv); // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ ï¿½ï¿½ë°¡ï¿½ï¿½.
+    }
 
-	static void staticMethod2() {
-		staticMethod1();
-//		instanceMethod1(); // ¿¡·¯. Å¬·¡½º¸Þ¼­µå¿¡¼­´Â ÀÎ½ºÅÏ½º¸Þ¼­µå¸¦ È£ÃâÇÒ ¼ö ¾øÀ½.
-		MemberCall c = new MemberCall();
-		c.instanceMethod1(); // ÀÎ½ºÅÏ½º¸¦ »ý¼ºÇÑ ÈÄ¿¡¾ß È£ÃâÇÒ ¼ö ÀÖÀ½.
- 	}
-	
-	void instanceMethod2() {	// ÀÎ½ºÅÏ½º¸Þ¼­µå¿¡¼­´Â ÀÎ½ºÅÏ½º¸Þ¼­µå¿Í Å¬·¡½º¸Þ¼­µå
-		staticMethod1();		//  ¸ðµÎ ÀÎ½ºÅÏ½º »ý¼º¾øÀÌ ¹Ù·Î È£ÃâÀÌ °¡´ÉÇÏ´Ù.
-		instanceMethod1();
-	}
+    static void staticMethod2() {
+        staticMethod1();
+//		instanceMethod1(); // ï¿½ï¿½ï¿½ï¿½. Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½Þ¼ï¿½ï¿½å¸¦ È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        MemberCall c = new MemberCall();
+        c.instanceMethod1(); // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+    }
+
+    void instanceMethod2() {    // ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½
+        staticMethod1();        //  ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù·ï¿½ È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+        instanceMethod1();
+    }
 }

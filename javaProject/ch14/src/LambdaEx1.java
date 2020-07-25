@@ -1,35 +1,35 @@
 @FunctionalInterface
 interface MyFunction {
-	void run();  // public abstract void run();
+    void run();  // public abstract void run();
 }
 
 class LambdaEx1 {
-	static void execute(MyFunction f) { // ¸Å°³º¯¼öÀÇ Å¸ÀÔÀÌ MyFunctionÀÎ ¸Ş¼­µå
-		f.run();
-	}
+    static void execute(MyFunction f) { // ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ MyFunctionï¿½ï¿½ ï¿½Ş¼ï¿½ï¿½ï¿½
+        f.run();
+    }
 
-	static MyFunction getMyFunction() { // ¹İÈ¯ Å¸ÀÔÀÌ MyFunctionÀÎ ¸Ş¼­µå 
-		MyFunction f = () -> System.out.println("f3.run()");
-		return f;
-	}
+    static MyFunction getMyFunction() { // ï¿½ï¿½È¯ Å¸ï¿½ï¿½ï¿½ï¿½ MyFunctionï¿½ï¿½ ï¿½Ş¼ï¿½ï¿½ï¿½ 
+        MyFunction f = () -> System.out.println("f3.run()");
+        return f;
+    }
 
-	public static void main(String[] args) {
-		// ¶÷´Ù½ÄÀ¸·Î MyFunctionÀÇ run()À» ±¸Çö
-		MyFunction f1 = ()-> System.out.println("f1.run()");
+    public static void main(String[] args) {
+        // ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½ MyFunctionï¿½ï¿½ run()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        MyFunction f1 = () -> System.out.println("f1.run()");
 
-		MyFunction f2 = new MyFunction() {  // ÀÍ¸íÅ¬·¡½º·Î run()À» ±¸Çö
-			public void run() {   // publicÀ» ¹İµå½Ã ºÙ¿©¾ß ÇÔ
-				System.out.println("f2.run()");
-			}
-		};
+        MyFunction f2 = new MyFunction() {  // ï¿½Í¸ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ run()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            public void run() {   // publicï¿½ï¿½ ï¿½İµï¿½ï¿½ ï¿½Ù¿ï¿½ï¿½ï¿½ ï¿½ï¿½
+                System.out.println("f2.run()");
+            }
+        };
 
-		MyFunction f3 = getMyFunction();
+        MyFunction f3 = getMyFunction();
 
-		f1.run();
-		f2.run();
-		f3.run();
+        f1.run();
+        f2.run();
+        f3.run();
 
-		execute(f1);
-		execute( ()-> System.out.println("run()") );
-	}
+        execute(f1);
+        execute(() -> System.out.println("run()"));
+    }
 }

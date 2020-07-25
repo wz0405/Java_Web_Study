@@ -1,130 +1,185 @@
 import java.util.*;
 
 public class MyVector implements List {
-	Object[] data = null;	// °´Ã¼¸¦ ´ã±â À§ÇÑ °´Ã¼¹è¿­À» ¼±¾ðÇÑ´Ù.
-	int capacity = 0;		// ¿ë·®
-	int size = 0;			// Å©±â
+    Object[] data = null;    // ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+    int capacity = 0;        // ï¿½ë·®
+    int size = 0;            // Å©ï¿½ï¿½
 
-	public MyVector(int capacity) {
-		if (capacity < 0)
-		   throw new IllegalArgumentException("À¯È¿ÇÏÁö ¾ÊÀº °ªÀÔ´Ï´Ù. :"+ capacity);
+    public MyVector(int capacity) {
+        if (capacity < 0)
+            throw new IllegalArgumentException("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½. :" + capacity);
 
-		this.capacity = capacity;
-		data = new Object[capacity];		
-	}
+        this.capacity = capacity;
+        data = new Object[capacity];
+    }
 
-	public MyVector() {
-		this(10);		// Å©±â¸¦ ÁöÁ¤ÇÏÁö ¾ÊÀ¸¸é Å©±â¸¦ 10À¸·Î ÇÑ´Ù.
-	}
+    public MyVector() {
+        this(10);        // Å©ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å©ï¿½â¸¦ 10ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
+    }
 
-    // ÃÖ¼ÒÇÑÀÇ ÀúÀå°ø°£(capacity)¸¦ È®º¸ÇÏ´Â ¸Þ¼­µå
-	public void ensureCapacity(int minCapacity) {
-		if (minCapacity - data.length > 0)
-			setCapacity(minCapacity);
-	}
+    // ï¿½Ö¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(capacity)ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    public void ensureCapacity(int minCapacity) {
+        if (minCapacity - data.length > 0)
+            setCapacity(minCapacity);
+    }
 
-	public boolean add(Object obj) {
-		// »õ·Î¿î °´Ã¼¸¦ ÀúÀåÇÏ±â Àü¿¡ ÀúÀåÇÒ °ø°£À» È®º¸ÇÑ´Ù.
-		ensureCapacity(size+1);
-		data[size++] = obj; 
-		return true;
-	}
+    public boolean add(Object obj) {
+        // ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ñ´ï¿½.
+        ensureCapacity(size + 1);
+        data[size++] = obj;
+        return true;
+    }
 
-	public Object get(int index) {
-		if(index < 0 || index >= size) 
-			throw new IndexOutOfBoundsException("¹üÀ§¸¦ ¹þ¾î³µ½À´Ï´Ù.");
+    public Object get(int index) {
+        if (index < 0 || index >= size)
+            throw new IndexOutOfBoundsException("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³µï¿½ï¿½ï¿½Ï´ï¿½.");
 
-		return data[index];
-	}
+        return data[index];
+    }
 
-	public Object remove(int index) { 
-		Object oldObj = null;
+    public Object remove(int index) {
+        Object oldObj = null;
 
-		if(index < 0 || index >= size) 
-			throw new IndexOutOfBoundsException("¹üÀ§¸¦ ¹þ¾î³µ½À´Ï´Ù.");
+        if (index < 0 || index >= size)
+            throw new IndexOutOfBoundsException("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³µï¿½ï¿½ï¿½Ï´ï¿½.");
 
-		oldObj = data[index];
+        oldObj = data[index];
 
-		// »èÁ¦ÇÏ°íÀÚ ÇÏ´Â °´Ã¼°¡ ¸¶Áö¸· °´Ã¼°¡ ¾Æ´Ï¶ó¸é, ¹è¿­º¹»ç¸¦ ÅëÇØ ºóÀÚ¸®¸¦ Ã¤¿öÁà¾ß ÇÑ´Ù.
-		if(index != size-1) {
-			System.arraycopy(data, index+1, data, index, size-index-1);
-		}
+        // ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½, ï¿½è¿­ï¿½ï¿½ï¿½ç¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
+        if (index != size - 1) {
+            System.arraycopy(data, index + 1, data, index, size - index - 1);
+        }
 
-        // ¸¶Áö¸· µ¥ÀÌÅÍ¸¦ null·Î ÇÑ´Ù. ¹è¿­Àº 0 ºÎÅÍ ½ÃÀÛÇÏ¹Ç·Î ¸¶Áö¸· ¿ä¼Ò´Â index°¡ size-1ÀÌ´Ù.
-		data[size-1] = null;	
-		size--;
-		return oldObj;
-	}
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ nullï¿½ï¿½ ï¿½Ñ´ï¿½. ï¿½è¿­ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¹Ç·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò´ï¿½ indexï¿½ï¿½ size-1ï¿½Ì´ï¿½.
+        data[size - 1] = null;
+        size--;
+        return oldObj;
+    }
 
-	public boolean remove(Object obj) {
-		for(int i=0; i< size; i++) {
-			if(obj.equals(data[i])) {
-				remove(i);
-				return true;
-			}
-		}
-		return false;
-	}
+    public boolean remove(Object obj) {
+        for (int i = 0; i < size; i++) {
+            if (obj.equals(data[i])) {
+                remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 
-	public void trimToSize() {
-		setCapacity(size);
-	}
+    public void trimToSize() {
+        setCapacity(size);
+    }
 
-	private void setCapacity(int capacity) {
-		if(this.capacity==capacity) return; // Å©±â°¡ °°À¸¸é º¯°æÇÏÁö ¾Ê´Â´Ù.
+    private void setCapacity(int capacity) {
+        if (this.capacity == capacity) return; // Å©ï¿½â°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
 
-		Object[] tmp = new Object[capacity];
-		System.arraycopy(data,0, tmp, 0, size);
-		data = tmp;
-		this.capacity = capacity;
-	}
+        Object[] tmp = new Object[capacity];
+        System.arraycopy(data, 0, tmp, 0, size);
+        data = tmp;
+        this.capacity = capacity;
+    }
 
-	public void clear(){ 
-		for (int i = 0; i < size; i++)
-			data[i] = null;
-		size = 0;
-	}
+    public void clear() {
+        for (int i = 0; i < size; i++)
+            data[i] = null;
+        size = 0;
+    }
 
-	public Object[] toArray(){ 
-		Object[] result = new Object[size];
-		System.arraycopy(data, 0, result, 0, size);
+    public Object[] toArray() {
+        Object[] result = new Object[size];
+        System.arraycopy(data, 0, result, 0, size);
 
-		return result;
-	}
+        return result;
+    }
 
-	public boolean isEmpty() { return size==0;}
-	public int capacity() { return capacity; }
-	public int size() { return size; }
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public int capacity() {
+        return capacity;
+    }
+
+    public int size() {
+        return size;
+    }
 /****************************************/
-/*       ListÀÎÅÍÆäÀÌ½º·ÎºÎÅÍ »ó¼Ó¹ÞÀº ¸Þ¼­µåµé          */
-/****************************************/
+    /*       Listï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½Ó¹ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½          */
+
+    /****************************************/
 //  public int size();
 //  public boolean isEmpty();
-	public boolean contains(Object o){ return false;}
-	public Iterator iterator(){ return null; }
-//	public Object[] toArray();
-	public Object[] toArray(Object a[]){ return null;}
-//  public boolean add(Object o);
-//  public boolean remove(Object o);
-	public boolean containsAll(Collection c){ return false; }
-	public boolean addAll(Collection c){ return false; }
-	public boolean addAll(int index, Collection c){ return false; }
-	public boolean removeAll(Collection c){ return false; }
-	public boolean retainAll(Collection c){ return false; }
-//	public void clear();
-	public boolean equals(Object o){ return false; }
-//	public int hashCode();
-//  public Object get(int index);
-	public Object set(int index, Object element){ return null;}
-	public void add(int index, Object element){}
-//  public Object remove(int index);
-	public int indexOf(Object o){ return -1;}
-	public int lastIndexOf(Object o){ return -1;}
-	public ListIterator listIterator(){ return null; }
-	public ListIterator listIterator(int index){ return null; }
-	public List subList(int fromIndex, int toIndex){ return null; }
+    public boolean contains(Object o) {
+        return false;
+    }
 
-//	default void sort(Comparator c) { /* ³»¿ë»ý·« */ }                     // JDK1.8ºÎÅÍ
-//	default Spliterator spliterator() { /* ³»¿ë»ý·« */ }                  // JDK1.8ºÎÅÍ
-//	default void replaceAll(UnaryOperator operator){/* ³»¿ë»ý·« */} //JDK1.8ºÎÅÍ
+    public Iterator iterator() {
+        return null;
+    }
+
+    //	public Object[] toArray();
+    public Object[] toArray(Object a[]) {
+        return null;
+    }
+
+    //  public boolean add(Object o);
+//  public boolean remove(Object o);
+    public boolean containsAll(Collection c) {
+        return false;
+    }
+
+    public boolean addAll(Collection c) {
+        return false;
+    }
+
+    public boolean addAll(int index, Collection c) {
+        return false;
+    }
+
+    public boolean removeAll(Collection c) {
+        return false;
+    }
+
+    public boolean retainAll(Collection c) {
+        return false;
+    }
+
+    //	public void clear();
+    public boolean equals(Object o) {
+        return false;
+    }
+
+    //	public int hashCode();
+//  public Object get(int index);
+    public Object set(int index, Object element) {
+        return null;
+    }
+
+    public void add(int index, Object element) {
+    }
+
+    //  public Object remove(int index);
+    public int indexOf(Object o) {
+        return -1;
+    }
+
+    public int lastIndexOf(Object o) {
+        return -1;
+    }
+
+    public ListIterator listIterator() {
+        return null;
+    }
+
+    public ListIterator listIterator(int index) {
+        return null;
+    }
+
+    public List subList(int fromIndex, int toIndex) {
+        return null;
+    }
+
+//	default void sort(Comparator c) { /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */ }                     // JDK1.8ï¿½ï¿½ï¿½ï¿½
+//	default Spliterator spliterator() { /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */ }                  // JDK1.8ï¿½ï¿½ï¿½ï¿½
+//	default void replaceAll(UnaryOperator operator){/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */} //JDK1.8ï¿½ï¿½ï¿½ï¿½
 }

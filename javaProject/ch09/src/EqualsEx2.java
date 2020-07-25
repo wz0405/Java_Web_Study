@@ -1,33 +1,33 @@
 class Person {
-	long id;
+    long id;
 
-	public boolean equals(Object obj) {
-		if(obj!=null && obj instanceof Person) {
-			return id ==((Person)obj).id;
-		} else {
-			return false;
-		}
-	}
+    public boolean equals(Object obj) {
+        if (obj != null && obj instanceof Person) {
+            return id == ((Person) obj).id;
+        } else {
+            return false;
+        }
+    }
 
-	Person(long id) {
-		this.id = id;
-	}
+    Person(long id) {
+        this.id = id;
+    }
 }
 
 class EqualsEx2 {
-	public static void main(String[] args) {
-		Person p1 = new Person(8011081111222L);
-		Person p2 = new Person(8011081111222L);
+    public static void main(String[] args) {
+        Person p1 = new Person(8011081111222L);
+        Person p2 = new Person(8011081111222L);
 
-		if(p1==p2)
-			System.out.println("p1°ú p2´Â °°Àº »ç¶÷ÀÔ´Ï´Ù.");
-		else
-			System.out.println("p1°ú p2´Â ´Ù¸¥ »ç¶÷ÀÔ´Ï´Ù.");
+        if (p1 == p2)
+            System.out.println("p1ï¿½ï¿½ p2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        else
+            System.out.println("p1ï¿½ï¿½ p2ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
 
-		if(p1.equals(p2))
-			System.out.println("p1°ú p2´Â °°Àº »ç¶÷ÀÔ´Ï´Ù.");
-		else
-			System.out.println("p1°ú p2´Â ´Ù¸¥ »ç¶÷ÀÔ´Ï´Ù.");
-	
-	}
+        if (p1.equals(p2))
+            System.out.println("p1ï¿½ï¿½ p2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        else
+            System.out.println("p1ï¿½ï¿½ p2ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+
+    }
 }

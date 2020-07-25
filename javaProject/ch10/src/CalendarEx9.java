@@ -1,83 +1,83 @@
-class CalendarEx9 { 
-	public static void main(String[] args) { 
-		System.out.println("2014. 5. 31 :" + getDayOfWeek(2014, 5, 31)); 
-		System.out.println("2012. 6. 1 :" + getDayOfWeek(2012, 6, 1)); 
-		System.out.println("2014. 5. 1 - 2014.4.28 :" + dayDiff(2014,5,1,2014,4,28)); 
-		System.out.println("2015. 6. 29 : "+convertDateToDay(2015, 6, 29)); 
-		System.out.println("735778 : "+convertDayToDate(735778)); 
-	} 
+class CalendarEx9 {
+    public static void main(String[] args) {
+        System.out.println("2014. 5. 31 :" + getDayOfWeek(2014, 5, 31));
+        System.out.println("2012. 6. 1 :" + getDayOfWeek(2012, 6, 1));
+        System.out.println("2014. 5. 1 - 2014.4.28 :" + dayDiff(2014, 5, 1, 2014, 4, 28));
+        System.out.println("2015. 6. 29 : " + convertDateToDay(2015, 6, 29));
+        System.out.println("735778 : " + convertDayToDate(735778));
+    }
 
-     // °¢ ´ÞÀÇ ¸¶Áö¸·ÀÏ
-	public static int[] endOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; 
+    // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public static int[] endOfMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-	public static boolean isLeapYear(int year) { 
-		return ((year%4==0)&&(year%100!=0)||(year%400==0)); 
-	} 
+    public static boolean isLeapYear(int year) {
+        return ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
+    }
 
-	public static int dayDiff(int y1, int m1, int d1, int y2, int m2, int d2) {
-		return convertDateToDay(y1, m1, d1) - convertDateToDay(y2, m2, d2); 
-	} 
+    public static int dayDiff(int y1, int m1, int d1, int y2, int m2, int d2) {
+        return convertDateToDay(y1, m1, d1) - convertDateToDay(y2, m2, d2);
+    }
 
-	public static int getDayOfWeek(int year, int month, int day) { 
-		// 1~7ÀÇ °ªÀ» ¹ÝÈ¯ÇÑ´Ù. °á°ú°¡ 1ÀÌ¸é ÀÏ¿äÀÏÀÌ´Ù. 
-		return convertDateToDay(year, month, day)%7 + 1; 
-	} 
+    public static int getDayOfWeek(int year, int month, int day) {
+        // 1~7ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½Ì¸ï¿½ ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ì´ï¿½. 
+        return convertDateToDay(year, month, day) % 7 + 1;
+    }
 
-	public static String convertDayToDate(int day) { 
-		int year=1; 
-		int month=0; 
+    public static String convertDayToDate(int day) {
+        int year = 1;
+        int month = 0;
 
-		while(true) { 
-			int aYear = isLeapYear(year)? 366 :365; 
-			if (day > aYear ) { 
-				day-= aYear; 
-				year++; 
-			} else { 
-				break; 
-			} 
-		} 
+        while (true) {
+            int aYear = isLeapYear(year) ? 366 : 365;
+            if (day > aYear) {
+                day -= aYear;
+                year++;
+            } else {
+                break;
+            }
+        }
 
-		while(true) { 
-			int endDay = endOfMonth[month]; 
-                     // À±³âÀÌ°í À±´ÞÀÌ Æ÷ÇÔµÇ¾î ÀÖÀ¸¸é, 1ÀÏÀ» ´õ »«´Ù. 
-			if(isLeapYear(year) && month == 1) endDay++;    
+        while (true) {
+            int endDay = endOfMonth[month];
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÔµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. 
+            if (isLeapYear(year) && month == 1) endDay++;
 
-			if(day > endDay) { 
-				day -= endDay; 
-				month++; 
-			} else { 
-				break;                         
-			} 
-		} 
+            if (day > endDay) {
+                day -= endDay;
+                month++;
+            } else {
+                break;
+            }
+        }
 
-		return year+"-"+(month+1)+"-"+day; 
-	} 
+        return year + "-" + (month + 1) + "-" + day;
+    }
 
-	public static int convertDateToDay(int year, int month, int day) { 
-		int numOfLeapYear =0; // À±³âÀÇ ¼ö 
+    public static int convertDateToDay(int year, int month, int day) {
+        int numOfLeapYear = 0; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 
 
-		// Àü³âµµ±îÁöÀÇ À±³âÀÇ ¼ö¸¦ ±¸ÇÑ´Ù. 
-		for(int i=1;i < year; i++) { 
-			if(isLeapYear(i)) 
-				numOfLeapYear++; 
-		} 
+        // ï¿½ï¿½ï¿½âµµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½. 
+        for (int i = 1; i < year; i++) {
+            if (isLeapYear(i))
+                numOfLeapYear++;
+        }
 
-		// Àü³âµµ±îÁöÀÇ ÀÏ ¼ö¸¦ ±¸ÇÑ´Ù. 
-		int toLastYearDaySum = (year-1) * 365 + numOfLeapYear; 
+        // ï¿½ï¿½ï¿½âµµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ´ï¿½. 
+        int toLastYearDaySum = (year - 1) * 365 + numOfLeapYear;
 
-		// ¿ÃÇØÀÇ ÇöÀç ¿ù±îÁöÀÇ ÀÏ¼ö °è»ê 
-		int thisYearDaySum =0; 
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¼ï¿½ ï¿½ï¿½ï¿½ 
+        int thisYearDaySum = 0;
 
-		for(int i=0; i < month-1; i++) { 
-			thisYearDaySum+=endOfMonth[i]; 
-		} 
+        for (int i = 0; i < month - 1; i++) {
+            thisYearDaySum += endOfMonth[i];
+        }
 
-		// À±³âÀÌ°í, 2¿ùÀÌ Æ÷ÇÔµÇ¾î ÀÖÀ¸¸é 1ÀÏÀ» Áõ°¡½ÃÅ²´Ù. 
-		if (month > 2 && isLeapYear(year))
-			thisYearDaySum++; 
+        // ï¿½ï¿½ï¿½ï¿½ï¿½Ì°ï¿½, 2ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÔµÇ¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½. 
+        if (month > 2 && isLeapYear(year))
+            thisYearDaySum++;
 
-		thisYearDaySum+=day; 
+        thisYearDaySum += day;
 
-		return toLastYearDaySum+thisYearDaySum; 
-	} 
+        return toLastYearDaySum + thisYearDaySum;
+    }
 } 

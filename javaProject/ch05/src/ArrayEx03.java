@@ -1,25 +1,25 @@
-class ArrayEx03{
-	public static void main(String[] args) {
-		int[] arr = new int[5];
+class ArrayEx03 {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
 
-		// ¹è¿­ arr¿¡ 1~5¸¦ ÀúÀåÇÑ´Ù.
-		for(int i=0; i < arr.length;i++) 
-			arr[i] = i + 1;
+        // ï¿½è¿­ arrï¿½ï¿½ 1~5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        for (int i = 0; i < arr.length; i++)
+            arr[i] = i + 1;
 
-		System.out.println("º¯°æÀü - arr.length:"+arr.length);	
-		for(int i=0; i < arr.length;i++) 
-			System.out.println("arr["+i+"]:"+arr[i]);	
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - arr.length:" + arr.length);
+        for (int i = 0; i < arr.length; i++)
+            System.out.println("arr[" + i + "]:" + arr[i]);
 
-		int[] tmp = new int[arr.length*2];
+        int[] tmp = new int[arr.length * 2];
 
-		// ¹è¿­ arr¿¡ ÀúÀåµÈ °ªµéÀ» ¹è¿­ tmp¿¡ º¹»çÇÑ´Ù.
-		for(int i=0; i < arr.length;i++) 
-			tmp[i] = arr[i];
+        // ï¿½è¿­ arrï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        for (int i = 0; i < arr.length; i++)
+            tmp[i] = arr[i];
 
-		arr = tmp;  // tmp¿¡ ÀúÀåµÈ °ªÀ» arr¿¡ ÀúÀåÇÑ´Ù.
+        arr = tmp;  // tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ arrï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 
-		System.out.println("º¯°æÈÄ - arr.length:"+arr.length);	
-		for(int i=0; i < arr.length;i++) 
-			System.out.println("arr["+i+"]:"+arr[i]);	
-	}
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ - arr.length:" + arr.length);
+        for (int i = 0; i < arr.length; i++)
+            System.out.println("arr[" + i + "]:" + arr[i]);
+    }
 }

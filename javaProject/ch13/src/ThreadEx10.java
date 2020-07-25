@@ -1,38 +1,40 @@
- class ThreadEx10 implements Runnable  {
-	static boolean autoSave = false;
+class ThreadEx10 implements Runnable {
+    static boolean autoSave = false;
 
-	public static void main(String[] args) {
-		Thread t = new Thread(new ThreadEx10());
-		t.setDaemon(true);		// ÀÌ ºÎºÐÀÌ ¾øÀ¸¸é Á¾·áµÇÁö ¾Ê´Â´Ù.
-		t.start();
+    public static void main(String[] args) {
+        Thread t = new Thread(new ThreadEx10());
+        t.setDaemon(true);        // ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
+        t.start();
 
-		for(int i=1; i <= 10; i++) {
-			try{
-				Thread.sleep(1000);
-			} catch(InterruptedException e) {}
-			System.out.println(i);
-			
-			if(i==5)
-				autoSave = true;
-		}
+        for (int i = 1; i <= 10; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+            System.out.println(i);
 
-		System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
-	}
+            if (i == 5)
+                autoSave = true;
+        }
 
-	public void run() {
-		while(true) {
-			try { 
-				Thread.sleep(3 * 1000);	// 3ÃÊ¸¶´Ù
-			} catch(InterruptedException e) {}	
+        System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+    }
 
-			// autoSaveÀÇ °ªÀÌ trueÀÌ¸é autoSave()¸¦ È£ÃâÇÑ´Ù.
-			if(autoSave) {
-				autoSave();
-			}
-		}
-	}
+    public void run() {
+        while (true) {
+            try {
+                Thread.sleep(3 * 1000);    // 3ï¿½Ê¸ï¿½ï¿½ï¿½
+            } catch (InterruptedException e) {
+            }
 
-	public void autoSave() {
-		System.out.println("ÀÛ¾÷ÆÄÀÏÀÌ ÀÚµ¿ÀúÀåµÇ¾ú½À´Ï´Ù.");
-	}
+            // autoSaveï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ trueï¿½Ì¸ï¿½ autoSave()ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ñ´ï¿½.
+            if (autoSave) {
+                autoSave();
+            }
+        }
+    }
+
+    public void autoSave() {
+        System.out.println("ï¿½Û¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+    }
 }

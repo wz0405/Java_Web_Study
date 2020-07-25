@@ -1,29 +1,29 @@
 class Card2 {
-	final int NUMBER;		// »ó¼öÁö¸¸ ¼±¾ð°ú ÇÔ²² ÃÊ±âÈ­ ÇÏÁö ¾Ê°í
-	final String KIND;		// »ý¼ºÀÚ¿¡¼­ ´Ü ÇÑ¹ø¸¸ ÃÊ±âÈ­ÇÒ ¼ö ÀÖ´Ù.
-	static int width  = 100;	
-	static int height = 250;
+    final int NUMBER;        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô²ï¿½ ï¿½Ê±ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½
+    final String KIND;        // ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
+    static int width = 100;
+    static int height = 250;
 
-	Card2(String kind, int num) {	
-		KIND = kind;
-		NUMBER = num;
-	}
+    Card2(String kind, int num) {
+        KIND = kind;
+        NUMBER = num;
+    }
 
-	Card2() {
-		this("HEART", 1);
-	}
+    Card2() {
+        this("HEART", 1);
+    }
 
-	public String toString() {
-		return KIND +" "+ NUMBER;
-	}
+    public String toString() {
+        return KIND + " " + NUMBER;
+    }
 }
 
 class FinalCardTest {
-	public static void main(String args[]) {
-		Card2 c = new Card2("HEART", 10);
+    public static void main(String args[]) {
+        Card2 c = new Card2("HEART", 10);
 //		c.NUMBER = 5;
-		System.out.println(c.KIND);
-		System.out.println(c.NUMBER);
-		System.out.println(c); // System.out.println(c.toString());
-	}
+        System.out.println(c.KIND);
+        System.out.println(c.NUMBER);
+        System.out.println(c); // System.out.println(c.toString());
+    }
 }

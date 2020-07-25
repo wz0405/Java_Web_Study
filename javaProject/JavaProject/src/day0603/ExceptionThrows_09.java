@@ -4,34 +4,35 @@ import java.util.Scanner;
 
 public class ExceptionThrows_09 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// »ç¿ëÀÚÁ¤ÀÇ ¿¹¿ÜÃ³¸®
-		// ¿¹¿Ü°¡ ¹ß»ýÇÒ °æ¿ì°¡ ¾Æ´Ô¿¡µµ ºÒ±¸ÇÏ°í Á¶°Ç¿¡ ÇØ´çÇÏ¸é °­Á¦·Î ¿¹¿ÜÃ³¸®
-		// throws- È£ÃâÇÑ ¿µ¿ªÀ¸·Î ¿¹¿ÜÃ³¸®¸¦ ´øÁü
-		// throw- °­Á¦·Î ¿¹¿Ü¸¦ ¹ß»ý½ÃÅ³¶§
-		try {
-			scoreInput();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			System.out.println("¿À·ù¸Þ¼¼Áö: "+e.getMessage());
-		}
-		System.out.println("Á¤»óÁ¾·á");
-	
-	}
-	public static void scoreInput() throws Exception {
-		//Á¡¼ö°¡ 0~100Á¡ÀÌ ¾Æ´Ï¶ó¸é °­Á¦·Î ÀÍ¼Á¼Ç ¹ß»ýÇÏ°Ô
-		Scanner sc = new Scanner(System.in);
-		int score=0;
-		
-		System.out.println("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		score=sc.nextInt();
-		
-		if(score<0 || score>100) {
-			throw new Exception("Á¡¼ö°¡ Àß¸øÀÔ·ÂµÇ¾ú½À´Ï´Ù.");
-		}else {
-			System.out.println("³ªÀÇ Á¡¼ö´Â"+score+"ÀÔ´Ï´Ù");
-		}
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
+        // ï¿½ï¿½ï¿½Ü°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ì°¡ ï¿½Æ´Ô¿ï¿½ï¿½ï¿½ ï¿½Ò±ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½Ø´ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½
+        // throws- È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        // throw- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ü¸ï¿½ ï¿½ß»ï¿½ï¿½ï¿½Å³ï¿½ï¿½
+        try {
+            scoreInput();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Þ¼ï¿½ï¿½ï¿½: " + e.getMessage());
+        }
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+
+    }
+
+    public static void scoreInput() throws Exception {
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0~100ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Í¼ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ï°ï¿½
+        Scanner sc = new Scanner(System.in);
+        int score = 0;
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        score = sc.nextInt();
+
+        if (score < 0 || score > 100) {
+            throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½Ô·ÂµÇ¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+        } else {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + score + "ï¿½Ô´Ï´ï¿½");
+        }
+    }
 
 }

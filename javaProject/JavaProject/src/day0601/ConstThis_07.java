@@ -1,30 +1,35 @@
 package day0601;
-class Person{
-	String name;
-	int age;
-	
-	public Person() {
-		this("¼Û°¡ÀÎ",35);
-	}
-	public Person(String name) {
-		this(name,25);
-	}
-	public Person(String name, int age) {
-		this.name=name;
-		this.age=age;
-		System.out.println("È£Ãâ");
-	}
-	public void write() {
-		System.out.println("ÀÌ¸§ "+name+" ³ªÀÌ "+age);
-	}
+
+class Person {
+    String name;
+    int age;
+
+    public Person() {
+        this("ï¿½Û°ï¿½ï¿½ï¿½", 35);
+    }
+
+    public Person(String name) {
+        this(name, 25);
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+        System.out.println("È£ï¿½ï¿½");
+    }
+
+    public void write() {
+        System.out.println("ï¿½Ì¸ï¿½ " + name + " ï¿½ï¿½ï¿½ï¿½ " + age);
+    }
 }
+
 public class ConstThis_07 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Person pe = new Person("ÇöÈñ",26);
-		Person pe1 = new Person("È«±æµ¿");
-		pe1.write();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Person pe = new Person("ï¿½ï¿½ï¿½ï¿½", 26);
+        Person pe1 = new Person("È«ï¿½æµ¿");
+        pe1.write();
+    }
 
 }

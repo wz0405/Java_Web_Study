@@ -1,24 +1,24 @@
 import java.math.*;
 
 class BigIntegerEx {
-	public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 //		BigInteger big =  BigInteger.ONE;
 
-		for(int i=1; i<100;i++) { // 1!ºÎÅÍ 99!±îÁö Ãâ·Â
-			System.out.printf("%d!=%s%n", i, calcFactorial(i));
-			Thread.sleep(300); // 0.3ÃÊÀÇ Áö¿¬
-		}
-	}
+        for (int i = 1; i < 100; i++) { // 1!ï¿½ï¿½ï¿½ï¿½ 99!ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+            System.out.printf("%d!=%s%n", i, calcFactorial(i));
+            Thread.sleep(300); // 0.3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        }
+    }
 
-	static String calcFactorial(int n) {
-		return factorial(BigInteger.valueOf(n)).toString();
-	}
+    static String calcFactorial(int n) {
+        return factorial(BigInteger.valueOf(n)).toString();
+    }
 
-	static BigInteger factorial(BigInteger n) {
-		if(n.equals(BigInteger.ZERO)) {
-			return BigInteger.ONE;
-		} else {  // return n * factorial(n-1);
-			return n.multiply(factorial(n.subtract(BigInteger.ONE)));
-		}
-	}
+    static BigInteger factorial(BigInteger n) {
+        if (n.equals(BigInteger.ZERO)) {
+            return BigInteger.ONE;
+        } else {  // return n * factorial(n-1);
+            return n.multiply(factorial(n.subtract(BigInteger.ONE)));
+        }
+    }
 }

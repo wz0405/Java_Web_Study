@@ -4,31 +4,31 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 public class ScanQuiz_16 {
-	public static void main(String[] args) {
-		Calendar cal = Calendar.getInstance();
-		Scanner sc = new Scanner(System.in);
-		String name;
-		int year;
-		String phone;
-		String address;
-	
-		System.out.print("ÅÂ¾î³­ ¿¬µµ´Â?");
-		year=Integer.parseInt(sc.nextLine());
-		//sc.nectLine ¿£ÅÍ¸¦ ¸ÕÀú ÀÐ¾î¼­ ¾ø¾ÖÁØ´Ù
-		System.out.print("ÀÌ¸§Àº?");
-		name=sc.nextLine();
-		System.out.print("ÇÚµåÆù ¹øÈ£´Â?");
-		phone=sc.nextLine();
-		System.out.print("ÁÖ¼Ò´Â?");
-		address=sc.nextLine();
-		int curYear=cal.get(Calendar.YEAR);
-		System.out.println("===============");
-		System.out.println("ÀÌ¸§:"+name);
-		System.out.println("ÅÂ¾î³­ ¿¬µµ:"+year);
-		System.out.println("ÇöÀç ³ªÀÌ: "+(curYear-year+1));
-		System.out.println("ÀüÈ­ ¹øÈ£:"+phone);
-		System.out.println("ÁÖ¼Ò:"+address);
-		
-				
-	}
+    public static void main(String[] args) {
+        Calendar cal = Calendar.getInstance();
+        Scanner sc = new Scanner(System.in);
+        String name;
+        int year;
+        String phone;
+        String address;
+
+        System.out.print("ï¿½Â¾î³­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+        year = Integer.parseInt(sc.nextLine());
+        //sc.nectLine ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½
+        System.out.print("ï¿½Ì¸ï¿½ï¿½ï¿½?");
+        name = sc.nextLine();
+        System.out.print("ï¿½Úµï¿½ï¿½ï¿½ ï¿½ï¿½È£ï¿½ï¿½?");
+        phone = sc.nextLine();
+        System.out.print("ï¿½Ö¼Ò´ï¿½?");
+        address = sc.nextLine();
+        int curYear = cal.get(Calendar.YEAR);
+        System.out.println("===============");
+        System.out.println("ï¿½Ì¸ï¿½:" + name);
+        System.out.println("ï¿½Â¾î³­ ï¿½ï¿½ï¿½ï¿½:" + year);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + (curYear - year + 1));
+        System.out.println("ï¿½ï¿½È­ ï¿½ï¿½È£:" + phone);
+        System.out.println("ï¿½Ö¼ï¿½:" + address);
+
+
+    }
 }

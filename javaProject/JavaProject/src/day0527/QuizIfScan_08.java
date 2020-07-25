@@ -4,28 +4,26 @@ import java.util.Scanner;
 
 public class QuizIfScan_08 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-		int score = sc.nextInt();
-		String grade;
-		System.out.println("Á¡¼ö"+score);
-		if (score>=90){
-			System.out.println("Æò°¡¸Þ¼¼Áö:Âü ÀßÇß¾î¿ä");
-			grade="A";
-		}
-		else if (score>=80) {
-			System.out.println("Æò°¡¸Þ¼¼Áö:Á» ´õ ³ë·ÂÇÏ¼¼¿ä");
-			grade="B";
-		}
-		else {
-			System.out.println("Æò°¡¸Þ¼¼Áö:´ÙÀ½±âÈ¸¿¡..");
-			grade="C";
-		}
-		System.out.println("ÇÐÁ¡:"+grade);
-		
-		
-	}
-	
-	
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+        int score = sc.nextInt();
+        String grade;
+        System.out.println("ï¿½ï¿½ï¿½ï¿½" + score);
+        if (score >= 90) {
+            System.out.println("ï¿½ò°¡¸Þ¼ï¿½ï¿½ï¿½:ï¿½ï¿½ ï¿½ï¿½ï¿½ß¾ï¿½ï¿½");
+            grade = "A";
+        } else if (score >= 80) {
+            System.out.println("ï¿½ò°¡¸Þ¼ï¿½ï¿½ï¿½:ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+            grade = "B";
+        } else {
+            System.out.println("ï¿½ò°¡¸Þ¼ï¿½ï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¸ï¿½ï¿½..");
+            grade = "C";
+        }
+        System.out.println("ï¿½ï¿½ï¿½ï¿½:" + grade);
+
+
+    }
+
+
 }

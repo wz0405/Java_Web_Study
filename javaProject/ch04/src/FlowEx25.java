@@ -1,23 +1,23 @@
 import java.util.*;
 
 class FlowEx25 {
-	public static void main(String[] args) { 
-		int num = 0; 
-		int sum = 0;
+    public static void main(String[] args) {
+        int num = 0;
+        int sum = 0;
 
-		System.out.print("¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(¿¹:12345)>");
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		num = Integer.parseInt(tmp);      // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)À» ¼ýÀÚ·Î º¯È¯
+        System.out.print("ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(ï¿½ï¿½:12345)>");
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine(); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        num = Integer.parseInt(tmp);      // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		while(num!=0) {    
-			// numÀ» 10À¸·Î ³ª´« ³ª¸ÓÁö¸¦ sum¿¡ ´õÇÔ
-			sum += num%10; 	// sum = sum + num%10;
-			System.out.printf("sum=%3d num=%d%n", sum, num);
+        while (num != 0) {
+            // numï¿½ï¿½ 10ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ sumï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            sum += num % 10;    // sum = sum + num%10;
+            System.out.printf("sum=%3d num=%d%n", sum, num);
 
-			num /= 10;  // num = num / 10;  numÀ» 10À¸·Î ³ª´« °ªÀ» ´Ù½Ã num¿¡ ÀúÀå
-		}
-		
-		System.out.println("°¢ ÀÚ¸®¼öÀÇ ÇÕ:"+ sum);
-	}
+            num /= 10;  // num = num / 10;  numï¿½ï¿½ 10ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ numï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        }
+
+        System.out.println("ï¿½ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½:" + sum);
+    }
 }

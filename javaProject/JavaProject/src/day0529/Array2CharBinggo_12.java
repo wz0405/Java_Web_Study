@@ -4,87 +4,79 @@ import java.util.Scanner;
 
 public class Array2CharBinggo_12 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-		Scanner sc=new Scanner(System.in);
-		//3Çà3¿­ÀÇ ºù°íÆÇÀ» »ı¼º
-		int [][]pz=new int[3][3];
-		int binggo; //ºù°í°³¼öÃâ·Â
-		String ans;
-		
-		//3Çà3¿­ÀÇ ¹è¿­¿¡ 1~3»çÀÌÀÇ ³­¼ö¸¦ ¹ß»ı½ÃÅ²´Ù
-		
-		while(true) {
-			System.out.println("***°°Àº¼ıÀÚ ³ª¿À¸é ºù°í***");
-			
-			//³­¼ö±¸ÇÏ±â
-			for(int i=0;i<pz.length;i++) 
-			{
-				for(int j=0;j<pz[i].length;j++)
-				{
-					//³­¼ö
-					pz[i][j]=(int)(Math.random()*3)+1;
-					
-				}
-			}
-			
-			//Ãâ·Â
-			for(int i=0;i<pz.length;i++) 
-			{
-				for(int j=0;j<pz[i].length;j++)
-				{
-					//Ãâ·Â
-					System.out.printf("%4d",pz[i][j]);
-				}
-				System.out.println();
-			}
-			
-			//ºù°í°³¼ö ±¸ÇÏ±â
-			binggo=0;
-			
-			//°¡·Î¼±ºñ±³
-			for(int i=0;i<3;i++)
-			{
-				if(pz[i][0]==pz[i][1] &&pz[i][1]==pz[i][2])
-					binggo++;
-			}
-			//¼¼·Î¼± ºñ±³
-			for(int i=0;i<3;i++)
-			{
-				if(pz[0][i]==pz[1][i]&&pz[1][i]==pz[2][i])
-					binggo++;
-			}
-			// ´ë°¢¼±\ºñ±³
-			if(pz[0][0]==pz[1][1]&&pz[1][1]==pz[2][2])
-				binggo++;
-			
-			//´ë°¢¼±/ºñ±³
-			if(pz[0][2]==pz[1][1]&&pz[1][1]==pz[2][0])
-				binggo++;
-			
-			System.out.println("ºù°í: "+binggo+"°³");
-			
-			//break¹®
-			System.out.println("°è¼Ó(c),±×¸¸(x)");
-			ans=sc.nextLine();
-			
-			if(ans.equalsIgnoreCase("x"))
-			{
-				System.out.println("°ÔÀÓÀ» Á¾·áÇÕ´Ï´Ù");
-				break;
-			}else if(ans.equalsIgnoreCase("c"))
-			{
-				System.out.println("°è¼Ó....");
-			}else {
-				System.out.println("Àß¸øÀÔ·Â...°­Á¦Á¾·á");
-				break;
-			}
-			
-			
-		}
-		
-	}
+        Scanner sc = new Scanner(System.in);
+        //3ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        int[][] pz = new int[3][3];
+        int binggo; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        String ans;
+
+        //3ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ 1~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ï¿½ï¿½Å²ï¿½ï¿½
+
+        while (true) {
+            System.out.println("***ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½***");
+
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
+            for (int i = 0; i < pz.length; i++) {
+                for (int j = 0; j < pz[i].length; j++) {
+                    //ï¿½ï¿½ï¿½ï¿½
+                    pz[i][j] = (int) (Math.random() * 3) + 1;
+
+                }
+            }
+
+            //ï¿½ï¿½ï¿½
+            for (int i = 0; i < pz.length; i++) {
+                for (int j = 0; j < pz[i].length; j++) {
+                    //ï¿½ï¿½ï¿½
+                    System.out.printf("%4d", pz[i][j]);
+                }
+                System.out.println();
+            }
+
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
+            binggo = 0;
+
+            //ï¿½ï¿½ï¿½Î¼ï¿½ï¿½ï¿½
+            for (int i = 0; i < 3; i++) {
+                if (pz[i][0] == pz[i][1] && pz[i][1] == pz[i][2])
+                    binggo++;
+            }
+            //ï¿½ï¿½ï¿½Î¼ï¿½ ï¿½ï¿½
+            for (int i = 0; i < 3; i++) {
+                if (pz[0][i] == pz[1][i] && pz[1][i] == pz[2][i])
+                    binggo++;
+            }
+            // ï¿½ë°¢ï¿½ï¿½\ï¿½ï¿½
+            if (pz[0][0] == pz[1][1] && pz[1][1] == pz[2][2])
+                binggo++;
+
+            //ï¿½ë°¢ï¿½ï¿½/ï¿½ï¿½
+            if (pz[0][2] == pz[1][1] && pz[1][1] == pz[2][0])
+                binggo++;
+
+            System.out.println("ï¿½ï¿½ï¿½ï¿½: " + binggo + "ï¿½ï¿½");
+
+            //breakï¿½ï¿½
+            System.out.println("ï¿½ï¿½ï¿½(c),ï¿½×¸ï¿½(x)");
+            ans = sc.nextLine();
+
+            if (ans.equalsIgnoreCase("x")) {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½");
+                break;
+            } else if (ans.equalsIgnoreCase("c")) {
+                System.out.println("ï¿½ï¿½ï¿½....");
+            } else {
+                System.out.println("ï¿½ß¸ï¿½ï¿½Ô·ï¿½...ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+                break;
+            }
+
+
+        }
+
+    }
 
 }
 

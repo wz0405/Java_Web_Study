@@ -1,9 +1,9 @@
 class FloatToBinEx {
-	public static void main(String args[]) {
-		float f = -9.1234567f;
-		int i = Float.floatToIntBits(f);
+    public static void main(String args[]) {
+        float f = -9.1234567f;
+        int i = Float.floatToIntBits(f);
 
-		System.out.printf("%f%n", f);
-		System.out.printf("%X%n", i); // 16Áø¼ö·Î Ãâ·Â
-	} // mainÀÇ ³¡
+        System.out.printf("%f%n", f);
+        System.out.printf("%X%n", i); // 16ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

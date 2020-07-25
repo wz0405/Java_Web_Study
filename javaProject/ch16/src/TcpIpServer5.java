@@ -3,68 +3,72 @@ import java.io.*;
 import java.util.Scanner;
 
 public class TcpIpServer5 {
-	public static void main(String args[]) {
-		ServerSocket serverSocket = null;
-		Socket socket = null;
+    public static void main(String args[]) {
+        ServerSocket serverSocket = null;
+        Socket socket = null;
 
-		try {
-			// ¼­¹ö¼ÒÄÏÀ» »ý¼ºÇÏ¿© 7777¹ø Æ÷Æ®¿Í °áÇÕ(bind)½ÃÅ²´Ù.
-			serverSocket = new ServerSocket(7777);
-			System.out.println("¼­¹ö°¡ ÁØºñµÇ¾ú½À´Ï´Ù.");
+        try {
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ 7777ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(bind)ï¿½ï¿½Å²ï¿½ï¿½.
+            serverSocket = new ServerSocket(7777);
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Øºï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
-			socket = serverSocket.accept();
+            socket = serverSocket.accept();
 
-			Sender   sender   = new Sender(socket);
-			Receiver receiver = new Receiver(socket);
+            Sender sender = new Sender(socket);
+            Receiver receiver = new Receiver(socket);
 
-			sender.start();
-			receiver.start();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	} // main
+            sender.start();
+            receiver.start();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    } // main
 } // class
 
 class Sender extends Thread {
-	Socket socket;
-	DataOutputStream out;
-	String name;
+    Socket socket;
+    DataOutputStream out;
+    String name;
 
-	Sender(Socket socket) {
-		this.socket = socket;
-		try {
-			out = new DataOutputStream(socket.getOutputStream());
-			name = "["+socket.getInetAddress()+":"+socket.getPort()+"]";
-		} catch(Exception e) {}
-	}
+    Sender(Socket socket) {
+        this.socket = socket;
+        try {
+            out = new DataOutputStream(socket.getOutputStream());
+            name = "[" + socket.getInetAddress() + ":" + socket.getPort() + "]";
+        } catch (Exception e) {
+        }
+    }
 
-	public void run() {
-		Scanner scanner = new Scanner(System.in);
-		while(out!=null) {
-			try {
-				out.writeUTF(name+scanner.nextLine());		
-			} catch(IOException e) {}
-		}
-	} // run()
+    public void run() {
+        Scanner scanner = new Scanner(System.in);
+        while (out != null) {
+            try {
+                out.writeUTF(name + scanner.nextLine());
+            } catch (IOException e) {
+            }
+        }
+    } // run()
 }
 
 class Receiver extends Thread {
-	Socket socket;
-	DataInputStream in;
+    Socket socket;
+    DataInputStream in;
 
-	Receiver(Socket socket) {
-		this.socket = socket;
-		try {
-			in = new DataInputStream(socket.getInputStream());
-		} catch(IOException e) {}
+    Receiver(Socket socket) {
+        this.socket = socket;
+        try {
+            in = new DataInputStream(socket.getInputStream());
+        } catch (IOException e) {
+        }
 
-	}
+    }
 
-	public void run() {
-		while(in!=null) {
-			try {
-				System.out.println(in.readUTF());
-			} catch(IOException e) {}
-		}
-	} // run
+    public void run() {
+        while (in != null) {
+            try {
+                System.out.println(in.readUTF());
+            } catch (IOException e) {
+            }
+        }
+    } // run
 }

@@ -1,27 +1,26 @@
 import java.io.*;
 
 class FileEx1 {
-	public static void main(String[] args) throws IOException
-	{
-		File f = new File("c:\\jdk1.8\\work\\ch15\\FileEx1.java");
-		String fileName = f.getName();
-		int pos = fileName.lastIndexOf(".");
+    public static void main(String[] args) throws IOException {
+        File f = new File("c:\\jdk1.8\\work\\ch15\\FileEx1.java");
+        String fileName = f.getName();
+        int pos = fileName.lastIndexOf(".");
 
-		System.out.println("°æ·Î¸¦ Á¦¿ÜÇÑ ÆÄÀÏÀÌ¸§ - " + f.getName());
-		System.out.println("È®ÀåÀÚ¸¦ Á¦¿ÜÇÑ ÆÄÀÏÀÌ¸§ - " + fileName.substring(0,pos));
-		System.out.println("È®ÀåÀÚ - " + fileName.substring(pos+1));
+        System.out.println("ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ - " + f.getName());
+        System.out.println("È®ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ - " + fileName.substring(0, pos));
+        System.out.println("È®ï¿½ï¿½ï¿½ï¿½ - " + fileName.substring(pos + 1));
 
-		System.out.println("°æ·Î¸¦ Æ÷ÇÔÇÑ ÆÄÀÏÀÌ¸§ - "		+ f.getPath());
-		System.out.println("ÆÄÀÏÀÇ Àý´ë°æ·Î        - "	+ f.getAbsolutePath());
-		System.out.println("ÆÄÀÏÀÇ Á¤±Ô°æ·Î        - "	+ f.getCanonicalPath());
-		System.out.println("ÆÄÀÏÀÌ ¼ÓÇØ ÀÖ´Â µð·ºÅä¸® - "	+ f.getParent());
-		System.out.println();
-		System.out.println("File.pathSeparator - "		+ File.pathSeparator);
-		System.out.println("File.pathSeparatorChar - "  + File.pathSeparatorChar);
-		System.out.println("File.separator - "		+ File.separator);
-		System.out.println("File.separatorChar - "	+ File.separatorChar);
-		System.out.println();
-		System.out.println("user.dir=" + System.getProperty("user.dir"));
-		System.out.println("sun.boot.class.path=" + System.getProperty("sun.boot.class.path"));
-	}
+        System.out.println("ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ - " + f.getPath());
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½        - " + f.getAbsolutePath());
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô°ï¿½ï¿½        - " + f.getCanonicalPath());
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ä¸® - " + f.getParent());
+        System.out.println();
+        System.out.println("File.pathSeparator - " + File.pathSeparator);
+        System.out.println("File.pathSeparatorChar - " + File.pathSeparatorChar);
+        System.out.println("File.separator - " + File.separator);
+        System.out.println("File.separatorChar - " + File.separatorChar);
+        System.out.println();
+        System.out.println("user.dir=" + System.getProperty("user.dir"));
+        System.out.println("sun.boot.class.path=" + System.getProperty("sun.boot.class.path"));
+    }
 }

@@ -1,20 +1,21 @@
 package day0601;
 
 public class Sangpum_16 {
-	private String sangpum; //»óÇ°¸í
-	private int su; //¼ö·®
-	private int dan; //´Ü°¡
-	
-	public void setData(String sangpum,int su, int dan) {
-		this.sangpum=sangpum;
-		this.su=su;
-		this.dan=dan;
-	}
-	public void getData() {
-		System.out.println("[»óÇ°Á¤º¸]");
-		System.out.println("»óÇ°¸í: "+this.sangpum);
-		System.out.println("¼ö·®: "+this.su+"°³");
-		System.out.println("´Ü°¡: "+this.dan+"¿ø");
-		System.out.println("=========================");
-	}
+    private String sangpum; //ï¿½ï¿½Ç°ï¿½ï¿½
+    private int su; //ï¿½ï¿½ï¿½ï¿½
+    private int dan; //ï¿½Ü°ï¿½
+
+    public void setData(String sangpum, int su, int dan) {
+        this.sangpum = sangpum;
+        this.su = su;
+        this.dan = dan;
+    }
+
+    public void getData() {
+        System.out.println("[ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½]");
+        System.out.println("ï¿½ï¿½Ç°ï¿½ï¿½: " + this.sangpum);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½: " + this.su + "ï¿½ï¿½");
+        System.out.println("ï¿½Ü°ï¿½: " + this.dan + "ï¿½ï¿½");
+        System.out.println("=========================");
+    }
 }

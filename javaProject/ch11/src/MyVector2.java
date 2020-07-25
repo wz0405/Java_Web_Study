@@ -1,53 +1,53 @@
 import java.util.*;
 
 public class MyVector2 extends MyVector implements Iterator {
-	int cursor  = 0;
-	int lastRet = -1;
-	
-	public MyVector2(int capacity) {
-		super(capacity);		
-	}
-	
-	public MyVector2() {
-		this(10);		
-	}
+    int cursor = 0;
+    int lastRet = -1;
 
-	public String toString() {
-		String tmp = "";
-		Iterator it = iterator();
-
-		for(int i=0; it.hasNext();i++) {
-			if(i!=0) tmp+=", ";
-			tmp += it.next(); 	// tmp += next().toString();
-		}
-
-		return "["+ tmp +"]";		
-	}
-
-	public Iterator iterator() {
-		cursor=0;		// cursor¿Í lastRet¸¦ ÃÊ±âÈ­ ÇÑ´Ù.
-		lastRet = -1;
-		return this;		
-	}	
-	
-	public boolean hasNext() {
-	    return cursor != size();
-	}
-	
-    public Object next(){
-		Object next = get(cursor);
-		lastRet = cursor++;
-		return next;
+    public MyVector2(int capacity) {
+        super(capacity);
     }
-	
-	public void remove() {
-         // ´õÀÌ»ó »èÁ¦ÇÒ °ÍÀÌ ¾øÀ¸¸é IllegalStateException¸¦ ¹ß»ý½ÃÅ²´Ù.
-		if(lastRet==-1) {  
-			throw new IllegalStateException();
-		} else {
-			remove(lastRet);
-			cursor--;           // »èÁ¦ ÈÄ¿¡ cursorÀÇ À§Ä¡¸¦ °¨¼Ò½ÃÅ²´Ù.
-			lastRet = -1;		// lastRetÀÇ °ªÀ» ÃÊ±âÈ­ ÇÑ´Ù.	
-		}
-	}		
+
+    public MyVector2() {
+        this(10);
+    }
+
+    public String toString() {
+        String tmp = "";
+        Iterator it = iterator();
+
+        for (int i = 0; it.hasNext(); i++) {
+            if (i != 0) tmp += ", ";
+            tmp += it.next();    // tmp += next().toString();
+        }
+
+        return "[" + tmp + "]";
+    }
+
+    public Iterator iterator() {
+        cursor = 0;        // cursorï¿½ï¿½ lastRetï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½Ñ´ï¿½.
+        lastRet = -1;
+        return this;
+    }
+
+    public boolean hasNext() {
+        return cursor != size();
+    }
+
+    public Object next() {
+        Object next = get(cursor);
+        lastRet = cursor++;
+        return next;
+    }
+
+    public void remove() {
+        // ï¿½ï¿½ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ IllegalStateExceptionï¿½ï¿½ ï¿½ß»ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
+        if (lastRet == -1) {
+            throw new IllegalStateException();
+        } else {
+            remove(lastRet);
+            cursor--;           // ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ cursorï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½Ò½ï¿½Å²ï¿½ï¿½.
+            lastRet = -1;        // lastRetï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½Ñ´ï¿½.	
+        }
+    }
 } // class

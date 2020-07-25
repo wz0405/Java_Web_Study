@@ -3,23 +3,22 @@ package day0527;
 import java.util.Scanner;
 
 public class IfTest_04 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		/*
-		 * int n = 5;
-		 * 
-		 * 
-		 * if(n>=5) { System.out.println("nÀº 5º¸´Ù Å®´Ï´Ù."); } else {
-		 * System.out.println("nÀº 5º¸´Ù ÀÛ½À´Ï´Ù."); }
-		 */
-		//Q. È¦¼ö¸é È¦¼ö Â¦¼ö¸é Â¦¼ö
-		System.out.print("¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
-		int n = sc.nextInt();
-		if (n%2==1) {
-			System.out.println(n+"Àº È¦¼öÀÔ´Ï´Ù");
-		}
-		else {
-			System.out.println(n+"Àº Â¦¼öÀÔ´Ï´Ù");
-		}
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        /*
+         * int n = 5;
+         *
+         *
+         * if(n>=5) { System.out.println("nï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½ Å®ï¿½Ï´ï¿½."); } else {
+         * System.out.println("nï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½ ï¿½Û½ï¿½ï¿½Ï´ï¿½."); }
+         */
+        //Q. È¦ï¿½ï¿½ï¿½ï¿½ È¦ï¿½ï¿½ Â¦ï¿½ï¿½ï¿½ï¿½ Â¦ï¿½ï¿½
+        System.out.print("ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½: ");
+        int n = sc.nextInt();
+        if (n % 2 == 1) {
+            System.out.println(n + "ï¿½ï¿½ È¦ï¿½ï¿½ï¿½Ô´Ï´ï¿½");
+        } else {
+            System.out.println(n + "ï¿½ï¿½ Â¦ï¿½ï¿½ï¿½Ô´Ï´ï¿½");
+        }
+    }
 }

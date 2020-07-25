@@ -1,43 +1,47 @@
 class TryWithResourceEx {
-	public static void main(String args[]) {
+    public static void main(String args[]) {
 
-		try (CloseableResource cr = new CloseableResource()) {
-			cr.exceptionWork(false); // ¿¹¿Ü°¡ ¹ß»ýÇÏÁö ¾Ê´Â´Ù.
- 		} catch(WorkException e) {
-			e.printStackTrace();
-		} catch(CloseException e) {
-			e.printStackTrace();
-		}
-		System.out.println();
-	
-		try (CloseableResource cr = new CloseableResource()) {
-			cr.exceptionWork(true); // ¿¹¿Ü°¡ ¹ß»ýÇÑ´Ù.
- 		} catch(WorkException e) {
-			e.printStackTrace();
-		} catch(CloseException e) {
-			e.printStackTrace();
-		}	
-	} // mainÀÇ ³¡
+        try (CloseableResource cr = new CloseableResource()) {
+            cr.exceptionWork(false); // ï¿½ï¿½ï¿½Ü°ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½.
+        } catch (WorkException e) {
+            e.printStackTrace();
+        } catch (CloseException e) {
+            e.printStackTrace();
+        }
+        System.out.println();
+
+        try (CloseableResource cr = new CloseableResource()) {
+            cr.exceptionWork(true); // ï¿½ï¿½ï¿½Ü°ï¿½ ï¿½ß»ï¿½ï¿½Ñ´ï¿½.
+        } catch (WorkException e) {
+            e.printStackTrace();
+        } catch (CloseException e) {
+            e.printStackTrace();
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }
 
 class CloseableResource implements AutoCloseable {
-	public void exceptionWork(boolean exception) throws WorkException {
-		System.out.println("exceptionWork("+exception+")°¡ È£ÃâµÊ");
+    public void exceptionWork(boolean exception) throws WorkException {
+        System.out.println("exceptionWork(" + exception + ")ï¿½ï¿½ È£ï¿½ï¿½ï¿½");
 
-		if(exception)
-			throw new WorkException("WorkException¹ß»ý!!!");
-	}
+        if (exception)
+            throw new WorkException("WorkExceptionï¿½ß»ï¿½!!!");
+    }
 
-	public void close() throws CloseException {
-		System.out.println("close()°¡ È£ÃâµÊ");
-		throw new CloseException("CloseException¹ß»ý!!!");
-	}
+    public void close() throws CloseException {
+        System.out.println("close()ï¿½ï¿½ È£ï¿½ï¿½ï¿½");
+        throw new CloseException("CloseExceptionï¿½ß»ï¿½!!!");
+    }
 }
 
 class WorkException extends Exception {
-	WorkException(String msg) { super(msg); }
+    WorkException(String msg) {
+        super(msg);
+    }
 }
 
 class CloseException extends Exception {
-	CloseException(String msg) { super(msg); }
+    CloseException(String msg) {
+        super(msg);
+    }
 }

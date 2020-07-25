@@ -2,10 +2,10 @@ package day0526;
 
 public class EscapeSeq_02 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("»ç°ú\t¿À·»Áö\t¿À·»Áö");
-		System.out.println("C:\\");
-		System.out.println("\'A\',\'B\'");
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println("ï¿½ï¿½ï¿½\tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        System.out.println("C:\\");
+        System.out.println("\'A\',\'B\'");
+    }
 }

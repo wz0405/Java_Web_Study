@@ -1,18 +1,21 @@
 class Data1 {
-	int value;
+    int value;
 }
 
 class Data2 {
-	int value;
-	Data2(){}
-	Data2(int x) { 	// ¸Å°³º¯¼ö°¡ ÀÖ´Â »ý¼ºÀÚ.
-		value = x;
-	}
+    int value;
+
+    Data2() {
+    }
+
+    Data2(int x) {    // ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+        value = x;
+    }
 }
 
 class ConstructorTest {
-	public static void main(String[] args) {
-		Data1 d1 = new Data1();
-		Data2 d2 = new Data2();		// compile error¹ß»ý
-	}
+    public static void main(String[] args) {
+        Data1 d1 = new Data1();
+        Data2 d2 = new Data2();        // compile errorï¿½ß»ï¿½
+    }
 }

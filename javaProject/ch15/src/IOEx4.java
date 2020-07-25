@@ -1,30 +1,31 @@
 import java.io.*;
-import java.util.Arrays;	
+import java.util.Arrays;
 
 class IOEx4 {
-	public static void main(String[] args) {
-		byte[] inSrc = {0,1,2,3,4,5,6,7,8,9};
-		byte[] outSrc = null;
+    public static void main(String[] args) {
+        byte[] inSrc = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        byte[] outSrc = null;
 
-		byte[] temp = new byte[4];
+        byte[] temp = new byte[4];
 
-		ByteArrayInputStream  input  = null;
-		ByteArrayOutputStream output = null;
+        ByteArrayInputStream input = null;
+        ByteArrayOutputStream output = null;
 
-		input  = new ByteArrayInputStream(inSrc);
-		output = new ByteArrayOutputStream();
+        input = new ByteArrayInputStream(inSrc);
+        output = new ByteArrayOutputStream();
 
-		try {
-			while(input.available() > 0) {
-				int len = input.read(temp); // ÀÐ¾î ¿Â µ¥ÀÌÅÍÀÇ °³¼ö¸¦ ¹ÝÈ¯ÇÑ´Ù.
-				output.write(temp, 0, len); // ÀÐ¾î ¿Â ¸¸Å­¸¸ writeÇÑ´Ù.
-			}
-		} catch(IOException e) {}
+        try {
+            while (input.available() > 0) {
+                int len = input.read(temp); // ï¿½Ð¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+                output.write(temp, 0, len); // ï¿½Ð¾ï¿½ ï¿½ï¿½ ï¿½ï¿½Å­ï¿½ï¿½ writeï¿½Ñ´ï¿½.
+            }
+        } catch (IOException e) {
+        }
 
-		outSrc = output.toByteArray();
+        outSrc = output.toByteArray();
 
-		System.out.println("Input Source  :" + Arrays.toString(inSrc));
-		System.out.println("temp          :" + Arrays.toString(temp));
-		System.out.println("Output Source :" + Arrays.toString(outSrc));
-	}
+        System.out.println("Input Source  :" + Arrays.toString(inSrc));
+        System.out.println("temp          :" + Arrays.toString(temp));
+        System.out.println("Output Source :" + Arrays.toString(outSrc));
+    }
 }

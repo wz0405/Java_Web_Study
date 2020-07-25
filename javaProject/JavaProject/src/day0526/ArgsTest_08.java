@@ -2,15 +2,15 @@ package day0526;
 
 public class ArgsTest_08 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("***¹è¿­ÀÇ ¸Å°³ º¯¼öÅ×½ºÆ®***");
-		System.out.println("Ã¹¹øÂ° °ª:"+args[0]); //¹è¿­ÀÇ index´Â 0¹øºÎÅÍ ½ÃÀÛ
-		System.out.println("µÎ¹øÂ° °ª:"+args[1]);	
-		//¼ýÀÚ·Î Çüº¯È¯ÇØ¼­ °è»êÇÏ±â
-		int a=Integer.parseInt(args[0]);
-		int b=Integer.parseInt(args[1]);
-		System.out.println(a+b);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        System.out.println("***ï¿½è¿­ï¿½ï¿½ ï¿½Å°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½×½ï¿½Æ®***");
+        System.out.println("Ã¹ï¿½ï¿½Â° ï¿½ï¿½:" + args[0]); //ï¿½è¿­ï¿½ï¿½ indexï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        System.out.println("ï¿½Î¹ï¿½Â° ï¿½ï¿½:" + args[1]);
+        //ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½È¯ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½
+        int a = Integer.parseInt(args[0]);
+        int b = Integer.parseInt(args[1]);
+        System.out.println(a + b);
+    }
 
 }

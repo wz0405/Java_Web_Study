@@ -2,26 +2,26 @@ package day0529;
 
 public class ArrayMaxMin_05 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//¹è¿­¿¡¼­ ÃÖ´ë°ª ÃÖ¼Ò°ª ±¸ÇÏ±â
-		int data[]= {5,123,13,1,2,-1,6,42};
-		//Ã¹¹øÀç µ¥ÀÌÅ¸¸¦ ¹«Á¶°Ç ÃÖ´ë°ªÀ¸·Î ÀúÀå
-		int max=data[0];
-		//µÎ¹øÂ° µ¥ÀÌÅ¸ ³¡±îÁö max¿Í ºñ±³
-		for(int i=1;i<data.length;i++) {
-			if (max<data[i]) {
-				max=data[i];
-			}
-		}
-		System.out.println("ÃÖ´ë°ªÀº"+max);
-		int min=data[0];
-		for(int i=1;i<data.length;i++) {
-			if (min>data[i]) {
-				min=data[i];
-			}
-		}
-		System.out.println("ÃÖ¼Ú°ªÀº"+min);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ë°ª ï¿½Ö¼Ò°ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
+        int data[] = {5, 123, 13, 1, 2, -1, 6, 42};
+        //Ã¹ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ë°ªï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        int max = data[0];
+        //ï¿½Î¹ï¿½Â° ï¿½ï¿½ï¿½ï¿½Å¸ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ maxï¿½ï¿½ ï¿½ï¿½
+        for (int i = 1; i < data.length; i++) {
+            if (max < data[i]) {
+                max = data[i];
+            }
+        }
+        System.out.println("ï¿½Ö´ë°ªï¿½ï¿½" + max);
+        int min = data[0];
+        for (int i = 1; i < data.length; i++) {
+            if (min > data[i]) {
+                min = data[i];
+            }
+        }
+        System.out.println("ï¿½Ö¼Ú°ï¿½ï¿½ï¿½" + min);
+    }
 
 }

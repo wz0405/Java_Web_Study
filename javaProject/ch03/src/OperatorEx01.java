@@ -1,11 +1,11 @@
 class OperatorEx01 {
-	public static void main(String args[]) {
-		int i=5;
-		i++;		      // i=i+1;°ú °°Àº ÀÇ¹ÌÀÌ´Ù. ++i;·Î ¹Ù²ã ½áµµ °á°ú´Â °°´Ù. 
-		System.out.println(i);
+    public static void main(String args[]) {
+        int i = 5;
+        i++;              // i=i+1;ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¹ï¿½ï¿½Ì´ï¿½. ++i;ï¿½ï¿½ ï¿½Ù²ï¿½ ï¿½áµµ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. 
+        System.out.println(i);
 
-		i=5;		      //	°á°ú¸¦ ºñ±³ÇÏ±â À§ÇØ i°ªÀ» ´Ù½Ã 5·Î º¯°æ.
-		++i;
-		System.out.println(i);
-	}
+        i = 5;              //	ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ iï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ 5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        ++i;
+        System.out.println(i);
+    }
 }

@@ -1,21 +1,21 @@
 class FlowEx01 {
-	public static void main(String[] args) { 
-		int x= 0;
+    public static void main(String[] args) {
+        int x = 0;
 
-		System.out.printf("x=%d ÀÏ¶§, ÂüÀÎ °ÍÀº%n", x);
+        System.out.printf("x=%d ï¿½Ï¶ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½%n", x);
 
-		if(x==0) System.out.println("x==0");
-		if(x!=0) System.out.println("x!=0");
-		if(!(x==0)) System.out.println("!(x==0)");
-		if(!(x!=0)) System.out.println("!(x!=0)");
-		System.out.println();
+        if (x == 0) System.out.println("x==0");
+        if (x != 0) System.out.println("x!=0");
+        if (!(x == 0)) System.out.println("!(x==0)");
+        if (!(x != 0)) System.out.println("!(x!=0)");
+        System.out.println();
 
-		x = 1;
-		System.out.printf("x=%d ÀÏ¶§, ÂüÀÎ °ÍÀº%n", x);
+        x = 1;
+        System.out.printf("x=%d ï¿½Ï¶ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½%n", x);
 
-		if(x==0) System.out.println("x==0");
-		if(x!=0) System.out.println("x!=0");
-		if(!(x==0)) System.out.println("!(x==0)");
-		if(!(x!=0)) System.out.println("!(x!=0)");
-	}
+        if (x == 0) System.out.println("x==0");
+        if (x != 0) System.out.println("x!=0");
+        if (!(x == 0)) System.out.println("!(x==0)");
+        if (!(x != 0)) System.out.println("!(x!=0)");
+    }
 }

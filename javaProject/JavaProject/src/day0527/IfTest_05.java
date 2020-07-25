@@ -3,28 +3,24 @@ package day0527;
 import java.util.Scanner;
 
 public class IfTest_05 {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int score;
-		String grade;
-		
-		System.out.print("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
-		score = sc.nextInt();
-		if(score>=90) {
-			grade="A";
-		}
-		else if(score>=80) {
-			grade="B";
-		}
-		else if(score>=70) {
-			grade="C";
-		}
-		else if(score>=60) {
-			grade="D";
-		}
-		else {
-			grade="F";
-		}
-		System.out.println("ÇÐÁ¡Àº "+grade+"ÀÔ´Ï´Ù");
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int score;
+        String grade;
+
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ :");
+        score = sc.nextInt();
+        if (score >= 90) {
+            grade = "A";
+        } else if (score >= 80) {
+            grade = "B";
+        } else if (score >= 70) {
+            grade = "C";
+        } else if (score >= 60) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + grade + "ï¿½Ô´Ï´ï¿½");
+    }
 }

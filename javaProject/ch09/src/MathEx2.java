@@ -2,20 +2,20 @@ import static java.lang.Math.*;
 import static java.lang.System.*;
 
 class MathEx2 {
-	public static void main(String args[]) {
-		int i = Integer.MIN_VALUE;
+    public static void main(String args[]) {
+        int i = Integer.MIN_VALUE;
 
-		out.println("i ="+i);
-		out.println("-i="+(-i));
+        out.println("i =" + i);
+        out.println("-i=" + (-i));
 
-		try {
-			out.printf("negateExact(%d)= %d%n",  10, negateExact(10));
-			out.printf("negateExact(%d)= %d%n", -10, negateExact(-10));
+        try {
+            out.printf("negateExact(%d)= %d%n", 10, negateExact(10));
+            out.printf("negateExact(%d)= %d%n", -10, negateExact(-10));
 
-			out.printf("negateExact(%d)= %d%n", i, negateExact(i)); // ¿¹¿Ü¹ß»ý
-		} catch(ArithmeticException e) {
-			// i¸¦ longÅ¸ÀÔÀ¸·Î Çüº¯È¯ ´ÙÀ½¿¡ negateExact(long a)¸¦ È£Ãâ
-		     out.printf("negateExact(%d)= %d%n",(long)i,negateExact((long)i));
-		}
-	} // mainÀÇ ³¡
+            out.printf("negateExact(%d)= %d%n", i, negateExact(i)); // ï¿½ï¿½ï¿½Ü¹ß»ï¿½
+        } catch (ArithmeticException e) {
+            // iï¿½ï¿½ longÅ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ negateExact(long a)ï¿½ï¿½ È£ï¿½ï¿½
+            out.printf("negateExact(%d)= %d%n", (long) i, negateExact((long) i));
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

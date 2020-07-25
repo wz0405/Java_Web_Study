@@ -1,14 +1,14 @@
 import java.util.*;
 
 class HashSetEx1 {
-	public static void main(String[] args) {
-		Object[] objArr = {"1",new Integer(1),"2","2","3","3","4","4","4"};
-		Set set = new HashSet();
+    public static void main(String[] args) {
+        Object[] objArr = {"1", new Integer(1), "2", "2", "3", "3", "4", "4", "4"};
+        Set set = new HashSet();
 
-		for(int i=0; i < objArr.length; i++) {
-			set.add(objArr[i]);	// HashSet¿¡ objArrÀÇ ¿ä¼ÒµéÀ» ÀúÀåÇÑ´Ù.
-		}
-             // HashSet¿¡ ÀúÀåµÈ ¿ä¼ÒµéÀ» Ãâ·ÂÇÑ´Ù.
-		System.out.println(set);	
-	}
+        for (int i = 0; i < objArr.length; i++) {
+            set.add(objArr[i]);    // HashSetï¿½ï¿½ objArrï¿½ï¿½ ï¿½ï¿½Òµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        }
+        // HashSetï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        System.out.println(set);
+    }
 }

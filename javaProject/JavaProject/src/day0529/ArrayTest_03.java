@@ -1,16 +1,16 @@
 package day0529;
 
 public class ArrayTest_03 {
-	public static void main(String[] args) {
-		int [] arr= {5, 7, 9, 11, 12, 2, 3}; //¹è¿­¼±¾ğÇÏ¸é¼­ ÃÊ±â°ª ÁÖ±â
-		System.out.println("°¹¼ö:"+arr.length);
-		
-		for(int i=0;i<arr.length;i++) {
-		
-			System.out.println(arr[i]);
-		}
-		for (int b:arr) {
-			System.out.println(b);
-		}
-	}
+    public static void main(String[] args) {
+        int[] arr = {5, 7, 9, 11, 12, 2, 3}; //ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸é¼­ ï¿½Ê±â°ª ï¿½Ö±ï¿½
+        System.out.println("ï¿½ï¿½ï¿½ï¿½:" + arr.length);
+
+        for (int i = 0; i < arr.length; i++) {
+
+            System.out.println(arr[i]);
+        }
+        for (int b : arr) {
+            System.out.println(b);
+        }
+    }
 }

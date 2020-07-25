@@ -1,11 +1,11 @@
 class ExceptionEx02 {
-	public static void main(String args[]) {
-		int number = 100;
-		int result = 0;
+    public static void main(String args[]) {
+        int number = 100;
+        int result = 0;
 
-		for(int i=0; i < 10; i++) {
-			result = number / (int)(Math.random() * 10); // 7¹øÂ° ¶óÀÎ
-			System.out.println(result);
-		}
-	} // mainÀÇ ³¡
+        for (int i = 0; i < 10; i++) {
+            result = number / (int) (Math.random() * 10); // 7ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½
+            System.out.println(result);
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

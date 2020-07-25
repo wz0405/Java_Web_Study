@@ -1,16 +1,15 @@
 class ReferenceParamEx2 {
-	public static void main(String[] args) 
-  {
-		int[] x = {10};  // Å©±â°¡ 1ÀÎ ¹è¿­. x[0] = 10;
-		System.out.println("main() : x = " + x[0]);
+    public static void main(String[] args) {
+        int[] x = {10};  // Å©ï¿½â°¡ 1ï¿½ï¿½ ï¿½è¿­. x[0] = 10;
+        System.out.println("main() : x = " + x[0]);
 
-		change(x);
-		System.out.println("After change(x)");
-		System.out.println("main() : x = " + x[0]);
-	}
+        change(x);
+        System.out.println("After change(x)");
+        System.out.println("main() : x = " + x[0]);
+    }
 
-	static void change(int[] x) { // ÂüÁ¶Çü ¸Å°³º¯¼ö
-		x[0] = 1000;
-		System.out.println("change() : x = " + x[0]);
-	}
+    static void change(int[] x) { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½
+        x[0] = 1000;
+        System.out.println("change() : x = " + x[0]);
+    }
 }

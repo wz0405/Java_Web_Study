@@ -1,10 +1,10 @@
 class StringEx3 {
-	public static void main(String[] args) {
-		// ±æÀÌ°¡ 0ÀÎ char¹è¿­À» »ý¼ºÇÑ´Ù.
-		char[] cArr = new char[0];   // char[] cArr = {};¿Í °°´Ù.
-		String s = new String(cArr); // String s = new String("");¿Í °°´Ù.
+    public static void main(String[] args) {
+        // ï¿½ï¿½ï¿½Ì°ï¿½ 0ï¿½ï¿½ charï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        char[] cArr = new char[0];   // char[] cArr = {};ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        String s = new String(cArr); // String s = new String("");ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
-		System.out.println("cArr.length="+cArr.length);
-		System.out.println("@@@"+s+"@@@");
-	}
+        System.out.println("cArr.length=" + cArr.length);
+        System.out.println("@@@" + s + "@@@");
+    }
 }

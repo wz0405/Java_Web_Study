@@ -2,47 +2,47 @@ import java.io.*;
 import java.util.*;
 
 class PropertiesEx2 {
-	public static void main(String[] args) {
-		// commandline¿¡¼­ inputfileÀ» ÁöÁ¤ÇØÁÖÁö ¾ÊÀ¸¸é ÇÁ·Î±×·¥À» Á¾·áÇÑ´Ù.
-		if(args.length != 1) {
-			System.out.println("USAGE: java PropertiesEx2 INPUTFILENAME");
-			System.exit(0);
-		}
+    public static void main(String[] args) {
+        // commandlineï¿½ï¿½ï¿½ï¿½ inputfileï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        if (args.length != 1) {
+            System.out.println("USAGE: java PropertiesEx2 INPUTFILENAME");
+            System.exit(0);
+        }
 
-		Properties prop = new Properties();
+        Properties prop = new Properties();
 
-		String inputFile = args[0];
+        String inputFile = args[0];
 
-		try {
-			prop.load(new FileInputStream(inputFile));
-		} catch(IOException e) {
-			System.out.println("ÁöÁ¤µÈ ÆÄÀÏÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.");
-			System.exit(0);
-		}
+        try {
+            prop.load(new FileInputStream(inputFile));
+        } catch (IOException e) {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            System.exit(0);
+        }
 
-		String   name = prop.getProperty("name");
-		String[] data = prop.getProperty("data").split(",");
-		int max = 0;
-		int min = 0;
-		int sum = 0;
+        String name = prop.getProperty("name");
+        String[] data = prop.getProperty("data").split(",");
+        int max = 0;
+        int min = 0;
+        int sum = 0;
 
-		for(int i=0; i < data.length; i++) {
-			int intValue = Integer.parseInt(data[i]);
-			if (i==0) max = min = intValue;
+        for (int i = 0; i < data.length; i++) {
+            int intValue = Integer.parseInt(data[i]);
+            if (i == 0) max = min = intValue;
 
-			if (max < intValue) {
-				max = intValue;
-			} else if (min > intValue) {
-				min = intValue;
-			}
+            if (max < intValue) {
+                max = intValue;
+            } else if (min > intValue) {
+                min = intValue;
+            }
 
-			sum += intValue;
-		}
+            sum += intValue;
+        }
 
-		System.out.println("ÀÌ¸§ :"  + name);		
-		System.out.println("ÃÖ´ë°ª :" + max);
-		System.out.println("ÃÖ¼Ò°ª :" + min);
-		System.out.println("ÇÕ°è :"  + sum);
-		System.out.println("Æò±Õ :"  + (sum*100.0/data.length)/100);
-	}
+        System.out.println("ï¿½Ì¸ï¿½ :" + name);
+        System.out.println("ï¿½Ö´ë°ª :" + max);
+        System.out.println("ï¿½Ö¼Ò°ï¿½ :" + min);
+        System.out.println("ï¿½Õ°ï¿½ :" + sum);
+        System.out.println("ï¿½ï¿½ï¿½ :" + (sum * 100.0 / data.length) / 100);
+    }
 }

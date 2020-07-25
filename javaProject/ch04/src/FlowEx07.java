@@ -1,30 +1,32 @@
 import java.util.*;
 
 class FlowEx07 {
-	public static void main(String[] args) { 
-		int user, com;
+    public static void main(String[] args) {
+        int user, com;
 
-		System.out.print("°¡À§(1),¹ÙÀ§(2), º¸(3) Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
+        System.out.print("ï¿½ï¿½ï¿½ï¿½(1),ï¿½ï¿½ï¿½ï¿½(2), ï¿½ï¿½(3) ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.>");
 
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		user = Integer.parseInt(tmp);    // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)¸¦ ¼ýÀÚ·Î º¯È¯
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine(); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        user = Integer.parseInt(tmp);    // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		com = (int)(Math.random() * 3) + 1;  // 1,2,3Áß ÇÏ³ª°¡ com¿¡ ÀúÀåµÊ
+        com = (int) (Math.random() * 3) + 1;  // 1,2,3ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ comï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 
-		System.out.println("´ç½ÅÀº "+ user +"ÀÔ´Ï´Ù.");
-		System.out.println("ÄÄÀº  "+ com +"ÀÔ´Ï´Ù.");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ " + user + "ï¿½Ô´Ï´ï¿½.");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½  " + com + "ï¿½Ô´Ï´ï¿½.");
 
-		switch(user-com) {
-			case 2: case -1:
-				System.out.println("´ç½ÅÀÌ Á³½À´Ï´Ù.");
-				break;
-			case 1: case -2:
-				System.out.println("´ç½ÅÀÌ ÀÌ°å½À´Ï´Ù.");
-				break;
-			case 0:
-				System.out.println("ºñ°å½À´Ï´Ù.");
-	//			break;		// ¸¶Áö¸· ¹®ÀåÀÌ¹Ç·Î break¸¦ »ç¿ëÇÒ ÇÊ¿ä°¡ ¾ø´Ù. 
-		}
-	} // mainÀÇ ³¡
+        switch (user - com) {
+            case 2:
+            case -1:
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+                break;
+            case 1:
+            case -2:
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì°ï¿½ï¿½ï¿½Ï´ï¿½.");
+                break;
+            case 0:
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+                //			break;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ breakï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ä°¡ ï¿½ï¿½ï¿½ï¿½. 
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

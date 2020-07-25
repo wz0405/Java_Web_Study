@@ -2,57 +2,57 @@ import java.io.*;
 import java.util.ArrayList;
 
 class FileEx3 {
-	static int totalFiles = 0;
-	static int totalDirs = 0;
+    static int totalFiles = 0;
+    static int totalDirs = 0;
 
-	public static void main(String[] args) {
-		if(args.length != 1) {
-			System.out.println("USAGE : java FileEx3 DIRECTORY");
-			System.exit(0);
-		}
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("USAGE : java FileEx3 DIRECTORY");
+            System.exit(0);
+        }
 
-		File dir = new File(args[0]);
+        File dir = new File(args[0]);
 
-		if(!dir.exists() || !dir.isDirectory()) {
-			System.out.println("À¯È¿ÇÏÁö ¾ÊÀº µð·ºÅä¸®ÀÔ´Ï´Ù.");
-			System.exit(0);
-		} 
+        if (!dir.exists() || !dir.isDirectory()) {
+            System.out.println("ï¿½ï¿½È¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä¸®ï¿½Ô´Ï´ï¿½.");
+            System.exit(0);
+        }
 
-		printFileList(dir);
+        printFileList(dir);
 
-		System.out.println();
-		System.out.println("ÃÑ " + totalFiles + "°³ÀÇ ÆÄÀÏ");
-		System.out.println("ÃÑ " + totalDirs + "°³ÀÇ µð·ºÅä¸®");
-	} // main
+        System.out.println();
+        System.out.println("ï¿½ï¿½ " + totalFiles + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+        System.out.println("ï¿½ï¿½ " + totalDirs + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä¸®");
+    } // main
 
-	public static void printFileList(File dir) {
-		System.out.println(dir.getAbsolutePath()+" µð·ºÅä¸®");
-		File[] files = dir.listFiles();
+    public static void printFileList(File dir) {
+        System.out.println(dir.getAbsolutePath() + " ï¿½ï¿½ï¿½ä¸®");
+        File[] files = dir.listFiles();
 
-		ArrayList subDir = new ArrayList();
+        ArrayList subDir = new ArrayList();
 
-		for(int i=0; i < files.length; i++) {
-			String filename = files[i].getName();
+        for (int i = 0; i < files.length; i++) {
+            String filename = files[i].getName();
 
-			if(files[i].isDirectory()) {
-				filename = "[" + filename + "]";
-				subDir.add(i+"");
-			}
-			System.out.println(filename);
-		}
+            if (files[i].isDirectory()) {
+                filename = "[" + filename + "]";
+                subDir.add(i + "");
+            }
+            System.out.println(filename);
+        }
 
-		int dirNum  = subDir.size();
-		int fileNum = files.length - dirNum;
+        int dirNum = subDir.size();
+        int fileNum = files.length - dirNum;
 
-		totalFiles += fileNum;
-		totalDirs  += dirNum;
+        totalFiles += fileNum;
+        totalDirs += dirNum;
 
-		System.out.println(fileNum + "°³ÀÇ ÆÄÀÏ, " + dirNum + "°³ÀÇ µð·ºÅä¸®");
-		System.out.println();
+        System.out.println(fileNum + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, " + dirNum + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ä¸®");
+        System.out.println();
 
-		for(int i=0; i < subDir.size(); i++) {
-			int index = Integer.parseInt((String)subDir.get(i));
-			printFileList(files[index]);
-		}
-	} // printFileList
+        for (int i = 0; i < subDir.size(); i++) {
+            int index = Integer.parseInt((String) subDir.get(i));
+            printFileList(files[index]);
+        }
+    } // printFileList
 }

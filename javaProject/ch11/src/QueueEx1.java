@@ -1,56 +1,56 @@
 import java.util.*;
 
 class QueueEx1 {
-	static Queue q = new LinkedList();
-	static final int MAX_SIZE = 5;	// Queue¿¡ ÃÖ´ë 5°³±îÁö¸¸ ÀúÀåµÇµµ·Ï ÇÑ´Ù.
+    static Queue q = new LinkedList();
+    static final int MAX_SIZE = 5;    // Queueï¿½ï¿½ ï¿½Ö´ï¿½ 5ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
 
-	public static void main(String[] args) {
-		System.out.println("help¸¦ ÀÔ·ÂÇÏ¸é µµ¿ò¸»À» º¼ ¼ö ÀÖ½À´Ï´Ù.");
+    public static void main(String[] args) {
+        System.out.println("helpï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 
-		while(true) {
-			System.out.print(">>");
-			try {
-                             // È­¸éÀ¸·ÎºÎÅÍ ¶óÀÎ´ÜÀ§·Î ÀÔ·Â¹Þ´Â´Ù.
-				Scanner s = new Scanner(System.in);  
-				String input = s.nextLine().trim();
+        while (true) {
+            System.out.print(">>");
+            try {
+                // È­ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹Þ´Â´ï¿½.
+                Scanner s = new Scanner(System.in);
+                String input = s.nextLine().trim();
 
-				if("".equals(input)) continue;
+                if ("".equals(input)) continue;
 
-				if(input.equalsIgnoreCase("q")) {
-					System.exit(0);
-				} else if(input.equalsIgnoreCase("help")) {
-					System.out.println(" help - µµ¿ò¸»À» º¸¿©ÁÝ´Ï´Ù.");
-					System.out.println(" q ¶Ç´Â Q - ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
-					System.out.println(" history - ÃÖ±Ù¿¡ ÀÔ·ÂÇÑ ¸í·É¾î¸¦ " + MAX_SIZE +"°³ º¸¿©ÁÝ´Ï´Ù.");
-				} else if(input.equalsIgnoreCase("history")) {
-					int i=0;
-					// ÀÔ·Â¹ÞÀº ¸í·É¾î¸¦ ÀúÀåÇÏ°í,
-					save(input);    
+                if (input.equalsIgnoreCase("q")) {
+                    System.exit(0);
+                } else if (input.equalsIgnoreCase("help")) {
+                    System.out.println(" help - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ý´Ï´ï¿½.");
+                    System.out.println(" q ï¿½Ç´ï¿½ Q - ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+                    System.out.println(" history - ï¿½Ö±Ù¿ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½É¾î¸¦ " + MAX_SIZE + "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ý´Ï´ï¿½.");
+                } else if (input.equalsIgnoreCase("history")) {
+                    int i = 0;
+                    // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½É¾î¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½,
+                    save(input);
 
-					// LinkedListÀÇ ³»¿ëÀ» º¸¿©ÁØ´Ù.
-					LinkedList tmp = (LinkedList)q;
-					ListIterator it = tmp.listIterator();
+                    // LinkedListï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½.
+                    LinkedList tmp = (LinkedList) q;
+                    ListIterator it = tmp.listIterator();
 
-					while(it.hasNext()) {
-						System.out.println(++i+"."+it.next());
-					}
-				} else {
-					save(input);    
-					System.out.println(input);
-				} // if(input.equalsIgnoreCase("q")) {
-			} catch(Exception e) {
-				System.out.println("ÀÔ·Â¿À·ùÀÔ´Ï´Ù.");
-			}
-		} // while(true)
-	} //  main()
+                    while (it.hasNext()) {
+                        System.out.println(++i + "." + it.next());
+                    }
+                } else {
+                    save(input);
+                    System.out.println(input);
+                } // if(input.equalsIgnoreCase("q")) {
+            } catch (Exception e) {
+                System.out.println("ï¿½Ô·Â¿ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+            }
+        } // while(true)
+    } //  main()
 
-	public static void save(String input) {
-		// queue¿¡ ÀúÀåÇÑ´Ù.
-		if(!"".equals(input))
-			q.offer(input);
+    public static void save(String input) {
+        // queueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        if (!"".equals(input))
+            q.offer(input);
 
-		// queueÀÇ ÃÖ´ëÅ©±â¸¦ ³ÑÀ¸¸é Á¦ÀÏ Ã³À½ ÀÔ·ÂµÈ °ÍÀ» »èÁ¦ÇÑ´Ù.
-		if(q.size() > MAX_SIZE)  // size()´Â CollectionÀÎÅÍÆäÀÌ½º¿¡ Á¤ÀÇ
-			q.remove();
-	}
+        // queueï¿½ï¿½ ï¿½Ö´ï¿½Å©ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½Ô·Âµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        if (q.size() > MAX_SIZE)  // size()ï¿½ï¿½ Collectionï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            q.remove();
+    }
 } // end of class

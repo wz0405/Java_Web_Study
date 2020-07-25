@@ -1,15 +1,15 @@
 class VarEx1 {
-	public static void main(String[] args) {
-		int year = 0;
-		int age  = 14;
-		 
-		System.out.println(year);
-		System.out.println(age);
+    public static void main(String[] args) {
+        int year = 0;
+        int age = 14;
 
-		year = age + 2000;  // º¯¼ö ageÀÇ °ª¿¡ 2000À» ´õÇØ¼­ º¯¼ö year¿¡ ÀúÀå
-		age  = age + 1;     // º¯¼ö age¿¡ ÀúÀåµÈ °ªÀ» 1Áõ°¡½ÃÅ²´Ù.
+        System.out.println(year);
+        System.out.println(age);
 
-		System.out.println(year);
-		System.out.println(age);
-	}
+        year = age + 2000;  // ï¿½ï¿½ï¿½ï¿½ ageï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 2000ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ yearï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        age = age + 1;     // ï¿½ï¿½ï¿½ï¿½ ageï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½.
+
+        System.out.println(year);
+        System.out.println(age);
+    }
 }

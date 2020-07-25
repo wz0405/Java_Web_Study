@@ -1,56 +1,56 @@
 import java.util.*;
 
 class MultiArrEx2 {
-	public static void main(String[] args) {
-		final int SIZE = 5;
-		int x = 0 , y = 0;
-		int num = 0;
+    public static void main(String[] args) {
+        final int SIZE = 5;
+        int x = 0, y = 0;
+        int num = 0;
 
-		int[][] bingo = new int[SIZE][SIZE];
-		Scanner scanner = new Scanner(System.in);
+        int[][] bingo = new int[SIZE][SIZE];
+        Scanner scanner = new Scanner(System.in);
 
-		// ¹è¿­ÀÇ ¸ðµç ¿ä¼Ò¸¦ 1ºÎÅÍ SIZE*SIZE±îÁöÀÇ ¼ýÀÚ·Î ÃÊ±âÈ­
-		for(int i=0;i<SIZE;i++) {
-			for(int j=0;j<SIZE;j++) {
-				bingo[i][j] = i*SIZE + j + 1;
-			}
-		}
+        // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ 1ï¿½ï¿½ï¿½ï¿½ SIZE*SIZEï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½Ê±ï¿½È­
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                bingo[i][j] = i * SIZE + j + 1;
+            }
+        }
 
-		// ¹è¿­¿¡ ÀúÀåµÈ °ªÀ» µÚ¼¯´Â´Ù.(shuffle)
-		for(int i=0;i<SIZE;i++) {
-			for(int j=0;j<SIZE;j++) {
-				x = (int)(Math.random() * SIZE);
-				y = (int)(Math.random() * SIZE);
+        // ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ú¼ï¿½ï¿½Â´ï¿½.(shuffle)
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                x = (int) (Math.random() * SIZE);
+                y = (int) (Math.random() * SIZE);
 
-				// bingo[i][j]¿Í ÀÓÀÇ·Î ¼±ÅÃµÈ °ª(bingo[x][y])À» ¹Ù²Û´Ù.
-				int tmp =  bingo[i][j];
-				bingo[i][j] = bingo[x][y];
-				bingo[x][y] = tmp;
-			}
-		}
+                // bingo[i][j]ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½Ãµï¿½ ï¿½ï¿½(bingo[x][y])ï¿½ï¿½ ï¿½Ù²Û´ï¿½.
+                int tmp = bingo[i][j];
+                bingo[i][j] = bingo[x][y];
+                bingo[x][y] = tmp;
+            }
+        }
 
-		do {
-			for(int i=0;i<SIZE;i++) {
-				for(int j=0;j<SIZE;j++)
-					System.out.printf("%2d ", bingo[i][j]);	
-				System.out.println();
-			}
-			System.out.println();
-		
-			System.out.printf("1~%dÀÇ ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.(Á¾·á:0)>", SIZE*SIZE);
-			String tmp = scanner.nextLine(); // È­¸é¿¡¼­ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-			num = Integer.parseInt(tmp);     // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)¸¦ ¼ýÀÚ·Î º¯È¯
+        do {
+            for (int i = 0; i < SIZE; i++) {
+                for (int j = 0; j < SIZE; j++)
+                    System.out.printf("%2d ", bingo[i][j]);
+                System.out.println();
+            }
+            System.out.println();
 
-			// ÀÔ·Â¹ÞÀº ¼ýÀÚ¿Í °°Àº ¼ýÀÚ°¡ ÀúÀåµÈ ¿ä¼Ò¸¦ Ã£¾Æ¼­ 0À» ÀúÀå
-			outer:
-			for(int i=0;i<SIZE;i++) {
-				for(int j=0;j<SIZE;j++) {
-					if(bingo[i][j]==num) {
-						bingo[i][j] = 0;
-						break outer; // 2Áß ¹Ýº¹¹®À» ¹þ¾î³­´Ù.
-					}
-				}
-			}
-		} while(num!=0); 
-	} // mainÀÇ ³¡
+            System.out.printf("1~%dï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.(ï¿½ï¿½ï¿½ï¿½:0)>", SIZE * SIZE);
+            String tmp = scanner.nextLine(); // È­ï¿½é¿¡ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            num = Integer.parseInt(tmp);     // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
+
+            // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ Ã£ï¿½Æ¼ï¿½ 0ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            outer:
+            for (int i = 0; i < SIZE; i++) {
+                for (int j = 0; j < SIZE; j++) {
+                    if (bingo[i][j] == num) {
+                        bingo[i][j] = 0;
+                        break outer; // 2ï¿½ï¿½ ï¿½Ýºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³­ï¿½ï¿½.
+                    }
+                }
+            }
+        } while (num != 0);
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

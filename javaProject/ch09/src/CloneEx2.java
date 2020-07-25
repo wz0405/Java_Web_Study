@@ -1,14 +1,14 @@
 import java.util.*;
 
 class CloneEx2 {
-	public static void main(String[] args){
-		int[] arr = {1,2,3,4,5};
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
 
-        // ¹è¿­ arrÀ» º¹Á¦ÇØ¼­ °°Àº ³»¿ëÀÇ »õ·Î¿î ¹è¿­À» ¸¸µç´Ù.
-		int[] arrClone = arr.clone(); 
-		arrClone[0]= 6;
+        // ï¿½è¿­ arrï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+        int[] arrClone = arr.clone();
+        arrClone[0] = 6;
 
-		System.out.println(Arrays.toString(arr));
-		System.out.println(Arrays.toString(arrClone));
-	}
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arrClone));
+    }
 }

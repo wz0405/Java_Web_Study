@@ -4,52 +4,52 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 
 public class TcpIpServer3 {
-	public static void main(String args[]) {
-		ServerSocket serverSocket = null;
-		
-		try {
-			// ¼­¹ö¼ÒÄÏÀ» »ý¼ºÇÏ¿© 7777¹ø Æ÷Æ®¿Í °áÇÕ(bind)½ÃÅ²´Ù.
-			serverSocket = new ServerSocket(7777);
-			System.out.println(getTime()+"¼­¹ö°¡ ÁØºñµÇ¾ú½À´Ï´Ù.");
+    public static void main(String args[]) {
+        ServerSocket serverSocket = null;
 
-		} catch(IOException e) {
-			e.printStackTrace();
-		}
-		
-		while(true) {
-			try {
-				// ¼­¹ö¼ÒÄÏ
-				System.out.println(getTime()+"¿¬°á¿äÃ»À» ±â´Ù¸³´Ï´Ù.");
+        try {
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ 7777ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(bind)ï¿½ï¿½Å²ï¿½ï¿½.
+            serverSocket = new ServerSocket(7777);
+            System.out.println(getTime() + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Øºï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 
-				// ¿äÃ»´ë±â½Ã°£À» 5ÃÊ·Î ¼³Á¤ÇÑ´Ù. 
-				// 5ÃÊµ¿¾È Á¢¼Ó¿äÃ»ÀÌ ¾øÀ¸¸é SocketTimeoutExceptionÀÌ ¹ß»ýÇÑ´Ù.
-				serverSocket.setSoTimeout(5*1000);
-				Socket socket = serverSocket.accept();
-				System.out.println(getTime()+ socket.getInetAddress() + "·ÎºÎÅÍ ¿¬°á¿äÃ»ÀÌ µé¾î¿Ô½À´Ï´Ù.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-				// ¼ÒÄÏÀÇ Ãâ·Â½ºÆ®¸²À» ¾ò´Â´Ù.
-				OutputStream out = socket.getOutputStream();
-				DataOutputStream dos = new DataOutputStream(out);
+        while (true) {
+            try {
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                System.out.println(getTime() + "ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½ï¿½Ï´ï¿½.");
 
-				// ¿ø°Ý ¼ÒÄÏ(remote socket)¿¡ µ¥ÀÌÅÍ¸¦ º¸³½´Ù.
-				dos.writeUTF("[Notice] Test Message1 from Server.");
-				System.out.println(getTime()+"µ¥ÀÌÅÍ¸¦ Àü¼ÛÇß½À´Ï´Ù.");
+                // ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ã°ï¿½ï¿½ï¿½ 5ï¿½Ê·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+                // 5ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ó¿ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ SocketTimeoutExceptionï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ñ´ï¿½.
+                serverSocket.setSoTimeout(5 * 1000);
+                Socket socket = serverSocket.accept();
+                System.out.println(getTime() + socket.getInetAddress() + "ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½Ô½ï¿½ï¿½Ï´ï¿½.");
 
-				// ½ºÆ®¸²°ú ¼ÒÄÏÀ» ´Ý¾ÆÁØ´Ù.
-				dos.close();
-				socket.close();
-			} catch (SocketTimeoutException  e) {
-			     System.out.println("ÁöÁ¤µÈ ½Ã°£µ¿¾È Á¢¼Ó¿äÃ»ÀÌ ¾ø¾î¼­ ¼­¹ö¸¦ Á¾·áÇÕ´Ï´Ù.");
-				System.exit(0);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		} // while
-	} // main
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.
+                OutputStream out = socket.getOutputStream();
+                DataOutputStream dos = new DataOutputStream(out);
 
-	// ÇöÀç½Ã°£À» ¹®ÀÚ¿­·Î ¹ÝÈ¯ÇÏ´Â ÇÔ¼ö
-	static String getTime() {
-		SimpleDateFormat f = new SimpleDateFormat("[hh:mm:ss]");
-		return f.format(new Date());
-	}
+                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(remote socket)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+                dos.writeUTF("[Notice] Test Message1 from Server.");
+                System.out.println(getTime() + "ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
+
+                // ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½Ø´ï¿½.
+                dos.close();
+                socket.close();
+            } catch (SocketTimeoutException e) {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ó¿ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+                System.exit(0);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } // while
+    } // main
+
+    // ï¿½ï¿½ï¿½ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+    static String getTime() {
+        SimpleDateFormat f = new SimpleDateFormat("[hh:mm:ss]");
+        return f.format(new Date());
+    }
 } // class

@@ -1,33 +1,33 @@
 class ArrayEx17 {
-	public static void main(String[] args) {
-		if (args.length !=3) {
-			System.out.println("usage: java ArrayEx15 NUM1 OP NUM2");
-			System.exit(0);
-		}
+    public static void main(String[] args) {
+        if (args.length != 3) {
+            System.out.println("usage: java ArrayEx15 NUM1 OP NUM2");
+            System.exit(0);
+        }
 
-		int num1 = Integer.parseInt(args[0]);   // ¹®ÀÚ¿­À» ¼ýÀÚ·Î º¯È¯ÇÑ´Ù.
-		char op = args[1].charAt(0);            // ¹®ÀÚ¿­À» ¹®ÀÚ(char)·Î º¯È¯ÇÑ´Ù.
-		int num2 = Integer.parseInt(args[2]);
+        int num1 = Integer.parseInt(args[0]);   // ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+        char op = args[1].charAt(0);            // ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(char)ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½.
+        int num2 = Integer.parseInt(args[2]);
 
-		int result = 0;
+        int result = 0;
 
-		switch(op) {    // switch¹®ÀÇ ¼ö½ÄÀ¸·Î charÅ¸ÀÔÀÇ º¯¼öµµ °¡´ÉÇÏ´Ù.					
-			case '+':
-				result = num1 + num2;
-				break;
-			case '-':
-				result = num1 - num2;
-				break;
-			case 'x':
-				result = num1 * num2;
-				break;
-			case '/':
-				result = num1 / num2;
-				break;
-			default :
-				System.out.println("Áö¿øµÇÁö ¾Ê´Â ¿¬»êÀÔ´Ï´Ù.");
-		}
+        switch (op) {    // switchï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ charÅ¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.					
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case 'x':
+                result = num1 * num2;
+                break;
+            case '/':
+                result = num1 / num2;
+                break;
+            default:
+                System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        }
 
-		System.out.println("°á°ú:"+result);
-	}
+        System.out.println("ï¿½ï¿½ï¿½:" + result);
+    }
 }

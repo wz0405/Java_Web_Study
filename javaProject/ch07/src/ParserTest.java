@@ -1,40 +1,40 @@
 interface Parseable {
-	// ±¸¹® ºÐ¼®ÀÛ¾÷À» ¼öÇàÇÑ´Ù.
-	public abstract void parse(String fileName);
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¼ï¿½ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+    public abstract void parse(String fileName);
 }
 
 class ParserManager {
-	// ¸®ÅÏÅ¸ÀÔÀÌ ParseableÀÎÅÍÆäÀÌ½ºÀÌ´Ù.
-	public static Parseable getParser(String type) {
-		if(type.equals("XML")) {
-			return new XMLParser();
-		} else {
-			Parseable p = new HTMLParser();
-			return p;
-			// return new HTMLParser();
-		}
-	}
+    // ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ Parseableï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½Ì´ï¿½.
+    public static Parseable getParser(String type) {
+        if (type.equals("XML")) {
+            return new XMLParser();
+        } else {
+            Parseable p = new HTMLParser();
+            return p;
+            // return new HTMLParser();
+        }
+    }
 }
 
 class XMLParser implements Parseable {
-	public void parse(String fileName) {
-		/* ±¸¹® ºÐ¼®ÀÛ¾÷À» ¼öÇàÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù. */
-		System.out.println(fileName + "- XML parsing completed.");
-	}
+    public void parse(String fileName) {
+        /* ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¼ï¿½ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½. */
+        System.out.println(fileName + "- XML parsing completed.");
+    }
 }
 
 class HTMLParser implements Parseable {
-	public void parse(String fileName) {
-		/* ±¸¹® ºÐ¼®ÀÛ¾÷À» ¼öÇàÇÏ´Â ÄÚµå¸¦ Àû´Â´Ù. */
-		System.out.println(fileName + "-HTML parsing completed.");
-	}
+    public void parse(String fileName) {
+        /* ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¼ï¿½ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½ï¿½ï¿½Â´ï¿½. */
+        System.out.println(fileName + "-HTML parsing completed.");
+    }
 }
 
 class ParserTest {
-	public static void main(String args[]) {
-		Parseable parser = ParserManager.getParser("XML");
-		parser.parse("document.xml");
-		parser = ParserManager.getParser("HTML");
-		parser.parse("document2.html");
-	}
+    public static void main(String args[]) {
+        Parseable parser = ParserManager.getParser("XML");
+        parser.parse("document.xml");
+        parser = ParserManager.getParser("HTML");
+        parser.parse("document2.html");
+    }
 }

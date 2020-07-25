@@ -1,29 +1,29 @@
 import java.time.*;
 
 class NewTimeEx2 {
-	public static void main(String[] args) {
-		LocalDate date = LocalDate.of(2015, 12, 31); // 2015³â 12¿ù 31ÀÏ
-		LocalTime time = LocalTime.of(12,34,56);     // 12½Ã 23ºÐ 56ÃÊ
+    public static void main(String[] args) {
+        LocalDate date = LocalDate.of(2015, 12, 31); // 2015ï¿½ï¿½ 12ï¿½ï¿½ 31ï¿½ï¿½
+        LocalTime time = LocalTime.of(12, 34, 56);     // 12ï¿½ï¿½ 23ï¿½ï¿½ 56ï¿½ï¿½
 
-		// 2015³â 12¿ù 31ÀÏ 12½Ã 23ºÐ 56ÃÊ
-		LocalDateTime dt  = LocalDateTime.of(date, time);
-	
-		ZoneId zid = ZoneId.of("Asia/Seoul");
-		ZonedDateTime zdt = dt.atZone(zid);
+        // 2015ï¿½ï¿½ 12ï¿½ï¿½ 31ï¿½ï¿½ 12ï¿½ï¿½ 23ï¿½ï¿½ 56ï¿½ï¿½
+        LocalDateTime dt = LocalDateTime.of(date, time);
+
+        ZoneId zid = ZoneId.of("Asia/Seoul");
+        ZonedDateTime zdt = dt.atZone(zid);
 //		String strZid = zdt.getZone().getId();
 
-		ZonedDateTime seoulTime = ZonedDateTime.now();
-		ZoneId nyId = ZoneId.of("America/New_York");
-	     ZonedDateTime nyTime = ZonedDateTime.now().withZoneSameInstant(nyId);
+        ZonedDateTime seoulTime = ZonedDateTime.now();
+        ZoneId nyId = ZoneId.of("America/New_York");
+        ZonedDateTime nyTime = ZonedDateTime.now().withZoneSameInstant(nyId);
 
-		// ZonedDatetime -> OffsetDateTime
-		OffsetDateTime odt = zdt.toOffsetDateTime();
+        // ZonedDatetime -> OffsetDateTime
+        OffsetDateTime odt = zdt.toOffsetDateTime();
 
-		System.out.println(dt);
-		System.out.println(zid);
-		System.out.println(zdt);
-		System.out.println(seoulTime);
-		System.out.println(nyTime);
-		System.out.println(odt);
-	}
+        System.out.println(dt);
+        System.out.println(zid);
+        System.out.println(zdt);
+        System.out.println(seoulTime);
+        System.out.println(nyTime);
+        System.out.println(odt);
+    }
 }

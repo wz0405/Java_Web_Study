@@ -3,21 +3,21 @@ package day0527;
 import java.util.Scanner;
 
 public class IfTest_07 {
-	public static void main(String[] args) {
-	
-		//¼ö½Ä?Âü:°ÅÁþ
-		Scanner sc = new Scanner(System.in);
-		
-		int x,y,max;
-		System.out.println("**µÎ°³ÀÇ ¼ýÀÚ¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä**");
-		x=sc.nextInt();
-		y=sc.nextInt();
-		
-		/*
-		 * if(x>=y) { max=x; } else { max=y; }
-		 */		
-		//»ïÇ×¿¬»êÀÚ
-		max=x>=y?x:y;
-		System.out.println("µÎ ¼öÁß ´õ Å« °ªÀº"+max);
-	}
+    public static void main(String[] args) {
+
+        //ï¿½ï¿½ï¿½ï¿½?ï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½
+        Scanner sc = new Scanner(System.in);
+
+        int x, y, max;
+        System.out.println("**ï¿½Î°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½**");
+        x = sc.nextInt();
+        y = sc.nextInt();
+
+        /*
+         * if(x>=y) { max=x; } else { max=y; }
+         */
+        //ï¿½ï¿½ï¿½×¿ï¿½ï¿½ï¿½ï¿½ï¿½
+        max = x >= y ? x : y;
+        System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Å« ï¿½ï¿½ï¿½ï¿½" + max);
+    }
 }

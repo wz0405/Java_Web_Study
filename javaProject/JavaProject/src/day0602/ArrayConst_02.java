@@ -1,52 +1,49 @@
 package day0602;
 
-class Shop{
-	private String sangpum;
-	private int price;
-	private String color;
-	
-	//»ý¼ºÀÚ
-	public Shop(String s,int p,String c) {
-		sangpum=s;
-		price=p;
-		color=c;
-	}
-	
-	//Á¦¸ñ °¡·Î ³ª¿­
-	public static void showTitle()
-	{
-		System.out.println("»óÇ°¸í\t´Ü°¡\t»ö»ó");
-		System.out.println("=====================");
-	}
-	
-	//»óÇ° Ãâ·Â
-	public void getSangpum()
-	{
-		System.out.println(sangpum+"\t"+price+"\t"+color);
-	}
-	
+class Shop {
+    private String sangpum;
+    private int price;
+    private String color;
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Shop(String s, int p, String c) {
+        sangpum = s;
+        price = p;
+        color = c;
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public static void showTitle() {
+        System.out.println("ï¿½ï¿½Ç°ï¿½ï¿½\tï¿½Ü°ï¿½\tï¿½ï¿½ï¿½ï¿½");
+        System.out.println("=====================");
+    }
+
+    //ï¿½ï¿½Ç° ï¿½ï¿½ï¿½
+    public void getSangpum() {
+        System.out.println(sangpum + "\t" + price + "\t" + color);
+    }
+
 }
 
 public class ArrayConst_02 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-		Shop[]sh=new Shop[5]; //5°³¸¦ »ý¼ºÇÒ°Å¶ó´Â ÁÖ¼Ò¸¸ ÇÒ´ç(ÃÊ±â°ªnull)
-		
-		//5°³ÀÇ shop¹è¿­¿¡ »ý¼ºÀÚ¸¦ ÅëÇØ¼­ »ý¼º
-		sh[0]=new Shop("ºí¶ó¿ì½º", 12000, "³ë¶û");
-		sh[1]=new Shop("Ã»¹ÙÁö", 55000, "±×¸°");
-		sh[2]=new Shop("·¹±ë½º", 18000, "È­ÀÌÆ®");
-		sh[3]=new Shop("Á®Áö", 44000, "ºí·ç");
-		sh[4]=new Shop("Ä¡", 12000, "È­ÀÌÆ®");
-		
-		//Ãâ·Â
-		Shop.showTitle();  //Å¬·¡½º¸í.¸Þ¼Òµå·Î Å¬·¡½º¸Þ¼Òµå È£Ãâ°¡´É
-		for(int i=0;i<sh.length;i++)
-		{
-			sh[i].getSangpum();
-		}
-	}
+        Shop[] sh = new Shop[5]; //5ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò°Å¶ï¿½ï¿½ ï¿½Ö¼Ò¸ï¿½ ï¿½Ò´ï¿½(ï¿½Ê±â°ªnull)
+
+        //5ï¿½ï¿½ï¿½ï¿½ shopï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½
+        sh[0] = new Shop("ï¿½ï¿½ï¿½ì½º", 12000, "ï¿½ï¿½ï¿½");
+        sh[1] = new Shop("Ã»ï¿½ï¿½ï¿½ï¿½", 55000, "ï¿½×¸ï¿½");
+        sh[2] = new Shop("ï¿½ï¿½ï¿½ë½º", 18000, "È­ï¿½ï¿½Æ®");
+        sh[3] = new Shop("ï¿½ï¿½ï¿½ï¿½", 44000, "ï¿½ï¿½ï¿½");
+        sh[4] = new Shop("Ä¡", 12000, "È­ï¿½ï¿½Æ®");
+
+        //ï¿½ï¿½ï¿½
+        Shop.showTitle();  //Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½Þ¼Òµï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Þ¼Òµï¿½ È£ï¿½â°¡ï¿½ï¿½
+        for (int i = 0; i < sh.length; i++) {
+            sh[i].getSangpum();
+        }
+    }
 
 }

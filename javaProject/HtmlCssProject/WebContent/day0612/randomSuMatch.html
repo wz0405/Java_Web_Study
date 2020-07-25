@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
-<style type="text/css">
-#out {
-	position: absolute;
-	top: 50px;
-	border: 2px solid gray;
-	width: 250px;
-	height: 250px;
-	background-color: #ffffcc;
-	font-size: 11pt;
-}
-</style>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <style type="text/css">
+        #out {
+            position: absolute;
+            top: 50px;
+            border: 2px solid gray;
+            width: 250px;
+            height: 250px;
+            background-color: #ffffcc;
+            font-size: 11pt;
+        }
+    </style>
 
-<script type="text/javascript">
-	var rnd;
-	var cnt = 0;
-	
-	window.onload = function() {
-		rnd = parseInt(Math.random() * 100) + 1;
-	}
+    <script type="text/javascript">
+        var rnd;
+        var cnt = 0;
 
-	function check(su) {
-		cnt++;
-		//난수와 비교해서 결과출력
-		if (su > rnd)
-			out.innerHTML += cnt + ":" + su + "보다 작습니다<br>";
-		else if (su < rnd)
-			out.innerHTML += cnt + ":" + su + "보다 큽니다<br>";
-		else {
-			out.innerHTML = "<h4>축하합니다...정답은" + rnd + "입니다</h4>";
+        window.onload = function () {
+            rnd = parseInt(Math.random() * 100) + 1;
+        }
 
-			//축하이미지
-			imge.src = "../image/이쁜동물이미지/C7.png";
-		}
-		//실패할때 이미지
-		if (cnt >= 10) {
-			out.innerHTML = "<h4>다음기회에...ㅠㅠ</h4>";
-			imge.src = "../image/이쁜동물이미지/C8.png";
-		}
+        function check(su) {
+            cnt++;
+            //난수와 비교해서 결과출력
+            if (su > rnd)
+                out.innerHTML += cnt + ":" + su + "보다 작습니다<br>";
+            else if (su < rnd)
+                out.innerHTML += cnt + ":" + su + "보다 큽니다<br>";
+            else {
+                out.innerHTML = "<h4>축하합니다...정답은" + rnd + "입니다</h4>";
 
-		//초기화(input창)
-		frm.num.value = '';
-		frm.num.focus();
+                //축하이미지
+                imge.src = "../image/이쁜동물이미지/C7.png";
+            }
+            //실패할때 이미지
+            if (cnt >= 10) {
+                out.innerHTML = "<h4>다음기회에...ㅠㅠ</h4>";
+                imge.src = "../image/이쁜동물이미지/C8.png";
+            }
 
-	}
-</script>
+            //초기화(input창)
+            frm.num.value = '';
+            frm.num.focus();
+
+        }
+    </script>
 </head>
 <body>
 
-	<form action="#" name="frm" onsubmit="return false">
-		<b>숫자입력:</b>
-		<input type="text" name="num" size="5" onkeydown="if(event.keyCode==13) check(value)">
-	</form>
+<form action="#" name="frm" onsubmit="return false">
+    <b>숫자입력:</b>
+    <input type="text" name="num" size="5" onkeydown="if(event.keyCode==13) check(value)">
+</form>
 
-	<!--숫자가 출력될공간  -->
-	<div id="out"></div>
-	<!-- 이미지출력될공간 -->
-	<div style="position: absolute; top: 80px; left: 400px;">
-		<img alt="" src="" name="imge">
-	</div>
+<!--숫자가 출력될공간  -->
+<div id="out"></div>
+<!-- 이미지출력될공간 -->
+<div style="position: absolute; top: 80px; left: 400px;">
+    <img alt="" src="" name="imge">
+</div>
 </body>
 </html>
 

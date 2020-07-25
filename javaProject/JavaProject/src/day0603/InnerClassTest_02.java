@@ -1,31 +1,32 @@
 package day0603;
-class OuterObj{
-	class InnerClass{
-		public void write()
-		{
-			System.out.println("³»ºÎÅ¬·¡½ºÀÇ ¸Þ¼Òµå");
-		}
-	}
-	//¿ÜºÎÅ¬·¡½ºÀÇ¸Þ¼Òµå
-	public void disp()
-	{
-		System.out.println("¿ÜºÎÅ¬·¡½ºÀÇ ¸Þ¼Òµå");
-		System.out.println("¿ÜºÎ¿¡¼­ ³»ºÎÅ¬·¡½º ¸Þ¼Òµå È£Ãâ");
-		InnerClass in = new InnerClass();
-	
-		in.write();
-	}
+
+class OuterObj {
+    class InnerClass {
+        public void write() {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½");
+        }
+    }
+
+    //ï¿½Üºï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸Þ¼Òµï¿½
+    public void disp() {
+        System.out.println("ï¿½Üºï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½");
+        System.out.println("ï¿½ÜºÎ¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½ È£ï¿½ï¿½");
+        InnerClass in = new InnerClass();
+
+        in.write();
+    }
 }
+
 public class InnerClassTest_02 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//¿ÜºÎ(ÀÏ¹ÝÀû)
-		OuterObj ou = new OuterObj();
-		ou.disp();
-		//³»ºÎÅ¬·¡½ºÀÇ ¸Þ¼Òµå´Â ¿ÜºÎÅë¾Ö¼­¸¸ °¡´ÉÇÏ´Ù.
-		OuterObj.InnerClass obj = new OuterObj().new InnerClass();
-		obj.write();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //ï¿½Üºï¿½(ï¿½Ï¹ï¿½ï¿½ï¿½)
+        OuterObj ou = new OuterObj();
+        ou.disp();
+        //ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½ï¿½ ï¿½Üºï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+        OuterObj.InnerClass obj = new OuterObj().new InnerClass();
+        obj.write();
+    }
 
 }

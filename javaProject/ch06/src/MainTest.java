@@ -1,5 +1,5 @@
 class MainTest {
-	public static void main(String args[]) {
-		main(null);		// ÀÚ±â ÀÚ½ÅÀ» ´Ù½Ã È£ÃâÇÑ´Ù.
-	}
+    public static void main(String args[]) {
+        main(null);        // ï¿½Ú±ï¿½ ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ È£ï¿½ï¿½ï¿½Ñ´ï¿½.
+    }
 }

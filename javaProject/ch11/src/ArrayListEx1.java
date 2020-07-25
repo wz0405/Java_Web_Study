@@ -1,47 +1,47 @@
 import java.util.*;
 
-class ArrayListEx1{
-	public static void main(String[] args) {
-		ArrayList list1 = new ArrayList(10);
-		list1.add(new Integer(5));
-		list1.add(new Integer(4));
-		list1.add(new Integer(2));
-		list1.add(new Integer(0));
-		list1.add(new Integer(1));
-		list1.add(new Integer(3));
+class ArrayListEx1 {
+    public static void main(String[] args) {
+        ArrayList list1 = new ArrayList(10);
+        list1.add(new Integer(5));
+        list1.add(new Integer(4));
+        list1.add(new Integer(2));
+        list1.add(new Integer(0));
+        list1.add(new Integer(1));
+        list1.add(new Integer(3));
 
-		ArrayList list2 = new ArrayList(list1.subList(1,4)); 
-		print(list1, list2);
+        ArrayList list2 = new ArrayList(list1.subList(1, 4));
+        print(list1, list2);
 
-		Collections.sort(list1);	// list1°ú list2¸¦ Á¤·ÄÇÑ´Ù.
-		Collections.sort(list2);	// Collections.sort(List l)
-		print(list1, list2);
+        Collections.sort(list1);    // list1ï¿½ï¿½ list2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        Collections.sort(list2);    // Collections.sort(List l)
+        print(list1, list2);
 
-		System.out.println("list1.containsAll(list2):" + list1.containsAll(list2));
+        System.out.println("list1.containsAll(list2):" + list1.containsAll(list2));
 
-		list2.add("B");
-		list2.add("C");
-		list2.add(3, "A");
-		print(list1, list2);
+        list2.add("B");
+        list2.add("C");
+        list2.add(3, "A");
+        print(list1, list2);
 
-		list2.set(3, "AA");
-		print(list1, list2);
-		
-		// list1¿¡¼­ list2¿Í °ãÄ¡´Â ºÎºÐ¸¸ ³²±â°í ³ª¸ÓÁö´Â »èÁ¦ÇÑ´Ù.
-		System.out.println("list1.retainAll(list2):" + list1.retainAll(list2));	
-		print(list1, list2);
-		
-		//  list2¿¡¼­ list1¿¡ Æ÷ÇÔµÈ °´Ã¼µéÀ» »èÁ¦ÇÑ´Ù.
-		for(int i= list2.size()-1; i >= 0; i--) {
-			if(list1.contains(list2.get(i)))
-				list2.remove(i);
-		}
-		print(list1, list2);
-	} // mainÀÇ ³¡
+        list2.set(3, "AA");
+        print(list1, list2);
 
-	static void print(ArrayList list1, ArrayList list2) {
-		System.out.println("list1:"+list1);
-		System.out.println("list2:"+list2);
-		System.out.println();		
-	}
+        // list1ï¿½ï¿½ï¿½ï¿½ list2ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ÎºÐ¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        System.out.println("list1.retainAll(list2):" + list1.retainAll(list2));
+        print(list1, list2);
+
+        //  list2ï¿½ï¿½ï¿½ï¿½ list1ï¿½ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        for (int i = list2.size() - 1; i >= 0; i--) {
+            if (list1.contains(list2.get(i)))
+                list2.remove(i);
+        }
+        print(list1, list2);
+    } // mainï¿½ï¿½ ï¿½ï¿½
+
+    static void print(ArrayList list1, ArrayList list2) {
+        System.out.println("list1:" + list1);
+        System.out.println("list2:" + list2);
+        System.out.println();
+    }
 } // class

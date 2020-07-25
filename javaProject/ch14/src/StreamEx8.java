@@ -1,102 +1,117 @@
 import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
+
 import static java.util.stream.Collectors.*;
 import static java.util.Comparator.*;
 
 class Student5 {
-	String name;
-	boolean isMale; // ¼ºº°
-	int hak;		// ÇÐ³â
-	int ban;		// ¹Ý
-	int score;
+    String name;
+    boolean isMale; // ï¿½ï¿½ï¿½ï¿½
+    int hak;        // ï¿½Ð³ï¿½
+    int ban;        // ï¿½ï¿½
+    int score;
 
-	Student5(String name, boolean isMale, int hak, int ban, int score) { 
-		this.name	= name;
-		this.isMale	= isMale;
-		this.hak	= hak;
-		this.ban	= ban;
-		this.score  = score;
-	}
+    Student5(String name, boolean isMale, int hak, int ban, int score) {
+        this.name = name;
+        this.isMale = isMale;
+        this.hak = hak;
+        this.ban = ban;
+        this.score = score;
+    }
 
-	String	getName()  { return name;}
-	boolean isMale()   { return isMale;}
-	int		getHak()   { return hak;}
-	int		getBan()   { return ban;}
-	int		getScore() { return score;}
+    String getName() {
+        return name;
+    }
 
-	public String toString() { 
-		return String.format("[%s, %s, %dÇÐ³â %d¹Ý, %3dÁ¡]", name, isMale ? "³²":"¿©", hak, ban, score); 
-	}
+    boolean isMale() {
+        return isMale;
+    }
 
-	enum Level {
-		HIGH, MID, LOW
-	}
+    int getHak() {
+        return hak;
+    }
+
+    int getBan() {
+        return ban;
+    }
+
+    int getScore() {
+        return score;
+    }
+
+    public String toString() {
+        return String.format("[%s, %s, %dï¿½Ð³ï¿½ %dï¿½ï¿½, %3dï¿½ï¿½]", name, isMale ? "ï¿½ï¿½" : "ï¿½ï¿½", hak, ban, score);
+    }
+
+    enum Level {
+        HIGH, MID, LOW
+    }
 }
 
 class StreamEx8 {
-	public static void main(String[] args) {
-		Student5[] stuArr = {
-			new Student5("³ªÀÚ¹Ù", true,  1, 1, 300),	
-			new Student5("±èÁö¹Ì", false, 1, 1, 250),	
-			new Student5("±èÀÚ¹Ù", true,  1, 1, 200),	
-			new Student5("ÀÌÁö¹Ì", false, 1, 2, 150),	
-			new Student5("³²ÀÚ¹Ù", true,  1, 2, 100),	
-			new Student5("¾ÈÁö¹Ì", false, 1, 2,  50),	
-			new Student5("È²Áö¹Ì", false, 1, 3, 100),	
-			new Student5("°­Áö¹Ì", false, 1, 3, 150),	
-			new Student5("ÀÌÀÚ¹Ù", true,  1, 3, 200),	
+    public static void main(String[] args) {
+        Student5[] stuArr = {
+                new Student5("ï¿½ï¿½ï¿½Ú¹ï¿½", true, 1, 1, 300),
+                new Student5("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 1, 1, 250),
+                new Student5("ï¿½ï¿½ï¿½Ú¹ï¿½", true, 1, 1, 200),
+                new Student5("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 1, 2, 150),
+                new Student5("ï¿½ï¿½ï¿½Ú¹ï¿½", true, 1, 2, 100),
+                new Student5("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 1, 2, 50),
+                new Student5("È²ï¿½ï¿½ï¿½ï¿½", false, 1, 3, 100),
+                new Student5("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 1, 3, 150),
+                new Student5("ï¿½ï¿½ï¿½Ú¹ï¿½", true, 1, 3, 200),
 
-			new Student5("³ªÀÚ¹Ù", true,  2, 1, 300),	
-			new Student5("±èÁö¹Ì", false, 2, 1, 250),	
-			new Student5("±èÀÚ¹Ù", true,  2, 1, 200),	
-			new Student5("ÀÌÁö¹Ì", false, 2, 2, 150),	
-			new Student5("³²ÀÚ¹Ù", true,  2, 2, 100),	
-			new Student5("¾ÈÁö¹Ì", false, 2, 2,  50),	
-			new Student5("È²Áö¹Ì", false, 2, 3, 100),	
-			new Student5("°­Áö¹Ì", false, 2, 3, 150),	
-			new Student5("ÀÌÀÚ¹Ù", true,  2, 3, 200)	
-		};
+                new Student5("ï¿½ï¿½ï¿½Ú¹ï¿½", true, 2, 1, 300),
+                new Student5("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 2, 1, 250),
+                new Student5("ï¿½ï¿½ï¿½Ú¹ï¿½", true, 2, 1, 200),
+                new Student5("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 2, 2, 150),
+                new Student5("ï¿½ï¿½ï¿½Ú¹ï¿½", true, 2, 2, 100),
+                new Student5("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 2, 2, 50),
+                new Student5("È²ï¿½ï¿½ï¿½ï¿½", false, 2, 3, 100),
+                new Student5("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", false, 2, 3, 150),
+                new Student5("ï¿½ï¿½ï¿½Ú¹ï¿½", true, 2, 3, 200)
+        };
 
-		System.out.printf("1. ´Ü¼ø±×·ìÈ­(¹Ýº°·Î ±×·ìÈ­)%n");
-		Map<Integer, List<Student5>> stuByBan = Stream.of(stuArr)
-				                                     .collect(groupingBy(Student5::getBan));
-		
-		for(List<Student5> ban : stuByBan.values()) {
-			for(Student5 s : ban) {
-				System.out.println(s);
-			}
-		}
+        System.out.printf("1. ï¿½Ü¼ï¿½ï¿½×·ï¿½È­(ï¿½Ýºï¿½ï¿½ï¿½ ï¿½×·ï¿½È­)%n");
+        Map<Integer, List<Student5>> stuByBan = Stream.of(stuArr)
+                .collect(groupingBy(Student5::getBan));
 
-		System.out.printf("%n2. ´Ü¼ø±×·ìÈ­(¼ºÀûº°·Î ±×·ìÈ­)%n");
-		Map<Student5.Level, List<Student5>> stuByLevel = Stream.of(stuArr)
-				.collect(groupingBy(s-> {
-						 if(s.getScore() >= 200) return Student5.Level.HIGH;
-					else if(s.getScore() >= 100) return Student5.Level.MID;
-					else                         return Student5.Level.LOW;
-				}));
+        for (List<Student5> ban : stuByBan.values()) {
+            for (Student5 s : ban) {
+                System.out.println(s);
+            }
+        }
 
-		TreeSet<Student5.Level> keySet = new TreeSet<>(stuByLevel.keySet());
+        System.out.printf("%n2. ï¿½Ü¼ï¿½ï¿½×·ï¿½È­(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×·ï¿½È­)%n");
+        Map<Student5.Level, List<Student5>> stuByLevel = Stream.of(stuArr)
+                .collect(groupingBy(s -> {
+                    if (s.getScore() >= 200) return Student5.Level.HIGH;
+                    else if (s.getScore() >= 100) return Student5.Level.MID;
+                    else return Student5.Level.LOW;
+                }));
 
-		for(Student5.Level key : keySet) {
-			System.out.println("["+key+"]");
+        TreeSet<Student5.Level> keySet = new TreeSet<>(stuByLevel.keySet());
 
-			for(Student5 s : stuByLevel.get(key))
-				System.out.println(s);
-			System.out.println();
-		}
+        for (Student5.Level key : keySet) {
+            System.out.println("[" + key + "]");
 
-		System.out.printf("%n3. ´Ü¼ø±×·ìÈ­ + Åë°è(¼ºÀûº° ÇÐ»ý¼ö)%n");
-		Map<Student5.Level, Long> stuCntByLevel = Stream.of(stuArr)
-				.collect(groupingBy(s-> {
-						 if(s.getScore() >= 200) return Student5.Level.HIGH;
-					else if(s.getScore() >= 100) return Student5.Level.MID;
-					else                         return Student5.Level.LOW;
-				}, counting()));
+            for (Student5 s : stuByLevel.get(key))
+                System.out.println(s);
+            System.out.println();
+        }
 
-		for(Student5.Level key : stuCntByLevel.keySet())
-			System.out.printf("[%s] - %d¸í, ", key, stuCntByLevel.get(key));
-		System.out.println();
+        System.out.printf("%n3. ï¿½Ü¼ï¿½ï¿½×·ï¿½È­ + ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð»ï¿½ï¿½ï¿½)%n");
+        Map<Student5.Level, Long> stuCntByLevel = Stream.of(stuArr)
+                .collect(groupingBy(s -> {
+                    if (s.getScore() >= 200) return Student5.Level.HIGH;
+                    else if (s.getScore() >= 100) return Student5.Level.MID;
+                    else return Student5.Level.LOW;
+                }, counting()));
+
+        for (Student5.Level key : stuCntByLevel.keySet())
+            System.out.printf("[%s] - %dï¿½ï¿½, ", key, stuCntByLevel.get(key));
+        System.out.println();
 /*
 		for(List<Student5> level : stuByLevel.values()) {
 			System.out.println();
@@ -105,50 +120,50 @@ class StreamEx8 {
 			}
 		}
 */
-		System.out.printf("%n4. ´ÙÁß±×·ìÈ­(ÇÐ³âº°, ¹Ýº°)%n");
-		Map<Integer, Map<Integer, List<Student5>>> stuByHakAndBan =
-          Stream.of(stuArr)
-				.collect(groupingBy(Student5::getHak,
-						 groupingBy(Student5::getBan)
-				));
+        System.out.printf("%n4. ï¿½ï¿½ï¿½ß±×·ï¿½È­(ï¿½Ð³âº°, ï¿½Ýºï¿½)%n");
+        Map<Integer, Map<Integer, List<Student5>>> stuByHakAndBan =
+                Stream.of(stuArr)
+                        .collect(groupingBy(Student5::getHak,
+                                groupingBy(Student5::getBan)
+                        ));
 
-		for(Map<Integer, List<Student5>> hak : stuByHakAndBan.values()) {
-			for(List<Student5> ban : hak.values()) {
-				System.out.println();
-				for(Student5 s : ban)
-					System.out.println(s);
-			}
-		}
+        for (Map<Integer, List<Student5>> hak : stuByHakAndBan.values()) {
+            for (List<Student5> ban : hak.values()) {
+                System.out.println();
+                for (Student5 s : ban)
+                    System.out.println(s);
+            }
+        }
 
-		System.out.printf("%n5. ´ÙÁß±×·ìÈ­ + Åë°è(ÇÐ³âº°, ¹Ýº° 1µî)%n");
-		Map<Integer, Map<Integer, Student5>> topStuByHakAndBan = Stream.of(stuArr)
-				.collect(groupingBy(Student5::getHak,
-						 groupingBy(Student5::getBan,
-							collectingAndThen(
-								maxBy(comparingInt(Student5::getScore)),
-								Optional::get
-							)
-						)
-				));
+        System.out.printf("%n5. ï¿½ï¿½ï¿½ß±×·ï¿½È­ + ï¿½ï¿½ï¿½(ï¿½Ð³âº°, ï¿½Ýºï¿½ 1ï¿½ï¿½)%n");
+        Map<Integer, Map<Integer, Student5>> topStuByHakAndBan = Stream.of(stuArr)
+                .collect(groupingBy(Student5::getHak,
+                        groupingBy(Student5::getBan,
+                                collectingAndThen(
+                                        maxBy(comparingInt(Student5::getScore)),
+                                        Optional::get
+                                )
+                        )
+                ));
 
-		for(Map<Integer, Student5> ban : topStuByHakAndBan.values())
-			for(Student5 s : ban.values())
-				System.out.println(s);
+        for (Map<Integer, Student5> ban : topStuByHakAndBan.values())
+            for (Student5 s : ban.values())
+                System.out.println(s);
 
-		System.out.printf("%n6. ´ÙÁß±×·ìÈ­ + Åë°è(ÇÐ³âº°, ¹Ýº° ¼ºÀû±×·ì)%n");
-		Map<String, Set<Student5.Level>> stuByScoreGroup = Stream.of(stuArr)
-			.collect(groupingBy(s-> s.getHak() + "-" + s.getBan(),
-					mapping(s-> {
-						 if(s.getScore() >= 200) return Student5.Level.HIGH;
-					else if(s.getScore() >= 100) return Student5.Level.MID;
-						 else                    return Student5.Level.LOW;
-					} , toSet())
-			));
+        System.out.printf("%n6. ï¿½ï¿½ï¿½ß±×·ï¿½È­ + ï¿½ï¿½ï¿½(ï¿½Ð³âº°, ï¿½Ýºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½×·ï¿½)%n");
+        Map<String, Set<Student5.Level>> stuByScoreGroup = Stream.of(stuArr)
+                .collect(groupingBy(s -> s.getHak() + "-" + s.getBan(),
+                        mapping(s -> {
+                            if (s.getScore() >= 200) return Student5.Level.HIGH;
+                            else if (s.getScore() >= 100) return Student5.Level.MID;
+                            else return Student5.Level.LOW;
+                        }, toSet())
+                ));
 
-		 Set<String> keySet2 = stuByScoreGroup.keySet();
+        Set<String> keySet2 = stuByScoreGroup.keySet();
 
-		for(String key : keySet2) {
-			System.out.println("["+key+"]" + stuByScoreGroup.get(key));
-		}
-	}  // mainÀÇ ³¡
+        for (String key : keySet2) {
+            System.out.println("[" + key + "]" + stuByScoreGroup.get(key));
+        }
+    }  // mainï¿½ï¿½ ï¿½ï¿½
 }

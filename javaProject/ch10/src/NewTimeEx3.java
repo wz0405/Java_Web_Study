@@ -1,36 +1,37 @@
 import java.time.*;
 import java.time.temporal.*;
+
 import static java.time.DayOfWeek.*;
 import static java.time.temporal.TemporalAdjusters.*;
 
 class DayAfterTomorrow implements TemporalAdjuster {
-	@Override
-	public Temporal adjustInto(Temporal temporal) {
-		return temporal.plus(2, ChronoUnit.DAYS);	
-	}
+    @Override
+    public Temporal adjustInto(Temporal temporal) {
+        return temporal.plus(2, ChronoUnit.DAYS);
+    }
 }
 
 class NewTimeEx3 {
-	public static void main(String[] args) {
-		LocalDate today = LocalDate.now();
-		LocalDate date  = today.with(new DayAfterTomorrow());
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.now();
+        LocalDate date = today.with(new DayAfterTomorrow());
 
-		p(today); // System.out.println(today);
-		p(date);
+        p(today); // System.out.println(today);
+        p(date);
 
-		p(today.with(firstDayOfNextMonth()));        // ´ÙÀ½ ´ÞÀÇ Ã¹ ³¯
-		p(today.with(firstDayOfMonth()));            // ÀÌ ´ÞÀÇ Ã¹ ³¯
-		p(today.with(lastDayOfMonth()));             // ÀÌ ´ÞÀÇ ¸¶Áö¸· ³¯
-		p(today.with(firstInMonth(TUESDAY)));        // ÀÌ ´ÞÀÇ Ã¹¹øÂ° È­¿äÀÏ
-		p(today.with(lastInMonth(TUESDAY)));         // ÀÌ ´ÞÀÇ ¸¶Áö¸· È­¿äÀÏ
-		p(today.with(previous(TUESDAY)));            // Áö³­ ÁÖ È­¿äÀÏ
-		p(today.with(previousOrSame(TUESDAY)));      // Áö³­ ÁÖ È­¿äÀÏ(¿À´Ã Æ÷ÇÔ)
-		p(today.with(next(TUESDAY)));                // ´ÙÀ½ ÁÖ È­¿äÀÏ
-		p(today.with(nextOrSame(TUESDAY)));          // ´ÙÀ½ ÁÖ È­¿äÀÏ(¿À´Ã Æ÷ÇÔ)
-		p(today.with(dayOfWeekInMonth(4, TUESDAY))); // ÀÌ ´ÞÀÇ 4¹øÂ° È­¿äÀÏ
-	}
+        p(today.with(firstDayOfNextMonth()));        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¹ ï¿½ï¿½
+        p(today.with(firstDayOfMonth()));            // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¹ ï¿½ï¿½
+        p(today.with(lastDayOfMonth()));             // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+        p(today.with(firstInMonth(TUESDAY)));        // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¹ï¿½ï¿½Â° È­ï¿½ï¿½ï¿½ï¿½
+        p(today.with(lastInMonth(TUESDAY)));         // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½
+        p(today.with(previous(TUESDAY)));            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½
+        p(today.with(previousOrSame(TUESDAY)));      // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+        p(today.with(next(TUESDAY)));                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½
+        p(today.with(nextOrSame(TUESDAY)));          // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ È­ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)
+        p(today.with(dayOfWeekInMonth(4, TUESDAY))); // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 4ï¿½ï¿½Â° È­ï¿½ï¿½ï¿½ï¿½
+    }
 
-	static void p(Object obj) { // ¶óÀÎÀÇ ±æÀÌ¸¦ ÁÙÀÌ±â À§ÇØ »õ·Î Á¤ÀÇÇÑ ¸Þ¼­µå
-		System.out.println(obj);
-	}
+    static void p(Object obj) { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+        System.out.println(obj);
+    }
 }

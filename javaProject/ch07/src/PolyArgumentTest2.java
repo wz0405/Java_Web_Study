@@ -1,75 +1,86 @@
 class Product2 {
-	int price;			// Á¦Ç°ÀÇ °¡°Ý
-	int bonusPoint;		// Á¦Ç°±¸¸Å ½Ã Á¦°øÇÏ´Â º¸³Ê½ºÁ¡¼ö
+    int price;            // ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    int bonusPoint;        // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	Product2(int price) {
-		this.price = price;
-		bonusPoint =(int)(price/10.0);
-	}
+    Product2(int price) {
+        this.price = price;
+        bonusPoint = (int) (price / 10.0);
+    }
 
-	Product2() {} // ±âº» »ý¼ºÀÚ
+    Product2() {
+    } // ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 }
- 
-class Tv4 extends Product2 {
-	Tv4() {
-		super(100);	
-	}
 
-	public String toString() { return "Tv"; }
+class Tv4 extends Product2 {
+    Tv4() {
+        super(100);
+    }
+
+    public String toString() {
+        return "Tv";
+    }
 }
 
 class Computer2 extends Product2 {
-	Computer2() { super(200); }
+    Computer2() {
+        super(200);
+    }
 
-	public String toString() { return "Computer"; }
+    public String toString() {
+        return "Computer";
+    }
 }
 
 class Audio extends Product2 {
-	Audio() { super(50); }
+    Audio() {
+        super(50);
+    }
 
-	public String toString() { return "Audio"; }
+    public String toString() {
+        return "Audio";
+    }
 }
 
-class Buyer2 {			// °í°´, ¹°°ÇÀ» »ç´Â »ç¶÷
-	int money = 1000;	// ¼ÒÀ¯±Ý¾×
-	int bonusPoint = 0;	// º¸³Ê½ºÁ¡¼ö
-	Product2[] item = new Product2[10];	// ±¸ÀÔÇÑ Á¦Ç°À» ÀúÀåÇÏ±â À§ÇÑ ¹è¿­
-	int i =0;			// Product¹è¿­¿¡ »ç¿ëµÉ Ä«¿îÅÍ
+class Buyer2 {            // ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    int money = 1000;    // ï¿½ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½
+    int bonusPoint = 0;    // ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½
+    Product2[] item = new Product2[10];    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+    int i = 0;            // Productï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½ï¿½
 
-	void buy(Product2 p) {
-		if(money < p.price) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ¹°°ÇÀ» »ì¼ö ¾ø½À´Ï´Ù.");
-			return;
-		}
+    void buy(Product2 p) {
+        if (money < p.price) {
+            System.out.println("ï¿½Ü¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            return;
+        }
 
-		money -= p.price;	        // °¡Áø µ·¿¡¼­ ±¸ÀÔÇÑ Á¦Ç°ÀÇ °¡°ÝÀ» »«´Ù.
-		bonusPoint += p.bonusPoint;	// Á¦Ç°ÀÇ º¸³Ê½º Á¡¼ö¸¦ Ãß°¡ÇÑ´Ù.
-		item[i++] = p;		        // Á¦Ç°À» Product[] item¿¡ ÀúÀåÇÑ´Ù.
-		System.out.println(p + "À»/¸¦ ±¸ÀÔÇÏ¼Ì½À´Ï´Ù.");
-	}
+        money -= p.price;            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        bonusPoint += p.bonusPoint;    // ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½Ê½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ñ´ï¿½.
+        item[i++] = p;                // ï¿½ï¿½Ç°ï¿½ï¿½ Product[] itemï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        System.out.println(p + "ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.");
+    }
 
-	void summary() {		    // ±¸¸ÅÇÑ ¹°Ç°¿¡ ´ëÇÑ Á¤º¸¸¦ ¿ä¾àÇØ¼­ º¸¿© ÁØ´Ù.
-		int sum = 0;		 	// ±¸ÀÔÇÑ ¹°Ç°ÀÇ °¡°ÝÇÕ°è
-		String itemList =""; 	// ±¸ÀÔÇÑ ¹°Ç°¸ñ·Ï
+    void summary() {            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ø´ï¿½.
+        int sum = 0;            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ°ï¿½
+        String itemList = "";    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ï¿½
 
-		// ¹Ýº¹¹®À» ÀÌ¿ëÇØ¼­ ±¸ÀÔÇÑ ¹°Ç°ÀÇ ÃÑ °¡°Ý°ú ¸ñ·ÏÀ» ¸¸µç´Ù.
-		for(int i=0; i<item.length;i++) {
-			if(item[i]==null) break;
-			sum += item[i].price;
-			itemList += item[i] + ", ";
-		}
-		System.out.println("±¸ÀÔÇÏ½Å ¹°Ç°ÀÇ ÃÑ±Ý¾×Àº " + sum + "¸¸¿øÀÔ´Ï´Ù.");
-		System.out.println("±¸ÀÔÇÏ½Å Á¦Ç°Àº " + itemList + "ÀÔ´Ï´Ù.");
-	}
+        // ï¿½Ýºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ý°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+        for (int i = 0; i < item.length; i++) {
+            if (item[i] == null) break;
+            sum += item[i].price;
+            itemList += item[i] + ", ";
+        }
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½Ñ±Ý¾ï¿½ï¿½ï¿½ " + sum + "ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ " + itemList + "ï¿½Ô´Ï´ï¿½.");
+    }
 }
 
 class PolyArgumentTest2 {
-	public static void main(String args[]) {
-		Buyer2 b = new Buyer2();
+    public static void main(String args[]) {
+        Buyer2 b = new Buyer2();
 
-		b.buy(new Tv4());
-		b.buy(new Computer2());
-		b.buy(new Audio());
-		b.summary();
-	}
+        b.buy(new Tv4());
+        b.buy(new Computer2());
+        b.buy(new Audio());
+        b.summary();
+    }
 }

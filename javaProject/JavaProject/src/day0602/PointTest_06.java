@@ -1,48 +1,56 @@
 package day0602;
 
-class Point{
-	
-	int x;
-	int y;
-	public Point() {
-		System.out.println("½´ÆÛ-µðÆúÆ® »ý¼ºÀÚ È£Ãâ");
-	}
-	public Point(int x, int y) {
-		System.out.println("½´ÆÛ-ÀÎÀÚÀÖ´Â »ý¼ºÀÚ");
-		this.x=x;
-		this.y=y;
-	}
-	public void write() {
-		System.out.println("xÁÂÇ¥ "+x+" yÁÂÇ¥ "+y);
-	}
+class Point {
+
+    int x;
+    int y;
+
+    public Point() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½");
+    }
+
+    public Point(int x, int y) {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        this.x = x;
+        this.y = y;
+    }
+
+    public void write() {
+        System.out.println("xï¿½ï¿½Ç¥ " + x + " yï¿½ï¿½Ç¥ " + y);
+    }
 }
-class SubPoint extends Point{
-	String msg;
-	public SubPoint() {
-		super();
-		System.out.println("¼­ºê-µðÆúÆ®»ý¼ºÀÚ È£Ãâ");
-	}
-	public SubPoint(int x, int y, String msg) {
-		super(x,y);
-		this.msg=msg;
-		System.out.println("¼­ºê-ÀÎÀÚÀÖ´Â »ý¼ºÀÚ");
-	}
-	//¿À¹ö¶óÀÌµù ¸Þ¼Ò´õ
-	//ºÎ¸ð°¡ °¡Áø ¸Þ¼Òµå¸¦ Àç±¸ÇöÇÔ..¹Ì¿ÏÀÇ ¸Þ¼Òµå ¿Ï¼º
-	@Override
-	public void write() {
-		super.write();
-		System.out.println("¸Þ¼¼Áö: "+msg);
-	}
+
+class SubPoint extends Point {
+    String msg;
+
+    public SubPoint() {
+        super();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½");
+    }
+
+    public SubPoint(int x, int y, String msg) {
+        super(x, y);
+        this.msg = msg;
+        System.out.println("ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Þ¼Ò´ï¿½
+    //ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµå¸¦ ï¿½ç±¸ï¿½ï¿½ï¿½ï¿½..ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½ ï¿½Ï¼ï¿½
+    @Override
+    public void write() {
+        super.write();
+        System.out.println("ï¿½Þ¼ï¿½ï¿½ï¿½: " + msg);
+    }
 }
+
 public class PointTest_06 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		SubPoint su = new SubPoint(1,2,"ok");
-		su.write();
-		SubPoint suq = new SubPoint();
-		suq.write();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        SubPoint su = new SubPoint(1, 2, "ok");
+        su.write();
+        SubPoint suq = new SubPoint();
+        suq.write();
+    }
 
 }

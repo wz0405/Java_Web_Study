@@ -4,22 +4,22 @@ import java.util.Scanner;
 
 public class ArrayData_04 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//º¯¼ö ¹Ì¸®ÁöÁ¤¾øÀÌ..°ø°£ÇÒ´çÀº ¹ÞÀ»°Í..ÀÔ·Â°ªÀ» Ãâ·Â
-		Scanner sc = new Scanner(System.in);
-		int data[]=new int[5];
-		int sum=0;
-		//°ªÀÔ·Â
-		for(int i=0;i<data.length;i++) {
-			System.out.println(i+1+"¹ø ¼ýÀÚ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-			data[i]=sc.nextInt();
-			sum+=data[i];
-		}
-		for(int i=0;i<data.length;i++) {
-			System.out.println(i+" =>"+data[i]);
-		}
-		System.out.println("¼ýÀÚÀÇÇÕ"+sum);
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..ï¿½ï¿½ï¿½ï¿½ï¿½Ò´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..ï¿½Ô·Â°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        Scanner sc = new Scanner(System.in);
+        int data[] = new int[5];
+        int sum = 0;
+        //ï¿½ï¿½ï¿½Ô·ï¿½
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(i + 1 + "ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
+            data[i] = sc.nextInt();
+            sum += data[i];
+        }
+        for (int i = 0; i < data.length; i++) {
+            System.out.println(i + " =>" + data[i]);
+        }
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + sum);
+    }
 
 }

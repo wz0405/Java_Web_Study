@@ -1,35 +1,36 @@
- class ThreadEx19 {
-	static long startTime = 0;
+class ThreadEx19 {
+    static long startTime = 0;
 
-	public static void main(String args[]) {
-		ThreadEx19_1 th1 = new ThreadEx19_1();
-		ThreadEx19_2 th2 = new ThreadEx19_2();
+    public static void main(String args[]) {
+        ThreadEx19_1 th1 = new ThreadEx19_1();
+        ThreadEx19_2 th2 = new ThreadEx19_2();
 
-		th1.start();
-		th2.start();
-		startTime = System.currentTimeMillis();
+        th1.start();
+        th2.start();
+        startTime = System.currentTimeMillis();
 
-		try {
-			th1.join();	// main¾²·¹µå°¡ th1ÀÇ ÀÛ¾÷ÀÌ ³¡³¯ ¶§±îÁö ±â´Ù¸°´Ù.
-			th2.join();	// main¾²·¹µå°¡ th2ÀÇ ÀÛ¾÷ÀÌ ³¡³¯ ¶§±îÁö ±â´Ù¸°´Ù.
-		} catch(InterruptedException e) {}
+        try {
+            th1.join();    // mainï¿½ï¿½ï¿½ï¿½ï¿½å°¡ th1ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½.
+            th2.join();    // mainï¿½ï¿½ï¿½ï¿½ï¿½å°¡ th2ï¿½ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ù¸ï¿½ï¿½ï¿½.
+        } catch (InterruptedException e) {
+        }
 
-		System.out.print("¼Ò¿ä½Ã°£:" + (System.currentTimeMillis() - ThreadEx19.startTime));
-	} // main
+        System.out.print("ï¿½Ò¿ï¿½Ã°ï¿½:" + (System.currentTimeMillis() - ThreadEx19.startTime));
+    } // main
 }
 
 class ThreadEx19_1 extends Thread {
-	public void run() {
-		for(int i=0; i < 300; i++) {
-			System.out.print(new String("-"));
-		}
-	} // run()
+    public void run() {
+        for (int i = 0; i < 300; i++) {
+            System.out.print(new String("-"));
+        }
+    } // run()
 }
 
 class ThreadEx19_2 extends Thread {
-	public void run() {
-		for(int i=0; i < 300; i++) {
-			System.out.print(new String("|"));
-		}
-	} // run()
+    public void run() {
+        for (int i = 0; i < 300; i++) {
+            System.out.print(new String("|"));
+        }
+    } // run()
 }

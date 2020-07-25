@@ -1,58 +1,58 @@
 import java.util.*;
 
 class HashMapEx3 {
-	static HashMap phoneBook = new HashMap();
+    static HashMap phoneBook = new HashMap();
 
-	public static void main(String[] args) {
-		addPhoneNo("Ä£±¸", "ÀÌÀÚ¹Ù", "010-111-1111");
-		addPhoneNo("Ä£±¸", "±èÀÚ¹Ù", "010-222-2222");
-		addPhoneNo("Ä£±¸", "±èÀÚ¹Ù", "010-333-3333");
-		addPhoneNo("È¸»ç", "±è´ë¸®", "010-444-4444");
-		addPhoneNo("È¸»ç", "±è´ë¸®", "010-555-5555");
-		addPhoneNo("È¸»ç", "¹Ú´ë¸®", "010-666-6666");
-		addPhoneNo("È¸»ç", "ÀÌ°úÀå", "010-777-7777");
-		addPhoneNo("¼¼Å¹", "010-888-8888");
+    public static void main(String[] args) {
+        addPhoneNo("Ä£ï¿½ï¿½", "ï¿½ï¿½ï¿½Ú¹ï¿½", "010-111-1111");
+        addPhoneNo("Ä£ï¿½ï¿½", "ï¿½ï¿½ï¿½Ú¹ï¿½", "010-222-2222");
+        addPhoneNo("Ä£ï¿½ï¿½", "ï¿½ï¿½ï¿½Ú¹ï¿½", "010-333-3333");
+        addPhoneNo("È¸ï¿½ï¿½", "ï¿½ï¿½ë¸®", "010-444-4444");
+        addPhoneNo("È¸ï¿½ï¿½", "ï¿½ï¿½ë¸®", "010-555-5555");
+        addPhoneNo("È¸ï¿½ï¿½", "ï¿½Ú´ë¸®", "010-666-6666");
+        addPhoneNo("È¸ï¿½ï¿½", "ï¿½Ì°ï¿½ï¿½ï¿½", "010-777-7777");
+        addPhoneNo("ï¿½ï¿½Å¹", "010-888-8888");
 
-		printList();
-	} // main
+        printList();
+    } // main
 
-	// ±×·ìÀ» Ãß°¡ÇÏ´Â ¸Þ¼­µå
-	static void addGroup(String groupName) {
-		if(!phoneBook.containsKey(groupName))
-			phoneBook.put(groupName, new HashMap());
-	}
+    // ï¿½×·ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    static void addGroup(String groupName) {
+        if (!phoneBook.containsKey(groupName))
+            phoneBook.put(groupName, new HashMap());
+    }
 
-	// ±×·ì¿¡ ÀüÈ­¹øÈ£¸¦ Ãß°¡ÇÏ´Â ¸Þ¼­µå
-	static void addPhoneNo(String groupName, String name, String tel) {
-		addGroup(groupName);
-		HashMap group = (HashMap)phoneBook.get(groupName);
-		group.put(tel, name);	// ÀÌ¸§Àº Áßº¹µÉ ¼ö ÀÖÀ¸´Ï ÀüÈ­¹øÈ£¸¦ key·Î ÀúÀåÇÑ´Ù.
-	}
+    // ï¿½×·ì¿¡ ï¿½ï¿½È­ï¿½ï¿½È£ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    static void addPhoneNo(String groupName, String name, String tel) {
+        addGroup(groupName);
+        HashMap group = (HashMap) phoneBook.get(groupName);
+        group.put(tel, name);    // ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ßºï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½È£ï¿½ï¿½ keyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+    }
 
-	static void addPhoneNo(String name, String tel) {
-		addPhoneNo("±âÅ¸", name, tel);
-	}
+    static void addPhoneNo(String name, String tel) {
+        addPhoneNo("ï¿½ï¿½Å¸", name, tel);
+    }
 
-	// ÀüÈ­¹øÈ£ºÎ ÀüÃ¼¸¦ Ãâ·ÂÇÏ´Â ¸Þ¼­µå
-	static void printList() {
-		Set set = phoneBook.entrySet();
-		Iterator it = set.iterator();	
+    // ï¿½ï¿½È­ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
+    static void printList() {
+        Set set = phoneBook.entrySet();
+        Iterator it = set.iterator();
 
-		while(it.hasNext()) {
-			Map.Entry e = (Map.Entry)it.next();
+        while (it.hasNext()) {
+            Map.Entry e = (Map.Entry) it.next();
 
-			Set subSet = ((HashMap)e.getValue()).entrySet();
-			Iterator subIt = subSet.iterator();	
+            Set subSet = ((HashMap) e.getValue()).entrySet();
+            Iterator subIt = subSet.iterator();
 
-			System.out.println(" * "+e.getKey()+"["+subSet.size()+"]");
+            System.out.println(" * " + e.getKey() + "[" + subSet.size() + "]");
 
-			while(subIt.hasNext()) {
-				Map.Entry subE = (Map.Entry)subIt.next();
-				String telNo = (String)subE.getKey();
-				String name = (String)subE.getValue();
-				System.out.println(name + " " + telNo );
-			}
-			System.out.println();
-		}
-	} // printList()
+            while (subIt.hasNext()) {
+                Map.Entry subE = (Map.Entry) subIt.next();
+                String telNo = (String) subE.getKey();
+                String name = (String) subE.getValue();
+                System.out.println(name + " " + telNo);
+            }
+            System.out.println();
+        }
+    } // printList()
 } // class

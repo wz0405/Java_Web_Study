@@ -3,17 +3,17 @@ package day0602;
 
 public class InstTest {
 
-	private InstTest() {
-		System.out.println("µðÆúÆ®»ý¼ºÀÚ");
-	}
-	//»ý¼ºÀÚ ´ë½Å¿¡ ÀÎ½ºÅÏ½º¸¦ ¹ÝÈ¯ÇÏ´Â ¸Þ¼Òµå
-	public static InstTest getInstance()
-	{
-		return new InstTest();
-	}
-	public void writeMessage()
-	{
-		System.out.println("¾È³çÇÏ¼¼¿ä.");
-	}
+    private InstTest() {
+        System.out.println("ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¿ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
+    public static InstTest getInstance() {
+        return new InstTest();
+    }
+
+    public void writeMessage() {
+        System.out.println("ï¿½È³ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.");
+    }
 
 }

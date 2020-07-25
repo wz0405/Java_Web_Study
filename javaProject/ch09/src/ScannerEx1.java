@@ -1,34 +1,34 @@
-import java.util.*; 
+import java.util.*;
 
-class ScannerEx1 { 
-	public static void main(String[] args) { 
-		Scanner s = new Scanner(System.in);
-		String[] argArr = null;
+class ScannerEx1 {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        String[] argArr = null;
 
-		while(true) { 
-			String prompt = ">>"; 
-			System.out.print(prompt); 
+        while (true) {
+            String prompt = ">>";
+            System.out.print(prompt);
 
-			// È­¸éÀ¸·ÎºÎÅÍ ¶óÀÎ´ÜÀ§·Î ÀÔ·Â¹Þ´Â´Ù. 
-			String input = s.nextLine(); 
+            // È­ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹Þ´Â´ï¿½. 
+            String input = s.nextLine();
 
-			input = input.trim();        // ÀÔ·Â¹ÞÀº °ª¿¡¼­ ºÒÇÊ¿äÇÑ ¾ÕµÚ °ø¹éÀ» Á¦°ÅÇÑ´Ù. 
-			argArr = input.split(" +");  // ÀÔ·Â¹ÞÀº ³»¿ëÀ» °ø¹éÀ» ±¸ºÐÀÚ·Î ÀÚ¸¥´Ù. 
+            input = input.trim();        // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Õµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+            argArr = input.split(" +");  // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½. 
 
-			String command = argArr[0].trim(); 
+            String command = argArr[0].trim();
 
-			if("".equals(command)) continue; 
+            if ("".equals(command)) continue;
 
-			// ¸í·É¾î¸¦ ¼Ò¹®ÀÚ·Î ¹Ù²Û´Ù.
-			command = command.toLowerCase();
-  
- 			// q ¶Ç´Â Q¸¦ ÀÔ·ÂÇÏ¸é ½ÇÇàÁ¾·áÇÑ´Ù.
-			if(command.equals("q")) { 
-				System.exit(0); 
-			} else { 
-				for(int i=0; i < argArr.length;i++) 
-					System.out.println(argArr[i]); 
-			} 
-		} // while(true) 
-	} // main 
+            // ï¿½ï¿½É¾î¸¦ ï¿½Ò¹ï¿½ï¿½Ú·ï¿½ ï¿½Ù²Û´ï¿½.
+            command = command.toLowerCase();
+
+            // q ï¿½Ç´ï¿½ Qï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            if (command.equals("q")) {
+                System.exit(0);
+            } else {
+                for (int i = 0; i < argArr.length; i++)
+                    System.out.println(argArr[i]);
+            }
+        } // while(true) 
+    } // main 
 }

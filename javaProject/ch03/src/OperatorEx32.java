@@ -1,23 +1,23 @@
 class OperatorEx32 {
-	public static void main(String args[]) { 
-		int  x, y, z;
-		int  absX, absY, absZ;
-		char signX, signY, signZ;
+    public static void main(String args[]) {
+        int x, y, z;
+        int absX, absY, absZ;
+        char signX, signY, signZ;
 
-		x = 10;
-		y = -5;
-		z = 0;
+        x = 10;
+        y = -5;
+        z = 0;
 
-		absX = x >= 0 ? x : -x;  // xÀÇ °ªÀÌ À½¼öÀÌ¸é, ¾ç¼ö·Î ¸¸µç´Ù.
-		absY = y >= 0 ? y : -y;
-		absZ = z >= 0 ? z : -z;
+        absX = x >= 0 ? x : -x;  // xï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+        absY = y >= 0 ? y : -y;
+        absZ = z >= 0 ? z : -z;
 
-		signX = x > 0 ? '+' : ( x==0 ? ' ' : '-');  // Á¶°Ç ¿¬»êÀÚ¸¦ ÁßÃ¸
-		signY = y > 0 ? '+' : ( y==0 ? ' ' : '-'); 
-		signZ = z > 0 ? '+' : ( z==0 ? ' ' : '-'); 
+        signX = x > 0 ? '+' : (x == 0 ? ' ' : '-');  // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½Ã¸
+        signY = y > 0 ? '+' : (y == 0 ? ' ' : '-');
+        signZ = z > 0 ? '+' : (z == 0 ? ' ' : '-');
 
-		System.out.printf("x=%c%d%n", signX, absX);
-		System.out.printf("y=%c%d%n", signY, absY);
-		System.out.printf("z=%c%d%n", signZ, absZ);
-	}
+        System.out.printf("x=%c%d%n", signX, absX);
+        System.out.printf("y=%c%d%n", signY, absY);
+        System.out.printf("z=%c%d%n", signZ, absZ);
+    }
 }

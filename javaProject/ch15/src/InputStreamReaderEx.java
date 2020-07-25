@@ -1,23 +1,24 @@
 import java.io.*;
 
 class InputStreamReaderEx {
-	public static void main(String[] args) {
-		String line = "";
+    public static void main(String[] args) {
+        String line = "";
 
-		try {
-			InputStreamReader isr = new InputStreamReader(System.in);
-			BufferedReader    br  = new BufferedReader(isr);
+        try {
+            InputStreamReader isr = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader(isr);
 
-			System.out.println("»ç¿ëÁßÀÎ OSÀÇ ÀÎÄÚµù :" + isr.getEncoding());
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ OSï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½ :" + isr.getEncoding());
 
-			do {
-				System.out.print("¹®ÀåÀ» ÀÔ·ÂÇÏ¼¼¿ä. ¸¶Ä¡½Ã·Á¸é q¸¦ ÀÔ·ÂÇÏ¼¼¿ä.>");
-				line = br.readLine();
-				System.out.println("ÀÔ·ÂÇÏ½Å ¹®Àå : "+line);
-			} while(!line.equalsIgnoreCase("q"));
+            do {
+                System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½. ï¿½ï¿½Ä¡ï¿½Ã·ï¿½ï¿½ï¿½ qï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½.>");
+                line = br.readLine();
+                System.out.println("ï¿½Ô·ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ : " + line);
+            } while (!line.equalsIgnoreCase("q"));
 
-//			br.close();   // System.in°ú °°Àº Ç¥ÁØÀÔÃâ·ÂÀº ´ÝÁö ¾Ê¾Æµµ µÈ´Ù.
-			System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
-		} catch(IOException e) {}
-	} // main
+//			br.close();   // System.inï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Æµï¿½ ï¿½È´ï¿½.
+            System.out.println("ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+        } catch (IOException e) {
+        }
+    } // main
 }

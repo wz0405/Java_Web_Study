@@ -1,28 +1,28 @@
 class InnerEx3 {
-	private int outerIv = 0;
-	static int outerCv = 0;
+    private int outerIv = 0;
+    static int outerCv = 0;
 
-	class InstanceInner {
-		int iiv  = outerIv;  // ¿ÜºÎ Å¬·¡½ºÀÇ private¸â¹öµµ Á¢±Ù°¡´ÉÇÏ´Ù.
-		int iiv2 = outerCv;
-	}
+    class InstanceInner {
+        int iiv = outerIv;  // ï¿½Üºï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ privateï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+        int iiv2 = outerCv;
+    }
 
-	static class StaticInner {
-// ½ºÅÂÆ½ Å¬·¡½º´Â ¿ÜºÎ Å¬·¡½ºÀÇ ÀÎ½ºÅÏ½º¸â¹ö¿¡ Á¢±ÙÇÒ ¼ö ¾ø´Ù.
+    static class StaticInner {
+        // ï¿½ï¿½ï¿½ï¿½Æ½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Üºï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 //		int siv = outerIv;
-		static int scv = outerCv;
-	}
+        static int scv = outerCv;
+    }
 
-	void myMethod() {
-		int lv = 0;
-		final int LV = 0;  // JDK1.8ºÎÅÍ final »ý·« °¡´É
-	
-		class LocalInner {
-			int liv = outerIv;
-			int liv2 = outerCv;
-//	¿ÜºÎ Å¬·¡½ºÀÇ Áö¿ªº¯¼ö´Â finalÀÌ ºÙÀº º¯¼ö(»ó¼ö)¸¸ Á¢±Ù°¡´ÉÇÏ´Ù.
-//			int liv3 = lv;	// ¿¡·¯!!!(JDK1.8ºÎÅÍ ¿¡·¯ ¾Æ´Ô)
-			int liv4 = LV;	// OK
-		}
-	}
+    void myMethod() {
+        int lv = 0;
+        final int LV = 0;  // JDK1.8ï¿½ï¿½ï¿½ï¿½ final ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+
+        class LocalInner {
+            int liv = outerIv;
+            int liv2 = outerCv;
+            //	ï¿½Üºï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ finalï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½)ï¿½ï¿½ ï¿½ï¿½ï¿½Ù°ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
+//			int liv3 = lv;	// ï¿½ï¿½ï¿½ï¿½!!!(JDK1.8ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½)
+            int liv4 = LV;    // OK
+        }
+    }
 }

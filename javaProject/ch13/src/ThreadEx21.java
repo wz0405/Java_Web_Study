@@ -1,35 +1,38 @@
 class ThreadEx21 {
-	public static void main(String args[]) {
-		Runnable r = new RunnableEx21();
-		new Thread(r).start(); // ThreadGroup¿¡ ÀÇÇØ ÂüÁ¶µÇ¹Ç·Î gc´ë»óÀÌ ¾Æ´Ï´Ù.
-		new Thread(r).start(); // ThreadGroup¿¡ ÀÇÇØ ÂüÁ¶µÇ¹Ç·Î gc´ë»óÀÌ ¾Æ´Ï´Ù.
-	}
+    public static void main(String args[]) {
+        Runnable r = new RunnableEx21();
+        new Thread(r).start(); // ThreadGroupï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹Ç·ï¿½ gcï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï´ï¿½.
+        new Thread(r).start(); // ThreadGroupï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹Ç·ï¿½ gcï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´Ï´ï¿½.
+    }
 }
 
 class Account {
-	private int balance = 1000;
+    private int balance = 1000;
 
-	public  int getBalance() {
-		return balance;
-	}
+    public int getBalance() {
+        return balance;
+    }
 
-	public void withdraw(int money){
-		if(balance >= money) {
-			try { Thread.sleep(1000);} catch(InterruptedException e) {}
-			balance -= money;
-		}
-	} // withdraw
+    public void withdraw(int money) {
+        if (balance >= money) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+            balance -= money;
+        }
+    } // withdraw
 }
 
 class RunnableEx21 implements Runnable {
-	Account acc = new Account();
+    Account acc = new Account();
 
-	public void run() {
-		while(acc.getBalance() > 0) {
-			// 100, 200, 300ÁßÀÇ ÇÑ °ªÀ» ÀÓÀ¸·Î ¼±ÅÃÇØ¼­ Ãâ±Ý(withdraw)
-			int money = (int)(Math.random() * 3 + 1) * 100;
-			acc.withdraw(money);
-			System.out.println("balance:"+acc.getBalance());
-		}
-	} // run()
+    public void run() {
+        while (acc.getBalance() > 0) {
+            // 100, 200, 300ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½(withdraw)
+            int money = (int) (Math.random() * 3 + 1) * 100;
+            acc.withdraw(money);
+            System.out.println("balance:" + acc.getBalance());
+        }
+    } // run()
 }

@@ -1,19 +1,19 @@
 package day0526;
 
 public class CastNum_05 {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 		/*byte a=127;
 		byte b=(byte)128;
 		System.out.println(a);
-		System.out.println(b); //µð¸ð¼Ç..´õÀÛÀº ÀÚ·áÇüÀ¸·ÎÀÇ º¯È¯..°ª¼Õ½Ç
-*/		
-		char a='A';
-		int b=(int)a;
-		System.out.println(a);
-		System.out.println(b);
-		double d=10.5;
-		//¼ýÀÚ³¢¸®ÀÇ Çüº¯È¯Àº(ÀÚ·áÇü)À» ¸ÂÃçÁØ´Ù
-		int c=(int)d; //µð¸ð¼ÇµÊ
-		System.out.println(c);
-	}
+		System.out.println(b); //ï¿½ï¿½ï¿½ï¿½..ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯..ï¿½ï¿½ï¿½Õ½ï¿½
+*/
+        char a = 'A';
+        int b = (int) a;
+        System.out.println(a);
+        System.out.println(b);
+        double d = 10.5;
+        //ï¿½ï¿½ï¿½Ú³ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯ï¿½ï¿½(ï¿½Ú·ï¿½ï¿½ï¿½)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø´ï¿½
+        int c = (int) d; //ï¿½ï¿½ï¿½Çµï¿½
+        System.out.println(c);
+    }
 }

@@ -1,8 +1,17 @@
 class InnerEx6 {
-	Object iv = new Object(){ void method(){} };		// ÀÍ¸íÅ¬·¡½º
-	static Object cv = new Object(){ void method(){} };	// ÀÍ¸íÅ¬·¡½º
+    Object iv = new Object() {
+        void method() {
+        }
+    };        // ï¿½Í¸ï¿½Å¬ï¿½ï¿½ï¿½ï¿½
+    static Object cv = new Object() {
+        void method() {
+        }
+    };    // ï¿½Í¸ï¿½Å¬ï¿½ï¿½ï¿½ï¿½
 
-	void myMethod() {
-		Object lv = new Object(){ void method(){} };	// ÀÍ¸íÅ¬·¡½º
-	}
+    void myMethod() {
+        Object lv = new Object() {
+            void method() {
+            }
+        };    // ï¿½Í¸ï¿½Å¬ï¿½ï¿½ï¿½ï¿½
+    }
 }

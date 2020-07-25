@@ -1,18 +1,18 @@
 class CallStackTest2 {
-	public static void main(String[] args) {
-		System.out.println("main(String[] args)ÀÌ ½ÃÀÛµÇ¾úÀ½.");
-		firstMethod();
-		System.out.println("main(String[] args)ÀÌ ³¡³µÀ½.");
-	}
+    public static void main(String[] args) {
+        System.out.println("main(String[] args)ï¿½ï¿½ ï¿½ï¿½ï¿½ÛµÇ¾ï¿½ï¿½ï¿½.");
+        firstMethod();
+        System.out.println("main(String[] args)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
+    }
 
-	static void firstMethod() {
-		System.out.println("firstMethod()ÀÌ ½ÃÀÛµÇ¾úÀ½.");
-		secondMethod();
-		System.out.println("firstMethod()ÀÌ ³¡³µÀ½.");		
-	}
+    static void firstMethod() {
+        System.out.println("firstMethod()ï¿½ï¿½ ï¿½ï¿½ï¿½ÛµÇ¾ï¿½ï¿½ï¿½.");
+        secondMethod();
+        System.out.println("firstMethod()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
+    }
 
-	static void secondMethod() {
-		System.out.println("secondMethod()ÀÌ ½ÃÀÛµÇ¾úÀ½.");
-		System.out.println("secondMethod()ÀÌ ³¡³µÀ½.");		
-	}
+    static void secondMethod() {
+        System.out.println("secondMethod()ï¿½ï¿½ ï¿½ï¿½ï¿½ÛµÇ¾ï¿½ï¿½ï¿½.");
+        System.out.println("secondMethod()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
+    }
 }

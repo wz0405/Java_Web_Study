@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Insert title here</title>
-<style type="text/css">
-#out {
-	position: absolute;
-	left: 20px;
-	top: 100px;
-	background: #ffcccc;
-	padding: 10 10 10 10;
-	width: 300px;
-	height: 100px;
-}
-</style>
+    <meta charset="utf-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+        #out {
+            position: absolute;
+            left: 20px;
+            top: 100px;
+            background: #ffcccc;
+            padding: 10 10 10 10;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
 
-<script type="text/javascript">
-<!-- alert1 -->
-	function test1(a) {
-		alert(a + 100);
-	}
-	function test2(b) {
-		alert(b)
-	}
-	function test3() {
-		var str = '';
-		var ch = '';
-		ch = confirm('안녕하세요')
-		/* document.write(ch); */
-		if (confirm('수강신청을 했습니까?'))
-			str = '네';
-		else
-			str = '아니오';
-		out.innerHTML = str
-	}
-	function test4() {
-		var str = "<font color='black' size='5'>내이름은 한현희입니다.</font>";
+    <script type="text/javascript">
+        <!-- alert1 -->
+        function test1(a) {
+            alert(a + 100);
+        }
 
-		out.innerHTML = str;
-	}
-</script>
+        function test2(b) {
+            alert(b)
+        }
+
+        function test3() {
+            var str = '';
+            var ch = '';
+            ch = confirm('안녕하세요')
+            /* document.write(ch); */
+            if (confirm('수강신청을 했습니까?'))
+                str = '네';
+            else
+                str = '아니오';
+            out.innerHTML = str
+        }
+
+        function test4() {
+            var str = "<font color='black' size='5'>내이름은 한현희입니다.</font>";
+
+            out.innerHTML = str;
+        }
+    </script>
 </head>
 <body>
-	<input type="button" value="alert" onclick="test1(123)">
-	<input type="button" value="alert" onclick="test2('안녕하세요')">
-	<input type="button" value="confirm" onclick="test3()">
-	<input type="button" value="prompt" onclick="test4()">
-	<div id="out"></div>
+<input type="button" value="alert" onclick="test1(123)">
+<input type="button" value="alert" onclick="test2('안녕하세요')">
+<input type="button" value="confirm" onclick="test3()">
+<input type="button" value="prompt" onclick="test4()">
+<div id="out"></div>
 </body>
 </html>

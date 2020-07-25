@@ -1,32 +1,32 @@
 class CastingTest1 {
-	public static void main(String args[]) {
-		Car car = null;
-		FireEngine fe = new FireEngine();
-		FireEngine fe2 = null;
+    public static void main(String args[]) {
+        Car car = null;
+        FireEngine fe = new FireEngine();
+        FireEngine fe2 = null;
 
-		fe.water();
-		car = fe;    // car =(Car)fe;¿¡¼­ Çüº¯È¯ÀÌ »ý·«µÈ ÇüÅÂ´Ù.
+        fe.water();
+        car = fe;    // car =(Car)fe;ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½.
 //		car.water();	
-		fe2 = (FireEngine)car; // ÀÚ¼ÕÅ¸ÀÔ ¡ç Á¶»óÅ¸ÀÔ
-		fe2.water();
-	}
+        fe2 = (FireEngine) car; // ï¿½Ú¼ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½
+        fe2.water();
+    }
 }
 
 class Car {
-	String color;
-	int door;
+    String color;
+    int door;
 
-	void drive() { 		// ¿îÀüÇÏ´Â ±â´É
-		System.out.println("drive, Brrrr~");
-	}
+    void drive() {        // ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½
+        System.out.println("drive, Brrrr~");
+    }
 
-	void stop() {		// ¸ØÃß´Â ±â´É	
-		System.out.println("stop!!!");	
-	}
+    void stop() {        // ï¿½ï¿½ï¿½ß´ï¿½ ï¿½ï¿½ï¿½	
+        System.out.println("stop!!!");
+    }
 }
 
-class FireEngine extends Car {	// ¼Ò¹æÂ÷
-	void water() {		// ¹°À» »Ñ¸®´Â ±â´É
-		System.out.println("water!!!");
-	}
+class FireEngine extends Car {    // ï¿½Ò¹ï¿½ï¿½ï¿½
+    void water() {        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        System.out.println("water!!!");
+    }
 }

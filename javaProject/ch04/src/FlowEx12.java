@@ -1,11 +1,11 @@
 class FlowEx12 {
-	public static void main(String[] args) { 
-		for(int i=1;i<=5;i++)
-			System.out.println(i); // iÀÇ °ªÀ» Ãâ·ÂÇÑ´Ù.
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++)
+            System.out.println(i); // iï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
 
-		for(int i=1;i<=5;i++)
-			System.out.print(i);  // println()´ë½Å print()¸¦ ¾²¸é °¡·Î·Î Ãâ·ÂµÈ´Ù.
+        for (int i = 1; i <= 5; i++)
+            System.out.print(i);  // println()ï¿½ï¿½ï¿½ print()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î·ï¿½ ï¿½ï¿½ÂµÈ´ï¿½.
 
-		System.out.println();
-	}
+        System.out.println();
+    }
 }

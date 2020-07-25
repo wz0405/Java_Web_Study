@@ -1,27 +1,27 @@
-import java.util.regex.*;	// Pattern°ú Matcher°¡ ¼ÓÇÑ ÆÐÅ°Áö
+import java.util.regex.*;    // Patternï¿½ï¿½ Matcherï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å°ï¿½ï¿½
 
 class RegularEx4 {
-	public static void main(String[] args) {
-		String source  = "A broken hand works, but not a broken heart.";
-		String pattern = "broken";
+    public static void main(String[] args) {
+        String source = "A broken hand works, but not a broken heart.";
+        String pattern = "broken";
 
-		StringBuffer sb = new StringBuffer();
+        StringBuffer sb = new StringBuffer();
 
-		Pattern p = Pattern.compile(pattern);
-		Matcher m = p.matcher(source);
-		System.out.println("source:"+source);
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(source);
+        System.out.println("source:" + source);
 
-		int i=0;
+        int i = 0;
 
-		while(m.find()) {
-			System.out.println(++i + "¹øÂ° ¸ÅÄª:" + m.start() + "~"+ m.end());
+        while (m.find()) {
+            System.out.println(++i + "ï¿½ï¿½Â° ï¿½ï¿½Äª:" + m.start() + "~" + m.end());
 
-            // brokenÀ» drunkenÀ¸·Î Ä¡È¯ÇÏ¿© sb¿¡ ÀúÀåÇÑ´Ù.
-			m.appendReplacement(sb, "drunken");  
-		}
+            // brokenï¿½ï¿½ drunkenï¿½ï¿½ï¿½ï¿½ Ä¡È¯ï¿½Ï¿ï¿½ sbï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+            m.appendReplacement(sb, "drunken");
+        }
 
-		m.appendTail(sb);
-		System.out.println("Replacement count : " + i);
-		System.out.println("result:"+sb.toString());
-	}
+        m.appendTail(sb);
+        System.out.println("Replacement count : " + i);
+        System.out.println("result:" + sb.toString());
+    }
 }

@@ -1,22 +1,22 @@
 class ArrayEx07 {
-	public static void main(String[] args) {
-		int[] numArr = new int[10];
+    public static void main(String[] args) {
+        int[] numArr = new int[10];
 
-		for (int i=0; i < numArr.length ; i++ ) {
-             numArr[i] = i;  // ¹è¿­À» 0~9ÀÇ ¼ýÀÚ·Î ÃÊ±âÈ­ÇÑ´Ù.
-			System.out.print(numArr[i]);  
-		}
-		System.out.println();
+        for (int i = 0; i < numArr.length; i++) {
+            numArr[i] = i;  // ï¿½è¿­ï¿½ï¿½ 0~9ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½Ê±ï¿½È­ï¿½Ñ´ï¿½.
+            System.out.print(numArr[i]);
+        }
+        System.out.println();
 
-		for (int i=0; i < 100; i++ ) {
-			int n = (int)(Math.random() * 10);	// 0~9ÁßÀÇ ÇÑ °ªÀ» ÀÓÀÇ·Î ¾ò´Â´Ù.
+        for (int i = 0; i < 100; i++) {
+            int n = (int) (Math.random() * 10);    // 0~9ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½Â´ï¿½.
 
-			int tmp = numArr[0];
-			numArr[0] = numArr[n];
-			numArr[n] = tmp;
-		}
+            int tmp = numArr[0];
+            numArr[0] = numArr[n];
+            numArr[n] = tmp;
+        }
 
-		for (int i=0; i < numArr.length ; i++ )
-			System.out.print(numArr[i]);		
-	} // mainÀÇ ³¡
+        for (int i = 0; i < numArr.length; i++)
+            System.out.print(numArr[i]);
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

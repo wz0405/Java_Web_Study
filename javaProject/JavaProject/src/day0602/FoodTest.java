@@ -1,33 +1,36 @@
 package day0602;
-class Food{
-	private String menu;
-	private int price;
-	
-	static int menuno=1;
 
-	//»ý¼ºÀÚ 2°³Â¥¸® ¸¸µç°æ¿ì get¸Þ¼­µå È°¿ëÇÑ Ãâ·Â¹®
-	public Food(String menu, int price){
-		this.menu=menu;
-		this.price=price;
-	}
-	public void getData(){
-		System.out.println("¸Þ´º_"+menuno);
-		menuno++;
-		System.out.println("¸Þ´º¸í: "+this.menu);
-		System.out.println("°¡°Ý: "+this.price);
-		System.out.println("------------------");
-		
-	}
-	//µðÆúÆ® »ý¼ºÀÚÀÎ °æ¿ì set¸Þ¼­µå¸¸µé°í get¸Þ¼­µå ¸¸µé±â
+class Food {
+    private String menu;
+    private int price;
+
+    static int menuno = 1;
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ getï¿½Þ¼ï¿½ï¿½ï¿½ È°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¹ï¿½
+    public Food(String menu, int price) {
+        this.menu = menu;
+        this.price = price;
+    }
+
+    public void getData() {
+        System.out.println("ï¿½Þ´ï¿½_" + menuno);
+        menuno++;
+        System.out.println("ï¿½Þ´ï¿½ï¿½ï¿½: " + this.menu);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½: " + this.price);
+        System.out.println("------------------");
+
+    }
+    //ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ setï¿½Þ¼ï¿½ï¿½å¸¸ï¿½ï¿½ï¿½ getï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 }
+
 public class FoodTest {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Food fo = new Food("½ºÆÄ°ÔÆ¼",18000);
-		fo.getData();
-		Food fo1 = new Food("ÆÄ½ºÅ¸",15000);
-		fo1.getData();
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Food fo = new Food("ï¿½ï¿½ï¿½Ä°ï¿½Æ¼", 18000);
+        fo.getData();
+        Food fo1 = new Food("ï¿½Ä½ï¿½Å¸", 15000);
+        fo1.getData();
+    }
 
 }

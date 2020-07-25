@@ -1,13 +1,13 @@
 class ExceptionEx12 {
-	public static void main(String[] args) throws Exception {
-		method1();	 // °°Àº Å¬·¡½º³»ÀÇ static¸â¹öÀÌ¹Ç·Î °´Ã¼»ý¼º¾øÀÌ Á÷Á¢ È£Ãâ°¡´É.
-  	}	// main¸Þ¼­µåÀÇ ³¡
+    public static void main(String[] args) throws Exception {
+        method1();     // ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ staticï¿½ï¿½ï¿½ï¿½Ì¹Ç·ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½â°¡ï¿½ï¿½.
+    }    // mainï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-	static void method1() throws Exception {
-		method2();
-	}	// method1ÀÇ ³¡
+    static void method1() throws Exception {
+        method2();
+    }    // method1ï¿½ï¿½ ï¿½ï¿½
 
-	static void method2() throws Exception {
-		throw new Exception();
-	}	// method2ÀÇ ³¡
+    static void method2() throws Exception {
+        throw new Exception();
+    }    // method2ï¿½ï¿½ ï¿½ï¿½
 }

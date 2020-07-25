@@ -1,22 +1,22 @@
 package day0526;
 
 public class DataType_04 {
-	public static void main(String[] args) {
-		//8°³ÀÇ ÀÚ·áÇü
-		boolean flag=false;
-		char ch='A'; //±âº»ÀûÀ¸·Î Á¤¼öÇü..¾Æ½ºÅ°ÄÚµå·Î º¯°æ°¡´É..¼Òµû¿ÈÇ¥·Î Ç¥Çö
-		char ch2='a';
-		byte num=-128;
-		int num2=500000; //32bit
-		long num3=8232332; //64bit
-		double num4=42.23; //64bit
-		float num5=1.123f; //µÚ¿¡ f 32bit
-		System.out.println(flag);
-		System.out.println(ch);
-		System.out.println(ch+ch2);
-		System.out.println(ch+2);
-		//char·Î Ä³½ºÆÃ..¹Ù²Ù·Á´Â ÀÚ·áÇüÀÌ¸§(char)
-		System.out.println((char)(ch+2));
-		System.out.println(num+num2+num3+num4+num5);
-	}
+    public static void main(String[] args) {
+        //8ï¿½ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½ï¿½ï¿½
+        boolean flag = false;
+        char ch = 'A'; //ï¿½âº»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..ï¿½Æ½ï¿½Å°ï¿½Úµï¿½ï¿½ ï¿½ï¿½ï¿½æ°¡ï¿½ï¿½..ï¿½Òµï¿½ï¿½ï¿½Ç¥ï¿½ï¿½ Ç¥ï¿½ï¿½
+        char ch2 = 'a';
+        byte num = -128;
+        int num2 = 500000; //32bit
+        long num3 = 8232332; //64bit
+        double num4 = 42.23; //64bit
+        float num5 = 1.123f; //ï¿½Ú¿ï¿½ f 32bit
+        System.out.println(flag);
+        System.out.println(ch);
+        System.out.println(ch + ch2);
+        System.out.println(ch + 2);
+        //charï¿½ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½..ï¿½Ù²Ù·ï¿½ï¿½ï¿½ ï¿½Ú·ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½(char)
+        System.out.println((char) (ch + 2));
+        System.out.println(num + num2 + num3 + num4 + num5);
+    }
 }

@@ -1,20 +1,20 @@
 package day0601;
 
 public class obTestA_03 {
-	int a;
-	static int b;
-	
-	public static void main(String[] args) {
-		//°°ÀºÅ¬·¡½º¿¡¼­´Â Å¬·¡½º¸íÀ» »ý·«°¡´É
-		b=20;
-		System.out.println(b);
-		
-		TestA_03 ab = new TestA_03();
-		System.out.println(ab.name);
-		//ÀÎ½ºÅÏ¼öº¯¼ö¿Í Çò°¥¸®¹Ç·Î Å¬·¡½º¸í.À¸·Î È£ÃâÇÏ´Â°Ô ´õ ¹Ù¶÷Á÷ÇÔ
-		System.out.println(ab.message);
-		System.out.println(TestA_03.message);
-		
-	}
+    int a;
+    static int b;
+
+    public static void main(String[] args) {
+        //ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        b = 20;
+        System.out.println(b);
+
+        TestA_03 ab = new TestA_03();
+        System.out.println(ab.name);
+        //ï¿½Î½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ò°¥¸ï¿½ï¿½Ç·ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ï´Â°ï¿½ ï¿½ï¿½ ï¿½Ù¶ï¿½ï¿½ï¿½ï¿½ï¿½
+        System.out.println(ab.message);
+        System.out.println(TestA_03.message);
+
+    }
 }
 

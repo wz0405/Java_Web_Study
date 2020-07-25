@@ -1,17 +1,17 @@
 class ArrayEx12 {
-	public static void main(String[] args) {
-		String[] names = {"Kim", "Park", "Yi"};
+    public static void main(String[] args) {
+        String[] names = {"Kim", "Park", "Yi"};
 
-		for(int i=0; i < names.length;i++) {
-			System.out.println("names["+i+"]:"+names[i]);
-		}
+        for (int i = 0; i < names.length; i++) {
+            System.out.println("names[" + i + "]:" + names[i]);
+        }
 
-		String tmp = names[2]; // ¹è¿­ namesÀÇ ¼¼ ¹øÂ°¿ä¼Ò¸¦ tmp¿¡ ÀúÀå
-		System.out.println("tmp:"+tmp);
+        String tmp = names[2]; // ï¿½è¿­ namesï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Â°ï¿½ï¿½Ò¸ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        System.out.println("tmp:" + tmp);
 
-		names[0] = "Yu"; // ¹è¿­ namesÀÇ Ã¹ ¹øÂ° ¿ä¼Ò¸¦ "Yu"·Î º¯°æ
+        names[0] = "Yu"; // ï¿½è¿­ namesï¿½ï¿½ Ã¹ ï¿½ï¿½Â° ï¿½ï¿½Ò¸ï¿½ "Yu"ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-		for(String str : names)   // Çâ»óµÈ for¹®
-			System.out.println(str);
-	} // main
+        for (String str : names)   // ï¿½ï¿½ï¿½ï¿½ forï¿½ï¿½
+            System.out.println(str);
+    } // main
 }

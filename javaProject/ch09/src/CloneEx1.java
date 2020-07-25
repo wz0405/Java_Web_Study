@@ -1,30 +1,31 @@
 class Point implements Cloneable {
-	int x;
-	int y;
+    int x;
+    int y;
 
-	Point(int x, int y) {
-		this.x = x;
-		this.y = y;
-	}
+    Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
 
-	public String toString() {
-		return "x="+x +", y="+y;
-	}
+    public String toString() {
+        return "x=" + x + ", y=" + y;
+    }
 
-	public Object clone() {
-		Object obj = null;
-		try {
-			obj = super.clone();  // clone()Àº ¹Ýµå½Ã ¿¹¿ÜÃ³¸®¸¦ ÇØÁÖ¾î¾ß ÇÑ´Ù.
-		} catch(CloneNotSupportedException e) {}
-		return obj;
-	}
+    public Object clone() {
+        Object obj = null;
+        try {
+            obj = super.clone();  // clone()ï¿½ï¿½ ï¿½Ýµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ ï¿½Ñ´ï¿½.
+        } catch (CloneNotSupportedException e) {
+        }
+        return obj;
+    }
 }
 
 class CloneEx1 {
-	public static void main(String[] args){
-		Point original = new Point(3, 5);
-		Point copy = (Point)original.clone(); // º¹Á¦(clone)ÇØ¼­ »õ·Î¿î °´Ã¼¸¦ »ý¼º
-		System.out.println(original);
-		System.out.println(copy);
-	}
+    public static void main(String[] args) {
+        Point original = new Point(3, 5);
+        Point copy = (Point) original.clone(); // ï¿½ï¿½ï¿½ï¿½(clone)ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        System.out.println(original);
+        System.out.println(copy);
+    }
 }

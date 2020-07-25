@@ -1,37 +1,37 @@
 import java.util.*;
 
 class FlowEx05 {
-	public static void main(String[] args) { 
-		int  score = 0;
-		char grade = ' ';
-		char opt   = '0';
+    public static void main(String[] args) {
+        int score = 0;
+        char grade = ' ';
+        char opt = '0';
 
-		System.out.print("Á¡¼ö¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.>");
+        System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.>");
 
-		Scanner scanner = new Scanner(System.in);
-		String tmp = scanner.nextLine(); // È­¸éÀ» ÅëÇØ ÀÔ·Â¹ÞÀº ³»¿ëÀ» tmp¿¡ ÀúÀå
-		score = Integer.parseInt(tmp);   // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­(tmp)À» ¼ýÀÚ·Î º¯È¯
-		
-		System.out.printf("´ç½ÅÀÇ Á¡¼ö´Â %dÀÔ´Ï´Ù.", score);
+        Scanner scanner = new Scanner(System.in);
+        String tmp = scanner.nextLine(); // È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ tmpï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        score = Integer.parseInt(tmp);   // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½(tmp)ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		if (score >= 90) {		      // score°¡ 90Á¡ º¸´Ù °°°Å³ª Å©¸é AÇÐÁ¡(grade)
-			grade = 'A';
-			if (score >= 98) { 	      // 90Á¡ ÀÌ»ó Áß¿¡¼­µµ 98Á¡ ÀÌ»óÀº A+
-				opt = '+';	
-			} else if (score < 94) {  // 90Á¡ ÀÌ»ó 94Á¡ ¹Ì¸¸Àº A-
-				opt = '-';
-			}
-		} else if (score >= 80){	  // score°¡ 80Á¡ º¸´Ù °°°Å³ª Å©¸é BÇÐÁ¡(grade)
-			grade = 'B';
-			if (score >= 88) {
-				opt = '+';
-			} else if (score < 84)	{
-				opt = '-';
-			}
-		} else {				      // ³ª¸ÓÁö´Â CÇÐÁ¡(grade)
-			grade = 'C';
-		}
-			
-		System.out.printf("´ç½ÅÀÇ ÇÐÁ¡Àº %c%cÀÔ´Ï´Ù.%n", grade, opt);
-	}
+        System.out.printf("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ %dï¿½Ô´Ï´ï¿½.", score);
+
+        if (score >= 90) {              // scoreï¿½ï¿½ 90ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å³ï¿½ Å©ï¿½ï¿½ Aï¿½ï¿½ï¿½ï¿½(grade)
+            grade = 'A';
+            if (score >= 98) {          // 90ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½ß¿ï¿½ï¿½ï¿½ï¿½ï¿½ 98ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½ï¿½ A+
+                opt = '+';
+            } else if (score < 94) {  // 90ï¿½ï¿½ ï¿½Ì»ï¿½ 94ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ A-
+                opt = '-';
+            }
+        } else if (score >= 80) {      // scoreï¿½ï¿½ 80ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Å³ï¿½ Å©ï¿½ï¿½ Bï¿½ï¿½ï¿½ï¿½(grade)
+            grade = 'B';
+            if (score >= 88) {
+                opt = '+';
+            } else if (score < 84) {
+                opt = '-';
+            }
+        } else {                      // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Cï¿½ï¿½ï¿½ï¿½(grade)
+            grade = 'C';
+        }
+
+        System.out.printf("ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ %c%cï¿½Ô´Ï´ï¿½.%n", grade, opt);
+    }
 }

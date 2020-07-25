@@ -1,35 +1,39 @@
 package day0601;
 
-class Number{
-	int num=0;
-	//»ý¼ºÀÚ
-	public Number() {
-		// TODO Auto-generated constructor stub
-		System.out.println("µðÆúÆ® »ý¼ºÀÚ È£Ãâ");
-	}
-	public Number(int num) {
-		this.num=num; //ÀÌ¸§ÀÌ °°Àº°æ¿ì this.num ÀÎ½ºÅÏ½º º¯¼ö¸í ¼³Á¤ 
-		System.out.println("»ý¼ºÀÚ È£Ãâ");
-	}
-	public int getNumber() {
-		num=100;
-		return num;
-	}
+class Number {
+    int num = 0;
+
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public Number() {
+        // TODO Auto-generated constructor stub
+        System.out.println("ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½");
+    }
+
+    public Number(int num) {
+        this.num = num; //ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ this.num ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½");
+    }
+
+    public int getNumber() {
+        num = 100;
+        return num;
+    }
 }
+
 public class ConstTest_04 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//¸ÞÀÎ¸Þ¼­µå¿¡¼­´Â ÀÎ½ºÅÏ½º°¡ »ý¼ºµÉ¶§¸¶´Ù »ý¼ºÀÚ ÀÚµ¿È£Ãâ
-		Number cd = new Number(1);
-		Number cd1= new Number();
-		System.out.println(cd1.num);
-		System.out.println(cd.num);
-		
-		//µðÆúÆ® »ý¼ºÀÚ »ý¼ºÇØ¼­ ¸Þ¼­µå °¡Á®¿À±â
-		System.out.println(cd.getNumber());
-		
-	}
-	
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //ï¿½ï¿½ï¿½Î¸Þ¼ï¿½ï¿½å¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½É¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½È£ï¿½ï¿½
+        Number cd = new Number(1);
+        Number cd1 = new Number();
+        System.out.println(cd1.num);
+        System.out.println(cd.num);
+
+        //ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        System.out.println(cd.getNumber());
+
+    }
+
 
 }

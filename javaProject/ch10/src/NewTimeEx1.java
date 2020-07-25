@@ -2,26 +2,26 @@ import java.time.*;
 import java.time.temporal.*;
 
 class NewTimeEx1 {
-	public static void main(String[] args) {
-		LocalDate today = LocalDate.now(); // ¿À´ÃÀÇ ³¯Â¥
-		LocalTime now  = LocalTime.now();  // ÇöÀç ½Ã°£
+    public static void main(String[] args) {
+        LocalDate today = LocalDate.now(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥
+        LocalTime now = LocalTime.now();  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
 
-		LocalDate birthDate = LocalDate.of(1999, 12, 31); // 1999³â 12¿ù 31ÀÏ
-		LocalTime birthTime = LocalTime.of(23, 59, 59);   // 23½Ã 59ºÐ 59ÃÊ	
+        LocalDate birthDate = LocalDate.of(1999, 12, 31); // 1999ï¿½ï¿½ 12ï¿½ï¿½ 31ï¿½ï¿½
+        LocalTime birthTime = LocalTime.of(23, 59, 59);   // 23ï¿½ï¿½ 59ï¿½ï¿½ 59ï¿½ï¿½	
 
-		System.out.println("today="+today);
-		System.out.println("now="+now);
-		System.out.println("birthDate="+birthDate);   // 1999-12-31
-		System.out.println("birthTime="+birthTime);   // 23:59:59
+        System.out.println("today=" + today);
+        System.out.println("now=" + now);
+        System.out.println("birthDate=" + birthDate);   // 1999-12-31
+        System.out.println("birthTime=" + birthTime);   // 23:59:59
 
-		System.out.println(birthDate.withYear(2000)); // 2000-12-31
-		System.out.println(birthDate.plusDays(1));    // 2001-01-01
-	      System.out.println(birthDate.plus(1,ChronoUnit.DAYS)); //2001-01-02
+        System.out.println(birthDate.withYear(2000)); // 2000-12-31
+        System.out.println(birthDate.plusDays(1));    // 2001-01-01
+        System.out.println(birthDate.plus(1, ChronoUnit.DAYS)); //2001-01-02
 
-		// 23:59:59 -> 23:00
-		System.out.println(birthTime.truncatedTo(ChronoUnit.HOURS)); 			
-		// Æ¯Á¤ ChronoFieldÀÇ ¹üÀ§¸¦ ¾Ë¾Æ³»´Â ¹æ¹ý
-		System.out.println(ChronoField.CLOCK_HOUR_OF_DAY.range()); // 1-24
-		System.out.println(ChronoField.HOUR_OF_DAY.range());       // 0-23
-	}
+        // 23:59:59 -> 23:00
+        System.out.println(birthTime.truncatedTo(ChronoUnit.HOURS));
+        // Æ¯ï¿½ï¿½ ChronoFieldï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¾Æ³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        System.out.println(ChronoField.CLOCK_HOUR_OF_DAY.range()); // 1-24
+        System.out.println(ChronoField.HOUR_OF_DAY.range());       // 0-23
+    }
 }

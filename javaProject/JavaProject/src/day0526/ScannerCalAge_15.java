@@ -4,21 +4,21 @@ import java.util.Calendar;
 import java.util.Scanner;
 
 public class ScannerCalAge_15 {
-	public static void main(String[] args) {
-		Calendar cal = Calendar.getInstance();
-		Scanner sc = new Scanner(System.in);
-		String name;
-		String year;
-		System.out.print("ÀÌ¸§ÀÔ·Â:");
-		name=sc.nextLine();
-		System.out.print("ÅÂ¾î³­ ¿¬µµ ÀÔ·Â:");
-		year=sc.nextLine();
-		System.out.println("===============");
-		System.out.println("½Å»óÁ¤º¸");
-		System.out.println("ÀÌ¸§:"+name);
-		int inyear=Integer.parseInt(year);
-		int curYear=cal.get(Calendar.YEAR);
-		System.out.println("ÇöÀç ³ªÀÌ: "+(curYear-inyear+1));
-				
-	}
+    public static void main(String[] args) {
+        Calendar cal = Calendar.getInstance();
+        Scanner sc = new Scanner(System.in);
+        String name;
+        String year;
+        System.out.print("ï¿½Ì¸ï¿½ï¿½Ô·ï¿½:");
+        name = sc.nextLine();
+        System.out.print("ï¿½Â¾î³­ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½:");
+        year = sc.nextLine();
+        System.out.println("===============");
+        System.out.println("ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½");
+        System.out.println("ï¿½Ì¸ï¿½:" + name);
+        int inyear = Integer.parseInt(year);
+        int curYear = cal.get(Calendar.YEAR);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + (curYear - inyear + 1));
+
+    }
 }

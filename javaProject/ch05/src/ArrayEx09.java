@@ -1,15 +1,15 @@
-import java.util.*;  // Arrays.toString()À» »ç¿ëÇÏ±â À§ÇØ Ãß°¡
+import java.util.*;  // Arrays.toString()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
 
 class ArrayEx09 {
-	public static void main(String[] args) {
-		int[] code = { -4, -1, 3, 6, 11 };  // ºÒ¿¬¼ÓÀûÀÎ °ªµé·Î ±¸¼ºµÈ ¹è¿­
-		int[] arr = new int[10];
+    public static void main(String[] args) {
+        int[] code = {-4, -1, 3, 6, 11};  // ï¿½Ò¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+        int[] arr = new int[10];
 
-		for (int i=0; i < arr.length ; i++ ) {
-			int tmp = (int)(Math.random() * code.length);
-			arr[i] = code[tmp];
-		}
+        for (int i = 0; i < arr.length; i++) {
+            int tmp = (int) (Math.random() * code.length);
+            arr[i] = code[tmp];
+        }
 
-		System.out.println(Arrays.toString(arr));
-	} // mainÀÇ ³¡
+        System.out.println(Arrays.toString(arr));
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

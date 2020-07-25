@@ -2,16 +2,17 @@ package day0526;
 
 
 import java.util.Calendar;
+
 public class CalTest_10 {
-	public static void main(String[] args) {
-		//Date date=new Date(); //±ÇÀåÇÏÁö ¾ÊÀ½
-		//import....Å¬·¡½º¸í.getInstance()
-		//ÂüÁ¶º¯¼ö¸í.¸Þ¼­µå·Î ÇÊ¿äÇÑ ¸Þ¼­µå È°¿ë
-		Calendar cal=Calendar.getInstance();
-	
-		System.out.println("Áö±ÝÀº"+cal.get(cal.YEAR)+"³âµµ ÀÔ´Ï´Ù");
-		System.out.println("Áö±ÝÀº"+(cal.get(cal.MONTH)+1)+"¿ù ÀÔ´Ï´Ù");
-		System.out.println("¿À´ÃÀÏÀÚ´Â"+ cal.get(cal.DAY_OF_MONTH)+"ÀÏ ÀÔ´Ï´Ù");
-		System.out.println("½Ã°£: "+cal.get(cal.HOUR_OF_DAY)+"½Ã"+cal.get(cal.MINUTE)+"ºÐ"+cal.get(cal.SECOND)+"ÃÊ");
-	}
+    public static void main(String[] args) {
+        //Date date=new Date(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //import....Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.getInstance()
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ È°ï¿½ï¿½
+        Calendar cal = Calendar.getInstance();
+
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + cal.get(cal.YEAR) + "ï¿½âµµ ï¿½Ô´Ï´ï¿½");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + (cal.get(cal.MONTH) + 1) + "ï¿½ï¿½ ï¿½Ô´Ï´ï¿½");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½" + cal.get(cal.DAY_OF_MONTH) + "ï¿½ï¿½ ï¿½Ô´Ï´ï¿½");
+        System.out.println("ï¿½Ã°ï¿½: " + cal.get(cal.HOUR_OF_DAY) + "ï¿½ï¿½" + cal.get(cal.MINUTE) + "ï¿½ï¿½" + cal.get(cal.SECOND) + "ï¿½ï¿½");
+    }
 }

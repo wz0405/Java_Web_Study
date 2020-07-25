@@ -1,58 +1,58 @@
 class Product {
-	int price;			// Á¦Ç°ÀÇ °¡°Ý
-	int bonusPoint;		// Á¦Ç°±¸¸Å ½Ã Á¦°øÇÏ´Â º¸³Ê½ºÁ¡¼ö
+    int price;            // ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    int bonusPoint;        // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	Product(int price) {
-		this.price = price;
-		bonusPoint =(int)(price/10.0);	// º¸³Ê½ºÁ¡¼ö´Â Á¦Ç°°¡°ÝÀÇ 10%
-	}
+    Product(int price) {
+        this.price = price;
+        bonusPoint = (int) (price / 10.0);    // ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 10%
+    }
 }
 
 class Tv3 extends Product {
-	Tv3() {
-		// Á¶»óÅ¬·¡½ºÀÇ »ý¼ºÀÚ Product(int price)¸¦ È£ÃâÇÑ´Ù.
-		super(100);			// TvÀÇ °¡°ÝÀ» 100¸¸¿øÀ¸·Î ÇÑ´Ù.
-	}
+    Tv3() {
+        // ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Product(int price)ï¿½ï¿½ È£ï¿½ï¿½ï¿½Ñ´ï¿½.
+        super(100);            // Tvï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 100ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½.
+    }
 
-	public String toString() {	// ObjectÅ¬·¡½ºÀÇ toString()À» ¿À¹ö¶óÀÌµùÇÑ´Ù.
-		return "Tv";
-	}
+    public String toString() {    // ObjectÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ toString()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½Ñ´ï¿½.
+        return "Tv";
+    }
 }
 
 class Computer extends Product {
-	Computer() {
-		super(200);
-	}
+    Computer() {
+        super(200);
+    }
 
-	public String toString() {
-		return "Computer";
-	}
+    public String toString() {
+        return "Computer";
+    }
 }
 
-class Buyer {			// °í°´, ¹°°ÇÀ» »ç´Â »ç¶÷
-	int money = 1000;	// ¼ÒÀ¯±Ý¾×
-	int bonusPoint = 0;	// º¸³Ê½ºÁ¡¼ö
+class Buyer {            // ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    int money = 1000;    // ï¿½ï¿½ï¿½ï¿½ï¿½Ý¾ï¿½
+    int bonusPoint = 0;    // ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	void buy(Product p) {
-		if(money < p.price) {
-			System.out.println("ÀÜ¾×ÀÌ ºÎÁ·ÇÏ¿© ¹°°ÇÀ» »ì¼ö ¾ø½À´Ï´Ù.");
-			return;
-		}
+    void buy(Product p) {
+        if (money < p.price) {
+            System.out.println("ï¿½Ü¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+            return;
+        }
 
-		money -= p.price;			// °¡Áø µ·¿¡¼­ ±¸ÀÔÇÑ Á¦Ç°ÀÇ °¡°ÝÀ» »«´Ù.
-		bonusPoint += p.bonusPoint;	// Á¦Ç°ÀÇ º¸³Ê½º Á¡¼ö¸¦ Ãß°¡ÇÑ´Ù.
-		System.out.println(p + "À»/¸¦ ±¸ÀÔÇÏ¼Ì½À´Ï´Ù.");
-	}
+        money -= p.price;            // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+        bonusPoint += p.bonusPoint;    // ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ï¿½ï¿½Ê½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ñ´ï¿½.
+        System.out.println(p + "ï¿½ï¿½/ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¼Ì½ï¿½ï¿½Ï´ï¿½.");
+    }
 }
 
 class PolyArgumentTest {
-	public static void main(String args[]) {
-		Buyer b = new Buyer();
+    public static void main(String args[]) {
+        Buyer b = new Buyer();
 
-		b.buy(new Tv3());
-		b.buy(new Computer());
+        b.buy(new Tv3());
+        b.buy(new Computer());
 
-		System.out.println("ÇöÀç ³²Àº µ·Àº " + b.money + "¸¸¿øÀÔ´Ï´Ù.");
-		System.out.println("ÇöÀç º¸³Ê½ºÁ¡¼ö´Â " + b.bonusPoint + "Á¡ÀÔ´Ï´Ù.");
-	}
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ " + b.money + "ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ " + b.bonusPoint + "ï¿½ï¿½ï¿½Ô´Ï´ï¿½.");
+    }
 }

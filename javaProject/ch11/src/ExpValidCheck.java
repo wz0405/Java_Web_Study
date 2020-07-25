@@ -1,36 +1,36 @@
 import java.util.*;
 
 public class ExpValidCheck {
-	public static void main(String[] args) {
-	     if(args.length!=1){
-               System.out.println("Usage : java ExpValidCheck \"EXPRESSION\"");
-               System.out.println("Example : java ExpValidCheck \"((2+3)*1)+3\"");		  
-			   System.exit(0);			
-	     }
-		
-		Stack st = new Stack();
-		String expression = args[0];
-		
-		System.out.println("expression:"+expression);
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("Usage : java ExpValidCheck \"EXPRESSION\"");
+            System.out.println("Example : java ExpValidCheck \"((2+3)*1)+3\"");
+            System.exit(0);
+        }
 
-		try {
-			for(int i=0; i < expression.length();i++){
-				char ch = expression.charAt(i); 
-				
-				if(ch=='('){
-					st.push(ch+"");
-				} else if(ch==')') {
-					st.pop();
-				}
-			}
-			
-			if(st.isEmpty()){
-				System.out.println("°ýÈ£°¡ ÀÏÄ¡ÇÕ´Ï´Ù.");
-			} else {
-				System.out.println("°ýÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
-			}
-		} catch (EmptyStackException e) {
-			System.out.println("°ýÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");		
-		} // try
-	}
+        Stack st = new Stack();
+        String expression = args[0];
+
+        System.out.println("expression:" + expression);
+
+        try {
+            for (int i = 0; i < expression.length(); i++) {
+                char ch = expression.charAt(i);
+
+                if (ch == '(') {
+                    st.push(ch + "");
+                } else if (ch == ')') {
+                    st.pop();
+                }
+            }
+
+            if (st.isEmpty()) {
+                System.out.println("ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½Õ´Ï´ï¿½.");
+            } else {
+                System.out.println("ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
+            }
+        } catch (EmptyStackException e) {
+            System.out.println("ï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.");
+        } // try
+    }
 }

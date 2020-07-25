@@ -1,14 +1,14 @@
 class ArrayEx14 {
-	public static void main(String[] args) {
-		String src = "ABCDE";
+    public static void main(String[] args) {
+        String src = "ABCDE";
 
-		for(int i=0; i < src.length(); i++) {
-			char ch = src.charAt(i); // srcÀÇ i¹øÂ° ¹®ÀÚ¸¦ ch¿¡ ÀúÀå
-			System.out.println("src.charAt("+i+"):"+ ch);
-		}
+        for (int i = 0; i < src.length(); i++) {
+            char ch = src.charAt(i); // srcï¿½ï¿½ iï¿½ï¿½Â° ï¿½ï¿½ï¿½Ú¸ï¿½ chï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+            System.out.println("src.charAt(" + i + "):" + ch);
+        }
 
-		char[] chArr = src.toCharArray();  // StringÀ» char[]·Î º¯È¯
+        char[] chArr = src.toCharArray();  // Stringï¿½ï¿½ char[]ï¿½ï¿½ ï¿½ï¿½È¯
 
-		System.out.println(chArr); // char¹è¿­(char[])À» Ãâ·Â
-	}
+        System.out.println(chArr); // charï¿½è¿­(char[])ï¿½ï¿½ ï¿½ï¿½ï¿½
+    }
 }

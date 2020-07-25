@@ -1,16 +1,16 @@
 class FlowEx29 {
-	public static void main(String[] args) { 
-		for(int i=1;i<=100;i++) {
-			System.out.printf("i=%d ", i);
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i++) {
+            System.out.printf("i=%d ", i);
 
-			int tmp = i;
+            int tmp = i;
 
-			do {
-				if(tmp%10%3==0 && tmp%10!=0) // tmp%10ÀÌ 3ÀÇ ¹è¼öÀÎÁö È®ÀÎ(0 Á¦¿Ü)
-					System.out.print("Â¦");
-			} while((tmp/=10)!=0);  // tmp /= 10Àº tmp = tmp / 10°ú µ¿ÀÏ
+            do {
+                if (tmp % 10 % 3 == 0 && tmp % 10 != 0) // tmp%10ï¿½ï¿½ 3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½(0 ï¿½ï¿½ï¿½ï¿½)
+                    System.out.print("Â¦");
+            } while ((tmp /= 10) != 0);  // tmp /= 10ï¿½ï¿½ tmp = tmp / 10ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-			System.out.println();
-		}
-	} // main
+            System.out.println();
+        }
+    } // main
 }

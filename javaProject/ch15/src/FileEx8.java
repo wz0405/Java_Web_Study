@@ -1,42 +1,42 @@
 import java.io.*;
 
 class FileEx8 {
-	static int deletedFiles = 0;
+    static int deletedFiles = 0;
 
-	public static void main(String[] args) {
-		if(args.length != 1) {
-			System.out.println("USAGE : java FileEx8 Extension");
-			System.exit(0);
-		}
+    public static void main(String[] args) {
+        if (args.length != 1) {
+            System.out.println("USAGE : java FileEx8 Extension");
+            System.exit(0);
+        }
 
-		String currDir = System.getProperty("user.dir");
+        String currDir = System.getProperty("user.dir");
 
-		File dir = new File(currDir);
-		String ext = "." + args[0];
+        File dir = new File(currDir);
+        String ext = "." + args[0];
 
-		delete(dir, ext);
-		System.out.println(deletedFiles + "°³ÀÇ ÆÄÀÏÀÌ »èÁ¦µÇ¾ú½À´Ï´Ù.");
-	} // end of main
+        delete(dir, ext);
+        System.out.println(deletedFiles + "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+    } // end of main
 
-	public static void delete(File dir, String ext) {
-		File[] files = dir.listFiles();
+    public static void delete(File dir, String ext) {
+        File[] files = dir.listFiles();
 
-		for(int i=0; i < files.length; i++) {
-			if(files[i].isDirectory()) {
-				delete(files[i], ext);
-			} else {
-				String filename = files[i].getAbsolutePath();
+        for (int i = 0; i < files.length; i++) {
+            if (files[i].isDirectory()) {
+                delete(files[i], ext);
+            } else {
+                String filename = files[i].getAbsolutePath();
 
-				if(filename.endsWith(ext)) {
-					System.out.print(filename);
-					if(files[i].delete()) {
-						System.out.println(" - »èÁ¦ ¼º°ø");
-						deletedFiles++;     
-					} else {
-						System.out.println(" - »èÁ¦ ½ÇÆÐ");
-					}
-				} // if(filename.endsWith(ext)) {
-			} // if(files[i].isDirectory()) {
-		} // for(int i=0; i < files.length; i++) {
-	} // end of delete
+                if (filename.endsWith(ext)) {
+                    System.out.print(filename);
+                    if (files[i].delete()) {
+                        System.out.println(" - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+                        deletedFiles++;
+                    } else {
+                        System.out.println(" - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+                    }
+                } // if(filename.endsWith(ext)) {
+            } // if(files[i].isDirectory()) {
+        } // for(int i=0; i < files.length; i++) {
+    } // end of delete
 } // end of class

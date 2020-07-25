@@ -4,53 +4,52 @@ import java.util.*;
 
 
 public class VectorMember {
-	Vector<Member>list = new Vector<Member>();
-	public void setData() {
-		Scanner sc = new Scanner(System.in);
-		String name;
-		String phone;
-		int num;
-		System.out.println("°í°´¸í?");
-		name=sc.nextLine();
-		System.out.println("ÀüÈ­¹øÈ£?");
-		phone=sc.nextLine();
-		System.out.println("±¸¸Å±Ý¾×?");
-		num=sc.nextInt();
-		
-		Member me = new Member(name,phone,num);
-		list.add(me);
-	}
-	public void getData() {
-		int cnt=1;
-		System.out.println("[°í°´ vip Á¤º¸]");
-		System.out.println("No\tÀÌ¸§\tÀüÈ­¹øÈ£\t±¸¸Å±Ý¾×\tµî±Þ");
-		System.out.println("---------------------------");
-		for(int i=0;i<list.size();i++)
-		{
-			Member s=list.get(i);
-			
-			System.out.println(i+1+"\t"+s.getName()+"\t"+s.getNumber()+"\t"+s.getMoney()+"\t"+s.check());
-			System.out.println("---------------------------");
-		}
-	}
-	
-	public static void main(String[] args) {
-		VectorMember ve = new VectorMember();
-		Scanner sc = new Scanner(System.in);
-		String temp;
-		while(true) {
-			System.out.println("°¡.¸í´ÜÀÔ·Â   ³ª.¸í´ÜÃâ·Â   ´Ù.Á¾·á");
-			temp=sc.nextLine();
-			if(temp.equals("°¡")){
-				ve.setData();
-			}
-			else if(temp.equals("³ª")) {
-				ve.getData();
-			}
-			else if(temp.equals("´Ù")) {
-				System.out.println("Á¾·á");
-				break;
-			}
-		}
-	}
+    Vector<Member> list = new Vector<Member>();
+
+    public void setData() {
+        Scanner sc = new Scanner(System.in);
+        String name;
+        String phone;
+        int num;
+        System.out.println("ï¿½ï¿½ï¿½ï¿½?");
+        name = sc.nextLine();
+        System.out.println("ï¿½ï¿½È­ï¿½ï¿½È£?");
+        phone = sc.nextLine();
+        System.out.println("ï¿½ï¿½ï¿½Å±Ý¾ï¿½?");
+        num = sc.nextInt();
+
+        Member me = new Member(name, phone, num);
+        list.add(me);
+    }
+
+    public void getData() {
+        int cnt = 1;
+        System.out.println("[ï¿½ï¿½ vip ï¿½ï¿½ï¿½ï¿½]");
+        System.out.println("No\tï¿½Ì¸ï¿½\tï¿½ï¿½È­ï¿½ï¿½È£\tï¿½ï¿½ï¿½Å±Ý¾ï¿½\tï¿½ï¿½ï¿½");
+        System.out.println("---------------------------");
+        for (int i = 0; i < list.size(); i++) {
+            Member s = list.get(i);
+
+            System.out.println(i + 1 + "\t" + s.getName() + "\t" + s.getNumber() + "\t" + s.getMoney() + "\t" + s.check());
+            System.out.println("---------------------------");
+        }
+    }
+
+    public static void main(String[] args) {
+        VectorMember ve = new VectorMember();
+        Scanner sc = new Scanner(System.in);
+        String temp;
+        while (true) {
+            System.out.println("ï¿½ï¿½.ï¿½ï¿½ï¿½ï¿½Ô·ï¿½   ï¿½ï¿½.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   ï¿½ï¿½.ï¿½ï¿½ï¿½ï¿½");
+            temp = sc.nextLine();
+            if (temp.equals("ï¿½ï¿½")) {
+                ve.setData();
+            } else if (temp.equals("ï¿½ï¿½")) {
+                ve.getData();
+            } else if (temp.equals("ï¿½ï¿½")) {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½");
+                break;
+            }
+        }
+    }
 }

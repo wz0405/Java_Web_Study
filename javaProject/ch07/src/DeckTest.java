@@ -1,75 +1,75 @@
 class DeckTest {
-	public static void main(String args[]) {
-		Deck d = new Deck();	// Ä«µå ÇÑ ¹ú(Deck)À» ¸¸µç´Ù.
-		Card c = d.pick(0);	   	// ¼¯±â Àü¿¡ Á¦ÀÏ À§ÀÇ Ä«µå¸¦ »Ì´Â´Ù.
-		System.out.println(c); 	// System.out.println(c.toString());°ú °°´Ù.
+    public static void main(String args[]) {
+        Deck d = new Deck();    // Ä«ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½(Deck)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+        Card c = d.pick(0);        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½å¸¦ ï¿½Ì´Â´ï¿½.
+        System.out.println(c);    // System.out.println(c.toString());ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
-		d.shuffle();			// Ä«µå¸¦ ¼¯´Â´Ù.
-		c = d.pick(0);		   	// ¼¯Àº ÈÄ¿¡ Á¦ÀÏ À§ÀÇ Ä«µå¸¦ »Ì´Â´Ù.
-		System.out.println(c);
-	}
+        d.shuffle();            // Ä«ï¿½å¸¦ ï¿½ï¿½ï¿½Â´ï¿½.
+        c = d.pick(0);            // ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½å¸¦ ï¿½Ì´Â´ï¿½.
+        System.out.println(c);
+    }
 }
 
-// DeckÅ¬·¡½º
+// DeckÅ¬ï¿½ï¿½ï¿½ï¿½
 class Deck {
-	final int CARD_NUM = 52;	// Ä«µåÀÇ °³¼ö
-	Card cardArr[] = new Card[CARD_NUM];  // Card°´Ã¼ ¹è¿­À» Æ÷ÇÔ
+    final int CARD_NUM = 52;    // Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    Card cardArr[] = new Card[CARD_NUM];  // Cardï¿½ï¿½Ã¼ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-	Deck () {	// DeckÀÇ Ä«µå¸¦ ÃÊ±âÈ­ÇÑ´Ù.
-		int i=0;
+    Deck() {    // Deckï¿½ï¿½ Ä«ï¿½å¸¦ ï¿½Ê±ï¿½È­ï¿½Ñ´ï¿½.
+        int i = 0;
 
-		for(int k=Card.KIND_MAX; k > 0; k--)
-			for(int n=0; n < Card.NUM_MAX ; n++)
-				cardArr[i++] = new Card(k, n+1);
-	}
+        for (int k = Card.KIND_MAX; k > 0; k--)
+            for (int n = 0; n < Card.NUM_MAX; n++)
+                cardArr[i++] = new Card(k, n + 1);
+    }
 
-	Card pick(int index) {	// ÁöÁ¤µÈ À§Ä¡(index)¿¡ ÀÖ´Â Ä«µå ÇÏ³ª¸¦ ²¨³»¼­ ¹ÝÈ¯
-		return cardArr[index];
-	}
+    Card pick(int index) {    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡(index)ï¿½ï¿½ ï¿½Ö´ï¿½ Ä«ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+        return cardArr[index];
+    }
 
-	Card pick() {			// Deck¿¡¼­ Ä«µå ÇÏ³ª¸¦ ¼±ÅÃÇÑ´Ù.
-		int index = (int)(Math.random() * CARD_NUM);
-		return pick(index);
-	}
+    Card pick() {            // Deckï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½.
+        int index = (int) (Math.random() * CARD_NUM);
+        return pick(index);
+    }
 
-	void shuffle() { // Ä«µåÀÇ ¼ø¼­¸¦ ¼¯´Â´Ù.
-		for(int i=0; i < cardArr.length; i++) {
-			int r = (int)(Math.random() * CARD_NUM);
+    void shuffle() { // Ä«ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½.
+        for (int i = 0; i < cardArr.length; i++) {
+            int r = (int) (Math.random() * CARD_NUM);
 
-			Card temp = cardArr[i];	
-			cardArr[i] = cardArr[r];
-			cardArr[r] = temp;
-		}
-	}
-} // DeckÅ¬·¡½ºÀÇ ³¡
+            Card temp = cardArr[i];
+            cardArr[i] = cardArr[r];
+            cardArr[r] = temp;
+        }
+    }
+} // DeckÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
-// CardÅ¬·¡½º
+// CardÅ¬ï¿½ï¿½ï¿½ï¿½
 class Card {
-	static final int KIND_MAX = 4;	// Ä«µå ¹«´ÌÀÇ ¼ö
-	static final int NUM_MAX  = 13;	// ¹«´Ìº° Ä«µå ¼ö
+    static final int KIND_MAX = 4;    // Ä«ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+    static final int NUM_MAX = 13;    // ï¿½ï¿½ï¿½Ìºï¿½ Ä«ï¿½ï¿½ ï¿½ï¿½
 
-	static final int SPADE   = 4;
-	static final int DIAMOND = 3;
-	static final int HEART   = 2;
-	static final int CLOVER  = 1;
+    static final int SPADE = 4;
+    static final int DIAMOND = 3;
+    static final int HEART = 2;
+    static final int CLOVER = 1;
 
-	int kind;
-	int number;
+    int kind;
+    int number;
 
-	Card() {
-		this(SPADE, 1);
-	}
+    Card() {
+        this(SPADE, 1);
+    }
 
-	Card(int kind, int number) {
-		this.kind = kind;
-		this.number = number;
-	}
+    Card(int kind, int number) {
+        this.kind = kind;
+        this.number = number;
+    }
 
-	public String toString() {
-		String[] kinds = {"", "CLOVER", "HEART", "DIAMOND", "SPADE"};
-		String numbers = "0123456789XJQK"; // ¼ýÀÚ 10Àº X·Î Ç¥Çö
+    public String toString() {
+        String[] kinds = {"", "CLOVER", "HEART", "DIAMOND", "SPADE"};
+        String numbers = "0123456789XJQK"; // ï¿½ï¿½ï¿½ï¿½ 10ï¿½ï¿½ Xï¿½ï¿½ Ç¥ï¿½ï¿½
 
-		return "kind : " + kinds[this.kind] 
-			+ ", number : " + numbers.charAt(this.number);
-	} // toString()ÀÇ ³¡
-} // CardÅ¬·¡½ºÀÇ ³¡
+        return "kind : " + kinds[this.kind]
+                + ", number : " + numbers.charAt(this.number);
+    } // toString()ï¿½ï¿½ ï¿½ï¿½
+} // CardÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½

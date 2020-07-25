@@ -1,22 +1,22 @@
 class Document {
-	static int count = 0;
-	String name;     // ¹®¼­¸í(Document name)
+    static int count = 0;
+    String name;     // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(Document name)
 
-	Document() {     // ¹®¼­ »ý¼º ½Ã ¹®¼­¸íÀ» ÁöÁ¤ÇÏÁö ¾Ê¾ÒÀ» ¶§
-		this("Á¦¸ñ¾øÀ½" + ++count);
-	}
+    Document() {     // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ ï¿½ï¿½
+        this("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + ++count);
+    }
 
-	Document(String name) {
-		this.name = name;
-		System.out.println("¹®¼­ " + this.name + "°¡ »ý¼ºµÇ¾ú½À´Ï´Ù.");
-	}
+    Document(String name) {
+        this.name = name;
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ " + this.name + "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+    }
 }
 
 class DocumentTest {
-	public static void main(String args[]) {
-		Document d1 = new Document();
-		Document d2 = new Document("ÀÚ¹Ù.txt");
-		Document d3 = new Document();
-		Document d4 = new Document();
-	}
+    public static void main(String args[]) {
+        Document d1 = new Document();
+        Document d2 = new Document("ï¿½Ú¹ï¿½.txt");
+        Document d3 = new Document();
+        Document d4 = new Document();
+    }
 }

@@ -1,19 +1,19 @@
-class ArrayEx06 { 
-	public static void main(String[] args) { 
-		int[] score = { 79, 88, 91, 33, 100, 55, 95}; 
+class ArrayEx06 {
+    public static void main(String[] args) {
+        int[] score = {79, 88, 91, 33, 100, 55, 95};
 
-		int max = score[0]; // ¹è¿­ÀÇ Ã¹ ¹øÂ° °ªÀ¸·Î ÃÖ´ë°ªÀ» ÃÊ±âÈ­ ÇÑ´Ù. 
-		int min = score[0]; // ¹è¿­ÀÇ Ã¹ ¹øÂ° °ªÀ¸·Î ÃÖ¼Ò°ªÀ» ÃÊ±âÈ­ ÇÑ´Ù. 
+        int max = score[0]; // ï¿½è¿­ï¿½ï¿½ Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ë°ªï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½Ñ´ï¿½. 
+        int min = score[0]; // ï¿½è¿­ï¿½ï¿½ Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ ï¿½Ñ´ï¿½. 
 
-		for(int i=1; i < score.length;i++) {
-			if(score[i] > max) { 
-				max = score[i]; 
-			} else if(score[i] < min) { 
-				min = score[i]; 
-			} 
-		} // end of for 
+        for (int i = 1; i < score.length; i++) {
+            if (score[i] > max) {
+                max = score[i];
+            } else if (score[i] < min) {
+                min = score[i];
+            }
+        } // end of for 
 
-		System.out.println("ÃÖ´ë°ª :" + max);       
-		System.out.println("ÃÖ¼Ò°ª :" + min);       
-	} // end of main 
+        System.out.println("ï¿½Ö´ë°ª :" + max);
+        System.out.println("ï¿½Ö¼Ò°ï¿½ :" + min);
+    } // end of main 
 } // end of class 

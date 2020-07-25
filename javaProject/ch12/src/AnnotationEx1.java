@@ -1,8 +1,10 @@
 class Parent {
-	void parentMethod() { }
+    void parentMethod() {
+    }
 }
 
 class Child extends Parent {
-	@Override
-	void parentmethod() { } // Á¶»ó ¸Þ¼­µåÀÇ ÀÌ¸§À» Àß¸øÀû¾úÀ½. 
+    @Override
+    void parentmethod() {
+    } // ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. 
 }

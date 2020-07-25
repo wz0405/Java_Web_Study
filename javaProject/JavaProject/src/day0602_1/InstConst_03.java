@@ -1,11 +1,12 @@
 package day0602_1;
 
 import day0602.InstTest;
+
 public class InstConst_03 {
 
-	public static void main(String[] args) {
-		//InstTest t1 = new InstTest(); //¿À·ù.. ÇÁ¶óÀÌºøÀÌ¶ó¼­ ÆÐÅ°Áö°¡ µå¸¦°æ¿ì »ý¼ºÀÌ ¾ÈµÊ
-		InstTest t1=InstTest.getInstance();
-		t1.writeMessage();
-	}
+    public static void main(String[] args) {
+        //InstTest t1 = new InstTest(); //ï¿½ï¿½ï¿½ï¿½.. ï¿½ï¿½ï¿½ï¿½ï¿½Ìºï¿½ï¿½Ì¶ï¿½ ï¿½ï¿½Å°ï¿½ï¿½ï¿½ï¿½ ï¿½å¸¦ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Èµï¿½
+        InstTest t1 = InstTest.getInstance();
+        t1.writeMessage();
+    }
 }

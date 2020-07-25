@@ -2,21 +2,21 @@ package day0526;
 
 public class VarArgs_09 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//1.º¯¼ö...ÀÌ¸§, ÁÖ¼ÒÁö, ³ªÀÌ Ãâ·Â
-		//String name="ÇÑÇöÈñ";
-		//String address="µ¿ÀÛ±¸";
-		//int age=26;
-		//1.º¯¼ö¸¦ Ãâ·Â½Ã ÁöÁ¤
-		String name=args[0];
-		String address=args[1];
-		String age=args[2];
-		System.out.println("[½Å»óÁ¤º¸]");
-		System.out.println("ÀÌ¸§ :"+name+"´Ô");
-		System.out.println("Áö¿ª:"+address);
-		System.out.println("³ªÀÌ:"+age+"¼¼");
-		
-	}
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        //1.ï¿½ï¿½ï¿½ï¿½...ï¿½Ì¸ï¿½, ï¿½Ö¼ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        //String name="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
+        //String address="ï¿½ï¿½ï¿½Û±ï¿½";
+        //int age=26;
+        //1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        String name = args[0];
+        String address = args[1];
+        String age = args[2];
+        System.out.println("[ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½]");
+        System.out.println("ï¿½Ì¸ï¿½ :" + name + "ï¿½ï¿½");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½:" + address);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½:" + age + "ï¿½ï¿½");
+
+    }
 
 }

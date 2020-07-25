@@ -1,17 +1,17 @@
 class FlowEx24 {
-	public static void main(String[] args) { 
-		int i=11;
+    public static void main(String[] args) {
+        int i = 11;
 
-		System.out.println("ÀÚ, ÀÌÁ¦ Ä«¿îÆ®´Ù¿îÀ» ½ÃÀÛÇÕ´Ï´Ù.");
+        System.out.println("ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½Æ®ï¿½Ù¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 
-		while(i--!=0) {
-			System.out.println(i);
+        while (i-- != 0) {
+            System.out.println(i);
 
-			for(int j=0;j<2_000_000_000;j++) {
-					;
-			}
-		}
+            for (int j = 0; j < 2_000_000_000; j++) {
+                ;
+            }
+        }
 
-		System.out.println("GAME OVER");
-	}
+        System.out.println("GAME OVER");
+    }
 }

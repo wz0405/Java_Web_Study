@@ -1,21 +1,25 @@
 class InstanceofTest {
-	public static void main(String args[]) {
-		FireEngine2 fe = new FireEngine2();
+    public static void main(String args[]) {
+        FireEngine2 fe = new FireEngine2();
 
-		if(fe instanceof FireEngine2) {
-			System.out.println("This is a FireEngine2 instance.");
-		} 
+        if (fe instanceof FireEngine2) {
+            System.out.println("This is a FireEngine2 instance.");
+        }
 
-		if(fe instanceof Car2) {
-			System.out.println("This is a Car2 instance.");
-		} 
+        if (fe instanceof Car2) {
+            System.out.println("This is a Car2 instance.");
+        }
 
-		if(fe instanceof Object) {
-			System.out.println("This is an Object instance.");
-		} 
+        if (fe instanceof Object) {
+            System.out.println("This is an Object instance.");
+        }
 
-		System.out.println(fe.getClass().getName()); // Å¬·¡½ºÀÇ ÀÌ¸§À» Ãâ·Â
-	}
+        System.out.println(fe.getClass().getName()); // Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    }
 } // class
-class Car2 {}
-class FireEngine2 extends Car2 {}
+
+class Car2 {
+}
+
+class FireEngine2 extends Car2 {
+}

@@ -1,23 +1,23 @@
 class PrintfEx2 {
-	public static void main(String[] args) {
-		String url = "www.codechobo.com";
+    public static void main(String[] args) {
+        String url = "www.codechobo.com";
 
-		float f1 = .10f;   // 0.10, 1.0e-1
-		float f2 = 1e1f;   // 10.0, 1.0e1, 1.0e+1
-		float f3 = 3.14e3f;
-		double d = 1.23456789;
+        float f1 = .10f;   // 0.10, 1.0e-1
+        float f2 = 1e1f;   // 10.0, 1.0e1, 1.0e+1
+        float f3 = 3.14e3f;
+        double d = 1.23456789;
 
-		System.out.printf("f1=%f, %e, %g%n", f1, f1, f1); 
-		System.out.printf("f2=%f, %e, %g%n", f2, f2, f2); 
-		System.out.printf("f3=%f, %e, %g%n", f3, f3, f3);
+        System.out.printf("f1=%f, %e, %g%n", f1, f1, f1);
+        System.out.printf("f2=%f, %e, %g%n", f2, f2, f2);
+        System.out.printf("f3=%f, %e, %g%n", f3, f3, f3);
 
-		System.out.printf("d=%f%n", d);
-		System.out.printf("d=%14.10f%n", d); // ÀüÃ¼ 14ÀÚ¸® Áß ¼Ò¼öÁ¡ 10ÀÚ¸®
+        System.out.printf("d=%f%n", d);
+        System.out.printf("d=%14.10f%n", d); // ï¿½ï¿½Ã¼ 14ï¿½Ú¸ï¿½ ï¿½ï¿½ ï¿½Ò¼ï¿½ï¿½ï¿½ 10ï¿½Ú¸ï¿½
 
-		System.out.printf("[12345678901234567890]%n");
-		System.out.printf("[%s]%n", url);
-		System.out.printf("[%20s]%n", url);
-		System.out.printf("[%-20s]%n", url); // ¿À¸¥ÂÊ Á¤·Ä
-		System.out.printf("[%.8s]%n", url);  // ¿ÞÂÊ¿¡¼­ 8±ÛÀÚ¸¸ Ãâ·Â
-	}
+        System.out.printf("[12345678901234567890]%n");
+        System.out.printf("[%s]%n", url);
+        System.out.printf("[%20s]%n", url);
+        System.out.printf("[%-20s]%n", url); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        System.out.printf("[%.8s]%n", url);  // ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ 8ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½
+    }
 }

@@ -1,21 +1,21 @@
 // class Data { int x; }
 
 class ReferenceParamEx {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Data d = new Data();
-		d.x = 10;
-		System.out.println("main() : x = " + d.x);
+        Data d = new Data();
+        d.x = 10;
+        System.out.println("main() : x = " + d.x);
 
-		change(d);
-		System.out.println("After change(d)");
-		System.out.println("main() : x = " + d.x);
+        change(d);
+        System.out.println("After change(d)");
+        System.out.println("main() : x = " + d.x);
 
-	}
+    }
 
-	static void change(Data d) { // ÂüÁ¶Çü ¸Å°³º¯¼ö
-		d.x = 1000;
-		System.out.println("change() : x = " + d.x);
-	}
+    static void change(Data d) { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½
+        d.x = 1000;
+        System.out.println("change() : x = " + d.x);
+    }
 }
 

@@ -1,70 +1,70 @@
 import java.util.*;
 
 class TreeMapEx1 {
-	public static void main(String[] args) {
-		String[] data = { "A","K","A","K","D","K","A","K","K","K","Z","D" };
+    public static void main(String[] args) {
+        String[] data = {"A", "K", "A", "K", "D", "K", "A", "K", "K", "K", "Z", "D"};
 
-		TreeMap map = new TreeMap();
+        TreeMap map = new TreeMap();
 
-		for(int i=0; i < data.length; i++) {
-			if(map.containsKey(data[i])) {
-				Integer value = (Integer)map.get(data[i]);
-				map.put(data[i], new Integer(value.intValue() + 1));
-			} else {
-				map.put(data[i], new Integer(1));			
-			}
-		}
+        for (int i = 0; i < data.length; i++) {
+            if (map.containsKey(data[i])) {
+                Integer value = (Integer) map.get(data[i]);
+                map.put(data[i], new Integer(value.intValue() + 1));
+            } else {
+                map.put(data[i], new Integer(1));
+            }
+        }
 
-		Iterator it = map.entrySet().iterator();
+        Iterator it = map.entrySet().iterator();
 
-		System.out.println("= ±âº»Á¤·Ä =");
-		while(it.hasNext()) {
-			Map.Entry entry = (Map.Entry)it.next();
-			int value = ((Integer)entry.getValue()).intValue();
-			System.out.println(entry.getKey() + " : " + printBar('#', value) + " " + value );
-		}
-		System.out.println();
+        System.out.println("= ï¿½âº»ï¿½ï¿½ï¿½ï¿½ =");
+        while (it.hasNext()) {
+            Map.Entry entry = (Map.Entry) it.next();
+            int value = ((Integer) entry.getValue()).intValue();
+            System.out.println(entry.getKey() + " : " + printBar('#', value) + " " + value);
+        }
+        System.out.println();
 
-		// mapÀ» ArrayList·Î º¯È¯ÇÑ ´ÙÀ½¿¡ Collectons.sort()·Î Á¤·Ä
-		Set set = map.entrySet();
-		List list = new ArrayList(set);	// ArrayList(Collection c) 
-		
-		// static void sort(List list, Comparator c)  
-		Collections.sort(list, new ValueComparator());
+        // mapï¿½ï¿½ ArrayListï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Collectons.sort()ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Set set = map.entrySet();
+        List list = new ArrayList(set);    // ArrayList(Collection c)
 
-		it = list.iterator();
+        // static void sort(List list, Comparator c)
+        Collections.sort(list, new ValueComparator());
 
-		System.out.println("= °ªÀÇ Å©±â°¡ Å« ¼ø¼­·Î Á¤·Ä =");		
-		while(it.hasNext()) {
-			Map.Entry entry = (Map.Entry)it.next();
-			int value = ((Integer)entry.getValue()).intValue();
-			System.out.println(entry.getKey() + " : " + printBar('#', value) + " " + value );
-		}
+        it = list.iterator();
 
-	} // 	public static void main(String[] args) 
+        System.out.println("= ï¿½ï¿½ï¿½ï¿½ Å©ï¿½â°¡ Å« ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ =");
+        while (it.hasNext()) {
+            Map.Entry entry = (Map.Entry) it.next();
+            int value = ((Integer) entry.getValue()).intValue();
+            System.out.println(entry.getKey() + " : " + printBar('#', value) + " " + value);
+        }
 
-	static class ValueComparator implements Comparator {
-		public int compare(Object o1, Object o2) {
-			if(o1 instanceof Map.Entry && o2 instanceof Map.Entry) {
-				Map.Entry e1 = (Map.Entry)o1;
-				Map.Entry e2 = (Map.Entry)o2;
+    } // 	public static void main(String[] args)
 
-				int v1 = ((Integer)e1.getValue()).intValue();
-				int v2 = ((Integer)e2.getValue()).intValue();
+    static class ValueComparator implements Comparator {
+        public int compare(Object o1, Object o2) {
+            if (o1 instanceof Map.Entry && o2 instanceof Map.Entry) {
+                Map.Entry e1 = (Map.Entry) o1;
+                Map.Entry e2 = (Map.Entry) o2;
 
-				return  v2 - v1;
-			} 
-			return -1;
-		}
-	}	// 	static class ValueComparator implements Comparator {
+                int v1 = ((Integer) e1.getValue()).intValue();
+                int v2 = ((Integer) e2.getValue()).intValue();
 
-	public static String printBar(char ch, int value) { 
-		char[] bar = new char[value]; 
+                return v2 - v1;
+            }
+            return -1;
+        }
+    }    // 	static class ValueComparator implements Comparator {
 
-		for(int i=0; i < bar.length; i++) { 
-			bar[i] = ch; 
-		} 
+    public static String printBar(char ch, int value) {
+        char[] bar = new char[value];
 
-		return new String(bar); 
-	} 
+        for (int i = 0; i < bar.length; i++) {
+            bar[i] = ch;
+        }
+
+        return new String(bar);
+    }
 }

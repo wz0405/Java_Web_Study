@@ -1,34 +1,34 @@
 class MultiArrEx3 {
-	public static void main(String[] args) {
-		int[][] m1 = {
-			{1, 2, 3},
-			{4, 5, 6}
-		};
+    public static void main(String[] args) {
+        int[][] m1 = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
 
-		int[][] m2 = {
-			{1, 2},
-			{3, 4},
-			{5, 6}
-		};
+        int[][] m2 = {
+                {1, 2},
+                {3, 4},
+                {5, 6}
+        };
 
-		final int ROW    = m1.length;      // m1ÀÇ Çà±æÀÌ
-		final int COL    = m2[0].length;  // m2ÀÇ ¿­±æÀÌ
-		final int M2_ROW = m2.length;	    // m2ÀÇ Çà±æÀÌ
+        final int ROW = m1.length;      // m1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+        final int COL = m2[0].length;  // m2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        final int M2_ROW = m2.length;        // m2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 
-		int[][] m3 = new int[ROW][COL];
+        int[][] m3 = new int[ROW][COL];
 
-	   // Çà·Ä°ö m1 x m2ÀÇ °á°ú¸¦ m3¿¡ ÀúÀå
-		for(int i=0;i<ROW;i++)
-			for(int j=0;j<COL;j++)
-				for(int k=0;k<M2_ROW;k++)
-					m3[i][j] += m1[i][k] * m2[k][j]; 
+        // ï¿½ï¿½Ä°ï¿½ m1 x m2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ m3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        for (int i = 0; i < ROW; i++)
+            for (int j = 0; j < COL; j++)
+                for (int k = 0; k < M2_ROW; k++)
+                    m3[i][j] += m1[i][k] * m2[k][j];
 
-	   // Çà·Ä m3¸¦ Ãâ·Â 
-		for(int i=0;i<ROW;i++) {
-			for(int j=0;j<COL;j++) {
-				System.out.printf("%3d ", m3[i][j]);
-			}
-			System.out.println();
-		}
-	} // mainÀÇ ³¡
+        // ï¿½ï¿½ï¿½ m3ï¿½ï¿½ ï¿½ï¿½ï¿½ 
+        for (int i = 0; i < ROW; i++) {
+            for (int j = 0; j < COL; j++) {
+                System.out.printf("%3d ", m3[i][j]);
+            }
+            System.out.println();
+        }
+    } // mainï¿½ï¿½ ï¿½ï¿½
 }

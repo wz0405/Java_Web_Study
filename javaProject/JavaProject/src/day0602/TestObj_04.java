@@ -2,29 +2,33 @@ package day0602;
 
 import day0602_1.SuperObj_04;
 
-class SubObj_04 extends SuperObj_04{
-	private String addr;
-	public SubObj_04(){
-		super(); //µðÆúÆ® »ý¼ºÀÚ ¸¸µé¶§ super()°¡ ÀÚµ¿À¸·Î ¸ÕÀú ³ª¿À¹Ç·Î ½´ÆÛ¿¡¼­ µðÆúÆ® »ý¼ºÀÚ ¸¸µé¾î ¿¡·¯¹æÁö
-	}
-	public SubObj_04(String name, int age, String addr) {
-		super(name, age);
-		this.addr=addr;
-		// TODO Auto-generated constructor stub
-	}
-	public void writeData() {
-		System.out.println("ÀÌ¸§ :" +name);
-		System.out.println("³ªÀÌ :" +age);
-		System.out.println("ÁÖ¼Ò :" +addr);
-	}
+class SubObj_04 extends SuperObj_04 {
+    private String addr;
+
+    public SubObj_04() {
+        super(); //ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½é¶§ super()ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ ï¿½ï¿½ï¿½Û¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    }
+
+    public SubObj_04(String name, int age, String addr) {
+        super(name, age);
+        this.addr = addr;
+        // TODO Auto-generated constructor stub
+    }
+
+    public void writeData() {
+        System.out.println("ï¿½Ì¸ï¿½ :" + name);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ :" + age);
+        System.out.println("ï¿½Ö¼ï¿½ :" + addr);
+    }
 
 }
+
 ///////////////////////////////
 public class TestObj_04 {
 
-	public static void main(String[] args) {
-		SubObj_04 su = new SubObj_04("ÀÌÈ¿¸®",33,"Á¦ÁÖ");
-		su.writeData();
-	}
+    public static void main(String[] args) {
+        SubObj_04 su = new SubObj_04("ï¿½ï¿½È¿ï¿½ï¿½", 33, "ï¿½ï¿½ï¿½ï¿½");
+        su.writeData();
+    }
 
 }

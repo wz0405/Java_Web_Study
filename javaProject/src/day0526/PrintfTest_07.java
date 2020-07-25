@@ -1,13 +1,13 @@
 package day0526;
 
 public class PrintfTest_07 {
-	public static void main(String[] args) {
-		//printf: %d-Á¤¼ö %s-¹®ÀÚ
-		//º¯¼ö
-		int num1=50,num2=30;
-		int result=num1+num2;
-		System.out.printf("¼ýÀÚ1Àº %dÀÌ°í, ¼ýÀÚ 2´Â %dÀÔ´Ï´Ù ±× ÇÕÀº %dÀÔ´Ï´Ù.\n",num1,num2,result);
-		System.out.println("***printlnÀ¸·Î Ãâ·Â***");
-		System.out.println("¼ýÀÚ1Àº "+num1+"ÀÌ°í, ¼ýÀÚ 2´Â"+num2+"ÀÔ´Ï´Ù ±× ÇÕÀº"+result+"ÀÔ´Ï´Ù");
-	}
+    public static void main(String[] args) {
+        //printf: %d-ï¿½ï¿½ï¿½ï¿½ %s-ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½
+        int num1 = 50, num2 = 30;
+        int result = num1 + num2;
+        System.out.printf("ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ %dï¿½Ì°ï¿½, ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ %dï¿½Ô´Ï´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ %dï¿½Ô´Ï´ï¿½.\n", num1, num2, result);
+        System.out.println("***printlnï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½***");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ " + num1 + "ï¿½Ì°ï¿½, ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½" + num2 + "ï¿½Ô´Ï´ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" + result + "ï¿½Ô´Ï´ï¿½");
+    }
 }

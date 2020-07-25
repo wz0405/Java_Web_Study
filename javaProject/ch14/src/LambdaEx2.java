@@ -1,21 +1,26 @@
 @FunctionalInterface
 interface MyFunction2 {
-	void myMethod();  // public abstract void myMethod();
+    void myMethod();  // public abstract void myMethod();
 }
 
 class LambdaEx2 {
-	public static void main(String[] args) 	{
-		MyFunction2 f = ()->{}; // MyFunction f = (MyFunction)(()->{}); 
-		Object obj = (MyFunction2)(()-> {});  // ObjectÅ¸ÀÔÀ¸·Î Çüº¯È¯ÀÌ »ý·«µÊ
-		String str = ((Object)(MyFunction2)(()-> {})).toString();
+    public static void main(String[] args) {
+        MyFunction2 f = () -> {
+        }; // MyFunction f = (MyFunction)(()->{}); 
+        Object obj = (MyFunction2) (() -> {
+        });  // ObjectÅ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        String str = ((Object) (MyFunction2) (() -> {
+        })).toString();
 
-		System.out.println(f);
-		System.out.println(obj);
-		System.out.println(str);
+        System.out.println(f);
+        System.out.println(obj);
+        System.out.println(str);
 
-//		System.out.println(()->{});	// ¿¡·¯. ¶÷´Ù½ÄÀº ObjectÅ¸ÀÔÀ¸·Î Çüº¯È¯ ¾ÈµÊ
-		System.out.println((MyFunction2)(()-> {}));
-//		System.out.println((MyFunction)(()-> {}).toString()); // ¿¡·¯
-		System.out.println(((Object)(MyFunction2)(()-> {})).toString());
-	}
+//		System.out.println(()->{});	// ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ ObjectÅ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È¯ ï¿½Èµï¿½
+        System.out.println((MyFunction2) (() -> {
+        }));
+//		System.out.println((MyFunction)(()-> {}).toString()); // ï¿½ï¿½ï¿½ï¿½
+        System.out.println(((Object) (MyFunction2) (() -> {
+        })).toString());
+    }
 }

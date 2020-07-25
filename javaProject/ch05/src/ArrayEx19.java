@@ -1,39 +1,39 @@
 class ArrayEx19 {
-	public static void main(String[] args) {
-		 int[][] score = {
-							{ 100, 100, 100}
-							, { 20, 20, 20}
-							, { 30, 30, 30}
-							, { 40, 40, 40}
-							, { 50, 50, 50}
-						};
-		// °ú¸ñº° ÃÑÁ¡
-		int korTotal = 0;
-		int engTotal = 0;
-		int mathTotal = 0;
+    public static void main(String[] args) {
+        int[][] score = {
+                {100, 100, 100}
+                , {20, 20, 20}
+                , {30, 30, 30}
+                , {40, 40, 40}
+                , {50, 50, 50}
+        };
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        int korTotal = 0;
+        int engTotal = 0;
+        int mathTotal = 0;
 
-	    System.out.println("¹øÈ£ ±¹¾î ¿µ¾î ¼öÇÐ ÃÑÁ¡ Æò±Õ ");
-	    System.out.println("=============================");
+        System.out.println("ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ");
+        System.out.println("=============================");
 
-		for(int i=0;i < score.length;i++) {
-			int   sum = 0;       // °³ÀÎº° ÃÑÁ¡
-			float avg = 0.0f;   // °³ÀÎº° Æò±Õ
+        for (int i = 0; i < score.length; i++) {
+            int sum = 0;       // ï¿½ï¿½ï¿½Îºï¿½ ï¿½ï¿½ï¿½ï¿½
+            float avg = 0.0f;   // ï¿½ï¿½ï¿½Îºï¿½ ï¿½ï¿½ï¿½
 
-			korTotal  += score[i][0];
-			engTotal  += score[i][1];
-			mathTotal += score[i][2];
-			System.out.printf("%3d", i+1);
+            korTotal += score[i][0];
+            engTotal += score[i][1];
+            mathTotal += score[i][2];
+            System.out.printf("%3d", i + 1);
 
-			for(int j=0;j < score[i].length;j++) {
-				sum += score[i][j]; 
-				System.out.printf("%5d", score[i][j]);
-			}
+            for (int j = 0; j < score[i].length; j++) {
+                sum += score[i][j];
+                System.out.printf("%5d", score[i][j]);
+            }
 
-			avg = sum/(float)score[i].length;  // Æò±Õ°è»ê
-			System.out.printf("%5d %5.1f%n", sum, avg);
-		}
+            avg = sum / (float) score[i].length;  // ï¿½ï¿½Õ°ï¿½ï¿½
+            System.out.printf("%5d %5.1f%n", sum, avg);
+        }
 
-	    System.out.println("=============================");
-	    System.out.printf("ÃÑÁ¡:%3d %4d %4d%n", korTotal, engTotal, mathTotal);
-	}
+        System.out.println("=============================");
+        System.out.printf("ï¿½ï¿½ï¿½ï¿½:%3d %4d %4d%n", korTotal, engTotal, mathTotal);
+    }
 }

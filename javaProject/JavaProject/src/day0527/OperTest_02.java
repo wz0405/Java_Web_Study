@@ -1,11 +1,11 @@
 package day0527;
 
 public class OperTest_02 {
-	public static void main(String[] args) {
-		//ºñ±³¿¬»êÀÚ : < > >= <= ==
-		//³í¸®¿¬»êÀÚ : &&(and),||(or)
-		int a=5,b=3,c=5;
-		System.out.println(a>b); //t
-		System.out.println(a>b&&b>c); //f
-	}
+    public static void main(String[] args) {
+        //ï¿½ñ±³¿ï¿½ï¿½ï¿½ï¿½ï¿½ : < > >= <= ==
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : &&(and),||(or)
+        int a = 5, b = 3, c = 5;
+        System.out.println(a > b); //t
+        System.out.println(a > b && b > c); //f
+    }
 }

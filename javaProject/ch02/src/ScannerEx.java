@@ -1,15 +1,15 @@
-import java.util.*;    // Scanner¸¦ »ç¿ëÇÏ±â À§ÇØ Ãß°¡
+import java.util.*;    // Scannerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½
 
-class ScannerEx { 
-	public static void main(String[] args) { 
-		Scanner scanner = new Scanner(System.in);
+class ScannerEx {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-		System.out.print("µÎÀÚ¸® Á¤¼ö¸¦ ÇÏ³ª ÀÔ·ÂÇØÁÖ¼¼¿ä.>");
+        System.out.print("ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.>");
 
-		String input = scanner.nextLine();
-		int num = Integer.parseInt(input); // ÀÔ·Â¹ÞÀº ¹®ÀÚ¿­À» ¼ýÀÚ·Î º¯È¯
+        String input = scanner.nextLine();
+        int num = Integer.parseInt(input); // ï¿½Ô·Â¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½È¯
 
-		System.out.println("ÀÔ·Â³»¿ë :"+input);
-		System.out.printf("num=%d%n", num);
-	} 
+        System.out.println("ï¿½Ô·Â³ï¿½ï¿½ï¿½ :" + input);
+        System.out.printf("num=%d%n", num);
+    }
 }

@@ -1,46 +1,46 @@
-import java.util.*; 
+import java.util.*;
 
-class CalendarEx6 { 
-      public static void main(String[] args) { 
-            if(args.length !=2) { 
-                  System.out.println("Usage : java CalendarEx6 2015 9"); 
-                  return; 
-            } 
-            int year = Integer.parseInt(args[0]); 
-            int month = Integer.parseInt(args[1]); 
+class CalendarEx6 {
+    public static void main(String[] args) {
+        if (args.length != 2) {
+            System.out.println("Usage : java CalendarEx6 2015 9");
+            return;
+        }
+        int year = Integer.parseInt(args[0]);
+        int month = Integer.parseInt(args[1]);
 
-            int START_DAY_OF_WEEK = 0; 
-            int END_DAY = 0; 
+        int START_DAY_OF_WEEK = 0;
+        int END_DAY = 0;
 
-            Calendar sDay = Calendar.getInstance();       // ½ÃÀÛÀÏ 
-            Calendar eDay = Calendar.getInstance();       // ³¡ÀÏ 
+        Calendar sDay = Calendar.getInstance();       // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+        Calendar eDay = Calendar.getInstance();       // ï¿½ï¿½ï¿½ï¿½ 
 
-            // ¿ùÀÇ °æ¿ì 0 ºÎÅÍ 11±îÁöÀÇ °ªÀ» °¡Áö¹Ç·Î 1À» »©ÁÖ¾î¾ß ÇÑ´Ù. 
-            // ¿¹¸¦ µé¾î, 2004³â 11¿ù 1ÀÏÀº sDay.set(2004, 10, 1);°ú °°ÀÌ ÇØÁà¾ß ÇÑ´Ù. 
-            sDay.set(year, month-1, 1);       
-            eDay.set(year, month, 1); 
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 0 ï¿½ï¿½ï¿½ï¿½ 11ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ ï¿½Ñ´ï¿½. 
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, 2004ï¿½ï¿½ 11ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ sDay.set(2004, 10, 1);ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ´ï¿½. 
+        sDay.set(year, month - 1, 1);
+        eDay.set(year, month, 1);
 
-            // ´ÙÀ½´ÞÀÇ Ã¹³¯¿¡¼­ ÇÏ·ç¸¦ »©¸é ÇöÀç´ÞÀÇ ¸¶Áö¸· ³¯ÀÌ µÈ´Ù. 
-            // 12¿ù 1ÀÏ¿¡¼­ ÇÏ·ç¸¦ »©¸é 11¿ù 30ÀÏÀÌ µÈ´Ù. 
-            eDay.add(Calendar.DATE, -1);       
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ç¸¦ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½È´ï¿½. 
+        // 12ï¿½ï¿½ 1ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Ï·ç¸¦ ï¿½ï¿½ï¿½ï¿½ 11ï¿½ï¿½ 30ï¿½ï¿½ï¿½ï¿½ ï¿½È´ï¿½. 
+        eDay.add(Calendar.DATE, -1);
 
-            // Ã¹ ¹øÂ° ¿äÀÏÀÌ ¹«½¼ ¿äÀÏÀÎÁö ¾Ë¾Æ³½´Ù. 
-            START_DAY_OF_WEEK = sDay.get(Calendar.DAY_OF_WEEK); 
-            // eDay¿¡ ÁöÁ¤µÈ ³¯Â¥¸¦ ¾ò¾î¿Â´Ù. 
-            END_DAY = eDay.get(Calendar.DATE); 
-            
-            System.out.println("      " + args[0] +"³â " + args[1] +"¿ù"); 
-            System.out.println(" SU MO TU WE TH FR SA"); 
+        // Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¾Æ³ï¿½ï¿½ï¿½. 
+        START_DAY_OF_WEEK = sDay.get(Calendar.DAY_OF_WEEK);
+        // eDayï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â¥ï¿½ï¿½ ï¿½ï¿½ï¿½Â´ï¿½. 
+        END_DAY = eDay.get(Calendar.DATE);
 
-            // ÇØ´ç ¿ùÀÇ 1ÀÏÀÌ ¾î´À ¿äÀÏÀÎÁö¿¡ µû¶ó¼­ °ø¹éÀ» Ãâ·ÂÇÑ´Ù. 
-            // ¸¸ÀÏ 1ÀÏÀÌ ¼ö¿äÀÏÀÌ¶ó¸é °ø¹éÀ» ¼¼ ¹ø Âï´Â´Ù.(ÀÏ¿äÀÏºÎÅÍ ½ÃÀÛ) 
-            for(int i=1; i < START_DAY_OF_WEEK; i++) { 
-                  System.out.print("   "); 
-            } 
+        System.out.println("      " + args[0] + "ï¿½ï¿½ " + args[1] + "ï¿½ï¿½");
+        System.out.println(" SU MO TU WE TH FR SA");
 
-            for(int i=1, n=START_DAY_OF_WEEK ; i <= END_DAY; i++, n++) { 
-                  System.out.print((i < 10)? "  "+i : " "+i ); 
-                  if(n%7==0) System.out.println(); 
-            } 
-      } 
+        // ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½. 
+        // ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Â´ï¿½.(ï¿½Ï¿ï¿½ï¿½Ïºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½) 
+        for (int i = 1; i < START_DAY_OF_WEEK; i++) {
+            System.out.print("   ");
+        }
+
+        for (int i = 1, n = START_DAY_OF_WEEK; i <= END_DAY; i++, n++) {
+            System.out.print((i < 10) ? "  " + i : " " + i);
+            if (n % 7 == 0) System.out.println();
+        }
+    }
 } 
